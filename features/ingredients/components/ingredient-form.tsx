@@ -1,0 +1,239 @@
+'use client';
+
+import { useEffect, useTransition } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+} from '@/components/ui/drawer';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { LoadingSpinner } from '@/components/shared/loading-spinner';
+import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
+import { createIngredient, updateIngredient } from '@/features/ingredients/actions';
+import { ingredientFormSchema, type IngredientFormInput } from '@/features/ingredients/schema';
+import type { Database } from '@/types/database.types';
+
+type Ingredient = Database['public']['Tables']['ingredients']['Row'];
+
+const EMPTY_VALUES: IngredientFormInput = {
+  name: '',
+  quantity: 1,
+  unit: '個',
+  categoryId: 'vegetable',
+  storageLocationId: 'fridge',
+  expiryDate: null,
+  memo: null,
+};
+
+function toFormValues(ingredient: Ingredient): IngredientFormInput {
+  return {
+    name: ingredient.name,
+    quantity: ingredient.quantity,
+    unit: ingredient.unit,
+    categoryId: ingredient.category_id,
+    storageLocationId: ingredient.storage_location_id,
+    expiryDate: ingredient.expiry_date,
+    memo: ingredient.memo,
+  };
+}
+
+export function IngredientForm({
+  open,
+  onOpenChange,
+  ingredient,
+}: {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  ingredient?: Ingredient | null;
+}) {
+  const isEdit = Boolean(ingredient);
+  const [isPending, startTransition] = useTransition();
+
+  const form = useForm<IngredientFormInput>({
+    resolver: zodResolver(ingredientFormSchema),
+    defaultValues: ingredient ? toFormValues(ingredient) : EMPTY_VALUES,
+  });
+
+  useEffect(() => {
+    if (open) form.reset(ingredient ? toFormValues(ingredient) : EMPTY_VALUES);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, ingredient]);
+
+  function onSubmit(values: IngredientFormInput) {
+    startTransition(async () => {
+      const result = isEdit
+        ? await updateIngredient({ id: ingredient!.id, ...values })
+        : await createIngredient(values);
+
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success(isEdit ? '更新しました' : '食材を登録しました');
+      onOpenChange(false);
+    });
+  }
+
+  return (
+    <Drawer open={open} onOpenChange={onOpenChange}>
+      <DrawerContent>
+        <div className="mx-auto w-full max-w-md">
+          <DrawerHeader>
+            <DrawerTitle>{isEdit ? '食材を編集' : '食材を追加'}</DrawerTitle>
+          </DrawerHeader>
+
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 px-4 pb-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>食材名</FormLabel>
+                    <FormControl>
+                      <Input placeholder="例: 卵" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <div className="grid grid-cols-2 gap-3">
+                <FormField
+                  control={form.control}
+                  name="quantity"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>数量</FormLabel>
+                      <FormControl>
+                        <Input type="number" min={0} step="any" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="unit"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>単位</FormLabel>
+                      <FormControl>
+                        <Input placeholder="個 / g / ml" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <FormField
+                  control={form.control}
+                  name="categoryId"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>カテゴリー</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {CATEGORY_OPTIONS.map((c) => (
+                            <SelectItem key={c.id} value={c.id}>
+                              {c.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="storageLocationId"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>保存場所</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {STORAGE_LOCATION_OPTIONS.map((s) => (
+                            <SelectItem key={s.id} value={s.id}>
+                              {s.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <FormField
+                control={form.control}
+                name="expiryDate"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>賞味期限(任意)</FormLabel>
+                    <FormControl>
+                      <Input type="date" value={field.value ?? ''} onChange={(e) => field.onChange(e.target.value || null)} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="memo"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>メモ(任意)</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        rows={2}
+                        value={field.value ?? ''}
+                        onChange={(e) => field.onChange(e.target.value || null)}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <DrawerFooter className="px-0">
+                <Button type="submit" disabled={isPending}>
+                  {isPending ? <LoadingSpinner className="text-primary-foreground" /> : '保存'}
+                </Button>
+                <DrawerClose asChild>
+                  <Button variant="outline" type="button">
+                    キャンセル
+                  </Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </form>
+          </Form>
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
+}
