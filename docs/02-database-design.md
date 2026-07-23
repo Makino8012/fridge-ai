@@ -127,7 +127,25 @@ erDiagram
 |---|---|---|---|
 | id | uuid | PK, default `gen_random_uuid()` | |
 | name | text | not null, default `'わが家'` | 世帯名(表示用) |
+| invite_token | text | not null, unique, default `encode(gen_random_bytes(16),'hex')` | 招待URL `/join/{invite_token}` に使用。再発行可能(後述) |
 | created_at | timestamptz | not null, default `now()` | |
+
+#### 招待URL(ログイン画面なし)の実現方式
+
+要件: 「招待URLをタップするだけで、ログイン画面を挟まず同じ世帯の在庫が見える」を、RLSと操作者記録を維持したまま実現する。
+
+**採用方式: Supabase Anonymous Auth(匿名認証) + 招待トークン**
+
+1. あなたが「彼女を招待」→ アプリが `https://yourapp.com/join/{households.invite_token}` を生成
+2. 彼女がそのURLを開く
+3. クライアント側でSupabaseのセッションが無ければ `supabase.auth.signInAnonymously()` を自動実行(**画面上は何も表示しない**。パスワード入力もメール入力も不要)
+4. 発行された匿名ユーザーの`auth.uid()`をキーに、`profiles`レコードを作成し `household_id` に招待元の`households.id`をセット(Server Action内で`invite_token`を検証してから実行)
+5. 以後はブラウザ/PWAにSupabaseセッションが保持されるため、ホーム画面アイコンから開く限り再度この手順は発生しない(体験としては「ログイン不要」)
+
+**このURLは`invite_token`単体では再利用可能な招待用URLであり、参加後の恒久的なアクセスキーではない点に注意**: 一度参加してprofilesが作られた後は、以後のアクセス制御は`profiles.household_id`(=匿名アカウントに紐づく)で行われる。つまり:
+- URLが他人に漏れても、既に参加済みの2人のアクセスには影響しない(URLの再共有だけでは新しい匿名アカウントが世帯に増えるだけ)
+- 意図しない第三者の参加を防ぐため、`invite_token`は世帯設定画面からいつでも再発行可能にする(再発行後は旧URLは無効化)
+- 匿名アカウントはブラウザのlocalStorageにセッションを保持する方式のため、端末を変えたりブラウザデータを消すと再度招待URL(またはブックマーク)からの参加が必要になる。将来的にSupabaseの「匿名→本登録への昇格(linkIdentity)」機能でメール紐付けし、複数端末対応やバックアップを追加可能(将来拡張として設計を阻害しない)
 
 ### `profiles`
 | カラム | 型 | 制約 | 説明 |
@@ -307,7 +325,32 @@ create policy "update own profile only"
   with check (id = auth.uid());
 ```
 
-`households` は所属メンバーのみ閲覧可、招待フローは後続のService層(Server Action)で`security definer`のRPC経由で処理する(招待コード方式を想定)。
+`households` は所属メンバーのみ閲覧可。招待参加(前述の匿名認証フロー)は、`profiles.household_id`がまだ`null`の状態で自分自身のprofileを更新する必要があるため、通常のRLSポリシーでは扱えない。そのため専用の`security definer`関数を用意する:
+
+```sql
+create or replace function join_household_by_invite(p_invite_token text, p_display_name text)
+returns uuid
+language plpgsql
+security definer
+as $$
+declare
+  v_household_id uuid;
+begin
+  select id into v_household_id from households where invite_token = p_invite_token;
+  if v_household_id is null then
+    raise exception 'invalid invite token';
+  end if;
+
+  insert into profiles (id, household_id, display_name)
+  values (auth.uid(), v_household_id, p_display_name)
+  on conflict (id) do update set household_id = excluded.household_id;
+
+  return v_household_id;
+end;
+$$;
+```
+
+Server Action (`joinHousehold`)からこのRPCのみを呼び出し、`profiles`テーブルへの直接insertはクライアントから行わせない。招待トークンの再発行は `regenerate_invite_token(household_id)` という同様のsecurity definer RPCで行う(所有者のみ実行可能かはアプリ側で判定、2人世帯なので単純化)。
 
 `categories` / `storage_locations` はマスタなので全ユーザー参照可・書き込み不可（RLSで`select`のみ許可、insert/update/deleteはservice_roleのみ）。
 
@@ -345,4 +388,5 @@ supabase/
 - ✅ `source`/`barcode`/`image_url`をNULL許容で先に用意し、OCR/バーコード機能を後から追加してもマイグレーションの破壊的変更が不要
 - ✅ `dietary_preferences`(jsonb)でアレルギー/苦手食材/ダイエット方針を保持し、AIプロンプト生成時に反映可能
 - ⚠️ `recipe_history`/`recipe_favorites`の`jsonb`スナップショットは将来検索性が必要になった場合、正規化テーブルへの分割を再検討（現時点ではAI応答をそのまま保存する設計で十分）
-- ⚠️ 世帯への招待フロー（招待コード発行・受諾）は本ドキュメントでは触れていない。⑤API設計で `households_invite` の仕組みを別途設計する
+- ✅ 世帯への招待は「URLタップのみ・ログイン画面なし」を、Supabase Anonymous Auth + `invite_token` + `join_household_by_invite` RPCで実現し、RLS/操作者記録を犠牲にしない設計にした
+- ⚠️ 匿名アカウントはブラウザ単位でセッションを保持するため、端末変更時の再参加動線(招待URLの再共有 or ブックマーク)をUI側で用意する必要がある(⑦フロント実装で対応)
