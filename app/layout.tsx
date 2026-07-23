@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,7 +20,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+          <Toaster position="top-center" richColors />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
