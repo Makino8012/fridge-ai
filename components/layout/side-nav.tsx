@@ -18,7 +18,7 @@ export function SideNav() {
 
   return (
     <nav className="hidden w-56 shrink-0 flex-col gap-1 border-r px-3 py-6 md:flex">
-      <div className="mb-4 px-3 text-lg font-semibold">冷蔵庫AI</div>
+      <div className="mb-4 px-3 text-lg font-semibold">Kukku</div>
       {NAV_ITEMS.map((item) => {
         const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
         const Icon = item.icon;

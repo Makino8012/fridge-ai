@@ -27,6 +27,17 @@ export async function findAlmostMakeableAction(
   }
 }
 
+export async function getSeasonalRecipesAction(): Promise<
+  ActionResult<{ missingCount: number; recipe: RecipeSuggestion }[]>
+> {
+  try {
+    const recipes = await localRecipeService.getSeasonalRecipes();
+    return actionSuccess(recipes);
+  } catch {
+    return actionError('旬のレシピの取得に失敗しました');
+  }
+}
+
 // ===== AIモード(その都度Claude APIを呼ぶ・課金あり) =====
 
 export async function suggestRecipesAction(): Promise<ActionResult<RecipeSuggestion[]>> {

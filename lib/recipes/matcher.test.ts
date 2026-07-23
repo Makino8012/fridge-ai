@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { findAlmostMakeableRecipes, findMakeableRecipes, type InventoryItem } from './matcher';
+import {
+  findAlmostMakeableRecipes,
+  findMakeableRecipes,
+  findSeasonalRecipes,
+  type InventoryItem,
+} from './matcher';
 import type { LocalRecipe } from './types';
 
 const recipes: LocalRecipe[] = [
@@ -14,6 +19,7 @@ const recipes: LocalRecipe[] = [
     ],
     steps: ['炒める'],
     tags: ['和食'],
+    seasons: ['all'],
   },
   {
     title: '肉じゃが',
@@ -26,6 +32,7 @@ const recipes: LocalRecipe[] = [
     ],
     steps: ['煮る'],
     tags: ['和食'],
+    seasons: ['winter'],
   },
 ];
 
@@ -62,6 +69,54 @@ describe('findMakeableRecipes', () => {
   it('excludes recipes missing a non-staple ingredient', () => {
     const result = findMakeableRecipes(recipes, inv(['玉ねぎ']));
     expect(result).toHaveLength(0);
+  });
+});
+
+describe('findMakeableRecipes with season', () => {
+  const seasonalRecipes: LocalRecipe[] = [
+    {
+      title: '冬料理',
+      difficulty: 'normal',
+      cookingTimeMinutes: 40,
+      ingredients: [{ name: '大根', quantity: '1本', staple: false }],
+      steps: ['煮る'],
+      tags: [],
+      seasons: ['winter'],
+    },
+    {
+      title: '夏料理',
+      difficulty: 'easy',
+      cookingTimeMinutes: 10,
+      ingredients: [{ name: 'なす', quantity: '1本', staple: false }],
+      steps: ['炒める'],
+      tags: [],
+      seasons: ['summer'],
+    },
+  ];
+
+  it('prioritizes in-season recipes even when they take longer to cook', () => {
+    const stock = inv(['大根', 'なす']);
+    const inWinter = findMakeableRecipes(seasonalRecipes, stock, 'winter');
+    expect(inWinter[0]!.title).toBe('冬料理'); // 旬なので調理時間が長くても優先
+    const inSummer = findMakeableRecipes(seasonalRecipes, stock, 'summer');
+    expect(inSummer[0]!.title).toBe('夏料理');
+  });
+});
+
+describe('findSeasonalRecipes', () => {
+  it('returns only recipes tagged with the given season', () => {
+    const result = findSeasonalRecipes(recipes, inv([]), 'winter');
+    expect(result.map((r) => r.recipe.title)).toEqual(['肉じゃが']);
+  });
+
+  it('excludes all-season recipes (shows season-specific ones)', () => {
+    const result = findSeasonalRecipes(recipes, inv([]), 'summer');
+    expect(result).toHaveLength(0);
+  });
+
+  it('reports how many ingredients are missing', () => {
+    const result = findSeasonalRecipes(recipes, inv(['じゃがいも', 'にんじん', '豚こま肉']), 'winter');
+    expect(result[0]!.missingCount).toBe(0);
   });
 });
 

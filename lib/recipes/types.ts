@@ -1,3 +1,5 @@
+export type Season = 'spring' | 'summer' | 'autumn' | 'winter' | 'all';
+
 export interface LocalRecipeIngredient {
   name: string;
   quantity: string;
@@ -11,4 +13,5 @@ export interface LocalRecipe {
   ingredients: LocalRecipeIngredient[];
   steps: string[];
   tags: string[];
+  seasons: Season[];
 }

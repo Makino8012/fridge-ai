@@ -22,3 +22,20 @@ export function formatExpiryLabel(expiryDate: string | null): string {
 export function formatDate(dateStr: string): string {
   return format(parseISO(dateStr), 'yyyy/MM/dd');
 }
+
+export type CurrentSeason = 'spring' | 'summer' | 'autumn' | 'winter';
+
+export function getCurrentSeason(date = new Date()): CurrentSeason {
+  const month = date.getMonth() + 1; // 1-12
+  if (month >= 3 && month <= 5) return 'spring';
+  if (month >= 6 && month <= 8) return 'summer';
+  if (month >= 9 && month <= 11) return 'autumn';
+  return 'winter';
+}
+
+export const SEASON_LABEL: Record<CurrentSeason, string> = {
+  spring: '春',
+  summer: '夏',
+  autumn: '秋',
+  winter: '冬',
+};

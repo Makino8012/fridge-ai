@@ -53,7 +53,7 @@ export function OnboardingForm() {
         <div className="flex size-14 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
           <Refrigerator className="size-7" strokeWidth={1.75} />
         </div>
-        <h1 className="text-xl font-semibold">冷蔵庫AIへようこそ</h1>
+        <h1 className="text-xl font-semibold">Kukkuへようこそ</h1>
         <p className="text-sm text-muted-foreground">
           まずはあなたの「わが家」を作りましょう。あとで同居している方を招待できます。
         </p>

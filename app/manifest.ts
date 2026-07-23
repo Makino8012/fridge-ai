@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: '冷蔵庫AI - 食材在庫管理',
-    short_name: '冷蔵庫AI',
+    name: 'Kukku - 食材在庫管理とレシピ提案',
+    short_name: 'Kukku',
     description: '家庭用の食材在庫管理 + AIレシピ提案アプリ',
     start_url: '/',
     display: 'standalone',

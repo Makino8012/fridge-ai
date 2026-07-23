@@ -3,6 +3,8 @@ import { Header } from '@/components/layout/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { InviteLinkCard } from '@/features/household/components/invite-link-card';
 import { DietaryPreferencesForm } from '@/features/household/components/dietary-preferences-form';
+import { ChangelogCard } from '@/features/household/components/changelog-card';
+import { APP_VERSION } from '@/data/changelog';
 import {
   getCurrentHouseholdId,
   getCurrentProfile,
@@ -43,6 +45,10 @@ export default async function SettingsPage() {
         <InviteLinkCard inviteToken={household.invite_token} />
 
         {profile && <DietaryPreferencesForm initialPreferences={profile.dietary_preferences} />}
+
+        <ChangelogCard />
+
+        <p className="pb-2 text-center text-xs text-muted-foreground">Kukku v{APP_VERSION}</p>
       </div>
     </>
   );

@@ -4,758 +4,8853 @@
     "difficulty": "easy",
     "cookingTimeMinutes": 15,
     "ingredients": [
-      { "name": "豚こま肉", "quantity": "200g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1個", "staple": false },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true },
-      { "name": "酒", "quantity": "大さじ1", "staple": true },
-      { "name": "生姜", "quantity": "1片", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      }
     ],
     "steps": [
       "玉ねぎを薄切り、生姜をすりおろす。",
-      "フライパンに油を熱し、豚こま肉を炒める。",
-      "色が変わったら玉ねぎを加えて炒める。",
-      "醤油・みりん・酒・生姜を加えて絡めて完成。"
+      "豚肉を炒める。",
+      "玉ねぎを加え、醤油・みりん・生姜で味付けして完成。"
     ],
-    "tags": ["和食", "主菜", "豚肉"]
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "鶏もも肉の照り焼き",
     "difficulty": "easy",
     "cookingTimeMinutes": 20,
     "ingredients": [
-      { "name": "鶏もも肉", "quantity": "1枚", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ2", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ1", "staple": true },
-      { "name": "酒", "quantity": "大さじ1", "staple": true }
+      {
+        "name": "鶏もも肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "鶏もも肉を一口大に切る。",
-      "フライパンで皮目から焼く。",
-      "醤油・みりん・砂糖・酒を混ぜて加える。",
-      "煮絡めてタレがとろっとしたら完成。"
+      "鶏肉を一口大に切る。",
+      "皮目から焼く。",
+      "醤油・みりん・砂糖を加えて煮絡めて完成。"
     ],
-    "tags": ["和食", "主菜", "鶏肉"]
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "野菜炒め",
     "difficulty": "easy",
     "cookingTimeMinutes": 12,
     "ingredients": [
-      { "name": "キャベツ", "quantity": "1/4個", "staple": false },
-      { "name": "にんじん", "quantity": "1/2本", "staple": false },
-      { "name": "もやし", "quantity": "1袋", "staple": false },
-      { "name": "豚こま肉", "quantity": "100g", "staple": false },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true },
-      { "name": "醤油", "quantity": "小さじ1", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "野菜を食べやすい大きさに切る。",
-      "油を熱し豚肉を炒める。",
-      "にんじん→キャベツ→もやしの順に炒める。",
+      "野菜を切る。",
+      "豚肉を炒め野菜を加える。",
       "塩こしょう・醤油で味を整えて完成。"
     ],
-    "tags": ["中華", "主菜", "野菜"]
+    "tags": [
+      "中華",
+      "主菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "肉じゃが",
     "difficulty": "normal",
     "cookingTimeMinutes": 35,
     "ingredients": [
-      { "name": "じゃがいも", "quantity": "3個", "staple": false },
-      { "name": "にんじん", "quantity": "1本", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1個", "staple": false },
-      { "name": "豚こま肉", "quantity": "150g", "staple": false },
-      { "name": "醤油", "quantity": "大さじ3", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true },
-      { "name": "だし", "quantity": "300ml", "staple": true }
+      {
+        "name": "じゃがいも",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      }
     ],
     "steps": [
       "野菜を一口大に切る。",
-      "鍋で豚肉を炒め、野菜を加える。",
-      "だしを注ぎ、砂糖・醤油・みりんを加える。",
-      "落とし蓋で20分ほど煮て完成。"
+      "肉と野菜を炒めだしを注ぐ。",
+      "調味料を加え20分煮て完成。"
     ],
-    "tags": ["和食", "主菜", "煮物"]
+    "tags": [
+      "和食",
+      "煮物",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "回鍋肉",
     "difficulty": "normal",
     "cookingTimeMinutes": 20,
     "ingredients": [
-      { "name": "豚こま肉", "quantity": "200g", "staple": false },
-      { "name": "キャベツ", "quantity": "1/4個", "staple": false },
-      { "name": "ピーマン", "quantity": "2個", "staple": false },
-      { "name": "味噌", "quantity": "大さじ1", "staple": true },
-      { "name": "醤油", "quantity": "小さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "小さじ1", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "キャベツとピーマンをざく切りにする。",
-      "豚肉を炒めて取り出す。",
-      "野菜を炒め、豚肉を戻す。",
-      "味噌・醤油・砂糖を加えて絡めて完成。"
+      "野菜をざく切りにする。",
+      "豚肉と野菜を炒める。",
+      "味噌・醤油・砂糖で味付けして完成。"
     ],
-    "tags": ["中華", "主菜", "豚肉"]
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "麻婆豆腐",
     "difficulty": "normal",
     "cookingTimeMinutes": 20,
     "ingredients": [
-      { "name": "豆腐", "quantity": "1丁", "staple": false },
-      { "name": "豚ひき肉", "quantity": "100g", "staple": false },
-      { "name": "長ねぎ", "quantity": "1/2本", "staple": false },
-      { "name": "味噌", "quantity": "大さじ1", "staple": true },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "片栗粉", "quantity": "小さじ1", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "豆腐をさいの目に切り、ねぎをみじん切りにする。",
-      "ひき肉を炒め、ねぎを加える。",
-      "水・味噌・醤油を加え、豆腐を入れる。",
-      "水溶き片栗粉でとろみをつけて完成。"
+      "豆腐を切りねぎを刻む。",
+      "ひき肉を炒め水と調味料を加える。",
+      "豆腐を入れ水溶き片栗粉でとろみをつけて完成。"
     ],
-    "tags": ["中華", "主菜", "豆腐"]
+    "tags": [
+      "中華",
+      "主菜",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "親子丼",
     "difficulty": "easy",
     "cookingTimeMinutes": 15,
     "ingredients": [
-      { "name": "鶏もも肉", "quantity": "150g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/2個", "staple": false },
-      { "name": "卵", "quantity": "3個", "staple": false },
-      { "name": "ご飯", "quantity": "2膳", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ2", "staple": true },
-      { "name": "だし", "quantity": "100ml", "staple": true }
+      {
+        "name": "鶏もも肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "100ml",
+        "staple": true
+      }
     ],
     "steps": [
-      "鶏肉と玉ねぎを切る。",
-      "だし・醤油・みりんで鶏肉と玉ねぎを煮る。",
+      "鶏肉と玉ねぎをだしで煮る。",
       "溶き卵を回し入れる。",
-      "半熟になったらご飯にのせて完成。"
+      "半熟でご飯にのせて完成。"
     ],
-    "tags": ["和食", "丼", "鶏肉"]
-  },
-  {
-    "title": "卵とじうどん",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 12,
-    "ingredients": [
-      { "name": "うどん", "quantity": "1玉", "staple": false },
-      { "name": "卵", "quantity": "1個", "staple": false },
-      { "name": "長ねぎ", "quantity": "1/4本", "staple": false },
-      { "name": "だし", "quantity": "400ml", "staple": true },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true }
+    "tags": [
+      "和食",
+      "丼",
+      "鶏肉"
     ],
-    "steps": [
-      "だし・醤油・みりんを煮立てる。",
-      "うどんを加えて温める。",
-      "溶き卵を回し入れる。",
-      "ねぎを散らして完成。"
-    ],
-    "tags": ["和食", "麺", "卵"]
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "オムライス",
     "difficulty": "normal",
     "cookingTimeMinutes": 25,
     "ingredients": [
-      { "name": "ご飯", "quantity": "2膳", "staple": false },
-      { "name": "卵", "quantity": "4個", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/2個", "staple": false },
-      { "name": "鶏もも肉", "quantity": "100g", "staple": false },
-      { "name": "ケチャップ", "quantity": "大さじ4", "staple": true },
-      { "name": "バター", "quantity": "10g", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
     ],
     "steps": [
-      "玉ねぎと鶏肉を炒める。",
-      "ご飯とケチャップを加えチキンライスを作る。",
-      "卵を焼いて半熟にする。",
-      "チキンライスを包み、ケチャップをかけて完成。"
+      "玉ねぎと鶏肉を炒めチキンライスを作る。",
+      "卵を半熟に焼く。",
+      "ライスを包みケチャップをかけて完成。"
     ],
-    "tags": ["洋食", "主菜", "卵"]
+    "tags": [
+      "洋食",
+      "主菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "チャーハン",
     "difficulty": "easy",
     "cookingTimeMinutes": 12,
     "ingredients": [
-      { "name": "ご飯", "quantity": "2膳", "staple": false },
-      { "name": "卵", "quantity": "2個", "staple": false },
-      { "name": "長ねぎ", "quantity": "1/2本", "staple": false },
-      { "name": "ハム", "quantity": "3枚", "staple": false },
-      { "name": "醤油", "quantity": "小さじ2", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
     ],
     "steps": [
-      "卵を溶き、ねぎとハムを刻む。",
-      "油を熱し卵を炒め、ご飯を加える。",
-      "ねぎとハムを加えて炒める。",
+      "卵を炒めご飯を加える。",
+      "ねぎとハムを加え炒める。",
       "醤油・塩こしょうで味付けして完成。"
     ],
-    "tags": ["中華", "主食", "卵"]
+    "tags": [
+      "中華",
+      "主食",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "カレーライス",
     "difficulty": "easy",
     "cookingTimeMinutes": 40,
     "ingredients": [
-      { "name": "じゃがいも", "quantity": "2個", "staple": false },
-      { "name": "にんじん", "quantity": "1本", "staple": false },
-      { "name": "玉ねぎ", "quantity": "2個", "staple": false },
-      { "name": "豚こま肉", "quantity": "200g", "staple": false },
-      { "name": "カレールー", "quantity": "1/2箱", "staple": false },
-      { "name": "ご飯", "quantity": "人数分", "staple": false },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "じゃがいも",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "カレールー",
+        "quantity": "1/2箱",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "人数分",
+        "staple": false
+      }
     ],
     "steps": [
-      "野菜と肉を一口大に切る。",
-      "鍋で肉と野菜を炒める。",
+      "野菜と肉を炒める。",
       "水を加えて煮込む。",
-      "火を止めルーを溶かし、再度煮て完成。"
+      "ルーを溶かし再度煮てご飯にかけて完成。"
     ],
-    "tags": ["洋食", "主食", "カレー"]
+    "tags": [
+      "洋食",
+      "主食",
+      "カレー"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "ハンバーグ",
     "difficulty": "normal",
     "cookingTimeMinutes": 30,
     "ingredients": [
-      { "name": "合いびき肉", "quantity": "300g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1個", "staple": false },
-      { "name": "卵", "quantity": "1個", "staple": false },
-      { "name": "パン粉", "quantity": "大さじ4", "staple": true },
-      { "name": "ケチャップ", "quantity": "大さじ2", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "合いびき肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
     ],
     "steps": [
-      "玉ねぎをみじん切りにして炒め冷ます。",
-      "ひき肉・卵・パン粉・玉ねぎを混ねる。",
+      "炒めた玉ねぎとひき肉・卵・パン粉を混ねる。",
       "成形して両面を焼く。",
-      "蓋をして蒸し焼きにし、ソースをかけて完成。"
+      "蒸し焼きにしソースをかけて完成。"
     ],
-    "tags": ["洋食", "主菜", "ひき肉"]
-  },
-  {
-    "title": "鮭のムニエル",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 15,
-    "ingredients": [
-      { "name": "鮭", "quantity": "2切れ", "staple": false },
-      { "name": "小麦粉", "quantity": "適量", "staple": true },
-      { "name": "バター", "quantity": "15g", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true },
-      { "name": "レモン", "quantity": "適量", "staple": false }
+    "tags": [
+      "洋食",
+      "主菜",
+      "ひき肉"
     ],
-    "steps": [
-      "鮭に塩こしょうをして小麦粉をまぶす。",
-      "バターを熱したフライパンで焼く。",
-      "両面をこんがり焼く。",
-      "レモンを添えて完成。"
-    ],
-    "tags": ["洋食", "主菜", "魚"]
-  },
-  {
-    "title": "味噌汁",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 10,
-    "ingredients": [
-      { "name": "豆腐", "quantity": "1/2丁", "staple": false },
-      { "name": "わかめ", "quantity": "適量", "staple": false },
-      { "name": "長ねぎ", "quantity": "1/4本", "staple": false },
-      { "name": "味噌", "quantity": "大さじ2", "staple": true },
-      { "name": "だし", "quantity": "400ml", "staple": true }
-    ],
-    "steps": [
-      "だしを温める。",
-      "豆腐とわかめを加える。",
-      "火を弱め味噌を溶く。",
-      "ねぎを散らして完成。"
-    ],
-    "tags": ["和食", "汁物", "豆腐"]
-  },
-  {
-    "title": "豚汁",
-    "difficulty": "normal",
-    "cookingTimeMinutes": 30,
-    "ingredients": [
-      { "name": "豚こま肉", "quantity": "150g", "staple": false },
-      { "name": "大根", "quantity": "1/4本", "staple": false },
-      { "name": "にんじん", "quantity": "1/2本", "staple": false },
-      { "name": "ごぼう", "quantity": "1/2本", "staple": false },
-      { "name": "こんにゃく", "quantity": "1/2枚", "staple": false },
-      { "name": "味噌", "quantity": "大さじ3", "staple": true },
-      { "name": "だし", "quantity": "600ml", "staple": true }
-    ],
-    "steps": [
-      "野菜を薄めのいちょう切りにする。",
-      "豚肉を炒め、野菜を加える。",
-      "だしを注いで煮込む。",
-      "味噌を溶いて完成。"
-    ],
-    "tags": ["和食", "汁物", "豚肉"]
-  },
-  {
-    "title": "餃子",
-    "difficulty": "hard",
-    "cookingTimeMinutes": 40,
-    "ingredients": [
-      { "name": "豚ひき肉", "quantity": "200g", "staple": false },
-      { "name": "キャベツ", "quantity": "1/4個", "staple": false },
-      { "name": "ニラ", "quantity": "1/2束", "staple": false },
-      { "name": "餃子の皮", "quantity": "1袋", "staple": false },
-      { "name": "醤油", "quantity": "小さじ1", "staple": true },
-      { "name": "ごま油", "quantity": "小さじ1", "staple": true },
-      { "name": "生姜", "quantity": "1片", "staple": true }
-    ],
-    "steps": [
-      "キャベツとニラをみじん切りにする。",
-      "ひき肉と野菜、調味料を混ぜる。",
-      "皮で包む。",
-      "フライパンで焼き、水を加えて蒸し焼きにして完成。"
-    ],
-    "tags": ["中華", "主菜", "ひき肉"]
-  },
-  {
-    "title": "ナポリタン",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 20,
-    "ingredients": [
-      { "name": "パスタ", "quantity": "200g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/2個", "staple": false },
-      { "name": "ピーマン", "quantity": "2個", "staple": false },
-      { "name": "ウインナー", "quantity": "4本", "staple": false },
-      { "name": "ケチャップ", "quantity": "大さじ5", "staple": true },
-      { "name": "バター", "quantity": "10g", "staple": true }
-    ],
-    "steps": [
-      "パスタを茹でる。",
-      "玉ねぎ・ピーマン・ウインナーを炒める。",
-      "ケチャップを加えて炒める。",
-      "パスタとバターを絡めて完成。"
-    ],
-    "tags": ["洋食", "麺", "パスタ"]
-  },
-  {
-    "title": "きんぴらごぼう",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 15,
-    "ingredients": [
-      { "name": "ごぼう", "quantity": "1本", "staple": false },
-      { "name": "にんじん", "quantity": "1/2本", "staple": false },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "小さじ1", "staple": true },
-      { "name": "ごま油", "quantity": "適量", "staple": true }
-    ],
-    "steps": [
-      "ごぼうとにんじんを細切りにする。",
-      "ごま油で炒める。",
-      "醤油・みりん・砂糖を加える。",
-      "汁気が飛ぶまで炒めて完成。"
-    ],
-    "tags": ["和食", "副菜", "野菜"]
-  },
-  {
-    "title": "ほうれん草のおひたし",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 10,
-    "ingredients": [
-      { "name": "ほうれん草", "quantity": "1束", "staple": false },
-      { "name": "醤油", "quantity": "小さじ1", "staple": true },
-      { "name": "だし", "quantity": "大さじ2", "staple": true },
-      { "name": "かつお節", "quantity": "適量", "staple": true }
-    ],
-    "steps": [
-      "ほうれん草を茹でて冷水にとる。",
-      "水気を絞り食べやすく切る。",
-      "だしと醤油で和える。",
-      "かつお節をのせて完成。"
-    ],
-    "tags": ["和食", "副菜", "野菜"]
-  },
-  {
-    "title": "ポテトサラダ",
-    "difficulty": "normal",
-    "cookingTimeMinutes": 25,
-    "ingredients": [
-      { "name": "じゃがいも", "quantity": "3個", "staple": false },
-      { "name": "きゅうり", "quantity": "1本", "staple": false },
-      { "name": "にんじん", "quantity": "1/3本", "staple": false },
-      { "name": "ハム", "quantity": "3枚", "staple": false },
-      { "name": "マヨネーズ", "quantity": "大さじ3", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
-    ],
-    "steps": [
-      "じゃがいもを茹でて潰す。",
-      "きゅうりとにんじんは薄切りにして塩もみ。",
-      "ハムと野菜を加える。",
-      "マヨネーズと塩こしょうで和えて完成。"
-    ],
-    "tags": ["洋食", "副菜", "野菜"]
-  },
-  {
-    "title": "だし巻き卵",
-    "difficulty": "normal",
-    "cookingTimeMinutes": 12,
-    "ingredients": [
-      { "name": "卵", "quantity": "3個", "staple": false },
-      { "name": "だし", "quantity": "大さじ3", "staple": true },
-      { "name": "醤油", "quantity": "小さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "小さじ1", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
-    ],
-    "steps": [
-      "卵を溶き、だし・醤油・砂糖を混ぜる。",
-      "卵焼き器に油を薄くひく。",
-      "卵液を数回に分けて巻く。",
-      "形を整えて完成。"
-    ],
-    "tags": ["和食", "副菜", "卵"]
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "鶏の唐揚げ",
     "difficulty": "normal",
     "cookingTimeMinutes": 30,
     "ingredients": [
-      { "name": "鶏もも肉", "quantity": "300g", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "酒", "quantity": "大さじ1", "staple": true },
-      { "name": "生姜", "quantity": "1片", "staple": true },
-      { "name": "片栗粉", "quantity": "適量", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+      {
+        "name": "鶏もも肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
     ],
     "steps": [
-      "鶏肉を一口大に切る。",
-      "醤油・酒・生姜で下味をつける。",
+      "鶏肉に下味をつける。",
       "片栗粉をまぶす。",
       "170度の油で揚げて完成。"
     ],
-    "tags": ["和食", "主菜", "鶏肉"]
-  },
-  {
-    "title": "焼きそば",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 15,
-    "ingredients": [
-      { "name": "焼きそば麺", "quantity": "2玉", "staple": false },
-      { "name": "キャベツ", "quantity": "1/4個", "staple": false },
-      { "name": "豚こま肉", "quantity": "100g", "staple": false },
-      { "name": "もやし", "quantity": "1/2袋", "staple": false },
-      { "name": "ソース", "quantity": "大さじ3", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉"
     ],
-    "steps": [
-      "豚肉と野菜を炒める。",
-      "麺を加えほぐしながら炒める。",
-      "ソースを加えて絡める。",
-      "皿に盛って完成。"
-    ],
-    "tags": ["中華", "麺", "豚肉"]
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "牛丼",
     "difficulty": "easy",
     "cookingTimeMinutes": 20,
     "ingredients": [
-      { "name": "牛こま肉", "quantity": "200g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1個", "staple": false },
-      { "name": "ご飯", "quantity": "2膳", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ2", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ1", "staple": true },
-      { "name": "だし", "quantity": "100ml", "staple": true }
+      {
+        "name": "牛こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
     ],
     "steps": [
       "玉ねぎを薄切りにする。",
-      "だし・醤油・みりん・砂糖を煮立てる。",
-      "玉ねぎと牛肉を加えて煮る。",
+      "だしと調味料で牛肉と玉ねぎを煮る。",
       "ご飯にのせて完成。"
     ],
-    "tags": ["和食", "丼", "牛肉"]
+    "tags": [
+      "和食",
+      "丼",
+      "牛肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "青椒肉絲",
     "difficulty": "normal",
     "cookingTimeMinutes": 20,
     "ingredients": [
-      { "name": "豚こま肉", "quantity": "200g", "staple": false },
-      { "name": "ピーマン", "quantity": "4個", "staple": false },
-      { "name": "たけのこ", "quantity": "100g", "staple": false },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "オイスターソース", "quantity": "大さじ1", "staple": true },
-      { "name": "片栗粉", "quantity": "小さじ1", "staple": true },
-      { "name": "ごま油", "quantity": "適量", "staple": true }
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "たけのこ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "豚肉・ピーマン・たけのこを細切りにする。",
-      "豚肉に片栗粉をまぶして炒める。",
-      "野菜を加えて炒める。",
-      "醤油・オイスターソースで味付けして完成。"
+      "材料を細切りにする。",
+      "豚肉を炒め野菜を加える。",
+      "調味料で味付けして完成。"
     ],
-    "tags": ["中華", "主菜", "豚肉"]
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "餃子",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "豚ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "餃子の皮",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を刻みひき肉と混ぜる。",
+      "皮で包む。",
+      "焼いて水を加え蒸し焼きにして完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ナポリタン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ウインナー",
+        "quantity": "4本",
+        "staple": false
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ5",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パスタを茹でる。",
+      "具材を炒めケチャップを加える。",
+      "パスタとバターを絡めて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "パスタ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "麻婆茄子",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "3本",
+        "staple": false
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なすを乱切りにして揚げ焼きにする。",
+      "ひき肉とねぎを炒め調味料を加える。",
+      "なすを戻しとろみをつけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "なす"
+    ],
+    "seasons": [
+      "summer"
+    ]
   },
   {
     "title": "冷奴",
     "difficulty": "easy",
     "cookingTimeMinutes": 3,
     "ingredients": [
-      { "name": "豆腐", "quantity": "1丁", "staple": false },
-      { "name": "長ねぎ", "quantity": "適量", "staple": false },
-      { "name": "醤油", "quantity": "適量", "staple": true },
-      { "name": "かつお節", "quantity": "適量", "staple": true }
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "かつお節",
+        "quantity": "適量",
+        "staple": true
+      }
     ],
     "steps": [
       "豆腐を器に盛る。",
-      "ねぎを刻んでのせる。",
-      "かつお節をのせる。",
+      "ねぎとかつお節をのせる。",
       "醤油をかけて完成。"
     ],
-    "tags": ["和食", "副菜", "豆腐"]
+    "tags": [
+      "和食",
+      "副菜",
+      "豆腐"
+    ],
+    "seasons": [
+      "summer"
+    ]
   },
   {
     "title": "スクランブルエッグ",
     "difficulty": "easy",
     "cookingTimeMinutes": 8,
     "ingredients": [
-      { "name": "卵", "quantity": "3個", "staple": false },
-      { "name": "牛乳", "quantity": "大さじ2", "staple": false },
-      { "name": "バター", "quantity": "10g", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
     ],
     "steps": [
-      "卵を溶き牛乳と塩こしょうを混ぜる。",
-      "バターを熱する。",
-      "卵液を入れ大きく混ぜる。",
+      "卵と牛乳を混ぜる。",
+      "バターで大きく混ぜながら焼く。",
       "半熟で火を止めて完成。"
     ],
-    "tags": ["洋食", "副菜", "卵"]
+    "tags": [
+      "洋食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼きそば",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "焼きそば麺",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "ソース",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "肉と野菜を炒める。",
+      "麺を加えほぐす。",
+      "ソースを絡めて完成。"
+    ],
+    "tags": [
+      "中華",
+      "麺",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鮭のムニエル",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "レモン",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "鮭に塩こしょうと小麦粉をまぶす。",
+      "バターで両面を焼く。",
+      "レモンを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "魚"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "わかめ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしを温め豆腐とわかめを加える。",
+      "味噌を溶く。",
+      "ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚汁",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "ごぼう",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を切る。",
+      "肉と野菜を炒めだしで煮る。",
+      "味噌を溶いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "豚肉"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "きんぴらごぼう",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ごぼう",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ごぼうとにんじんを細切りにする。",
+      "ごま油で炒める。",
+      "調味料を加え汁気を飛ばして完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "ほうれん草のおひたし",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ほうれん草",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "かつお節",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ほうれん草を茹でて絞る。",
+      "だしと醤油で和える。",
+      "かつお節をのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ポテトサラダ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "じゃがいも",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "じゃがいもを茹でて潰す。",
+      "野菜を塩もみしハムと合わせる。",
+      "マヨネーズで和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "だし巻き卵",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵とだし・調味料を混ぜる。",
+      "卵焼き器で数回に分けて巻く。",
+      "形を整えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "味噌煮込みうどん",
     "difficulty": "normal",
     "cookingTimeMinutes": 25,
     "ingredients": [
-      { "name": "うどん", "quantity": "2玉", "staple": false },
-      { "name": "鶏もも肉", "quantity": "100g", "staple": false },
-      { "name": "長ねぎ", "quantity": "1本", "staple": false },
-      { "name": "卵", "quantity": "2個", "staple": false },
-      { "name": "味噌", "quantity": "大さじ2", "staple": true },
-      { "name": "だし", "quantity": "600ml", "staple": true }
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      }
     ],
     "steps": [
-      "だしで鶏肉を煮る。",
-      "味噌を溶く。",
-      "うどんとねぎを加えて煮込む。",
-      "卵を落として火を通して完成。"
+      "だしで鶏肉を煮て味噌を溶く。",
+      "うどんとねぎを加える。",
+      "卵を落として完成。"
     ],
-    "tags": ["和食", "麺", "鶏肉"]
-  },
-  {
-    "title": "なすの味噌炒め",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 15,
-    "ingredients": [
-      { "name": "なす", "quantity": "3本", "staple": false },
-      { "name": "ピーマン", "quantity": "2個", "staple": false },
-      { "name": "豚こま肉", "quantity": "100g", "staple": false },
-      { "name": "味噌", "quantity": "大さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "小さじ1", "staple": true },
-      { "name": "サラダ油", "quantity": "適量", "staple": true }
+    "tags": [
+      "和食",
+      "麺",
+      "鶏肉"
     ],
-    "steps": [
-      "なすとピーマンを乱切りにする。",
-      "豚肉を炒める。",
-      "なすとピーマンを加えて炒める。",
-      "味噌・砂糖を加えて絡めて完成。"
-    ],
-    "tags": ["和食", "主菜", "なす"]
+    "seasons": [
+      "winter"
+    ]
   },
   {
     "title": "ツナと玉ねぎのパスタ",
     "difficulty": "easy",
     "cookingTimeMinutes": 18,
     "ingredients": [
-      { "name": "パスタ", "quantity": "200g", "staple": false },
-      { "name": "ツナ缶", "quantity": "1缶", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/2個", "staple": false },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "バター", "quantity": "10g", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "パスタ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
     ],
     "steps": [
       "パスタを茹でる。",
-      "玉ねぎを炒める。",
-      "ツナとバターを加える。",
-      "パスタと醤油・塩こしょうで和えて完成。"
+      "玉ねぎとツナを炒める。",
+      "パスタと醤油・バターで和えて完成。"
     ],
-    "tags": ["洋食", "麺", "パスタ"]
+    "tags": [
+      "洋食",
+      "麺",
+      "パスタ"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "キャベツとベーコンのコンソメスープ",
     "difficulty": "easy",
     "cookingTimeMinutes": 15,
     "ingredients": [
-      { "name": "キャベツ", "quantity": "1/8個", "staple": false },
-      { "name": "ベーコン", "quantity": "2枚", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/4個", "staple": false },
-      { "name": "コンソメ", "quantity": "1個", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "キャベツ",
+        "quantity": "1/8個",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
     ],
     "steps": [
-      "キャベツ・玉ねぎ・ベーコンを切る。",
-      "鍋で軽く炒める。",
-      "水とコンソメを加えて煮る。",
+      "具材を切る。",
+      "軽く炒め水とコンソメで煮る。",
       "塩こしょうで整えて完成。"
     ],
-    "tags": ["洋食", "汁物", "野菜"]
+    "tags": [
+      "洋食",
+      "汁物",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "鶏肉と大根の煮物",
     "difficulty": "normal",
     "cookingTimeMinutes": 35,
     "ingredients": [
-      { "name": "鶏もも肉", "quantity": "200g", "staple": false },
-      { "name": "大根", "quantity": "1/3本", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ2", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ1", "staple": true },
-      { "name": "だし", "quantity": "400ml", "staple": true }
+      {
+        "name": "鶏もも肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      }
     ],
     "steps": [
-      "大根を厚めのいちょう切りにする。",
-      "鶏肉を焼く。",
-      "だしと調味料、大根を加えて煮る。",
-      "味が染みるまで20分煮て完成。"
+      "大根と鶏肉を切る。",
+      "だしと調味料で煮る。",
+      "味が染みるまで煮て完成。"
     ],
-    "tags": ["和食", "煮物", "鶏肉"]
+    "tags": [
+      "和食",
+      "煮物",
+      "鶏肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
   },
   {
     "title": "白菜と豚肉のミルフィーユ鍋",
     "difficulty": "normal",
     "cookingTimeMinutes": 30,
     "ingredients": [
-      { "name": "白菜", "quantity": "1/4個", "staple": false },
-      { "name": "豚バラ肉", "quantity": "250g", "staple": false },
-      { "name": "だし", "quantity": "600ml", "staple": true },
-      { "name": "醤油", "quantity": "大さじ1", "staple": true },
-      { "name": "ポン酢", "quantity": "適量", "staple": true }
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      }
     ],
     "steps": [
-      "白菜と豚肉を交互に重ねる。",
-      "5cm幅に切って鍋に並べる。",
-      "だしと醤油を注ぐ。",
-      "煮えたらポン酢でいただいて完成。"
+      "白菜と豚肉を交互に重ね切る。",
+      "鍋に並べだしで煮る。",
+      "ポン酢でいただいて完成。"
     ],
-    "tags": ["和食", "鍋", "豚肉"]
-  },
-  {
-    "title": "厚揚げの煮物",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 20,
-    "ingredients": [
-      { "name": "厚揚げ", "quantity": "2枚", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "小さじ1", "staple": true },
-      { "name": "だし", "quantity": "300ml", "staple": true }
+    "tags": [
+      "和食",
+      "鍋",
+      "豚肉"
     ],
-    "steps": [
-      "厚揚げを一口大に切る。",
-      "だしと調味料を煮立てる。",
-      "厚揚げを加える。",
-      "10分ほど煮て味を染ませて完成。"
-    ],
-    "tags": ["和食", "副菜", "厚揚げ"]
-  },
-  {
-    "title": "プルコギ風炒め",
-    "difficulty": "easy",
-    "cookingTimeMinutes": 18,
-    "ingredients": [
-      { "name": "牛こま肉", "quantity": "200g", "staple": false },
-      { "name": "玉ねぎ", "quantity": "1/2個", "staple": false },
-      { "name": "にんじん", "quantity": "1/3本", "staple": false },
-      { "name": "ニラ", "quantity": "1/2束", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ1", "staple": true },
-      { "name": "ごま油", "quantity": "適量", "staple": true }
-    ],
-    "steps": [
-      "野菜を細切りにする。",
-      "牛肉を醤油・砂糖で下味をつける。",
-      "ごま油で牛肉と野菜を炒める。",
-      "全体に火が通ったら完成。"
-    ],
-    "tags": ["韓国", "主菜", "牛肉"]
+    "seasons": [
+      "winter"
+    ]
   },
   {
     "title": "そぼろ丼",
     "difficulty": "easy",
     "cookingTimeMinutes": 15,
     "ingredients": [
-      { "name": "鶏ひき肉", "quantity": "200g", "staple": false },
-      { "name": "卵", "quantity": "2個", "staple": false },
-      { "name": "ご飯", "quantity": "2膳", "staple": false },
-      { "name": "醤油", "quantity": "大さじ2", "staple": true },
-      { "name": "みりん", "quantity": "大さじ1", "staple": true },
-      { "name": "砂糖", "quantity": "大さじ1", "staple": true }
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
     ],
     "steps": [
-      "ひき肉を醤油・みりん・砂糖で炒める。",
-      "別鍋で炒り卵を作る。",
-      "ご飯にそぼろと炒り卵をのせる。",
-      "彩りよく盛って完成。"
+      "ひき肉を調味料で炒める。",
+      "炒り卵を作る。",
+      "ご飯にのせて完成。"
     ],
-    "tags": ["和食", "丼", "ひき肉"]
+    "tags": [
+      "和食",
+      "丼",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
   },
   {
     "title": "ブロッコリーとベーコンの炒め物",
     "difficulty": "easy",
     "cookingTimeMinutes": 12,
     "ingredients": [
-      { "name": "ブロッコリー", "quantity": "1/2株", "staple": false },
-      { "name": "ベーコン", "quantity": "3枚", "staple": false },
-      { "name": "にんにく", "quantity": "1片", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true },
-      { "name": "オリーブオイル", "quantity": "適量", "staple": true }
+      {
+        "name": "ブロッコリー",
+        "quantity": "1/2株",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "適量",
+        "staple": true
+      }
     ],
     "steps": [
-      "ブロッコリーを小房に分け下茹でする。",
+      "ブロッコリーを下茹でする。",
       "にんにくとベーコンを炒める。",
-      "ブロッコリーを加えて炒める。",
-      "塩こしょうで味を整えて完成。"
+      "ブロッコリーを加え塩こしょうで整えて完成。"
     ],
-    "tags": ["洋食", "副菜", "野菜"]
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "winter"
+    ]
   },
   {
     "title": "たまごサンド",
     "difficulty": "easy",
     "cookingTimeMinutes": 15,
     "ingredients": [
-      { "name": "卵", "quantity": "3個", "staple": false },
-      { "name": "食パン", "quantity": "4枚", "staple": false },
-      { "name": "マヨネーズ", "quantity": "大さじ2", "staple": true },
-      { "name": "塩こしょう", "quantity": "少々", "staple": true }
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "食パン",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
     ],
     "steps": [
       "卵を固茹でにして刻む。",
-      "マヨネーズと塩こしょうで和える。",
-      "パンに挟む。",
-      "食べやすく切って完成。"
+      "マヨネーズと和える。",
+      "パンに挟んで切って完成。"
     ],
-    "tags": ["洋食", "軽食", "卵"]
+    "tags": [
+      "洋食",
+      "軽食",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "プルコギ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を細切りにする。",
+      "牛肉に下味をつける。",
+      "全体を炒めて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "主菜",
+      "牛肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "厚揚げの煮物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げを切る。",
+      "だしと調味料で煮る。",
+      "味を染ませて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "厚揚げ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "卵とじうどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "1玉",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしを煮立てうどんを温める。",
+      "溶き卵を回し入れる。",
+      "ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "なすの味噌炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "3本",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なすとピーマンを乱切りにする。",
+      "豚肉と野菜を炒める。",
+      "味噌・砂糖で味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "なす"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "春キャベツと豚肉の蒸し煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "春キャベツ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツをざく切りにする。",
+      "豚肉とキャベツを重ね酒を回しかける。",
+      "蓋をして蒸し煮にし塩こしょうで整えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "新玉ねぎのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "新玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "かつお節",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "新玉ねぎを薄切りにして水にさらす。",
+      "水気を切り器に盛る。",
+      "かつお節と醤油をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "菜の花のからし和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "菜の花",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "からし",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "菜の花を茹でて絞る。",
+      "醤油とからしを混ぜる。",
+      "和えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "たけのこご飯",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "たけのこ",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "油揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "たけのこと油揚げを刻む。",
+      "米と具材、だし・醤油を入れて炊く。",
+      "炊き上がったら混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "野菜"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "アスパラのベーコン巻き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "アスパラ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "6枚",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "アスパラにベーコンを巻く。",
+      "フライパンで転がしながら焼く。",
+      "塩こしょうで味付けして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "冷やし中華",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "中華麺",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "麺を茹でて冷水で締める。",
+      "具材を細切りにする。",
+      "麺に具をのせタレをかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "そうめん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "そうめん",
+        "quantity": "2束",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "そうめんを茹でて冷水で締める。",
+      "薬味を用意する。",
+      "めんつゆでいただいて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "きゅうりとわかめの酢の物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "わかめ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きゅうりを薄切りにして塩もみする。",
+      "わかめを戻す。",
+      "酢と砂糖で和えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ゴーヤチャンプルー",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ゴーヤ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ゴーヤを薄切りにして塩もみする。",
+      "豚肉・豆腐・ゴーヤを炒める。",
+      "溶き卵を加え醤油で味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "トマトとモッツァレラのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "トマト",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "モッツァレラ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "トマトとチーズを薄切りにする。",
+      "交互に並べる。",
+      "オリーブオイルと塩こしょうをかけて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷やしトマトの塩昆布和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "トマト",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "トマトをくし切りにする。",
+      "塩昆布とごま油で和える。",
+      "冷やして完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "とうもろこしご飯",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "とうもろこし",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "とうもろこしの実を削ぐ。",
+      "米と実、塩を入れて炊く。",
+      "バターを混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "オクラのおひたし",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "オクラ",
+        "quantity": "8本",
+        "staple": false
+      },
+      {
+        "name": "かつお節",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "オクラを塩茹でする。",
+      "小口切りにする。",
+      "かつお節と醤油をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "夏野菜のラタトゥイユ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ズッキーニ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "パプリカ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を角切りにする。",
+      "にんにくと野菜を炒める。",
+      "トマトを加え煮込んで完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "枝豆",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "枝豆",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "枝豆を塩もみする。",
+      "たっぷりの湯で茹でる。",
+      "ザルにあげ塩をふって完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷汁",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "みょうが",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "味噌をだしで溶き冷やす。",
+      "きゅうりと薬味を刻む。",
+      "豆腐を崩し入れご飯にかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "豚しゃぶサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "豚しゃぶ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉をさっと茹でて冷ます。",
+      "野菜を切り皿に盛る。",
+      "豚肉をのせポン酢をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷製トマトパスタ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "トマトを角切りにしオイル・にんにくと和え冷やす。",
+      "パスタを茹でて冷水で締める。",
+      "ソースと和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "きゅうりの浅漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "きゅうり",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "昆布",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きゅうりを乱切りにする。",
+      "塩と昆布を加え揉む。",
+      "冷蔵庫で30分置いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "なすの煮浸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "3本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なすを切り油で焼く。",
+      "だしと調味料で煮る。",
+      "冷やして味を染ませて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ピーマンの肉詰め",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "ピーマン",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "合いびき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ピーマンを半分に切る。",
+      "肉だねを詰める。",
+      "焼いてケチャップソースをかけて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "ひき肉"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷やし茶碗蒸し",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵とだしを混ぜ濾す。",
+      "具を入れ蒸す。",
+      "冷やして完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "スタミナ豚キムチ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉を炒める。",
+      "キムチとニラを加える。",
+      "醤油で味を整えて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ズッキーニのチーズ焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ズッキーニ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "チーズ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ズッキーニを輪切りにする。",
+      "オイルで焼く。",
+      "チーズをのせて溶かして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ガパオライス",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "パプリカ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ひき肉と野菜を炒める。",
+      "調味料で味付けする。",
+      "ご飯にのせ目玉焼きを添えて完成。"
+    ],
+    "tags": [
+      "エスニック",
+      "主菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "春雨サラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "春雨",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "春雨を戻す。",
+      "具材を細切りにする。",
+      "調味料で和えて完成。"
+    ],
+    "tags": [
+      "中華",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "アスパラと卵の炒め物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "アスパラ",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "サラダ油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "アスパラを斜め切りにする。",
+      "卵を半熟に炒め取り出す。",
+      "アスパラを炒め卵を戻し塩こしょうで完成。"
+    ],
+    "tags": [
+      "中華",
+      "副菜",
+      "春"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "新じゃがの煮っころがし",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "新じゃがいも",
+        "quantity": "10個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "新じゃがを皮ごと下茹でする。",
+      "油で炒める。",
+      "調味料を絡めて煮て完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "春"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "キャベツとツナの和風パスタ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "春キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パスタとキャベツを一緒に茹でる。",
+      "ツナと炒める。",
+      "醤油・バターで和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "春"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "いちごのミルクプリン",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "いちご",
+        "quantity": "6個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "300ml",
+        "staple": false
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ゼラチン",
+        "quantity": "5g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "牛乳と砂糖を温めゼラチンを溶かす。",
+      "型に流し冷やし固める。",
+      "いちごを飾って完成。"
+    ],
+    "tags": [
+      "デザート",
+      "洋食",
+      "春"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "豆ご飯",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "グリンピース",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "米に塩と酒を加える。",
+      "グリンピースをのせて炊く。",
+      "さっくり混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "春"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "冷やしうどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "うどんを茹でて冷水で締める。",
+      "薬味と具を用意する。",
+      "めんつゆをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "パプリカのマリネ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "パプリカ",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パプリカを焼いて皮をむく。",
+      "細切りにする。",
+      "調味料でマリネして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷製コーンスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "とうもろこし",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "コーンと玉ねぎを炒める。",
+      "水とコンソメで煮てミキサーにかける。",
+      "牛乳を加え冷やして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "鶏むね肉のよだれ鶏",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を茹でて薄切りにする。",
+      "ねぎと調味料でタレを作る。",
+      "鶏肉にタレをかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "みょうがの甘酢漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "みょうが",
+        "quantity": "5個",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "みょうがをさっと茹でる。",
+      "甘酢に漬ける。",
+      "冷やして完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "冷しゃぶそうめん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "そうめん",
+        "quantity": "2束",
+        "staple": false
+      },
+      {
+        "name": "豚しゃぶ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "そうめんを茹でて締める。",
+      "豚肉を茹でて冷ます。",
+      "具をのせめんつゆをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "アボカドとエビのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "エビ",
+        "quantity": "8尾",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "レモン",
+        "quantity": "少々",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "エビを茹でる。",
+      "アボカドを角切りにする。",
+      "マヨネーズとレモンで和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer",
+      "all"
+    ]
+  },
+  {
+    "title": "オクラと長芋のネバネバ丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "オクラ",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "長芋",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "納豆",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "オクラを茹でて刻む。",
+      "長芋をすりおろす。",
+      "ご飯にのせ醤油をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "さんまの塩焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "さんま",
+        "quantity": "2尾",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "大根",
+        "quantity": "1/6本",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "さんまに塩をふる。",
+      "グリルで両面を焼く。",
+      "大根おろしを添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "魚"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鮭ときのこのホイル焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ホイルに鮭と野菜をのせる。",
+      "バターと醤油をかけ包む。",
+      "フライパンで蒸し焼きにして完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "魚"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "さつまいもご飯",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "さつまいも",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "さつまいもを角切りにする。",
+      "米に塩と酒を加えさつまいもをのせて炊く。",
+      "混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "きのこの炊き込みご飯",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "まいたけ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "油揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きのこと油揚げを刻む。",
+      "米と具、だし・醤油を入れて炊く。",
+      "混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "かぼちゃの煮物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "かぼちゃ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぼちゃを一口大に切る。",
+      "だしと調味料で煮る。",
+      "柔らかくなったら完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "里芋の煮っころがし",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "里芋",
+        "quantity": "8個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "里芋の皮をむく。",
+      "だしと調味料で煮る。",
+      "煮汁が絡んだら完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "れんこんのきんぴら",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "れんこん",
+        "quantity": "1節",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "れんこんを薄切りにする。",
+      "ごま油で炒める。",
+      "調味料を絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "きのこのバター醤油炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "エリンギ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きのこをほぐす。",
+      "バターで炒める。",
+      "醤油を回しかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "秋鮭のちゃんちゃん焼き",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を切る。",
+      "鮭と野菜を焼く。",
+      "味噌とバターを絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "栗ご飯",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 70,
+    "ingredients": [
+      {
+        "name": "栗",
+        "quantity": "10個",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "栗の皮をむく。",
+      "米に塩・酒を加え栗をのせて炊く。",
+      "混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "おでん",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "大根",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "こんにゃく",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "ちくわ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "1L",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根と卵を下茹でする。",
+      "だしと醤油で具材を煮る。",
+      "味が染みるまで煮込んで完成。"
+    ],
+    "tags": [
+      "和食",
+      "煮物",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ぶり大根",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "ぶり",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根を下茹でする。",
+      "ぶりを湯通しする。",
+      "調味料と生姜で煮込んで完成。"
+    ],
+    "tags": [
+      "和食",
+      "煮物",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "寄せ鍋",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "1L",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "具材を切る。",
+      "だしで煮る。",
+      "ポン酢や薬味でいただいて完成。"
+    ],
+    "tags": [
+      "和食",
+      "鍋",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "キムチ鍋",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "800ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "具材を切る。",
+      "だしとキムチ・味噌で煮る。",
+      "全体に火が通ったら完成。"
+    ],
+    "tags": [
+      "韓国",
+      "鍋",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "湯豆腐",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "昆布",
+        "quantity": "1枚",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "昆布だしを温める。",
+      "豆腐を入れて温める。",
+      "ポン酢と薬味でいただいて完成。"
+    ],
+    "tags": [
+      "和食",
+      "鍋",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "大根と豚バラの煮物",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "大根",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根を厚めに切り下茹でする。",
+      "豚肉と大根を炒める。",
+      "だしと調味料で煮込んで完成。"
+    ],
+    "tags": [
+      "和食",
+      "煮物",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "白菜と鶏肉のクリーム煮",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "300ml",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉と白菜を炒める。",
+      "小麦粉をふり牛乳を加える。",
+      "とろみがつくまで煮て完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ほうれん草とベーコンのソテー",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ほうれん草",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ほうれん草をざく切りにする。",
+      "にんにくとベーコンを炒める。",
+      "ほうれん草を加え塩こしょうで完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "牡蠣の土手鍋",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "牡蠣",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "春菊",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "800ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鍋の縁に味噌を塗る。",
+      "だしと具材を入れて煮る。",
+      "味噌を溶きながらいただいて完成。"
+    ],
+    "tags": [
+      "和食",
+      "鍋",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "かぶの浅漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "かぶ",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "昆布",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぶを薄切りにする。",
+      "塩と昆布で揉む。",
+      "冷蔵庫で置いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ビーフシチュー",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 90,
+    "ingredients": [
+      {
+        "name": "牛すね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "デミグラスソース",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "赤ワイン",
+        "quantity": "100ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "牛肉を焼き野菜と煮込む。",
+      "赤ワインとデミグラスを加える。",
+      "肉が柔らかくなるまで煮込んで完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "グラタン",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "マカロニ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "400ml",
+        "staple": false
+      },
+      {
+        "name": "チーズ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "20g",
+        "staple": true
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ホワイトソースを作る。",
+      "具材とマカロニを混ぜる。",
+      "チーズをのせて焼いて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "肉まん",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "豚ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "薄力粉",
+        "quantity": "200g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生地をこねて発酵させる。",
+      "肉あんを作り包む。",
+      "蒸し器で蒸して完成。"
+    ],
+    "tags": [
+      "中華",
+      "軽食",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "みぞれ鍋",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "大根",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "800ml",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根をおろす。",
+      "だしで豚肉と白菜を煮る。",
+      "大根おろしを加えポン酢で完成。"
+    ],
+    "tags": [
+      "和食",
+      "鍋",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "春菊のごま和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "春菊",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "春菊を茹でて絞る。",
+      "ごま・醤油・砂糖を混ぜる。",
+      "和えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "根菜の筑前煮",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "れんこん",
+        "quantity": "1節",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごぼう",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "こんにゃく",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "具材を乱切りにする。",
+      "鶏肉と野菜を炒める。",
+      "だしと調味料で煮含めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "煮物",
+      "冬"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "かぼちゃのポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "かぼちゃ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぼちゃと玉ねぎを炒め煮る。",
+      "ミキサーにかける。",
+      "牛乳を加え温めて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "さつまいもの天ぷら",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "さつまいも",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "100g",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "さつまいもを輪切りにする。",
+      "衣をつける。",
+      "170度の油で揚げて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "きのこのポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "マッシュルーム",
+        "quantity": "5個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きのこと玉ねぎを炒める。",
+      "水とコンソメで煮てミキサーにかける。",
+      "牛乳を加えて温めて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鶏と根菜の味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/6本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ごぼう",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉と根菜を切る。",
+      "だしで煮る。",
+      "味噌を溶いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "冬"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "焼き芋",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "さつまいも",
+        "quantity": "2本",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "さつまいもを洗う。",
+      "アルミホイルで包む。",
+      "オーブンでじっくり焼いて完成。"
+    ],
+    "tags": [
+      "デザート",
+      "和食",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "ぶりの照り焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "ぶり",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ぶりを焼く。",
+      "調味料を加える。",
+      "煮絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "白菜の中華スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜を切る。",
+      "スープで白菜を煮る。",
+      "溶き卵を回し入れごま油で完成。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "肉豆腐",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしと調味料を煮立てる。",
+      "牛肉と豆腐、ねぎを加える。",
+      "煮含めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "さといもの味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "里芋",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "油揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "里芋を切って下茹でする。",
+      "だしで里芋と油揚げを煮る。",
+      "味噌を溶いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鮭のクリームパスタ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "鮭",
+        "quantity": "1切れ",
+        "staple": false
+      },
+      {
+        "name": "ほうれん草",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1/2個",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鮭とほうれん草を炒める。",
+      "牛乳とコンソメでソースを作る。",
+      "パスタと和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "秋"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "きのこたっぷりすき焼き風煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "しいたけ",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "割り下を作る。",
+      "牛肉ときのこ、ねぎを煮る。",
+      "味が染みたら完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "エビチリ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "エビ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "豆板醤",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "エビの下処理をする。",
+      "ねぎと調味料でソースを作る。",
+      "エビを炒めソースと絡めて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "エビ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "酢豚",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉に衣をつけて揚げる。",
+      "野菜を炒める。",
+      "甘酢あんと絡めて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "天津飯",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "カニカマ",
+        "quantity": "4本",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵とカニカマで卵焼きを作る。",
+      "ご飯にのせる。",
+      "甘酢あんをかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "丼",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "チンジャオロース丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉とピーマンを細切りにする。",
+      "炒めて調味料で味付けする。",
+      "ご飯にのせて完成。"
+    ],
+    "tags": [
+      "中華",
+      "丼",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ビビンバ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "ほうれん草",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜をそれぞれナムルにする。",
+      "牛肉を炒める。",
+      "ご飯に具をのせ卵を添えて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "丼",
+      "牛肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "チヂミ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "100g",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を細切りにする。",
+      "粉と卵、水で生地を作る。",
+      "両面をカリッと焼いて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "軽食",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "タッカルビ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "さつまいも",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉に下味をつける。",
+      "野菜と一緒に炒める。",
+      "コチュジャンだれを絡めて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "チキン南蛮",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉に衣をつけて揚げ焼きにする。",
+      "甘酢を絡める。",
+      "タルタルソースをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "とんかつ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "豚ロース肉",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉に塩こしょうをする。",
+      "小麦粉・卵・パン粉をつける。",
+      "170度の油で揚げて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "カツ丼",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "とんかつ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "100ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしと調味料で玉ねぎを煮る。",
+      "カツをのせ卵でとじる。",
+      "ご飯にのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "エビフライ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "エビ",
+        "quantity": "8尾",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "エビの下処理をして開く。",
+      "衣をつける。",
+      "180度で揚げて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "エビ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏むね肉のチキンカツ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉をそぎ切りにする。",
+      "衣をつける。",
+      "揚げ焼きにして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "肉野菜炒め定食風",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を切る。",
+      "豚肉と野菜を炒める。",
+      "調味料で味付けして完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚キムチチャーハン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉とキムチを炒める。",
+      "ご飯と卵を加えて炒める。",
+      "醤油で味を整えて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "主食",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ドライカレー",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "合いびき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜をみじん切りにする。",
+      "ひき肉と野菜を炒める。",
+      "カレー粉で味付けしご飯にのせて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主食",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "麻婆春雨",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "春雨",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "豆板醤",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ひき肉とねぎを炒める。",
+      "スープと春雨を加える。",
+      "煮て味を含ませて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼き鳥丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉とねぎを焼く。",
+      "タレを絡める。",
+      "ご飯にのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚の角煮",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 120,
+    "ingredients": [
+      {
+        "name": "豚バラ肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚バラを下茹でする。",
+      "調味料と生姜で煮込む。",
+      "とろとろになるまで煮て完成。"
+    ],
+    "tags": [
+      "和食",
+      "煮物",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏そぼろと卵の二色丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏そぼろを作る。",
+      "炒り卵を作る。",
+      "ご飯に二色にのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豆腐ハンバーグ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐の水を切る。",
+      "材料を混ねて成形する。",
+      "焼いて和風あんをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏だんごスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ひき肉でだんごを作る。",
+      "スープで野菜とだんごを煮る。",
+      "味を整えて完成。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼き餃子と野菜炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "冷凍餃子",
+        "quantity": "10個",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "餃子を焼く。",
+      "野菜を炒める。",
+      "皿に盛り合わせて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "オムレツ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "チーズ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵と牛乳を混ぜる。",
+      "バターで焼く。",
+      "チーズを包んで成形して完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "フレンチトースト",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "100ml",
+        "staple": false
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵液に食パンを浸す。",
+      "バターで両面を焼く。",
+      "お好みでシロップをかけて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "軽食",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ホットケーキ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ホットケーキミックス",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "100ml",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "材料を混ぜる。",
+      "弱火で両面を焼く。",
+      "バターをのせて完成。"
+    ],
+    "tags": [
+      "デザート",
+      "軽食",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "納豆チャーハン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵とご飯を炒める。",
+      "納豆とねぎを加える。",
+      "醤油で味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "納豆"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "煮込みハンバーグ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "合いびき肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "デミグラスソース",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ハンバーグだねを作り焼く。",
+      "デミグラスソースときのこで煮込む。",
+      "とろみがついたら完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏もも肉の南蛮漬け",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉を揚げ焼きにする。",
+      "南蛮酢に野菜と漬ける。",
+      "味を馴染ませて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚バラと大根の炒め煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "豚バラ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根を薄切りにする。",
+      "豚バラと大根を炒める。",
+      "だしと調味料で煮て完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "無限ピーマン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ピーマン",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ピーマンを細切りにする。",
+      "ツナと調味料を混ぜる。",
+      "レンジで加熱して完成。"
+    ],
+    "tags": [
+      "中華",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "もやしナムル",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "もやしを茹でる。",
+      "水気を切る。",
+      "調味料で和えて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "にんじんしりしり",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "にんじん",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "にんじんを千切りにする。",
+      "ツナと炒める。",
+      "卵を加え醤油で味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "きゅうりとちくわの和え物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ちくわ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きゅうりとちくわを切る。",
+      "マヨネーズと醤油で和える。",
+      "器に盛って完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "卵スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "スープを煮立てる。",
+      "水溶き片栗粉でとろみをつける。",
+      "溶き卵を回し入れて完成。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "わかめスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "わかめ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "わかめを戻す。",
+      "スープを温める。",
+      "わかめとごまを加えて完成。"
+    ],
+    "tags": [
+      "韓国",
+      "汁物",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚バラ白菜のうま煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜と豚肉を切る。",
+      "炒めてスープで煮る。",
+      "とろみをつけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "しらす丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "しらす",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "1膳",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ご飯を盛る。",
+      "しらすと卵黄をのせる。",
+      "ねぎと醤油をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼きうどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ソース",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "肉と野菜を炒める。",
+      "うどんを加える。",
+      "醤油とソースで味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "たらこパスタ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "たらこ",
+        "quantity": "2腹",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "刻みのり",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "たらこをほぐしバターと混ぜる。",
+      "茹でたパスタと和える。",
+      "のりをのせて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "パスタ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ペペロンチーノ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "2片",
+        "staple": true
+      },
+      {
+        "name": "唐辛子",
+        "quantity": "1本",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "にんにくと唐辛子をオイルで炒める。",
+      "茹で汁を加え乳化させる。",
+      "パスタと和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "パスタ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "肉野菜あんかけ焼きそば",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "中華麺",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "麺を焼いて皿に盛る。",
+      "肉と野菜を炒めスープで煮る。",
+      "とろみをつけ麺にかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "麺",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚バラなすの甘辛炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なすを乱切りにする。",
+      "豚バラとなすを炒める。",
+      "甘辛だれを絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "なす"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "鶏むね肉のマヨネーズ焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉をそぎ切りにする。",
+      "マヨネーズと調味料を絡める。",
+      "焼いて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "厚揚げの甘辛炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げとピーマンを切る。",
+      "炒める。",
+      "甘辛だれを絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "厚揚げ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "卵かけご飯アレンジ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "1膳",
+        "staple": false
+      },
+      {
+        "name": "しらす",
+        "quantity": "20g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ご飯に卵を割り入れる。",
+      "しらすをのせる。",
+      "醤油をかけて混ぜて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "小松菜と油揚げの煮浸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "小松菜",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "油揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小松菜と油揚げを切る。",
+      "だしと醤油で煮る。",
+      "味を含ませて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "豚肉ともやしの塩炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉を炒める。",
+      "もやしとニラを加える。",
+      "塩こしょうと鶏がらで味付けして完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "きのこの和風パスタ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きのことベーコンを炒める。",
+      "パスタを加える。",
+      "醤油とバターで和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鶏皮ぽん酢",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏皮",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏皮を茹でる。",
+      "食べやすく切る。",
+      "ねぎとポン酢で和えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "おつまみ",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "たこときゅうりの酢の物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "たこ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "たこときゅうりを切る。",
+      "甘酢を作る。",
+      "和えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "豚こまと白菜の中華煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "具材を切る。",
+      "炒めてスープで煮る。",
+      "とろみをつけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "アボカドとまぐろの丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "まぐろ",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "まぐろとアボカドを角切りにする。",
+      "醤油とわさびで和える。",
+      "ご飯にのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ミネストローネ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "トマト缶",
+        "quantity": "1/2缶",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜を角切りにする。",
+      "炒めてトマトとコンソメで煮る。",
+      "野菜が柔らかくなったら完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "きのこと鶏肉のトマト煮",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "トマト缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉を焼く。",
+      "野菜とトマトで煮込む。",
+      "味を整えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "豆腐とわかめのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "わかめ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜と豆腐を器に盛る。",
+      "わかめを戻して加える。",
+      "和風ドレッシングをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "キャベツたっぷりお好み焼き",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "豚バラ肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "100g",
+        "staple": true
+      },
+      {
+        "name": "ソース",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツと生地を混ぜる。",
+      "豚肉をのせて両面焼く。",
+      "ソースとマヨネーズをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "たこ焼き風卵焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "たこ",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ソース",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵とだしを混ぜる。",
+      "たことねぎを加え焼く。",
+      "ソースをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚肉の梅しそ巻き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "豚ロース薄切り肉",
+        "quantity": "8枚",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "8枚",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉に大葉と梅をのせて巻く。",
+      "焼く。",
+      "醤油を絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ちくわの磯辺揚げ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ちくわ",
+        "quantity": "4本",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "50g",
+        "staple": true
+      },
+      {
+        "name": "青のり",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ちくわを切る。",
+      "青のり入りの衣をつける。",
+      "揚げて完成。"
+    ],
+    "tags": [
+      "和食",
+      "おつまみ",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "コロッケ",
+    "difficulty": "hard",
+    "cookingTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "じゃがいも",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "合いびき肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "じゃがいもを潰しひき肉と混ぜる。",
+      "成形して衣をつける。",
+      "揚げて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "肉うどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "牛こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "牛肉を甘辛く煮る。",
+      "だしつゆを作りうどんを温める。",
+      "肉とねぎをのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "牛肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ツナマヨ丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "1膳",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ツナとマヨネーズを混ぜる。",
+      "ご飯にのせる。",
+      "ねぎと醤油をかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚肉と厚揚げのオイスター炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "厚揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "材料を切る。",
+      "豚肉と厚揚げ、ピーマンを炒める。",
+      "オイスターソースで味付けして完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "だし茶漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "1膳",
+        "staple": false
+      },
+      {
+        "name": "鮭",
+        "quantity": "1/2切れ",
+        "staple": false
+      },
+      {
+        "name": "刻みのり",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "焼いた鮭をほぐす。",
+      "ご飯にのせる。",
+      "熱いだしをかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ほうれん草とコーンのバター炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ほうれん草",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "コーン缶",
+        "quantity": "1/2缶",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ほうれん草を切る。",
+      "バターで炒める。",
+      "コーンと塩こしょうで味付けして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "鶏むね肉の照り焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉に片栗粉をまぶす。",
+      "焼く。",
+      "照り焼きだれを絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "冷やし担々麺",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "中華麺",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごまだれ",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ひき肉を炒め肉味噌を作る。",
+      "麺を茹でて冷やす。",
+      "ごまだれと肉味噌をのせて完成。"
+    ],
+    "tags": [
+      "中華",
+      "麺",
+      "夏"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "豚汁うどん",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/6本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "800ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚汁を作る。",
+      "うどんを加えて煮る。",
+      "味噌を溶いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "簡単ピザトースト",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "ピーマン",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ウインナー",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "チーズ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パンにケチャップを塗る。",
+      "具とチーズをのせる。",
+      "トースターで焼いて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "軽食",
+      "パン"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "小松菜と豚肉の炒め物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "小松菜",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小松菜を切る。",
+      "豚肉と炒める。",
+      "調味料で味付けして完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "野菜"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "とろろ昆布のお吸い物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "とろろ昆布",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "椀にとろろ昆布を入れる。",
+      "熱いだしを注ぐ。",
+      "ねぎと醤油を加えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚バラともやしの重ね蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚バラ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "2袋",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "もやしを敷き豚肉をのせる。",
+      "酒を回しかけ蒸す。",
+      "ポン酢でいただいて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "かぼちゃサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "かぼちゃ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぼちゃを茹でて潰す。",
+      "きゅうりとハムを加える。",
+      "マヨネーズで和えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "きんぴられんこん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "れんこん",
+        "quantity": "1節",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "れんこんとにんじんを切る。",
+      "ごま油で炒める。",
+      "調味料を絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "秋"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "サバの味噌煮",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "さば",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "さばを湯通しする。",
+      "調味料と生姜で煮る。",
+      "煮汁を絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "魚"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "肉巻きおにぎり",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "豚ロース薄切り肉",
+        "quantity": "6枚",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "おにぎりを握る。",
+      "豚肉を巻いて焼く。",
+      "甘辛だれを絡めて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主食",
+      "豚肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "白菜と豚肉のあんかけ丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉と白菜を炒める。",
+      "スープで煮てとろみをつける。",
+      "ご飯にかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "丼",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ミートソースパスタ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "quantity": "160g",
+        "staple": false
+      },
+      {
+        "name": "合いびき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "トマト缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "野菜をみじん切りにする。",
+      "ひき肉と炒めトマトで煮込む。",
+      "パスタにかけて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "麺",
+      "ひき肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豆苗と豚肉の炒め物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "豆苗",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆苗を切る。",
+      "豚肉と炒める。",
+      "調味料で味付けして完成。"
+    ],
+    "tags": [
+      "中華",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "納豆オムレツ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "納豆",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "サラダ油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵と納豆、ねぎを混ぜる。",
+      "フライパンで焼く。",
+      "半熟に巻いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鮭とほうれん草のバター醤油",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "ほうれん草",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鮭を焼く。",
+      "ほうれん草を加える。",
+      "バター醤油で味付けして完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "冬"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "オニオングラタンスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "玉ねぎ",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "食パン",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "チーズ",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "1個",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "玉ねぎをあめ色になるまで炒める。",
+      "水とコンソメで煮る。",
+      "パンとチーズをのせて焼いて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
   }
 ]

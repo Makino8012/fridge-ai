@@ -1,9 +1,15 @@
 import type { RecipeSuggestion } from '@/lib/ai/types';
+import type { CurrentSeason } from '@/lib/date';
 import type { LocalRecipe } from '@/lib/recipes/types';
 
 export interface InventoryItem {
   name: string;
   expiringSoon: boolean;
+}
+
+function isInSeason(recipe: LocalRecipe, season: CurrentSeason | undefined): boolean {
+  if (!season) return true;
+  return recipe.seasons.includes('all') || recipe.seasons.includes(season);
 }
 
 // 常備調味料として扱うキーワード。辞書のstapleフラグに加え、名前でも判定して取りこぼしを防ぐ。
@@ -114,18 +120,50 @@ function evaluate(recipe: LocalRecipe, inventory: InventoryItem[]): EvaluatedRec
 export function findMakeableRecipes(
   recipes: LocalRecipe[],
   inventory: InventoryItem[],
-  limit = 10,
+  currentSeason?: CurrentSeason,
+  limit = 12,
 ): RecipeSuggestion[] {
   const makeable = recipes
     .map((r) => evaluate(r, inventory))
     .filter((e) => e.missing.length === 0);
 
   makeable.sort((a, b) => {
+    // 1. 賞味期限が近い食材を使うレシピを最優先
     if (a.usesExpiring !== b.usesExpiring) return a.usesExpiring ? -1 : 1;
+    // 2. 旬のレシピを優先
+    const aSeason = isInSeason(a.recipe, currentSeason);
+    const bSeason = isInSeason(b.recipe, currentSeason);
+    if (aSeason !== bSeason) return aSeason ? -1 : 1;
+    // 3. 調理時間が短い順
     return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
   });
 
   return makeable.slice(0, limit).map((e) => e.suggestion);
+}
+
+/**
+ * 現在の季節が旬のレシピを返す('all'通年は含めない、その季節ならではのものを提示)。
+ * 在庫で作れるものを優先しつつ、不足が少ない順に並べる。
+ */
+export function findSeasonalRecipes(
+  recipes: LocalRecipe[],
+  inventory: InventoryItem[],
+  currentSeason: CurrentSeason,
+  limit = 12,
+): { missingCount: number; recipe: RecipeSuggestion }[] {
+  const seasonal = recipes
+    .filter((r) => r.seasons.includes(currentSeason))
+    .map((r) => evaluate(r, inventory));
+
+  seasonal.sort((a, b) => {
+    if (a.missing.length !== b.missing.length) return a.missing.length - b.missing.length;
+    return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
+  });
+
+  return seasonal.slice(0, limit).map((e) => ({
+    missingCount: e.missing.length,
+    recipe: e.suggestion,
+  }));
 }
 
 /**

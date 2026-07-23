@@ -1,4 +1,4 @@
-# 冷蔵庫AI
+# Kukku
 
 家庭用の食材在庫管理 + AIレシピ提案Webアプリ。Next.js (App Router) + Supabase + Claude APIで構築。
 

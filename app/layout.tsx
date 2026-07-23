@@ -4,13 +4,13 @@ import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '冷蔵庫AI',
-  description: '家庭用の食材在庫管理 + AIレシピ提案アプリ',
+  title: 'Kukku',
+  description: '家庭用の食材在庫管理 + レシピ提案アプリ',
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: '冷蔵庫AI',
+    title: 'Kukku',
   },
   icons: {
     icon: [

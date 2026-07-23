@@ -1,8 +1,9 @@
 import recipesData from '@/data/recipes.json';
-import { getExpiryStatus } from '@/lib/date';
+import { getCurrentSeason, getExpiryStatus } from '@/lib/date';
 import {
   findAlmostMakeableRecipes,
   findMakeableRecipes,
+  findSeasonalRecipes,
   type InventoryItem,
 } from '@/lib/recipes/matcher';
 import type { LocalRecipe } from '@/lib/recipes/types';
@@ -23,10 +24,15 @@ async function getInventory(): Promise<InventoryItem[]> {
 
 export async function getMakeableRecipes() {
   const inventory = await getInventory();
-  return findMakeableRecipes(RECIPES, inventory);
+  return findMakeableRecipes(RECIPES, inventory, getCurrentSeason());
 }
 
 export async function getAlmostMakeableRecipes(missingIngredientName?: string) {
   const inventory = await getInventory();
   return findAlmostMakeableRecipes(RECIPES, inventory, missingIngredientName);
+}
+
+export async function getSeasonalRecipes() {
+  const inventory = await getInventory();
+  return findSeasonalRecipes(RECIPES, inventory, getCurrentSeason());
 }
