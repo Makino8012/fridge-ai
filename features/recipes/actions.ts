@@ -2,7 +2,32 @@
 
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as recipeService from '@/services/recipes/recipe-service';
+import * as localRecipeService from '@/services/recipes/local-recipe-service';
 import type { MenuPlanTimeframe, RecipeSuggestion } from '@/lib/ai/types';
+
+// ===== 無料モード(ローカルレシピ辞書・API課金なし) =====
+
+export async function findMakeableRecipesAction(): Promise<ActionResult<RecipeSuggestion[]>> {
+  try {
+    const recipes = await localRecipeService.getMakeableRecipes();
+    return actionSuccess(recipes);
+  } catch {
+    return actionError('レシピの取得に失敗しました');
+  }
+}
+
+export async function findAlmostMakeableAction(
+  missingIngredientName?: string,
+): Promise<ActionResult<{ missingIngredient: string; recipe: RecipeSuggestion }[]>> {
+  try {
+    const recipes = await localRecipeService.getAlmostMakeableRecipes(missingIngredientName);
+    return actionSuccess(recipes);
+  } catch {
+    return actionError('レシピの取得に失敗しました');
+  }
+}
+
+// ===== AIモード(その都度Claude APIを呼ぶ・課金あり) =====
 
 export async function suggestRecipesAction(): Promise<ActionResult<RecipeSuggestion[]>> {
   try {
