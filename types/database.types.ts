@@ -43,6 +43,7 @@ export interface Database {
         };
         Insert: Partial<Database['public']['Tables']['households']['Row']>;
         Update: Partial<Database['public']['Tables']['households']['Row']>;
+        Relationships: [];
       };
       profiles: {
         Row: {
@@ -55,16 +56,19 @@ export interface Database {
         };
         Insert: Partial<Database['public']['Tables']['profiles']['Row']> & { id: string };
         Update: Partial<Database['public']['Tables']['profiles']['Row']>;
+        Relationships: [];
       };
       categories: {
         Row: { id: CategoryId; label_ja: string; icon: string; sort_order: number };
         Insert: Database['public']['Tables']['categories']['Row'];
         Update: Partial<Database['public']['Tables']['categories']['Row']>;
+        Relationships: [];
       };
       storage_locations: {
         Row: { id: StorageLocationId; label_ja: string; sort_order: number };
         Insert: Database['public']['Tables']['storage_locations']['Row'];
         Update: Partial<Database['public']['Tables']['storage_locations']['Row']>;
+        Relationships: [];
       };
       ingredients: {
         Row: {
@@ -91,6 +95,7 @@ export interface Database {
           storage_location_id: StorageLocationId;
         };
         Update: Partial<Database['public']['Tables']['ingredients']['Row']>;
+        Relationships: [];
       };
       ingredient_logs: {
         Row: {
@@ -109,6 +114,7 @@ export interface Database {
           reason: IngredientLogReason;
         };
         Update: Partial<Database['public']['Tables']['ingredient_logs']['Row']>;
+        Relationships: [];
       };
       shopping_list_items: {
         Row: {
@@ -129,6 +135,7 @@ export interface Database {
           name: string;
         };
         Update: Partial<Database['public']['Tables']['shopping_list_items']['Row']>;
+        Relationships: [];
       };
       recipe_favorites: {
         Row: {
@@ -145,6 +152,7 @@ export interface Database {
           recipe_data: Json;
         };
         Update: Partial<Database['public']['Tables']['recipe_favorites']['Row']>;
+        Relationships: [];
       };
       recipe_history: {
         Row: {
@@ -163,8 +171,10 @@ export interface Database {
           response_data: Json;
         };
         Update: Partial<Database['public']['Tables']['recipe_history']['Row']>;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
     Functions: {
       join_household_by_invite: {
         Args: { p_invite_token: string; p_display_name: string };
@@ -183,5 +193,7 @@ export interface Database {
         Returns: number;
       };
     };
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 }
