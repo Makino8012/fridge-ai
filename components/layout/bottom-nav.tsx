@@ -27,11 +27,18 @@ export function BottomNav() {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex flex-col items-center gap-1 py-2.5 text-[11px] transition-colors',
+                'flex flex-col items-center gap-1 py-2 text-[11px] transition-colors',
                 isActive ? 'text-primary' : 'text-muted-foreground',
               )}
             >
-              <Icon className="size-6" strokeWidth={isActive ? 2.25 : 1.75} />
+              <span
+                className={cn(
+                  'flex h-8 w-12 items-center justify-center rounded-full transition-colors',
+                  isActive && 'bg-primary/10',
+                )}
+              >
+                <Icon className="size-[22px]" strokeWidth={isActive ? 2.25 : 1.75} />
+              </span>
               {item.label}
             </Link>
           );

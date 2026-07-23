@@ -1,19 +1,10 @@
 import { Header } from '@/components/layout/header';
 import { StockSummaryCards } from '@/features/dashboard/components/stock-summary-card';
 import { TodaysSuggestionCard } from '@/features/dashboard/components/todays-suggestion-card';
-import { getDashboardSummary, getTodaysSuggestion } from '@/services/dashboard/dashboard-service';
-import type { WasteReductionOutput } from '@/lib/ai/types';
+import { getDashboardSummary } from '@/services/dashboard/dashboard-service';
 
 export default async function DashboardPage() {
   const summary = await getDashboardSummary();
-
-  let suggestion: WasteReductionOutput | null = null;
-  let aiUnavailable = false;
-  try {
-    suggestion = await getTodaysSuggestion();
-  } catch {
-    aiUnavailable = true;
-  }
 
   return (
     <>
@@ -24,7 +15,7 @@ export default async function DashboardPage() {
           expiredCount={summary.expiredCount}
           expiringSoonCount={summary.expiringSoonCount}
         />
-        <TodaysSuggestionCard suggestion={suggestion} aiUnavailable={aiUnavailable} />
+        <TodaysSuggestionCard />
       </div>
     </>
   );
