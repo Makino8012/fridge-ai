@@ -42,6 +42,23 @@ function toToolInputSchema(schema: ZodType) {
   return jsonSchema as Anthropic.Tool.InputSchema;
 }
 
+// Anthropic APIのエラーから、ユーザーに表示すべき原因メッセージを判定する。
+function userMessageForApiError(error: unknown): string | undefined {
+  if (error instanceof Anthropic.APIError) {
+    const msg = (error.message ?? '').toLowerCase();
+    if (error.status === 400 && msg.includes('credit balance')) {
+      return 'AI機能を使うにはClaudeのクレジット残高が必要です。Anthropicコンソールの「Plans & Billing」からチャージしてください。';
+    }
+    if (error.status === 401) {
+      return 'Claude APIキーが正しくありません。設定を確認してください。';
+    }
+    if (error.status === 429) {
+      return 'AIへのリクエストが混み合っています。少し待ってからもう一度お試しください。';
+    }
+  }
+  return undefined;
+}
+
 export class ClaudeProvider implements AiProvider {
   private readonly client: Anthropic;
 
@@ -100,7 +117,11 @@ export class ClaudeProvider implements AiProvider {
     }
 
     if (lastError instanceof AiProviderError) throw lastError;
-    throw new AiProviderError('Claude APIの呼び出しに失敗しました', lastError);
+    throw new AiProviderError(
+      'Claude APIの呼び出しに失敗しました',
+      lastError,
+      userMessageForApiError(lastError),
+    );
   }
 
   async suggestRecipes(input: SuggestRecipesInput): Promise<SuggestRecipesOutput> {
@@ -205,6 +226,10 @@ export class ClaudeProvider implements AiProvider {
     }
 
     if (lastError instanceof AiProviderError) throw lastError;
-    throw new AiProviderError('レシートの解析に失敗しました', lastError);
+    throw new AiProviderError(
+      'レシートの解析に失敗しました',
+      lastError,
+      userMessageForApiError(lastError),
+    );
   }
 }

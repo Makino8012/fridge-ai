@@ -12,39 +12,6 @@ function isInSeason(recipe: LocalRecipe, season: CurrentSeason | undefined): boo
   return recipe.seasons.includes('all') || recipe.seasons.includes(season);
 }
 
-// 常備調味料として扱うキーワード。辞書のstapleフラグに加え、名前でも判定して取りこぼしを防ぐ。
-const STAPLE_KEYWORDS = [
-  '塩',
-  'こしょう',
-  '胡椒',
-  '醤油',
-  'しょうゆ',
-  '味噌',
-  'みそ',
-  '砂糖',
-  '酒',
-  'みりん',
-  '油',
-  'サラダ油',
-  'ごま油',
-  'オリーブ',
-  'だし',
-  'かつお節',
-  '片栗粉',
-  '小麦粉',
-  'パン粉',
-  'ケチャップ',
-  'マヨネーズ',
-  'ソース',
-  'オイスターソース',
-  'ポン酢',
-  'バター',
-  'コンソメ',
-  'にんにく',
-  '生姜',
-  'しょうが',
-];
-
 // 肉・魚の部位や切り方の表記を吸収し、「豚こま肉」と「豚肉」を同一視できるようにする。
 const CUT_TOKENS = ['こま', '細切れ', '切れ', 'スライス', '薄切り', 'バラ', 'もも', 'むね', 'ロース', 'ひき', '挽き', '挽'];
 
@@ -66,10 +33,10 @@ export function namesMatch(a: string, b: string): boolean {
   return na.includes(nb) || nb.includes(na);
 }
 
-function isStaple(ingredientName: string, stapleFlag: boolean): boolean {
-  if (stapleFlag) return true;
-  const n = normalize(ingredientName);
-  return STAPLE_KEYWORDS.some((kw) => n.includes(normalize(kw)));
+// 常備調味料かどうかは辞書の staple フラグだけで判定する。
+// 名前のキーワード一致に頼ると「油揚げ」を油と誤認するなど、誤ヒットの原因になるため使わない。
+function isStaple(_ingredientName: string, stapleFlag: boolean): boolean {
+  return stapleFlag;
 }
 
 // 在庫食材名とレシピ材料名を緩く突き合わせる(部分一致・双方向)。

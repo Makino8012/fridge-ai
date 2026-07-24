@@ -1,7 +1,7 @@
 'use client';
 
-import { useTransition } from 'react';
-import { Check, CookingPot, X } from 'lucide-react';
+import { useEffect, useState, useTransition } from 'react';
+import { Check, CookingPot, Minus, Plus, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
@@ -9,9 +9,12 @@ import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { FavoriteButton } from '@/features/recipes/components/favorite-button';
 import { cookRecipeAction } from '@/features/recipes/actions';
+import { BASE_SERVINGS, scaleQuantity, servingsRatio } from '@/lib/recipes/scale';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
 const DIFFICULTY_LABEL: Record<string, string> = { easy: '簡単', normal: '普通', hard: '本格的' };
+const MIN_SERVINGS = 1;
+const MAX_SERVINGS = 8;
 
 export function RecipeDetailDialog({
   recipe,
@@ -23,6 +26,12 @@ export function RecipeDetailDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const [isCooking, startCooking] = useTransition();
+  const [servings, setServings] = useState(BASE_SERVINGS);
+
+  // ダイアログを開くたびに基本(2人前)に戻す。
+  useEffect(() => {
+    if (open) setServings(BASE_SERVINGS);
+  }, [open]);
 
   function handleCooked() {
     if (!recipe) return;
@@ -44,6 +53,7 @@ export function RecipeDetailDialog({
   if (!recipe) return null;
 
   const hasOwned = recipe.ingredients.some((i) => i.owned);
+  const ratio = servingsRatio(servings);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -64,8 +74,35 @@ export function RecipeDetailDialog({
           </Badge>
         </div>
 
+        <div className="flex items-center justify-between rounded-xl border px-3 py-2">
+          <span className="text-sm font-medium">分量</span>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              className="size-8 rounded-full"
+              disabled={servings <= MIN_SERVINGS}
+              onClick={() => setServings((s) => Math.max(MIN_SERVINGS, s - 1))}
+              aria-label="人数を減らす"
+            >
+              <Minus className="size-4" />
+            </Button>
+            <span className="min-w-14 text-center text-sm font-medium tabular-nums">{servings}人前</span>
+            <Button
+              variant="outline"
+              size="icon"
+              className="size-8 rounded-full"
+              disabled={servings >= MAX_SERVINGS}
+              onClick={() => setServings((s) => Math.min(MAX_SERVINGS, s + 1))}
+              aria-label="人数を増やす"
+            >
+              <Plus className="size-4" />
+            </Button>
+          </div>
+        </div>
+
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold">必要な材料</h3>
+          <h3 className="text-sm font-semibold">必要な材料（{servings}人前）</h3>
           <ul className="space-y-1 text-sm">
             {recipe.ingredients.map((ing, i) => (
               <li key={i} className="flex items-center gap-2">
@@ -75,7 +112,7 @@ export function RecipeDetailDialog({
                   <X className="size-4 text-muted-foreground" />
                 )}
                 <span className={!ing.owned ? 'text-muted-foreground' : ''}>
-                  {ing.name} {ing.quantity}
+                  {ing.name} {scaleQuantity(ing.quantity, ratio)}
                 </span>
               </li>
             ))}

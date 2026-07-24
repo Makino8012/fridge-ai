@@ -159,8 +159,16 @@ export class AiProviderError extends Error {
   constructor(
     message: string,
     public override readonly cause?: unknown,
+    // ユーザーにそのまま表示してよい日本語メッセージ(課金不足など原因が明確なとき)。
+    public readonly userMessage?: string,
   ) {
     super(message);
     this.name = 'AiProviderError';
   }
+}
+
+/** unknown なエラーからユーザー向けの日本語メッセージを取り出す。 */
+export function aiErrorMessage(error: unknown, fallback: string): string {
+  if (error instanceof AiProviderError && error.userMessage) return error.userMessage;
+  return fallback;
 }

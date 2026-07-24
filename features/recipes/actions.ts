@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as recipeService from '@/services/recipes/recipe-service';
 import * as localRecipeService from '@/services/recipes/local-recipe-service';
-import type { MenuPlanTimeframe, RecipeSuggestion } from '@/lib/ai/types';
+import { aiErrorMessage, type MenuPlanTimeframe, type RecipeSuggestion } from '@/lib/ai/types';
 
 // ===== 無料モード(ローカルレシピ辞書・API課金なし) =====
 
@@ -45,8 +45,8 @@ export async function suggestRecipesAction(): Promise<ActionResult<RecipeSuggest
   try {
     const recipes = await recipeService.suggestRecipes();
     return actionSuccess(recipes);
-  } catch {
-    return actionError('レシピ提案の取得に失敗しました。しばらくしてから再度お試しください');
+  } catch (e) {
+    return actionError(aiErrorMessage(e, 'レシピ提案の取得に失敗しました。しばらくしてから再度お試しください'));
   }
 }
 
@@ -57,8 +57,8 @@ export async function suggestWithMissingIngredientAction(
   try {
     const recipes = await recipeService.suggestWithMissingIngredient(missingIngredientName.trim());
     return actionSuccess(recipes);
-  } catch {
-    return actionError('提案の取得に失敗しました。しばらくしてから再度お試しください');
+  } catch (e) {
+    return actionError(aiErrorMessage(e, '提案の取得に失敗しました。しばらくしてから再度お試しください'));
   }
 }
 
@@ -68,8 +68,8 @@ export async function suggestMenuPlanAction(
   try {
     const plans = await recipeService.suggestMenuPlan(timeframe);
     return actionSuccess(plans);
-  } catch {
-    return actionError('献立提案の取得に失敗しました。しばらくしてから再度お試しください');
+  } catch (e) {
+    return actionError(aiErrorMessage(e, '献立提案の取得に失敗しました。しばらくしてから再度お試しください'));
   }
 }
 

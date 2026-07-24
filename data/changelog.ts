@@ -7,6 +7,15 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.2.1',
+    date: '2026-07-24',
+    changes: [
+      'レシピを2人前基本にし、人数を変えると材料の分量も自動で変わるように',
+      '「在庫から探す」で、持っていない材料のレシピが誤って表示される不具合を修正',
+      'AI機能が使えないときに原因（クレジット残高不足など）を分かりやすく表示',
+    ],
+  },
+  {
     version: '1.2.0',
     date: '2026-07-24',
     changes: [
