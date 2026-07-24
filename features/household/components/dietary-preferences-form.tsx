@@ -28,11 +28,14 @@ function fromCsv(text: string): string[] {
 export function DietaryPreferencesForm({ initialPreferences }: { initialPreferences: DietaryPreferences }) {
   const [isPending, startTransition] = useTransition();
 
+  // DBのdietary_preferencesは初期状態が {} のため、各フィールドが欠けていても落ちないよう防御する。
+  const prefs = initialPreferences ?? ({} as DietaryPreferences);
+
   const form = useForm<FormValues>({
     defaultValues: {
-      allergiesText: toCsv(initialPreferences.allergies),
-      dislikesText: toCsv(initialPreferences.dislikes),
-      diet: initialPreferences.diet ?? 'none',
+      allergiesText: toCsv(prefs.allergies ?? []),
+      dislikesText: toCsv(prefs.dislikes ?? []),
+      diet: prefs.diet ?? 'none',
     },
   });
 

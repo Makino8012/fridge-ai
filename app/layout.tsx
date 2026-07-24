@@ -1,7 +1,16 @@
 import type { Metadata, Viewport } from 'next';
+import { M_PLUS_Rounded_1c } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
+
+const appFont = M_PLUS_Rounded_1c({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false,
+  variable: '--font-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Kukku',
@@ -32,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja" className={appFont.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}

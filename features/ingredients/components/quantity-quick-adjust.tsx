@@ -1,12 +1,20 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Minus, Plus } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { adjustQuantity, updateIngredient } from '@/features/ingredients/actions';
+
+// 数量の大きさに応じて増減の刻みを変える(300mlなら±10、卵10個なら±1)。
+function stepFor(quantity: number): number {
+  if (quantity >= 500) return 50;
+  if (quantity >= 100) return 10;
+  if (quantity >= 20) return 5;
+  return 1;
+}
 
 export function QuantityQuickAdjust({
   ingredientId,
@@ -17,21 +25,37 @@ export function QuantityQuickAdjust({
   quantity: number;
   unit: string;
 }) {
-  const [optimisticQuantity, setOptimisticQuantity] = useState(quantity);
-  const [isPending, startTransition] = useTransition();
+  const [displayQuantity, setDisplayQuantity] = useState(quantity);
   const [manualValue, setManualValue] = useState(String(quantity));
   const [open, setOpen] = useState(false);
 
-  function adjust(delta: number) {
-    const next = Math.max(0, optimisticQuantity + delta);
-    setOptimisticQuantity(next);
-    startTransition(async () => {
-      const result = await adjustQuantity(ingredientId, delta, 'manual_adjust');
-      if (!result.success) {
-        setOptimisticQuantity(optimisticQuantity);
-        toast.error(result.error);
-      }
+  // タップのたびにサーバー通信すると固まるため、変化分をためて一定時間後にまとめて同期する。
+  const pendingDeltaRef = useRef(0);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // 外部(Realtime等)で数量が変わったら表示に反映(同期待ちの変化がないときのみ)。
+  useEffect(() => {
+    if (pendingDeltaRef.current === 0) setDisplayQuantity(quantity);
+  }, [quantity]);
+
+  function flush() {
+    const delta = pendingDeltaRef.current;
+    pendingDeltaRef.current = 0;
+    if (delta === 0) return;
+    void adjustQuantity(ingredientId, delta, 'manual_adjust').then((result) => {
+      if (!result.success) toast.error(result.error);
     });
+  }
+
+  function adjust(sign: 1 | -1) {
+    const step = stepFor(displayQuantity);
+    const next = Math.max(0, displayQuantity + sign * step);
+    const applied = next - displayQuantity;
+    if (applied === 0) return;
+    setDisplayQuantity(next);
+    pendingDeltaRef.current += applied;
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(flush, 600);
   }
 
   function submitManualValue() {
@@ -40,23 +64,30 @@ export function QuantityQuickAdjust({
       toast.error('正しい数量を入力してください');
       return;
     }
-    setOptimisticQuantity(next);
+    pendingDeltaRef.current = 0;
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setDisplayQuantity(next);
     setOpen(false);
-    startTransition(async () => {
-      const result = await updateIngredient({ id: ingredientId, quantity: next });
+    void updateIngredient({ id: ingredientId, quantity: next }).then((result) => {
       if (!result.success) toast.error(result.error);
     });
   }
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <div className="flex items-center gap-1.5">
       <Button
         variant="outline"
         size="icon"
-        className="size-9 rounded-full"
-        disabled={isPending || optimisticQuantity <= 0}
+        className="size-9 shrink-0 rounded-full"
+        disabled={displayQuantity <= 0}
         onClick={() => adjust(-1)}
-        aria-label="1減らす"
+        aria-label="減らす"
       >
         <Minus className="size-4" />
       </Button>
@@ -65,10 +96,10 @@ export function QuantityQuickAdjust({
         <PopoverTrigger asChild>
           <button
             type="button"
-            className="min-w-14 rounded-lg px-1 text-center text-sm font-medium tabular-nums hover:bg-muted"
-            onClick={() => setManualValue(String(optimisticQuantity))}
+            className="min-w-16 rounded-lg px-1 text-center text-sm font-medium tabular-nums hover:bg-muted"
+            onClick={() => setManualValue(String(displayQuantity))}
           >
-            {optimisticQuantity}
+            {displayQuantity}
             {unit}
           </button>
         </PopoverTrigger>
@@ -92,10 +123,9 @@ export function QuantityQuickAdjust({
       <Button
         variant="outline"
         size="icon"
-        className="size-9 rounded-full"
-        disabled={isPending}
+        className="size-9 shrink-0 rounded-full"
         onClick={() => adjust(1)}
-        aria-label="1増やす"
+        aria-label="増やす"
       >
         <Plus className="size-4" />
       </Button>

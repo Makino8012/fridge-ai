@@ -52,46 +52,48 @@ export function IngredientCard({
 
   return (
     <Card className="rounded-2xl">
-      <CardContent className="flex items-center gap-3 p-4">
-        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-          <Icon className="size-5" strokeWidth={1.75} />
-        </div>
-
-        <div className="min-w-0 flex-1 space-y-1">
-          <div className="flex items-center gap-2">
-            <p className="truncate font-medium">{ingredient.name}</p>
-            <ExpiryBadge expiryDate={ingredient.expiry_date} />
+      <CardContent className="space-y-3 p-4">
+        <div className="flex items-start gap-3">
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
+            <Icon className="size-5" strokeWidth={1.75} />
           </div>
-          <p className="text-xs text-muted-foreground">
-            {getStorageLocationLabel(ingredient.storage_location_id)}
-            {ingredient.memo ? ` ・ ${ingredient.memo}` : ''}
-          </p>
+
+          <div className="min-w-0 flex-1">
+            <p className="font-medium leading-snug break-words">{ingredient.name}</p>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              {getStorageLocationLabel(ingredient.storage_location_id)}
+              {ingredient.memo ? ` ・ ${ingredient.memo}` : ''}
+            </p>
+          </div>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="-mr-1 size-8 shrink-0" aria-label="メニュー">
+                <MoreVertical className="size-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => onEdit(ingredient)}>
+                <Pencil className="size-4" /> 編集
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-destructive focus:text-destructive"
+                onClick={() => setConfirmOpen(true)}
+              >
+                <Trash2 className="size-4" /> 削除
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
-        <QuantityQuickAdjust
-          ingredientId={ingredient.id}
-          quantity={ingredient.quantity}
-          unit={ingredient.unit}
-        />
-
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="size-8 shrink-0" aria-label="メニュー">
-              <MoreVertical className="size-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => onEdit(ingredient)}>
-              <Pencil className="size-4" /> 編集
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="text-destructive focus:text-destructive"
-              onClick={() => setConfirmOpen(true)}
-            >
-              <Trash2 className="size-4" /> 削除
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div className="flex items-center justify-between gap-2 pl-14">
+          <ExpiryBadge expiryDate={ingredient.expiry_date} />
+          <QuantityQuickAdjust
+            ingredientId={ingredient.id}
+            quantity={ingredient.quantity}
+            unit={ingredient.unit}
+          />
+        </div>
       </CardContent>
 
       <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>
