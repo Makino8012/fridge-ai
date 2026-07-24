@@ -73,3 +73,16 @@ export async function adjustQuantity(
     return actionError('数量の更新に失敗しました');
   }
 }
+
+export async function quickAddIngredient(
+  input: ingredientService.QuickAddInput,
+): Promise<ActionResult<{ mode: 'created' | 'incremented' }>> {
+  try {
+    const result = await ingredientService.quickAddIngredient(input);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(result);
+  } catch {
+    return actionError('追加に失敗しました');
+  }
+}

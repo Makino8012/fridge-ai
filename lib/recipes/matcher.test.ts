@@ -3,6 +3,7 @@ import {
   findAlmostMakeableRecipes,
   findMakeableRecipes,
   findSeasonalRecipes,
+  namesMatch,
   type InventoryItem,
 } from './matcher';
 import type { LocalRecipe } from './types';
@@ -117,6 +118,25 @@ describe('findSeasonalRecipes', () => {
   it('reports how many ingredients are missing', () => {
     const result = findSeasonalRecipes(recipes, inv(['じゃがいも', 'にんじん', '豚こま肉']), 'winter');
     expect(result[0]!.missingCount).toBe(0);
+  });
+});
+
+describe('namesMatch', () => {
+  it('matches identical names', () => {
+    expect(namesMatch('玉ねぎ', '玉ねぎ')).toBe(true);
+  });
+
+  it('matches partial/loose names (豚肉 ↔ 豚こま肉)', () => {
+    expect(namesMatch('豚肉', '豚こま肉')).toBe(true);
+    expect(namesMatch('鶏もも肉', '鶏肉')).toBe(true);
+  });
+
+  it('does not match unrelated names', () => {
+    expect(namesMatch('玉ねぎ', 'にんじん')).toBe(false);
+  });
+
+  it('returns false for empty names', () => {
+    expect(namesMatch('', '玉ねぎ')).toBe(false);
   });
 });
 

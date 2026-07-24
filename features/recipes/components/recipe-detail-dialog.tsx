@@ -1,7 +1,14 @@
-import { Check, X } from 'lucide-react';
+'use client';
+
+import { useTransition } from 'react';
+import { Check, CookingPot, X } from 'lucide-react';
+import { toast } from 'sonner';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { FavoriteButton } from '@/features/recipes/components/favorite-button';
+import { cookRecipeAction } from '@/features/recipes/actions';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
 const DIFFICULTY_LABEL: Record<string, string> = { easy: '簡単', normal: '普通', hard: '本格的' };
@@ -15,7 +22,28 @@ export function RecipeDetailDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const [isCooking, startCooking] = useTransition();
+
+  function handleCooked() {
+    if (!recipe) return;
+    startCooking(async () => {
+      const result = await cookRecipeAction(recipe);
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      if (result.data.reduced.length === 0) {
+        toast.info('在庫から減らせる材料はありませんでした');
+      } else {
+        toast.success(`${result.data.reduced.join('、')}を在庫から1つずつ減らしました`);
+      }
+      onOpenChange(false);
+    });
+  }
+
   if (!recipe) return null;
+
+  const hasOwned = recipe.ingredients.some((i) => i.owned);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -65,6 +93,23 @@ export function RecipeDetailDialog({
             ))}
           </ol>
         </div>
+
+        {hasOwned && (
+          <div className="space-y-1.5 border-t pt-4">
+            <Button className="w-full" onClick={handleCooked} disabled={isCooking}>
+              {isCooking ? (
+                <LoadingSpinner className="text-primary-foreground" />
+              ) : (
+                <>
+                  <CookingPot className="size-4" /> この料理を作った（在庫を減らす）
+                </>
+              )}
+            </Button>
+            <p className="text-center text-xs text-muted-foreground">
+              在庫にある材料を1つずつ減らします。常備調味料は対象外です。
+            </p>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );

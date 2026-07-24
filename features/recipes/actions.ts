@@ -1,5 +1,6 @@
 'use server';
 
+import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as recipeService from '@/services/recipes/recipe-service';
 import * as localRecipeService from '@/services/recipes/local-recipe-service';
@@ -80,5 +81,18 @@ export async function toggleFavoriteAction(
     return actionSuccess(result);
   } catch {
     return actionError('お気に入りの更新に失敗しました');
+  }
+}
+
+export async function cookRecipeAction(recipe: RecipeSuggestion): Promise<ActionResult<{ reduced: string[] }>> {
+  try {
+    // 在庫にある材料(owned)だけを対象にする。常備調味料などは自動でスキップされる。
+    const names = recipe.ingredients.filter((i) => i.owned).map((i) => i.name);
+    const result = await recipeService.cookRecipe(names);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(result);
+  } catch {
+    return actionError('在庫の更新に失敗しました');
   }
 }

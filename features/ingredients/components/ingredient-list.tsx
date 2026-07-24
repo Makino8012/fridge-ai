@@ -12,6 +12,7 @@ import { getExpiryStatus } from '@/lib/date';
 import { useRealtimeTableRefresh } from '@/lib/hooks/use-realtime-table';
 import { IngredientCard } from '@/features/ingredients/components/ingredient-card';
 import { IngredientForm } from '@/features/ingredients/components/ingredient-form';
+import { QuickAddBar } from '@/features/ingredients/components/quick-add-bar';
 import type { CategoryId, Database } from '@/types/database.types';
 
 type Ingredient = Database['public']['Tables']['ingredients']['Row'];
@@ -77,6 +78,8 @@ export function IngredientList({
 
   return (
     <div className="space-y-4">
+      <QuickAddBar />
+
       <div className="flex gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />

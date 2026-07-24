@@ -69,7 +69,7 @@ export function IngredientForm({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, ingredient]);
 
-  function onSubmit(values: IngredientFormInput) {
+  function submit(values: IngredientFormInput, keepOpen: boolean) {
     startTransition(async () => {
       const result = isEdit
         ? await updateIngredient({ id: ingredient!.id, ...values })
@@ -79,9 +79,21 @@ export function IngredientForm({
         toast.error(result.error);
         return;
       }
+
+      if (keepOpen && !isEdit) {
+        toast.success(`${values.name}を登録しました。続けて入力できます`);
+        form.reset(EMPTY_VALUES);
+        form.setFocus('name');
+        return;
+      }
+
       toast.success(isEdit ? '更新しました' : '食材を登録しました');
       onOpenChange(false);
     });
+  }
+
+  function onSubmit(values: IngredientFormInput) {
+    submit(values, false);
   }
 
   return (
@@ -224,6 +236,16 @@ export function IngredientForm({
                 <Button type="submit" disabled={isPending}>
                   {isPending ? <LoadingSpinner className="text-primary-foreground" /> : '保存'}
                 </Button>
+                {!isEdit && (
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    disabled={isPending}
+                    onClick={form.handleSubmit((values) => submit(values, true))}
+                  >
+                    保存して続けて追加
+                  </Button>
+                )}
                 <DrawerClose asChild>
                   <Button variant="outline" type="button">
                     キャンセル

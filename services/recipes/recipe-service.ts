@@ -2,7 +2,8 @@ import { createClient } from '@/lib/supabase/server';
 import { getAiProvider } from '@/lib/ai/provider';
 import type { DietaryPreferencesInput, IngredientInput, MenuPlanTimeframe, RecipeSuggestion } from '@/lib/ai/types';
 import { getCurrentHouseholdId, getCurrentProfile } from '@/services/household/household-service';
-import { listIngredients } from '@/services/ingredients/ingredient-service';
+import { adjustQuantity, listIngredients } from '@/services/ingredients/ingredient-service';
+import { namesMatch } from '@/lib/recipes/matcher';
 import type { Json } from '@/types/database.types';
 
 async function getIngredientsForAi(): Promise<IngredientInput[]> {
@@ -144,4 +145,26 @@ export async function getHistory() {
     .limit(50);
   if (error) throw error;
   return data;
+}
+
+/**
+ * 「この料理を作った」: レシピの材料名を在庫と照合し、見つかった食材を1ずつ減らす。
+ * 常備調味料など在庫にないものは自動でスキップされる。減らした食材名を返す。
+ */
+export async function cookRecipe(ingredientNames: string[]): Promise<{ reduced: string[] }> {
+  const inventory = await listIngredients();
+  const reduced: string[] = [];
+  const usedIds = new Set<string>();
+
+  for (const rawName of ingredientNames) {
+    const match = inventory.find(
+      (item) => !usedIds.has(item.id) && item.quantity > 0 && namesMatch(item.name, rawName),
+    );
+    if (!match) continue;
+    usedIds.add(match.id);
+    await adjustQuantity(match.id, -1, 'used_in_recipe');
+    reduced.push(match.name);
+  }
+
+  return { reduced };
 }

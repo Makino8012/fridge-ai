@@ -116,3 +116,44 @@ export async function adjustQuantity(id: string, delta: number, reason: Ingredie
   if (error) throw error;
   return data;
 }
+
+export interface QuickAddInput {
+  name: string;
+  categoryId: CategoryId;
+  storageLocationId: StorageLocationId;
+  unit: string;
+  quantity: number;
+}
+
+/**
+ * クイック追加/一括登録用。同名の食材が既にあれば数量を加算し、なければ新規作成する。
+ * 戻り値の mode で「加算(incremented)」か「新規(created)」かが分かる。
+ */
+export async function quickAddIngredient(
+  input: QuickAddInput,
+): Promise<{ mode: 'created' | 'incremented' }> {
+  const supabase = await createClient();
+  const householdId = await getCurrentHouseholdId();
+
+  const { data: existing } = await supabase
+    .from('ingredients')
+    .select('id')
+    .eq('household_id', householdId)
+    .eq('name', input.name)
+    .limit(1)
+    .maybeSingle();
+
+  if (existing) {
+    await adjustQuantity(existing.id, input.quantity, 'purchased');
+    return { mode: 'incremented' };
+  }
+
+  await createIngredient({
+    name: input.name,
+    quantity: input.quantity,
+    unit: input.unit,
+    categoryId: input.categoryId,
+    storageLocationId: input.storageLocationId,
+  });
+  return { mode: 'created' };
+}

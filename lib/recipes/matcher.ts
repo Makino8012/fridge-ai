@@ -48,12 +48,22 @@ const STAPLE_KEYWORDS = [
 // 肉・魚の部位や切り方の表記を吸収し、「豚こま肉」と「豚肉」を同一視できるようにする。
 const CUT_TOKENS = ['こま', '細切れ', '切れ', 'スライス', '薄切り', 'バラ', 'もも', 'むね', 'ロース', 'ひき', '挽き', '挽'];
 
-function normalize(name: string): string {
+export function normalizeIngredientName(name: string): string {
   let n = name.replace(/\s+/g, '').toLowerCase();
   for (const token of CUT_TOKENS) {
     n = n.split(token).join('');
   }
   return n;
+}
+
+const normalize = normalizeIngredientName;
+
+/** 2つの食材名が同一とみなせるか(部分一致・双方向・部位表記ゆれ吸収)。 */
+export function namesMatch(a: string, b: string): boolean {
+  const na = normalize(a);
+  const nb = normalize(b);
+  if (na.length === 0 || nb.length === 0) return false;
+  return na.includes(nb) || nb.includes(na);
 }
 
 function isStaple(ingredientName: string, stapleFlag: boolean): boolean {
