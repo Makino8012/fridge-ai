@@ -5,7 +5,7 @@ const ROOT = process.cwd();
 const RECIPES = path.join(ROOT, 'data', 'recipes.json');
 const SCRATCH =
   'C:/Users/user/AppData/Local/Temp/claude/C--Users-user/004132d5-0408-457a-8355-5577293ee747/scratchpad';
-const BATCHES = ['batch18.json', 'batch19.json'];
+const BATCHES = ['batch20.json', 'batch21.json', 'batch22.json'];
 
 const existing = JSON.parse(fs.readFileSync(RECIPES, 'utf8'));
 const titles = new Set(existing.map((r) => r.title));

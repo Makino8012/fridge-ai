@@ -7,6 +7,13 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.4.2',
+    date: '2026-07-24',
+    changes: [
+      'レシピをさらに追加（味噌汁・スープ各種・天ぷら/揚げ物・寿司・ヘルシー/作り置き・カフェ飯など、合計703種類に）',
+    ],
+  },
+  {
     version: '1.4.1',
     date: '2026-07-24',
     changes: [
