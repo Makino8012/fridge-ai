@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.3.2',
+    date: '2026-07-24',
+    changes: [
+      '定番レシピ約30品の手順を、下ごしらえ・火加減・時間・コツまで含めた詳しい説明に改善',
+      'スマホ画面の上部にKukkuのロゴを表示',
+    ],
+  },
+  {
     version: '1.3.1',
     date: '2026-07-24',
     changes: [
