@@ -110,6 +110,36 @@ export const shoppingListOutputSchema = z.object({
 });
 export type ShoppingListOutput = z.infer<typeof shoppingListOutputSchema>;
 
+// レシートOCR: 写真から食材品目を抽出
+export const receiptCategorySchema = z.enum([
+  'vegetable',
+  'meat',
+  'fish',
+  'drink',
+  'frozen',
+  'seasoning',
+  'other',
+]);
+
+export const receiptItemSchema = z.object({
+  name: z.string(),
+  quantity: z.number(),
+  unit: z.string(),
+  categoryId: receiptCategorySchema,
+});
+export type ReceiptItem = z.infer<typeof receiptItemSchema>;
+
+export const receiptExtractInputSchema = z.object({
+  imageBase64: z.string(),
+  mediaType: z.enum(['image/jpeg', 'image/png', 'image/webp']),
+});
+export type ReceiptExtractInput = z.infer<typeof receiptExtractInputSchema>;
+
+export const receiptExtractOutputSchema = z.object({
+  items: z.array(receiptItemSchema),
+});
+export type ReceiptExtractOutput = z.infer<typeof receiptExtractOutputSchema>;
+
 /**
  * AIプロバイダの共通インターフェース。
  * lib/ai/providers/* が実装し、services/* からはこのインターフェースのみを参照する。
@@ -122,6 +152,7 @@ export interface AiProvider {
   suggestMenuPlan(input: MenuPlanInput): Promise<MenuPlanOutput>;
   suggestWasteReduction(input: WasteReductionInput): Promise<WasteReductionOutput>;
   suggestShoppingList(input: ShoppingListInput): Promise<ShoppingListOutput>;
+  extractReceiptItems(input: ReceiptExtractInput): Promise<ReceiptExtractOutput>;
 }
 
 export class AiProviderError extends Error {

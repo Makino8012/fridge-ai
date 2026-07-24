@@ -4,6 +4,8 @@ import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as ingredientService from '@/services/ingredients/ingredient-service';
 import { lookupBarcode, type BarcodeLookupResult } from '@/services/ingredients/barcode-service';
+import { addReceiptItems, extractReceiptItems } from '@/services/ingredients/receipt-service';
+import type { ReceiptExtractInput, ReceiptItem } from '@/lib/ai/types';
 import type { IngredientLogReason, IngredientSource } from '@/types/database.types';
 import {
   createIngredientSchema,
@@ -99,5 +101,27 @@ export async function lookupBarcodeAction(barcode: string): Promise<ActionResult
     return actionSuccess(result);
   } catch {
     return actionError('商品情報の照会に失敗しました');
+  }
+}
+
+export async function extractReceiptItemsAction(
+  input: ReceiptExtractInput,
+): Promise<ActionResult<ReceiptItem[]>> {
+  try {
+    const items = await extractReceiptItems(input);
+    return actionSuccess(items);
+  } catch {
+    return actionError('レシートの読み取りに失敗しました。もう一度お試しください');
+  }
+}
+
+export async function addReceiptItemsAction(items: ReceiptItem[]): Promise<ActionResult<{ added: number }>> {
+  try {
+    const result = await addReceiptItems(items);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(result);
+  } catch {
+    return actionError('登録に失敗しました');
   }
 }

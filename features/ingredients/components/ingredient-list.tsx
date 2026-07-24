@@ -15,6 +15,7 @@ import { IngredientCard } from '@/features/ingredients/components/ingredient-car
 import { IngredientForm } from '@/features/ingredients/components/ingredient-form';
 import { QuickAddBar } from '@/features/ingredients/components/quick-add-bar';
 import { BarcodeScanner } from '@/features/ingredients/components/barcode-scanner';
+import { ReceiptCapture } from '@/features/ingredients/components/receipt-capture';
 import { lookupBarcodeAction } from '@/features/ingredients/actions';
 import type { CategoryId, Database } from '@/types/database.types';
 
@@ -159,6 +160,7 @@ export function IngredientList({
       )}
 
       <div className="fixed bottom-24 right-4 flex flex-col items-center gap-3 md:bottom-8 md:right-8">
+        <ReceiptCapture />
         <Button
           size="icon"
           variant="secondary"

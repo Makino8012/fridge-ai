@@ -5,6 +5,7 @@ import {
   AiProviderError,
   menuPlanOutputSchema,
   missingIngredientsOutputSchema,
+  receiptExtractOutputSchema,
   shoppingListOutputSchema,
   suggestRecipesOutputSchema,
   wasteReductionOutputSchema,
@@ -13,6 +14,8 @@ import {
   type MenuPlanOutput,
   type MissingIngredientsInput,
   type MissingIngredientsOutput,
+  type ReceiptExtractInput,
+  type ReceiptExtractOutput,
   type ShoppingListInput,
   type ShoppingListOutput,
   type SuggestRecipesInput,
@@ -26,6 +29,7 @@ import { buildMissingIngredientsPrompt } from '@/lib/ai/prompts/missing-ingredie
 import { buildMenuPlanPrompt } from '@/lib/ai/prompts/menu-plan';
 import { buildWasteReductionPrompt } from '@/lib/ai/prompts/waste-reduction';
 import { buildShoppingListPrompt } from '@/lib/ai/prompts/shopping-list';
+import { RECEIPT_EXTRACT_PROMPT } from '@/lib/ai/prompts/receipt';
 
 const MODEL = 'claude-sonnet-5';
 const MAX_TOKENS = 4096;
@@ -144,5 +148,63 @@ export class ClaudeProvider implements AiProvider {
       outputSchema: shoppingListOutputSchema,
       userPrompt: buildShoppingListPrompt(input),
     });
+  }
+
+  async extractReceiptItems(input: ReceiptExtractInput): Promise<ReceiptExtractOutput> {
+    const toolName = 'extract_receipt_items';
+    let lastError: unknown;
+
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const response = await this.client.messages.create({
+          model: MODEL,
+          max_tokens: MAX_TOKENS,
+          messages: [
+            {
+              role: 'user',
+              content: [
+                {
+                  type: 'image',
+                  source: {
+                    type: 'base64',
+                    media_type: input.mediaType,
+                    data: input.imageBase64,
+                  },
+                },
+                { type: 'text', text: RECEIPT_EXTRACT_PROMPT },
+              ],
+            },
+          ],
+          tools: [
+            {
+              name: toolName,
+              description: 'レシート写真から抽出した食材品目のリストを返す',
+              input_schema: toToolInputSchema(receiptExtractOutputSchema),
+            },
+          ],
+          tool_choice: { type: 'tool', name: toolName },
+        });
+
+        const toolUseBlock = response.content.find(
+          (block): block is Anthropic.ToolUseBlock => block.type === 'tool_use',
+        );
+        if (!toolUseBlock) throw new AiProviderError('Claudeがtool_useブロックを返しませんでした');
+
+        const parsed = receiptExtractOutputSchema.safeParse(toolUseBlock.input);
+        if (!parsed.success) {
+          throw new AiProviderError('レシート解析の応答がスキーマに一致しませんでした', parsed.error);
+        }
+        return parsed.data;
+      } catch (error) {
+        lastError = error;
+        if (attempt < MAX_RETRIES) {
+          await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+          continue;
+        }
+      }
+    }
+
+    if (lastError instanceof AiProviderError) throw lastError;
+    throw new AiProviderError('レシートの解析に失敗しました', lastError);
   }
 }
