@@ -39,6 +39,18 @@ export async function getSeasonalRecipesAction(): Promise<
   }
 }
 
+export async function browseRecipesAction(filters: {
+  query?: string;
+  tag?: string;
+}): Promise<ActionResult<{ missingCount: number; recipe: RecipeSuggestion }[]>> {
+  try {
+    const recipes = await localRecipeService.getBrowseRecipes(filters);
+    return actionSuccess(recipes);
+  } catch {
+    return actionError('レシピ一覧の取得に失敗しました');
+  }
+}
+
 // ===== AIモード(その都度Claude APIを呼ぶ・課金あり) =====
 
 export async function suggestRecipesAction(): Promise<ActionResult<RecipeSuggestion[]>> {

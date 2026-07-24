@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.3.0',
+    date: '2026-07-24',
+    changes: [
+      'レシピ「一覧」タブを追加。登録されている全レシピを検索・ジャンル別に閲覧でき、在庫で作れるものも分かる',
+      'レシピを大幅に追加（和洋中・韓国・エスニック・麺・丼・鍋・デザートなど、合計334種類に）',
+    ],
+  },
+  {
     version: '1.2.1',
     date: '2026-07-24',
     changes: [

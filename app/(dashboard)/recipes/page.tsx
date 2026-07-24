@@ -2,11 +2,13 @@ import { Header } from '@/components/layout/header';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SuggestRecipesPanel } from '@/features/recipes/components/suggest-recipes-panel';
 import { SeasonalPanel } from '@/features/recipes/components/seasonal-panel';
+import { BrowsePanel } from '@/features/recipes/components/browse-panel';
 import { MissingIngredientsPanel } from '@/features/recipes/components/missing-ingredients-panel';
 import { MenuPlanPanel } from '@/features/menu-plan/components/menu-plan-panel';
 import { FavoritesList } from '@/features/recipes/components/favorites-list';
 import { HistoryList } from '@/features/recipes/components/history-list';
 import { getFavorites, getHistory } from '@/services/recipes/recipe-service';
+import { RECIPE_COUNT } from '@/services/recipes/local-recipe-service';
 
 export default async function RecipesPage() {
   const [favorites, history] = await Promise.all([getFavorites(), getHistory()]);
@@ -19,6 +21,7 @@ export default async function RecipesPage() {
           <div className="-mx-4 overflow-x-auto px-4 md:mx-0 md:px-0">
             <TabsList className="w-max">
               <TabsTrigger value="suggest">作れる</TabsTrigger>
+              <TabsTrigger value="browse">一覧</TabsTrigger>
               <TabsTrigger value="seasonal">旬</TabsTrigger>
               <TabsTrigger value="missing">あと1品</TabsTrigger>
               <TabsTrigger value="menu">献立</TabsTrigger>
@@ -28,6 +31,9 @@ export default async function RecipesPage() {
           </div>
           <TabsContent value="suggest" className="mt-4">
             <SuggestRecipesPanel />
+          </TabsContent>
+          <TabsContent value="browse" className="mt-4">
+            <BrowsePanel totalCount={RECIPE_COUNT} />
           </TabsContent>
           <TabsContent value="seasonal" className="mt-4">
             <SeasonalPanel />
