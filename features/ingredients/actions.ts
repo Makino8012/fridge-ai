@@ -3,7 +3,8 @@
 import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as ingredientService from '@/services/ingredients/ingredient-service';
-import type { IngredientLogReason } from '@/types/database.types';
+import { lookupBarcode, type BarcodeLookupResult } from '@/services/ingredients/barcode-service';
+import type { IngredientLogReason, IngredientSource } from '@/types/database.types';
 import {
   createIngredientSchema,
   updateIngredientSchema,
@@ -11,7 +12,10 @@ import {
   type UpdateIngredientFormInput,
 } from './schema';
 
-export async function createIngredient(input: IngredientFormInput): Promise<ActionResult<null>> {
+export async function createIngredient(
+  input: IngredientFormInput,
+  extra?: { source?: IngredientSource; barcode?: string | null },
+): Promise<ActionResult<null>> {
   const parsed = createIngredientSchema.safeParse(input);
   if (!parsed.success) return actionError(parsed.error.issues[0]?.message ?? 'invalid input');
 
@@ -24,6 +28,8 @@ export async function createIngredient(input: IngredientFormInput): Promise<Acti
       storageLocationId: parsed.data.storageLocationId,
       expiryDate: parsed.data.expiryDate,
       memo: parsed.data.memo,
+      source: extra?.source,
+      barcode: extra?.barcode ?? null,
     });
     revalidatePath('/ingredients');
     revalidatePath('/');
@@ -84,5 +90,14 @@ export async function quickAddIngredient(
     return actionSuccess(result);
   } catch {
     return actionError('追加に失敗しました');
+  }
+}
+
+export async function lookupBarcodeAction(barcode: string): Promise<ActionResult<BarcodeLookupResult>> {
+  try {
+    const result = await lookupBarcode(barcode);
+    return actionSuccess(result);
+  } catch {
+    return actionError('商品情報の照会に失敗しました');
   }
 }

@@ -1,7 +1,8 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { Plus, Refrigerator, Search } from 'lucide-react';
+import { useMemo, useState, useTransition } from 'react';
+import { Barcode, Plus, Refrigerator, Search } from 'lucide-react';
+import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +14,8 @@ import { useRealtimeTableRefresh } from '@/lib/hooks/use-realtime-table';
 import { IngredientCard } from '@/features/ingredients/components/ingredient-card';
 import { IngredientForm } from '@/features/ingredients/components/ingredient-form';
 import { QuickAddBar } from '@/features/ingredients/components/quick-add-bar';
+import { BarcodeScanner } from '@/features/ingredients/components/barcode-scanner';
+import { lookupBarcodeAction } from '@/features/ingredients/actions';
 import type { CategoryId, Database } from '@/types/database.types';
 
 type Ingredient = Database['public']['Tables']['ingredients']['Row'];
@@ -34,6 +37,9 @@ export function IngredientList({
   const [sort, setSort] = useState<SortKey>('expiry');
   const [formOpen, setFormOpen] = useState(false);
   const [editingIngredient, setEditingIngredient] = useState<Ingredient | null>(null);
+  const [formPrefill, setFormPrefill] = useState<{ name?: string; barcode?: string | null } | undefined>();
+  const [scannerOpen, setScannerOpen] = useState(false);
+  const [, startLookup] = useTransition();
 
   const filtered = useMemo(() => {
     let items = initialIngredients;
@@ -68,12 +74,28 @@ export function IngredientList({
 
   function openCreateForm() {
     setEditingIngredient(null);
+    setFormPrefill(undefined);
     setFormOpen(true);
   }
 
   function openEditForm(ingredient: Ingredient) {
     setEditingIngredient(ingredient);
+    setFormPrefill(undefined);
     setFormOpen(true);
+  }
+
+  function handleBarcodeDetected(code: string) {
+    setScannerOpen(false);
+    startLookup(async () => {
+      const result = await lookupBarcodeAction(code);
+      const name = result.success && result.data.found ? (result.data.name ?? '') : '';
+      if (!name) {
+        toast.info('商品名が見つかりませんでした。名前を入力してください');
+      }
+      setEditingIngredient(null);
+      setFormPrefill({ name, barcode: code });
+      setFormOpen(true);
+    });
   }
 
   return (
@@ -136,16 +158,38 @@ export function IngredientList({
         </div>
       )}
 
-      <Button
-        size="icon"
-        className="fixed bottom-24 right-4 size-14 rounded-full shadow-lg md:bottom-8 md:right-8"
-        onClick={openCreateForm}
-        aria-label="食材を追加"
-      >
-        <Plus className="size-6" />
-      </Button>
+      <div className="fixed bottom-24 right-4 flex flex-col items-center gap-3 md:bottom-8 md:right-8">
+        <Button
+          size="icon"
+          variant="secondary"
+          className="size-12 rounded-full shadow-lg"
+          onClick={() => setScannerOpen(true)}
+          aria-label="バーコードで追加"
+        >
+          <Barcode className="size-5" />
+        </Button>
+        <Button
+          size="icon"
+          className="size-14 rounded-full shadow-lg"
+          onClick={openCreateForm}
+          aria-label="食材を追加"
+        >
+          <Plus className="size-6" />
+        </Button>
+      </div>
 
-      <IngredientForm open={formOpen} onOpenChange={setFormOpen} ingredient={editingIngredient} />
+      <BarcodeScanner
+        open={scannerOpen}
+        onDetected={handleBarcodeDetected}
+        onClose={() => setScannerOpen(false)}
+      />
+
+      <IngredientForm
+        open={formOpen}
+        onOpenChange={setFormOpen}
+        ingredient={editingIngredient}
+        prefill={formPrefill}
+      />
     </div>
   );
 }

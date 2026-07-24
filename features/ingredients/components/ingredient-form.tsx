@@ -51,29 +51,40 @@ export function IngredientForm({
   open,
   onOpenChange,
   ingredient,
+  prefill,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   ingredient?: Ingredient | null;
+  prefill?: { name?: string; barcode?: string | null };
 }) {
   const isEdit = Boolean(ingredient);
   const [isPending, startTransition] = useTransition();
 
+  const initialValues = ingredient
+    ? toFormValues(ingredient)
+    : { ...EMPTY_VALUES, name: prefill?.name ?? '' };
+
   const form = useForm<IngredientFormInput>({
     resolver: zodResolver(ingredientFormSchema),
-    defaultValues: ingredient ? toFormValues(ingredient) : EMPTY_VALUES,
+    defaultValues: initialValues,
   });
 
   useEffect(() => {
-    if (open) form.reset(ingredient ? toFormValues(ingredient) : EMPTY_VALUES);
+    if (open) {
+      form.reset(ingredient ? toFormValues(ingredient) : { ...EMPTY_VALUES, name: prefill?.name ?? '' });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, ingredient]);
+  }, [open, ingredient, prefill?.name]);
 
   function submit(values: IngredientFormInput, keepOpen: boolean) {
     startTransition(async () => {
       const result = isEdit
         ? await updateIngredient({ id: ingredient!.id, ...values })
-        : await createIngredient(values);
+        : await createIngredient(
+            values,
+            prefill?.barcode ? { source: 'barcode', barcode: prefill.barcode } : undefined,
+          );
 
       if (!result.success) {
         toast.error(result.error);

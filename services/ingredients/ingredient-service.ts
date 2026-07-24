@@ -1,6 +1,11 @@
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentHouseholdId } from '@/services/household/household-service';
-import type { CategoryId, IngredientLogReason, StorageLocationId } from '@/types/database.types';
+import type {
+  CategoryId,
+  IngredientLogReason,
+  IngredientSource,
+  StorageLocationId,
+} from '@/types/database.types';
 
 export interface IngredientListParams {
   query?: string;
@@ -16,6 +21,8 @@ export interface CreateIngredientInput {
   storageLocationId: StorageLocationId;
   expiryDate?: string | null;
   memo?: string | null;
+  source?: IngredientSource;
+  barcode?: string | null;
 }
 
 export type UpdateIngredientInput = Partial<CreateIngredientInput>;
@@ -70,6 +77,8 @@ export async function createIngredient(input: CreateIngredientInput) {
       storage_location_id: input.storageLocationId,
       expiry_date: input.expiryDate ?? null,
       memo: input.memo ?? null,
+      source: input.source ?? 'manual',
+      barcode: input.barcode ?? null,
       created_by: user?.id ?? null,
     })
     .select()
