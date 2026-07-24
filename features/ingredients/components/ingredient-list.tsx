@@ -159,7 +159,7 @@ export function IngredientList({
         </div>
       )}
 
-      <div className="fixed bottom-24 right-4 flex flex-col items-center gap-3 md:bottom-8 md:right-8">
+      <div className="fixed bottom-24 left-4 flex flex-col items-center gap-3 md:bottom-8 md:left-auto md:right-8">
         <ReceiptCapture />
         <Button
           size="icon"
