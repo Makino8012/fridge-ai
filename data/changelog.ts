@@ -7,6 +7,13 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.3.1',
+    date: '2026-07-24',
+    changes: [
+      'レシピをさらに追加（無限系・やみつき・レンチン時短・韓国/台湾トレンドなどの人気レシピ、合計442種類に）',
+    ],
+  },
+  {
     version: '1.3.0',
     date: '2026-07-24',
     changes: [
