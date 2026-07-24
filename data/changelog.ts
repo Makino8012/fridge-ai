@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.3.3',
+    date: '2026-07-24',
+    changes: [
+      'レシピをさらに追加（丼・炒め物・揚げ物・煮物・作り置き常備菜・世界の料理・スープ・パン/朝食・デザートなど、合計512種類に）',
+      '新しいレシピは手順を4〜5工程にして、下ごしらえや火加減まで分かりやすく記載',
+    ],
+  },
+  {
     version: '1.3.2',
     date: '2026-07-24',
     changes: [
