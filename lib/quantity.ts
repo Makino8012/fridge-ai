@@ -96,7 +96,11 @@ export function parseQuantity(input: string): number | null {
  */
 export function stepForQuantity(quantity: number, unit: string): number {
   const countable = !isMeasureUnit(unit);
-  if (countable && quantity <= 3) return 0.25;
+  if (countable) {
+    const hasFraction = Math.abs(quantity - Math.round(quantity)) > 1e-9;
+    // 少量のとき、または既に端数があるときは0.25刻みで微調整できるようにする。
+    if (quantity <= 3 || hasFraction) return 0.25;
+  }
   if (quantity >= 500) return 50;
   if (quantity >= 100) return 10;
   if (quantity >= 20) return 5;

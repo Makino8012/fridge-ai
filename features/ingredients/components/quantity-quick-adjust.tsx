@@ -9,8 +9,8 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { adjustQuantity, updateIngredient } from '@/features/ingredients/actions';
 import { formatQuantity, parseQuantity, roundQuantity, stepForQuantity } from '@/lib/quantity';
 
-// 直接入力ポップオーバーで使う分数のクイックボタン。
-const FRACTION_PRESETS = ['¼', '½', '¾', '1'];
+// 直接入力ポップオーバーで使う端数のクイックボタン(整数部はそのまま、端数だけ差し替える)。
+const FRACTION_PARTS = [0, 0.25, 0.5, 0.75];
 
 export function QuantityQuickAdjust({
   ingredientId,
@@ -123,20 +123,24 @@ export function QuantityQuickAdjust({
               保存
             </Button>
           </div>
+          <p className="text-xs text-muted-foreground">端数をセット(整数部はそのまま)</p>
           <div className="flex flex-wrap gap-1.5">
-            {FRACTION_PRESETS.map((f) => (
-              <Button
-                key={f}
-                type="button"
-                variant="outline"
-                size="sm"
-                className="h-8 min-w-9 px-2"
-                onClick={() => saveExactValue(parseQuantity(f)!)}
-              >
-                {f}
-                {unit}
-              </Button>
-            ))}
+            {FRACTION_PARTS.map((fr) => {
+              const target = roundQuantity(Math.floor(displayQuantity + 1e-9) + fr);
+              return (
+                <Button
+                  key={fr}
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="h-8 min-w-9 flex-1 px-2"
+                  onClick={() => saveExactValue(target)}
+                >
+                  {formatQuantity(target)}
+                  {unit}
+                </Button>
+              );
+            })}
           </div>
         </PopoverContent>
       </Popover>

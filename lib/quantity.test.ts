@@ -58,8 +58,12 @@ describe('stepForQuantity', () => {
     expect(stepForQuantity(2, '本')).toBe(0.25);
   });
 
-  it('uses 1 step for larger countable quantities', () => {
+  it('uses 1 step for larger whole countable quantities', () => {
     expect(stepForQuantity(10, '個')).toBe(1);
+  });
+
+  it('keeps 0.25 steps once a larger quantity has a fraction', () => {
+    expect(stepForQuantity(5.5, '個')).toBe(0.25);
   });
 
   it('uses volume-based steps for measure units', () => {
