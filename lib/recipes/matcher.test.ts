@@ -53,6 +53,17 @@ describe('findMakeableRecipes', () => {
     expect(shoyu?.owned).toBe(true);
   });
 
+  it('marks staples with staple:true and inventory matches with staple:false', () => {
+    const result = findMakeableRecipes(recipes, inv(['豚こま肉', '玉ねぎ']));
+    const shoyu = result[0]!.ingredients.find((i) => i.name === '醤油');
+    const pork = result[0]!.ingredients.find((i) => i.name === '豚こま肉');
+    // 常備調味料は「持っている前提」なので staple:true（見た目で区別する）
+    expect(shoyu?.staple).toBe(true);
+    // 実際に在庫にある食材は staple:false（緑チェック=在庫あり）
+    expect(pork?.owned).toBe(true);
+    expect(pork?.staple).toBe(false);
+  });
+
   it('matches loosely (豚肉 matches 豚こま肉)', () => {
     const result = findMakeableRecipes(recipes, inv(['豚肉', '玉ねぎ']));
     expect(result.map((r) => r.title)).toContain('生姜焼き');

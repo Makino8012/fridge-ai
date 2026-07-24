@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useTransition } from 'react';
-import { Check, CookingPot, Minus, Plus, X } from 'lucide-react';
+import { Check, CircleDot, CookingPot, Minus, Plus, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
@@ -52,7 +52,8 @@ export function RecipeDetailDialog({
 
   if (!recipe) return null;
 
-  const hasOwned = recipe.ingredients.some((i) => i.owned);
+  // 在庫から減らせるのは「実際に在庫にある食材(常備調味料以外)」だけ。
+  const hasOwned = recipe.ingredients.some((i) => i.owned && !i.staple);
   const ratio = servingsRatio(servings);
 
   return (
@@ -106,17 +107,31 @@ export function RecipeDetailDialog({
           <ul className="space-y-1 text-sm">
             {recipe.ingredients.map((ing, i) => (
               <li key={i} className="flex items-center gap-2">
-                {ing.owned ? (
-                  <Check className="size-4 text-success" />
+                {ing.owned && !ing.staple ? (
+                  <Check className="size-4 shrink-0 text-success" />
+                ) : ing.staple ? (
+                  <CircleDot className="size-4 shrink-0 text-muted-foreground/60" />
                 ) : (
-                  <X className="size-4 text-muted-foreground" />
+                  <X className="size-4 shrink-0 text-muted-foreground" />
                 )}
-                <span className={!ing.owned ? 'text-muted-foreground' : ''}>
+                <span className={!ing.owned || ing.staple ? 'text-muted-foreground' : ''}>
                   {ing.name} {scaleQuantity(ing.quantity, ratio)}
                 </span>
+                {ing.staple && (
+                  <Badge variant="outline" className="ml-auto shrink-0 px-1.5 py-0 text-[10px] font-normal">
+                    常備
+                  </Badge>
+                )}
               </li>
             ))}
           </ul>
+          <p className="text-xs text-muted-foreground">
+            <Check className="mr-1 inline size-3 text-success" />在庫にある
+            <span className="mx-1.5">/</span>
+            <CircleDot className="mr-1 inline size-3 text-muted-foreground/60" />常備（調味料など、持っている前提）
+            <span className="mx-1.5">/</span>
+            <X className="mr-1 inline size-3" />不足
+          </p>
         </div>
 
         <div className="space-y-2">

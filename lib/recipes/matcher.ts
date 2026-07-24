@@ -64,15 +64,16 @@ function evaluate(recipe: LocalRecipe, inventory: InventoryItem[]): EvaluatedRec
   const suggestionIngredients = recipe.ingredients.map((ing) => {
     const staple = isStaple(ing.name, ing.staple);
     if (staple) {
-      return { name: ing.name, quantity: ing.quantity, owned: true };
+      // 常備調味料は「持っている前提」。在庫照合はせず、staple:true で見た目を区別できるようにする。
+      return { name: ing.name, quantity: ing.quantity, owned: true, staple: true };
     }
     const matched = matchesInventory(ing.name, inventory);
     if (matched) {
       if (matched.expiringSoon) usesExpiring = true;
-      return { name: ing.name, quantity: ing.quantity, owned: true };
+      return { name: ing.name, quantity: ing.quantity, owned: true, staple: false };
     }
     missing.push(ing.name);
-    return { name: ing.name, quantity: ing.quantity, owned: false };
+    return { name: ing.name, quantity: ing.quantity, owned: false, staple: false };
   });
 
   return {

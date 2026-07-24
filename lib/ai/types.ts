@@ -24,6 +24,9 @@ export const recipeSuggestionSchema = z.object({
       name: z.string(),
       quantity: z.string(),
       owned: z.boolean(),
+      // 常備調味料として「持っている前提」で owned:true にしたもの。
+      // 在庫に実際にある食材(owned:true, staple:false/未指定)と見た目で区別するために使う。
+      staple: z.boolean().optional(),
     }),
   ),
   steps: z.array(z.string()),
