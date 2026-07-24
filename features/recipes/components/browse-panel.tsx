@@ -16,7 +16,7 @@ import type { RecipeSuggestion } from '@/lib/ai/types';
 type BrowseResult = { missingCount: number; recipe: RecipeSuggestion };
 
 // よく使う代表的なタグだけを絞り込みチップに出す。
-const TAG_CHIPS = ['和食', '洋食', '中華', '韓国', '主菜', '副菜', '汁物', '麺', '丼', 'デザート'];
+const TAG_CHIPS = ['背徳飯', '和食', '洋食', '中華', '韓国', '主菜', '副菜', '鍋', '麺', '丼', 'デザート'];
 
 export function BrowsePanel({ totalCount }: { totalCount: number }) {
   const [query, setQuery] = useState('');
