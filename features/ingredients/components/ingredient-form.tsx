@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
@@ -21,9 +21,61 @@ import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
 import { createIngredient, updateIngredient } from '@/features/ingredients/actions';
 import { ingredientFormSchema, type IngredientFormInput } from '@/features/ingredients/schema';
+import { formatQuantity, parseQuantity } from '@/lib/quantity';
 import type { Database } from '@/types/database.types';
 
 type Ingredient = Database['public']['Tables']['ingredients']['Row'];
+
+const QUANTITY_PRESETS = ['¼', '½', '¾', '1'];
+
+// 「1/2」「½」「0.5」などの分数入力に対応した数量フィールド。
+// react-hook-form には数値で渡しつつ、表示は分数記号にする。
+function QuantityField({ value, onChange }: { value: number; onChange: (n: number) => void }) {
+  const [text, setText] = useState(() => formatQuantity(value));
+
+  useEffect(() => {
+    setText(formatQuantity(value));
+  }, [value]);
+
+  function commit(raw: string) {
+    const parsed = parseQuantity(raw);
+    if (parsed !== null) {
+      onChange(parsed);
+      setText(formatQuantity(parsed));
+    } else {
+      setText(formatQuantity(value));
+    }
+  }
+
+  return (
+    <div className="space-y-1.5">
+      <Input
+        inputMode="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onBlur={(e) => commit(e.target.value)}
+      />
+      <div className="flex gap-1.5">
+        {QUANTITY_PRESETS.map((f) => (
+          <Button
+            key={f}
+            type="button"
+            variant="outline"
+            size="sm"
+            className="h-7 flex-1 px-0 text-xs"
+            onClick={() => {
+              const n = parseQuantity(f)!;
+              onChange(n);
+              setText(formatQuantity(n));
+            }}
+          >
+            {f}
+          </Button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const EMPTY_VALUES: IngredientFormInput = {
   name: '',
@@ -139,7 +191,7 @@ export function IngredientForm({
                     <FormItem>
                       <FormLabel>数量</FormLabel>
                       <FormControl>
-                        <Input type="number" min={0} step="any" {...field} />
+                        <QuantityField value={field.value} onChange={field.onChange} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -7,14 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { adjustQuantity, updateIngredient } from '@/features/ingredients/actions';
+import { formatQuantity, parseQuantity, roundQuantity, stepForQuantity } from '@/lib/quantity';
 
-// 数量の大きさに応じて増減の刻みを変える(300mlなら±10、卵10個なら±1)。
-function stepFor(quantity: number): number {
-  if (quantity >= 500) return 50;
-  if (quantity >= 100) return 10;
-  if (quantity >= 20) return 5;
-  return 1;
-}
+// 直接入力ポップオーバーで使う分数のクイックボタン。
+const FRACTION_PRESETS = ['¼', '½', '¾', '1'];
 
 export function QuantityQuickAdjust({
   ingredientId,
@@ -48,22 +44,17 @@ export function QuantityQuickAdjust({
   }
 
   function adjust(sign: 1 | -1) {
-    const step = stepFor(displayQuantity);
-    const next = Math.max(0, displayQuantity + sign * step);
-    const applied = next - displayQuantity;
+    const step = stepForQuantity(displayQuantity, unit);
+    const next = roundQuantity(Math.max(0, displayQuantity + sign * step));
+    const applied = roundQuantity(next - displayQuantity);
     if (applied === 0) return;
     setDisplayQuantity(next);
-    pendingDeltaRef.current += applied;
+    pendingDeltaRef.current = roundQuantity(pendingDeltaRef.current + applied);
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(flush, 600);
   }
 
-  function submitManualValue() {
-    const next = Number(manualValue);
-    if (Number.isNaN(next) || next < 0) {
-      toast.error('正しい数量を入力してください');
-      return;
-    }
+  function saveExactValue(next: number) {
     pendingDeltaRef.current = 0;
     if (timerRef.current) clearTimeout(timerRef.current);
     setDisplayQuantity(next);
@@ -71,6 +62,15 @@ export function QuantityQuickAdjust({
     void updateIngredient({ id: ingredientId, quantity: next }).then((result) => {
       if (!result.success) toast.error(result.error);
     });
+  }
+
+  function submitManualValue() {
+    const next = parseQuantity(manualValue);
+    if (next === null) {
+      toast.error('「1/2」「0.5」などで入力してください');
+      return;
+    }
+    saveExactValue(next);
   }
 
   useEffect(() => {
@@ -97,25 +97,46 @@ export function QuantityQuickAdjust({
           <button
             type="button"
             className="min-w-16 rounded-lg px-1 text-center text-sm font-medium tabular-nums hover:bg-muted"
-            onClick={() => setManualValue(String(displayQuantity))}
+            onClick={() => setManualValue(formatQuantity(displayQuantity))}
           >
-            {displayQuantity}
+            {formatQuantity(displayQuantity)}
             {unit}
           </button>
         </PopoverTrigger>
-        <PopoverContent className="w-48 space-y-2">
-          <p className="text-xs text-muted-foreground">数量を直接入力</p>
+        <PopoverContent className="w-56 space-y-2">
+          <p className="text-xs text-muted-foreground">数量を直接入力(「1/2」「0.5」もOK)</p>
           <div className="flex items-center gap-2">
             <Input
-              type="number"
-              min={0}
+              type="text"
+              inputMode="text"
               value={manualValue}
               onChange={(e) => setManualValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  submitManualValue();
+                }
+              }}
               className="h-9"
             />
             <Button size="sm" onClick={submitManualValue}>
               保存
             </Button>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {FRACTION_PRESETS.map((f) => (
+              <Button
+                key={f}
+                type="button"
+                variant="outline"
+                size="sm"
+                className="h-8 min-w-9 px-2"
+                onClick={() => saveExactValue(parseQuantity(f)!)}
+              >
+                {f}
+                {unit}
+              </Button>
+            ))}
           </div>
         </PopoverContent>
       </Popover>
