@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.5.1',
+    date: '2026-07-25',
+    changes: [
+      '定番レシピ40品の手順を、下ごしらえ・火加減・時間・失敗しないコツまで含めた詳しい説明に改善',
+      '食材の追加/編集フォームがPCで画面からはみ出し、上部が見切れる不具合を修正。入力欄がスクロールでき、保存ボタンは常に表示されるように',
+    ],
+  },
+  {
     version: '1.5.0',
     date: '2026-07-25',
     changes: [

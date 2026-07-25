@@ -15,8 +15,21 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
 import { createIngredient, updateIngredient } from '@/features/ingredients/actions';
@@ -124,7 +137,9 @@ export function IngredientForm({
 
   useEffect(() => {
     if (open) {
-      form.reset(ingredient ? toFormValues(ingredient) : { ...EMPTY_VALUES, name: prefill?.name ?? '' });
+      form.reset(
+        ingredient ? toFormValues(ingredient) : { ...EMPTY_VALUES, name: prefill?.name ?? '' },
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, ingredient, prefill?.name]);
@@ -162,49 +177,140 @@ export function IngredientForm({
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent>
-        <div className="mx-auto w-full max-w-md">
-          <DrawerHeader>
+        {/* ドロワーの高さ上限内でフォームだけをスクロールさせる(PCで上部が見切れないように) */}
+        <div className="mx-auto flex min-h-0 w-full max-w-md flex-col">
+          <DrawerHeader className="shrink-0">
             <DrawerTitle>{isEdit ? '食材を編集' : '食材を追加'}</DrawerTitle>
           </DrawerHeader>
 
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 px-4 pb-4">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>食材名</FormLabel>
-                    <FormControl>
-                      <Input placeholder="例: 卵" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <div className="grid grid-cols-2 gap-3">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex min-h-0 flex-col">
+              {/* 入力欄だけスクロールさせ、保存ボタンは常に見えるようにする */}
+              <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 pb-2">
                 <FormField
                   control={form.control}
-                  name="quantity"
+                  name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>数量</FormLabel>
+                      <FormLabel>食材名</FormLabel>
                       <FormControl>
-                        <QuantityField value={field.value} onChange={field.onChange} />
+                        <Input placeholder="例: 卵" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
+
+                <div className="grid grid-cols-2 gap-3">
+                  <FormField
+                    control={form.control}
+                    name="quantity"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>数量</FormLabel>
+                        <FormControl>
+                          <QuantityField value={field.value} onChange={field.onChange} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="unit"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>単位</FormLabel>
+                        <FormControl>
+                          <Input placeholder="個 / g / ml" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <FormField
+                    control={form.control}
+                    name="categoryId"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>カテゴリー</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {CATEGORY_OPTIONS.map((c) => (
+                              <SelectItem key={c.id} value={c.id}>
+                                {c.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="storageLocationId"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>保存場所</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {STORAGE_LOCATION_OPTIONS.map((s) => (
+                              <SelectItem key={s.id} value={s.id}>
+                                {s.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
                 <FormField
                   control={form.control}
-                  name="unit"
+                  name="expiryDate"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>単位</FormLabel>
+                      <FormLabel>賞味期限(任意)</FormLabel>
                       <FormControl>
-                        <Input placeholder="個 / g / ml" {...field} />
+                        <Input
+                          type="date"
+                          value={field.value ?? ''}
+                          onChange={(e) => field.onChange(e.target.value || null)}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="memo"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>メモ(任意)</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          rows={2}
+                          value={field.value ?? ''}
+                          onChange={(e) => field.onChange(e.target.value || null)}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -212,90 +318,7 @@ export function IngredientForm({
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
-                <FormField
-                  control={form.control}
-                  name="categoryId"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>カテゴリー</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {CATEGORY_OPTIONS.map((c) => (
-                            <SelectItem key={c.id} value={c.id}>
-                              {c.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="storageLocationId"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>保存場所</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {STORAGE_LOCATION_OPTIONS.map((s) => (
-                            <SelectItem key={s.id} value={s.id}>
-                              {s.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <FormField
-                control={form.control}
-                name="expiryDate"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>賞味期限(任意)</FormLabel>
-                    <FormControl>
-                      <Input type="date" value={field.value ?? ''} onChange={(e) => field.onChange(e.target.value || null)} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="memo"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>メモ(任意)</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        rows={2}
-                        value={field.value ?? ''}
-                        onChange={(e) => field.onChange(e.target.value || null)}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <DrawerFooter className="px-0">
+              <DrawerFooter className="shrink-0 border-t bg-background px-4">
                 <Button type="submit" disabled={isPending}>
                   {isPending ? <LoadingSpinner className="text-primary-foreground" /> : '保存'}
                 </Button>
