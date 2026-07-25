@@ -7,7 +7,15 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { adjustQuantity, updateIngredient } from '@/features/ingredients/actions';
-import { formatQuantity, parseQuantity, roundQuantity, stepForQuantity } from '@/lib/quantity';
+import {
+  ROUGH_LEVELS,
+  displayQuantity as formatWithUnit,
+  formatQuantity,
+  isRoughUnit,
+  parseQuantity,
+  roundQuantity,
+  stepForQuantity,
+} from '@/lib/quantity';
 
 // 直接入力ポップオーバーで使う端数のクイックボタン(整数部はそのまま、端数だけ差し替える)。
 const FRACTION_PARTS = [0, 0.25, 0.5, 0.75];
@@ -43,7 +51,29 @@ export function QuantityQuickAdjust({
     });
   }
 
+  const rough = isRoughUnit(unit);
+
+  // ざっくり量は「たっぷり→半分→残りわずか→なし」を1段ずつ移動する。
+  function adjustRough(sign: 1 | -1) {
+    const index = ROUGH_LEVELS.reduce(
+      (bestIdx, level, i) =>
+        Math.abs(displayQuantity - level.value) < Math.abs(displayQuantity - ROUGH_LEVELS[bestIdx]!.value)
+          ? i
+          : bestIdx,
+      0,
+    );
+    // 配列は多い順に並んでいるので、+ は index を減らす方向。
+    const nextIndex = Math.min(ROUGH_LEVELS.length - 1, Math.max(0, index - sign));
+    const next = ROUGH_LEVELS[nextIndex]!.value;
+    if (next === displayQuantity) return;
+    saveExactValue(next);
+  }
+
   function adjust(sign: 1 | -1) {
+    if (rough) {
+      adjustRough(sign);
+      return;
+    }
     const step = stepForQuantity(displayQuantity, unit);
     const next = roundQuantity(Math.max(0, displayQuantity + sign * step));
     const applied = roundQuantity(next - displayQuantity);
@@ -99,49 +129,70 @@ export function QuantityQuickAdjust({
             className="min-w-16 rounded-lg px-1 text-center text-sm font-medium tabular-nums hover:bg-muted"
             onClick={() => setManualValue(formatQuantity(displayQuantity))}
           >
-            {formatQuantity(displayQuantity)}
-            {unit}
+            {formatWithUnit(displayQuantity, unit)}
           </button>
         </PopoverTrigger>
         <PopoverContent className="w-56 space-y-2">
-          <p className="text-xs text-muted-foreground">数量を直接入力(「1/2」「0.5」もOK)</p>
-          <div className="flex items-center gap-2">
-            <Input
-              type="text"
-              inputMode="text"
-              value={manualValue}
-              onChange={(e) => setManualValue(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  e.preventDefault();
-                  submitManualValue();
-                }
-              }}
-              className="h-9"
-            />
-            <Button size="sm" onClick={submitManualValue}>
-              保存
-            </Button>
-          </div>
-          <p className="text-xs text-muted-foreground">端数をセット(整数部はそのまま)</p>
-          <div className="flex flex-wrap gap-1.5">
-            {FRACTION_PARTS.map((fr) => {
-              const target = roundQuantity(Math.floor(displayQuantity + 1e-9) + fr);
-              return (
-                <Button
-                  key={fr}
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="h-8 min-w-9 flex-1 px-2"
-                  onClick={() => saveExactValue(target)}
-                >
-                  {formatQuantity(target)}
-                  {unit}
+          {rough ? (
+            <>
+              <p className="text-xs text-muted-foreground">どれくらい残っている?</p>
+              <div className="flex flex-wrap gap-1.5">
+                {ROUGH_LEVELS.map((level) => (
+                  <Button
+                    key={level.label}
+                    type="button"
+                    variant={displayQuantity === level.value ? 'default' : 'outline'}
+                    size="sm"
+                    className="h-8 px-3 text-xs font-normal"
+                    onClick={() => saveExactValue(level.value)}
+                  >
+                    {level.label}
+                  </Button>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-xs text-muted-foreground">数量を直接入力(「1/2」「0.5」もOK)</p>
+              <div className="flex items-center gap-2">
+                <Input
+                  type="text"
+                  inputMode="text"
+                  value={manualValue}
+                  onChange={(e) => setManualValue(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      submitManualValue();
+                    }
+                  }}
+                  className="h-9"
+                />
+                <Button size="sm" onClick={submitManualValue}>
+                  保存
                 </Button>
-              );
-            })}
-          </div>
+              </div>
+              <p className="text-xs text-muted-foreground">端数をセット(整数部はそのまま)</p>
+              <div className="flex flex-wrap gap-1.5">
+                {FRACTION_PARTS.map((fr) => {
+                  const target = roundQuantity(Math.floor(displayQuantity + 1e-9) + fr);
+                  return (
+                    <Button
+                      key={fr}
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="h-8 min-w-9 flex-1 px-2"
+                      onClick={() => saveExactValue(target)}
+                    >
+                      {formatQuantity(target)}
+                      {unit}
+                    </Button>
+                  );
+                })}
+              </div>
+            </>
+          )}
         </PopoverContent>
       </Popover>
 

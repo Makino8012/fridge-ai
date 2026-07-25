@@ -111,3 +111,112 @@ export function stepForQuantity(quantity: number, unit: string): number {
 export function roundQuantity(n: number): number {
   return Math.round(n * 1000) / 1000;
 }
+
+// ── ざっくり量 ────────────────────────────────────────────────
+// もやし1袋・キャベツ・調味料など、数値で管理しづらいものは
+// 単位を「ざっくり」にして「たっぷり/半分/残りわずか」で記録する。
+// 数量は内部的には数値のままなので、レシピ照合や並び替えはそのまま動く。
+
+export const ROUGH_UNIT = 'ざっくり';
+
+export const ROUGH_LEVELS: { value: number; label: string }[] = [
+  { value: 1, label: 'たっぷり' },
+  { value: 0.5, label: '半分' },
+  { value: 0.25, label: '残りわずか' },
+  { value: 0, label: 'なし' },
+];
+
+export function isRoughUnit(unit: string): boolean {
+  return unit.trim() === ROUGH_UNIT;
+}
+
+/** ざっくり量の数値を「たっぷり」などの言葉にする。 */
+export function formatRoughQuantity(n: number): string {
+  let best = ROUGH_LEVELS[0]!;
+  for (const level of ROUGH_LEVELS) {
+    if (Math.abs(n - level.value) < Math.abs(n - best.value)) best = level;
+  }
+  return best.label;
+}
+
+/** 在庫カードなどでの表示用。ざっくり量なら言葉、それ以外は「2½個」のように返す。 */
+export function displayQuantity(quantity: number, unit: string): string {
+  if (isRoughUnit(unit)) return formatRoughQuantity(quantity);
+  return `${formatQuantity(quantity)}${unit}`;
+}
+
+// ── 単位の表記ゆれ統一 ─────────────────────────────────────────
+// 「コ」「ヶ」「玉」→「個」のように、同じ意味の単位を1つに揃える。
+// 揃えておくと在庫が二重に増えたり、数量の比較がずれたりしない。
+
+const UNIT_ALIASES: Record<string, string> = {
+  コ: '個', ヶ: '個', ケ: '個', こ: '個', 玉: '個',
+  グラム: 'g', ｇ: 'g', G: 'g', gr: 'g', ｸﾞﾗﾑ: 'g',
+  ミリリットル: 'ml', cc: 'ml', ｍｌ: 'ml', ML: 'ml', mL: 'ml', CC: 'ml',
+  キログラム: 'kg', ｋｇ: 'kg', KG: 'kg',
+  リットル: 'L', l: 'L', ℓ: 'L', ｌ: 'L',
+  ぱっく: 'パック', ﾊﾟｯｸ: 'パック', pack: 'パック', P: 'パック', pc: 'パック',
+  ふくろ: '袋', ﾌｸﾛ: '袋', 包: '袋',
+  ほん: '本', ﾎﾝ: '本',
+  まい: '枚', ﾏｲ: '枚',
+  たば: '束', ﾀﾊﾞ: '束', わ: '束',
+  丁: '丁', ちょう: '丁',
+  大さじ: '大さじ', 小さじ: '小さじ',
+};
+
+/** 単位の表記ゆれを揃える(前後の空白も落とす)。 */
+export function normalizeUnit(unit: string): string {
+  const u = unit.trim();
+  if (u === '') return u;
+  return UNIT_ALIASES[u] ?? u;
+}
+
+/**
+ * レシピの分量文字列(「200g」「1/2個」「大さじ2」など)を数値と単位に分ける。
+ * 「適量」「少々」のように量が決まらないものは null を返す。
+ */
+export function parseAmount(text: string): { value: number; unit: string } | null {
+  const s = text.trim();
+  if (s === '') return null;
+  if (/適量|少々|お好み|ひとつまみ|人数分/.test(s)) return null;
+
+  // 先頭の数値部分(分数・小数・分数記号)と、残りの単位に分ける。
+  const match = s.match(/^([\d０-９./\s½⅓⅔¼¾⅛⅜⅝⅞]+)(.*)$/);
+  if (!match) return null;
+
+  const value = parseQuantity(match[1]!.replace(/[０-９]/g, (c) => String(c.charCodeAt(0) - 0xfee0)));
+  if (value === null || value <= 0) return null;
+
+  return { value, unit: normalizeUnit(match[2] ?? '') };
+}
+
+/**
+ * 「この料理を作った」ときに在庫から引く量を決める。
+ * レシピと在庫の単位が揃っていればその分だけ、揃わなければ常識的な既定値で引く。
+ */
+export function consumptionAmount(
+  recipeQuantity: string,
+  stockQuantity: number,
+  stockUnit: string,
+): number {
+  // ざっくり管理のものは「1段階減らす」(たっぷり→半分など)。
+  if (isRoughUnit(stockUnit)) {
+    const next = ROUGH_LEVELS.find((l) => l.value < stockQuantity);
+    return next ? roundQuantity(stockQuantity - next.value) : stockQuantity;
+  }
+
+  const amount = parseAmount(recipeQuantity);
+  const unit = normalizeUnit(stockUnit);
+
+  // 単位が一致していればレシピの分量をそのまま引く(在庫を超えない)。
+  if (amount && amount.unit === unit) {
+    return Math.min(stockQuantity, amount.value);
+  }
+
+  // 単位が合わない場合は使い切りではなく妥当な量を引く。
+  if (isMeasureUnit(unit)) {
+    // g・mlは「だいたい半分使った」とみなす(1gだけ引くより実態に近い)。
+    return roundQuantity(Math.min(stockQuantity, Math.max(stockQuantity / 2, 1)));
+  }
+  return Math.min(stockQuantity, 1);
+}

@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { normalizeUnit } from '@/lib/quantity';
 
 const categoryIdSchema = z.enum(['vegetable', 'meat', 'fish', 'drink', 'frozen', 'seasoning', 'other']);
 const storageLocationIdSchema = z.enum(['fridge', 'freezer', 'room_temp']);
@@ -6,7 +7,8 @@ const storageLocationIdSchema = z.enum(['fridge', 'freezer', 'room_temp']);
 export const ingredientFormSchema = z.object({
   name: z.string().min(1, '食材名を入力してください').max(50),
   quantity: z.coerce.number().min(0, '0以上で入力してください'),
-  unit: z.string().min(1, '単位を入力してください').max(10),
+  // 「コ」「グラム」などの表記ゆれを保存前に統一する。
+  unit: z.string().min(1, '単位を入力してください').max(10).transform(normalizeUnit),
   categoryId: categoryIdSchema,
   storageLocationId: storageLocationIdSchema,
   expiryDate: z.string().nullable().default(null),

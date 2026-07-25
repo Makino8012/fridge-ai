@@ -4,6 +4,7 @@ import type { DietaryPreferencesInput, IngredientInput, MenuPlanTimeframe, Recip
 import { getCurrentHouseholdId, getCurrentProfile } from '@/services/household/household-service';
 import { adjustQuantity, listIngredients } from '@/services/ingredients/ingredient-service';
 import { namesMatch } from '@/lib/recipes/matcher';
+import { consumptionAmount, displayQuantity } from '@/lib/quantity';
 import type { Json } from '@/types/database.types';
 
 async function getIngredientsForAi(): Promise<IngredientInput[]> {
@@ -151,19 +152,29 @@ export async function getHistory() {
  * 「この料理を作った」: レシピの材料名を在庫と照合し、見つかった食材を1ずつ減らす。
  * 常備調味料など在庫にないものは自動でスキップされる。減らした食材名を返す。
  */
-export async function cookRecipe(ingredientNames: string[]): Promise<{ reduced: string[] }> {
+/**
+ * 作った料理の材料を在庫から引く。
+ * レシピの分量と在庫の単位が揃っていればその分だけ引く(200gの肉から150g引く、など)。
+ */
+export async function cookRecipe(
+  items: { name: string; quantity: string }[],
+): Promise<{ reduced: string[] }> {
   const inventory = await listIngredients();
   const reduced: string[] = [];
   const usedIds = new Set<string>();
 
-  for (const rawName of ingredientNames) {
+  for (const item of items) {
     const match = inventory.find(
-      (item) => !usedIds.has(item.id) && item.quantity > 0 && namesMatch(item.name, rawName),
+      (stock) => !usedIds.has(stock.id) && stock.quantity > 0 && namesMatch(stock.name, item.name),
     );
     if (!match) continue;
     usedIds.add(match.id);
-    await adjustQuantity(match.id, -1, 'used_in_recipe');
-    reduced.push(match.name);
+
+    const amount = consumptionAmount(item.quantity, match.quantity, match.unit);
+    if (amount <= 0) continue;
+
+    await adjustQuantity(match.id, -amount, 'used_in_recipe');
+    reduced.push(`${match.name}(${displayQuantity(amount, match.unit)})`);
   }
 
   return { reduced };

@@ -98,9 +98,11 @@ export async function toggleFavoriteAction(
 
 export async function cookRecipeAction(recipe: RecipeSuggestion): Promise<ActionResult<{ reduced: string[] }>> {
   try {
-    // 在庫にある材料(owned)だけを対象にする。常備調味料などは自動でスキップされる。
-    const names = recipe.ingredients.filter((i) => i.owned).map((i) => i.name);
-    const result = await recipeService.cookRecipe(names);
+    // 在庫にある材料だけを対象にする(常備調味料は staple なので除外)。
+    const items = recipe.ingredients
+      .filter((i) => i.owned && !i.staple)
+      .map((i) => ({ name: i.name, quantity: i.quantity }));
+    const result = await recipeService.cookRecipe(items);
     revalidatePath('/ingredients');
     revalidatePath('/');
     return actionSuccess(result);

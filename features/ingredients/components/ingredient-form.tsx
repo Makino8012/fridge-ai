@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useTransition } from 'react';
+import { useEffect, useMemo, useRef, useState, useTransition } from 'react';
 import { Minus, Plus } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -25,10 +25,21 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
-import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
+import {
+  CATEGORY_OPTIONS,
+  STORAGE_LOCATION_OPTIONS,
+  getStorageLocationLabel,
+} from '@/lib/constants';
 import { createIngredient, updateIngredient } from '@/features/ingredients/actions';
 import { ingredientFormSchema, type IngredientFormInput } from '@/features/ingredients/schema';
-import { formatQuantity, isMeasureUnit, parseQuantity } from '@/lib/quantity';
+import {
+  ROUGH_LEVELS,
+  displayQuantity,
+  formatQuantity,
+  isMeasureUnit,
+  isRoughUnit,
+  parseQuantity,
+} from '@/lib/quantity';
 import { UNIT_PRESETS, guessCategory, guessStorage, guessUnit } from '@/lib/ingredient-guess';
 import type { Database } from '@/types/database.types';
 
@@ -49,6 +60,7 @@ function QuantityField({
   unit: string;
 }) {
   const [text, setText] = useState(() => formatQuantity(value));
+  const rough = isRoughUnit(unit);
   const showFractions = !isMeasureUnit(unit);
 
   useEffect(() => {
@@ -69,6 +81,26 @@ function QuantityField({
     const next = Math.max(0, Math.round((value + delta) * 100) / 100);
     onChange(next);
     setText(formatQuantity(next));
+  }
+
+  // ざっくり量のときは数値入力ではなく「たっぷり/半分/…」のボタンで選ぶ。
+  if (rough) {
+    return (
+      <div className="flex flex-wrap gap-1.5">
+        {ROUGH_LEVELS.map((level) => (
+          <Button
+            key={level.label}
+            type="button"
+            variant={value === level.value ? 'default' : 'outline'}
+            size="sm"
+            className="h-9 px-3 text-xs font-normal"
+            onClick={() => onChange(level.value)}
+          >
+            {level.label}
+          </Button>
+        ))}
+      </div>
+    );
   }
 
   return (
@@ -195,11 +227,13 @@ export function IngredientForm({
   onOpenChange,
   ingredient,
   prefill,
+  existingIngredients = [],
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   ingredient?: Ingredient | null;
   prefill?: { name?: string; barcode?: string | null };
+  existingIngredients?: Ingredient[];
 }) {
   const isEdit = Boolean(ingredient);
   const [isPending, startTransition] = useTransition();
@@ -231,6 +265,37 @@ export function IngredientForm({
   }, [open, ingredient, prefill?.name]);
 
   const name = form.watch('name');
+
+  // 同じ食材をうっかり二重登録しないよう、名前が一致する在庫があれば知らせる。
+  const duplicate = useMemo(() => {
+    if (isEdit) return null;
+    const n = name.trim();
+    if (n.length < 2) return null;
+    return (
+      existingIngredients.find((i) => i.name === n) ??
+      existingIngredients.find((i) => i.name.includes(n) || n.includes(i.name)) ??
+      null
+    );
+  }, [name, existingIngredients, isEdit]);
+
+  function addToExisting() {
+    if (!duplicate) return;
+    const add = form.getValues('quantity');
+    startTransition(async () => {
+      const result = await updateIngredient({
+        id: duplicate.id,
+        quantity: Math.round((duplicate.quantity + add) * 100) / 100,
+      });
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success(
+        `${duplicate.name}の在庫を${displayQuantity(duplicate.quantity + add, duplicate.unit)}にしました`,
+      );
+      onOpenChange(false);
+    });
+  }
 
   // 食材名からカテゴリー・単位・保存場所を自動で推測して埋める(新規追加のときだけ)。
   useEffect(() => {
@@ -300,6 +365,29 @@ export function IngredientForm({
                     </FormItem>
                   )}
                 />
+
+                {duplicate && (
+                  <div className="rounded-xl border border-warning/40 bg-warning/10 p-3">
+                    <p className="text-xs">
+                      すでに「{duplicate.name}」が
+                      {getStorageLocationLabel(duplicate.storage_location_id)}に
+                      <span className="font-medium">
+                        {displayQuantity(duplicate.quantity, duplicate.unit)}
+                      </span>
+                      あります。
+                    </p>
+                    <Button
+                      type="button"
+                      variant="secondary"
+                      size="sm"
+                      className="mt-2 h-8 text-xs"
+                      disabled={isPending}
+                      onClick={addToExisting}
+                    >
+                      別で登録せず、この在庫に数量を足す
+                    </Button>
+                  </div>
+                )}
 
                 <FormField
                   control={form.control}

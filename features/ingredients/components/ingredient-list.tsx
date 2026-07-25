@@ -1,15 +1,16 @@
 'use client';
 
 import { useMemo, useState, useTransition } from 'react';
-import { Barcode, Plus, Refrigerator, Search } from 'lucide-react';
+import { Barcode, ChevronDown, Plus, Refrigerator, Search } from 'lucide-react';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { EmptyState } from '@/components/shared/empty-state';
-import { CATEGORY_OPTIONS } from '@/lib/constants';
+import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
 import { getExpiryStatus } from '@/lib/date';
+import { cn } from '@/lib/utils';
 import { useRealtimeTableRefresh } from '@/lib/hooks/use-realtime-table';
 import { IngredientCard } from '@/features/ingredients/components/ingredient-card';
 import { IngredientForm } from '@/features/ingredients/components/ingredient-form';
@@ -21,8 +22,15 @@ import type { CategoryId, Database } from '@/types/database.types';
 
 type Ingredient = Database['public']['Tables']['ingredients']['Row'];
 type SortKey = 'expiry' | 'name' | 'quantity';
+type GroupKey = 'storage' | 'category' | 'none';
 
 const EXPIRY_RANK: Record<string, number> = { expired: 0, soon: 1, ok: 2, none: 3 };
+
+const GROUP_OPTIONS: { id: GroupKey; label: string }[] = [
+  { id: 'storage', label: '保存場所' },
+  { id: 'category', label: '種類' },
+  { id: 'none', label: 'まとめて' },
+];
 
 export function IngredientList({
   initialIngredients,
@@ -36,6 +44,8 @@ export function IngredientList({
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<CategoryId | 'all'>('all');
   const [sort, setSort] = useState<SortKey>('expiry');
+  const [group, setGroup] = useState<GroupKey>('storage');
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const [formOpen, setFormOpen] = useState(false);
   const [editingIngredient, setEditingIngredient] = useState<Ingredient | null>(null);
   const [formPrefill, setFormPrefill] = useState<{ name?: string; barcode?: string | null } | undefined>();
@@ -72,6 +82,32 @@ export function IngredientList({
     }
     return sorted;
   }, [initialIngredients, search, category, sort]);
+
+  // 在庫が増えても探しやすいよう、保存場所や種類ごとに見出しをつけて分ける。
+  const groups = useMemo((): { key: string; label: string; items: Ingredient[] }[] => {
+    if (group === 'none') {
+      return [{ key: 'all', label: 'すべて', items: filtered }];
+    }
+    const options = group === 'storage' ? STORAGE_LOCATION_OPTIONS : CATEGORY_OPTIONS;
+    return options
+      .map((o) => ({
+        key: o.id,
+        label: o.label,
+        items: filtered.filter((i) =>
+          group === 'storage' ? i.storage_location_id === o.id : i.category_id === o.id,
+        ),
+      }))
+      .filter((g) => g.items.length > 0);
+  }, [filtered, group]);
+
+  // カテゴリー絞り込みチップに件数を出す(どこに何個あるか一目で分かる)。
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const i of initialIngredients) {
+      counts.set(i.category_id, (counts.get(i.category_id) ?? 0) + 1);
+    }
+    return counts;
+  }, [initialIngredients]);
 
   function openCreateForm() {
     setEditingIngredient(null);
@@ -131,18 +167,36 @@ export function IngredientList({
           className="cursor-pointer font-normal"
           onClick={() => setCategory('all')}
         >
-          すべて
+          すべて {initialIngredients.length}
         </Badge>
-        {CATEGORY_OPTIONS.map((c) => (
+        {CATEGORY_OPTIONS.filter((c) => (categoryCounts.get(c.id) ?? 0) > 0).map((c) => (
           <Badge
             key={c.id}
             variant={category === c.id ? 'default' : 'outline'}
             className="cursor-pointer font-normal"
             onClick={() => setCategory(c.id)}
           >
-            {c.label}
+            {c.label} {categoryCounts.get(c.id)}
           </Badge>
         ))}
+      </div>
+
+      <div className="flex items-center gap-2">
+        <span className="shrink-0 text-xs text-muted-foreground">分け方</span>
+        <div className="flex gap-1.5">
+          {GROUP_OPTIONS.map((g) => (
+            <Button
+              key={g.id}
+              type="button"
+              variant={group === g.id ? 'default' : 'outline'}
+              size="sm"
+              className="h-7 rounded-full px-3 text-xs font-normal"
+              onClick={() => setGroup(g.id)}
+            >
+              {g.label}
+            </Button>
+          ))}
+        </div>
       </div>
 
       {filtered.length === 0 ? (
@@ -152,10 +206,44 @@ export function IngredientList({
           description={initialIngredients.length === 0 ? '右下の+ボタンから追加しましょう' : undefined}
         />
       ) : (
-        <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((ingredient) => (
-            <IngredientCard key={ingredient.id} ingredient={ingredient} onEdit={openEditForm} />
-          ))}
+        <div className="space-y-5">
+          {groups.map((g) => {
+            const isCollapsed = collapsed.has(g.key);
+            return (
+              <section key={g.key} className="space-y-2.5">
+                {group !== 'none' && (
+                  <button
+                    type="button"
+                    className="flex w-full items-center gap-1.5 border-b pb-1.5 text-left"
+                    onClick={() =>
+                      setCollapsed((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(g.key)) next.delete(g.key);
+                        else next.add(g.key);
+                        return next;
+                      })
+                    }
+                  >
+                    <ChevronDown
+                      className={cn(
+                        'size-4 shrink-0 text-muted-foreground transition-transform',
+                        isCollapsed && '-rotate-90',
+                      )}
+                    />
+                    <span className="text-sm font-semibold">{g.label}</span>
+                    <span className="text-xs text-muted-foreground">{g.items.length}</span>
+                  </button>
+                )}
+                {!isCollapsed && (
+                  <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+                    {g.items.map((ingredient) => (
+                      <IngredientCard key={ingredient.id} ingredient={ingredient} onEdit={openEditForm} />
+                    ))}
+                  </div>
+                )}
+              </section>
+            );
+          })}
         </div>
       )}
 
@@ -191,6 +279,7 @@ export function IngredientList({
         onOpenChange={setFormOpen}
         ingredient={editingIngredient}
         prefill={formPrefill}
+        existingIngredients={initialIngredients}
       />
     </div>
   );

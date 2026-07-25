@@ -115,5 +115,5 @@ export function guessStorage(category: CategoryId | null, name: string): Storage
   return null;
 }
 
-/** よく使う単位(単位のクイック選択に使う)。 */
-export const UNIT_PRESETS = ['個', 'g', 'ml', '本', '枚', '袋', 'パック', '束'];
+/** よく使う単位(単位のクイック選択に使う)。「ざっくり」は数えずに管理したいもの用。 */
+export const UNIT_PRESETS = ['個', 'g', 'ml', '本', '枚', '袋', 'パック', '束', 'ざっくり'];

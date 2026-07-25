@@ -36,7 +36,15 @@ export function RecipeDetailDialog({
   function handleCooked() {
     if (!recipe) return;
     startCooking(async () => {
-      const result = await cookRecipeAction(recipe);
+      // 表示中の人数に合わせた分量で在庫を減らす。
+      const scaled = {
+        ...recipe,
+        ingredients: recipe.ingredients.map((ing) => ({
+          ...ing,
+          quantity: scaleQuantity(ing.quantity, servingsRatio(servings)),
+        })),
+      };
+      const result = await cookRecipeAction(scaled);
       if (!result.success) {
         toast.error(result.error);
         return;
@@ -44,7 +52,7 @@ export function RecipeDetailDialog({
       if (result.data.reduced.length === 0) {
         toast.info('在庫から減らせる材料はありませんでした');
       } else {
-        toast.success(`${result.data.reduced.join('、')}を在庫から1つずつ減らしました`);
+        toast.success(`${result.data.reduced.join("、")}を在庫から減らしました`);
       }
       onOpenChange(false);
     });
@@ -158,7 +166,7 @@ export function RecipeDetailDialog({
               )}
             </Button>
             <p className="text-center text-xs text-muted-foreground">
-              在庫にある材料を1つずつ減らします。常備調味料は対象外です。
+              上の分量に合わせて在庫を減らします。単位が違うときは目安の量になります。常備調味料は対象外です。
             </p>
           </div>
         )}
