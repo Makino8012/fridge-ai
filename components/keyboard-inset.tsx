@@ -15,8 +15,10 @@ export function KeyboardInset() {
     if (!viewport) return;
 
     const update = () => {
-      // 画面の高さと、実際に見えている領域の差がキーボードの高さ。
-      const inset = Math.max(0, window.innerHeight - viewport.height - viewport.offsetTop);
+      // 画面の高さと、実際に見えている領域の高さの差がキーボードの高さ。
+      // offsetTop はページのスクロール位置なので、ここでは引かない
+      // (引くとキーボードの高さを小さく見積もってしまう)。
+      const inset = Math.max(0, window.innerHeight - viewport.height);
       document.documentElement.style.setProperty('--kb-inset', `${Math.round(inset)}px`);
       // 端末のURLバー分の変動を拾わないよう、ある程度の高さがあるときだけ「開いた」とみなす。
       document.documentElement.classList.toggle('keyboard-open', inset > 120);

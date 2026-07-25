@@ -47,9 +47,9 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        // drawer-keyboard-safe: 画面からはみ出さない高さ上限と、
-        // キーボードが出たときに中身をその上へ逃がす余白(globals.css)
-        "drawer-keyboard-safe fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
+        // drawer-keyboard-safe: 高さ上限と、キーボードが出たときに
+        // その真上まで持ち上げる位置指定(globals.css)
+        "drawer-keyboard-safe fixed inset-x-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
         className
       )}
       {...props}
