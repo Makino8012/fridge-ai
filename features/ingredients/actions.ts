@@ -162,3 +162,31 @@ export async function addReceiptItemsAction(items: ReceiptItem[]): Promise<Actio
     return actionError('登録に失敗しました');
   }
 }
+
+/**
+ * 在庫チェックで「まだある」と答えたとき。数量は変えず、確認済みの印だけ付ける。
+ */
+export async function confirmStillHaveAction(id: string): Promise<ActionResult<null>> {
+  try {
+    await ingredientService.touchIngredient(id);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(null);
+  } catch {
+    return actionError('確認の記録に失敗しました');
+  }
+}
+
+/**
+ * 在庫チェックで「もう無い」と答えたとき。在庫から消す。
+ */
+export async function markUsedUpAction(id: string): Promise<ActionResult<null>> {
+  try {
+    await ingredientService.deleteIngredient(id);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(null);
+  } catch {
+    return actionError('在庫の削除に失敗しました');
+  }
+}

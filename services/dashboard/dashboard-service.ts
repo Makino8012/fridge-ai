@@ -3,6 +3,11 @@ import { listIngredients } from '@/services/ingredients/ingredient-service';
 import { suggestWasteReduction } from '@/services/recipes/recipe-service';
 import { getAlmostMakeableRecipes, getMakeableRecipes } from '@/services/recipes/local-recipe-service';
 import { displayQuantity } from '@/lib/quantity';
+import {
+  pickStockCheckItems,
+  type StockCheckCandidate,
+  type StockCheckItem,
+} from '@/lib/stock-check';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
 export interface DashboardSummary {
@@ -72,4 +77,13 @@ export async function getTonightPicks(): Promise<TonightPicks> {
     }));
 
   return { recipes, almost: almost.slice(0, 5), expiring };
+}
+
+/**
+ * 「これまだある?」と聞きたい食材を数点だけ返す。
+ * 在庫データが現実とズレたままだと提案が全部ずれるので、少しずつ直してもらう。
+ */
+export async function getStockCheckItems(): Promise<StockCheckItem[]> {
+  const ingredients = await listIngredients();
+  return pickStockCheckItems(ingredients as StockCheckCandidate[]);
 }

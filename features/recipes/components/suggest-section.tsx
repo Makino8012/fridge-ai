@@ -1,24 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import { CalendarDays, ChefHat, Leaf, ShoppingBasket, Sparkles, Trash2 } from 'lucide-react';
+import { CalendarDays, ChefHat, Leaf, ShoppingBasket, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SuggestRecipesPanel } from '@/features/recipes/components/suggest-recipes-panel';
 import { SeasonalPanel } from '@/features/recipes/components/seasonal-panel';
 import { MissingIngredientsPanel } from '@/features/recipes/components/missing-ingredients-panel';
 import { UseUpPanel, type UseUpTarget } from '@/features/recipes/components/use-up-panel';
-import { MenuPlanPanel } from '@/features/menu-plan/components/menu-plan-panel';
 import { WeeklyPlanPanel } from '@/features/menu-plan/components/weekly-plan-panel';
 
-type Mode = 'makeable' | 'useup' | 'seasonal' | 'missing' | 'weekly' | 'menu';
+type Mode = 'makeable' | 'useup' | 'seasonal' | 'missing' | 'weekly';
 
-const MODES: { id: Mode; label: string; icon: typeof ChefHat; ai?: boolean }[] = [
+const MODES: { id: Mode; label: string; icon: typeof ChefHat }[] = [
   { id: 'makeable', label: '作れる', icon: ChefHat },
   { id: 'useup', label: '使い切り', icon: Trash2 },
   { id: 'seasonal', label: '旬', icon: Leaf },
   { id: 'missing', label: '買い足せば', icon: ShoppingBasket },
   { id: 'weekly', label: '1週間の献立', icon: CalendarDays },
-  { id: 'menu', label: 'AIに献立を頼む', icon: Sparkles, ai: true },
 ];
 
 /**
@@ -54,7 +52,6 @@ export function SuggestSection({
             >
               <Icon className="size-4" />
               {m.label}
-              {m.ai && <Sparkles className="size-3 opacity-70" />}
             </Button>
           );
         })}
@@ -65,7 +62,6 @@ export function SuggestSection({
       {mode === 'seasonal' && <SeasonalPanel />}
       {mode === 'missing' && <MissingIngredientsPanel />}
       {mode === 'weekly' && <WeeklyPlanPanel defaultHighProtein={highProtein} />}
-      {mode === 'menu' && <MenuPlanPanel />}
     </div>
   );
 }

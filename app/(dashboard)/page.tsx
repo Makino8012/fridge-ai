@@ -1,12 +1,20 @@
 import { Header } from '@/components/layout/header';
 import { StockSummaryCards } from '@/features/dashboard/components/stock-summary-card';
-import { TodaysSuggestionCard } from '@/features/dashboard/components/todays-suggestion-card';
+import { StockCheckCard } from '@/features/dashboard/components/stock-check-card';
 import { TonightCard } from '@/features/dashboard/components/tonight-card';
 import { ExpiringStrip } from '@/features/dashboard/components/expiring-strip';
-import { getDashboardSummary, getTonightPicks } from '@/services/dashboard/dashboard-service';
+import {
+  getDashboardSummary,
+  getStockCheckItems,
+  getTonightPicks,
+} from '@/services/dashboard/dashboard-service';
 
 export default async function DashboardPage() {
-  const [summary, picks] = await Promise.all([getDashboardSummary(), getTonightPicks()]);
+  const [summary, picks, stockCheckItems] = await Promise.all([
+    getDashboardSummary(),
+    getTonightPicks(),
+    getStockCheckItems(),
+  ]);
 
   return (
     <>
@@ -17,13 +25,14 @@ export default async function DashboardPage() {
 
         <ExpiringStrip items={picks.expiring} />
 
+        {/* 在庫のズレを少しずつ直す。提案の精度はここに依存している */}
+        <StockCheckCard items={stockCheckItems} />
+
         <StockSummaryCards
           totalCount={summary.totalCount}
           expiredCount={summary.expiredCount}
           expiringSoonCount={summary.expiringSoonCount}
         />
-
-        <TodaysSuggestionCard />
       </div>
     </>
   );

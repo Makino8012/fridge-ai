@@ -2,20 +2,16 @@
 
 import { useEffect, useState, useTransition } from 'react';
 import { toast } from 'sonner';
-import { Search, ShoppingBasket, ShoppingCart, Sparkles } from 'lucide-react';
+import { Search, ShoppingBasket, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { EmptyState } from '@/components/shared/empty-state';
 import {
-  AiLoadingHint,
   RecipeSuggestionCard,
   RecipeSuggestionSkeletonList,
 } from '@/features/recipes/components/recipe-suggestion-card';
-import {
-  findAlmostMakeableAction,
-  suggestWithMissingIngredientAction,
-} from '@/features/recipes/actions';
+import { findAlmostMakeableAction } from '@/features/recipes/actions';
 import { addShoppingItem } from '@/features/shopping-list/actions';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
@@ -24,13 +20,10 @@ type LocalResult = { missingIngredients: string[]; recipe: RecipeSuggestion };
 export function MissingIngredientsPanel() {
   const [ingredientName, setIngredientName] = useState('');
   const [localResults, setLocalResults] = useState<LocalResult[] | null>(null);
-  const [aiRecipes, setAiRecipes] = useState<RecipeSuggestion[] | null>(null);
   const [isLocalPending, startLocalTransition] = useTransition();
-  const [isAiPending, startAiTransition] = useTransition();
   const [, startAddTransition] = useTransition();
 
   function runLocalSearch(query?: string) {
-    setAiRecipes(null);
     startLocalTransition(async () => {
       const result = await findAlmostMakeableAction(query?.trim() || undefined);
       if (!result.success) {
@@ -46,22 +39,6 @@ export function MissingIngredientsPanel() {
     runLocalSearch();
   }, []);
 
-  function handleAiSearch() {
-    if (!ingredientName.trim()) {
-      toast.error('食材名を入力してください');
-      return;
-    }
-    setLocalResults(null);
-    startAiTransition(async () => {
-      const result = await suggestWithMissingIngredientAction(ingredientName);
-      if (!result.success) {
-        toast.error(result.error);
-        return;
-      }
-      setAiRecipes(result.data);
-    });
-  }
-
   function addAllToShoppingList(names: string[]) {
     startAddTransition(async () => {
       for (const name of names) {
@@ -75,7 +52,7 @@ export function MissingIngredientsPanel() {
     });
   }
 
-  const isPending = isLocalPending || isAiPending;
+  const isPending = isLocalPending;
 
   return (
     <div className="space-y-4">
@@ -94,26 +71,17 @@ export function MissingIngredientsPanel() {
         />
       </div>
 
-      <div className="flex gap-2">
-        <Button
-          variant="outline"
-          onClick={() => runLocalSearch(ingredientName)}
-          disabled={isPending}
-          className="flex-1"
-        >
-          在庫から探す(無料)
-        </Button>
-        <Button onClick={handleAiSearch} disabled={isPending} className="flex-1">
-          <Sparkles className={isAiPending ? 'animate-pulse' : ''} />
-          AIに相談
-        </Button>
-      </div>
+      <Button
+        variant="outline"
+        onClick={() => runLocalSearch(ingredientName)}
+        disabled={isPending}
+        className="w-full"
+      >
+        この条件で探し直す
+      </Button>
 
       {isPending && (
-        <div className="space-y-3">
-          {isAiPending && <AiLoadingHint />}
-          <RecipeSuggestionSkeletonList />
-        </div>
+        <RecipeSuggestionSkeletonList />
       )}
 
       {!isPending && localResults && localResults.length > 0 && (
@@ -145,16 +113,8 @@ export function MissingIngredientsPanel() {
         </div>
       )}
 
-      {!isPending && aiRecipes && aiRecipes.length > 0 && (
-        <div className="grid gap-2.5 md:grid-cols-2">
-          {aiRecipes.map((recipe, i) => (
-            <RecipeSuggestionCard key={i} recipe={recipe} />
-          ))}
-        </div>
-      )}
 
-      {!isPending &&
-        ((localResults && localResults.length === 0) || (aiRecipes && aiRecipes.length === 0)) && (
+      {!isPending && localResults && localResults.length === 0 && (
           <EmptyState
             icon={ShoppingBasket}
             title="該当する料理が見つかりませんでした"

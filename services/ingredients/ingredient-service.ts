@@ -166,3 +166,16 @@ export async function quickAddIngredient(
   });
   return { mode: 'created' };
 }
+
+/**
+ * 「まだある」と確認されたときに updated_at だけ更新する。
+ * トリガーで自動更新されるので、内容を変えない更新で十分。
+ */
+export async function touchIngredient(id: string) {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from('ingredients')
+    .update({ updated_at: new Date().toISOString() })
+    .eq('id', id);
+  if (error) throw error;
+}

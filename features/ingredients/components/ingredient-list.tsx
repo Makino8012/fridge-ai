@@ -17,6 +17,7 @@ import { IngredientForm } from '@/features/ingredients/components/ingredient-for
 import { QuickAddBar } from '@/features/ingredients/components/quick-add-bar';
 import { BarcodeScanner } from '@/features/ingredients/components/barcode-scanner';
 import { ReceiptCapture } from '@/features/ingredients/components/receipt-capture';
+import { AI_ENABLED } from '@/lib/features';
 import { BulkAdd } from '@/features/ingredients/components/bulk-add';
 import { lookupBarcodeAction } from '@/features/ingredients/actions';
 import type { CategoryId, Database } from '@/types/database.types';
@@ -257,7 +258,7 @@ export function IngredientList({
       )}
 
       <div className="hide-on-keyboard fixed bottom-24 left-4 flex flex-col items-center gap-3 md:bottom-8 md:left-auto md:right-8">
-        <ReceiptCapture />
+        {AI_ENABLED && <ReceiptCapture />}
         <Button
           size="icon"
           variant="secondary"
