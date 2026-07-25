@@ -5,6 +5,8 @@ import { actionError, actionSuccess, type ActionResult } from '@/lib/action-resu
 import * as recipeService from '@/services/recipes/recipe-service';
 import * as localRecipeService from '@/services/recipes/local-recipe-service';
 import type { UseUpResult } from '@/lib/recipes/matcher';
+import type { PlannedMeal, WeeklyPlanOptions } from '@/lib/recipes/weekly-plan';
+import * as shoppingListService from '@/services/shopping-list/shopping-list-service';
 import { aiErrorMessage, type MenuPlanTimeframe, type RecipeSuggestion } from '@/lib/ai/types';
 
 // ===== 無料モード(ローカルレシピ辞書・API課金なし) =====
@@ -120,5 +122,32 @@ export async function findUseUpRecipesAction(
     return actionSuccess(recipes);
   } catch {
     return actionError('レシピの取得に失敗しました');
+  }
+}
+
+export async function buildWeeklyPlanAction(
+  options: WeeklyPlanOptions,
+): Promise<ActionResult<{ meals: PlannedMeal[]; missingIngredients: string[] }>> {
+  try {
+    const result = await localRecipeService.getWeeklyPlan(options);
+    return actionSuccess(result);
+  } catch {
+    return actionError('献立の作成に失敗しました');
+  }
+}
+
+/** 献立で足りない材料をまとめて買い物リストに入れる。 */
+export async function addMissingToShoppingListAction(
+  names: string[],
+): Promise<ActionResult<{ added: number }>> {
+  if (names.length === 0) return actionError('追加する食材がありません');
+  try {
+    for (const name of names) {
+      await shoppingListService.addShoppingItem({ name, quantity: null, unit: null });
+    }
+    revalidatePath('/shopping-list');
+    return actionSuccess({ added: names.length });
+  } catch {
+    return actionError('買い物リストへの追加に失敗しました');
   }
 }

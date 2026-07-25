@@ -4,6 +4,7 @@ import {
   browseRecipes,
   collectTags,
   findAlmostMakeableRecipes,
+  evaluateRecipe,
   findMakeableRecipes,
   findRecipesUsing,
   findSeasonalRecipes,
@@ -11,6 +12,11 @@ import {
   type InventoryItem,
 } from '@/lib/recipes/matcher';
 import type { LocalRecipe } from '@/lib/recipes/types';
+import {
+  buildWeeklyPlan,
+  collectMissingIngredients,
+  type WeeklyPlanOptions,
+} from '@/lib/recipes/weekly-plan';
 import { listIngredients } from '@/services/ingredients/ingredient-service';
 
 const RECIPES = recipesData as LocalRecipe[];
@@ -53,4 +59,11 @@ export async function getBrowseRecipes(filters: BrowseFilters) {
 export async function getUseUpRecipes(targetNames: string[]) {
   const inventory = await getInventory();
   return findRecipesUsing(RECIPES, inventory, targetNames);
+}
+
+/** 1週間分の献立を組み立てる(ローカル辞書のみ・API料金なし)。 */
+export async function getWeeklyPlan(options: WeeklyPlanOptions) {
+  const inventory = await getInventory();
+  const meals = buildWeeklyPlan(RECIPES, inventory, (r) => evaluateRecipe(r, inventory), options);
+  return { meals, missingIngredients: collectMissingIngredients(meals) };
 }

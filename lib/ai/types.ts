@@ -31,6 +31,8 @@ export const recipeSuggestionSchema = z.object({
   ),
   steps: z.array(z.string()),
   usesExpiringIngredient: z.boolean(),
+  // 1人分のタンパク質量の目安(g)。ローカル辞書のレシピにだけ入る。
+  proteinPerServing: z.number().optional(),
 });
 export type RecipeSuggestion = z.infer<typeof recipeSuggestionSchema>;
 

@@ -8,15 +8,17 @@ import { SeasonalPanel } from '@/features/recipes/components/seasonal-panel';
 import { MissingIngredientsPanel } from '@/features/recipes/components/missing-ingredients-panel';
 import { UseUpPanel, type UseUpTarget } from '@/features/recipes/components/use-up-panel';
 import { MenuPlanPanel } from '@/features/menu-plan/components/menu-plan-panel';
+import { WeeklyPlanPanel } from '@/features/menu-plan/components/weekly-plan-panel';
 
-type Mode = 'makeable' | 'useup' | 'seasonal' | 'missing' | 'menu';
+type Mode = 'makeable' | 'useup' | 'seasonal' | 'missing' | 'weekly' | 'menu';
 
 const MODES: { id: Mode; label: string; icon: typeof ChefHat; ai?: boolean }[] = [
   { id: 'makeable', label: '作れる', icon: ChefHat },
   { id: 'useup', label: '使い切り', icon: Trash2 },
   { id: 'seasonal', label: '旬', icon: Leaf },
   { id: 'missing', label: '買い足せば', icon: ShoppingBasket },
-  { id: 'menu', label: '献立', icon: CalendarDays, ai: true },
+  { id: 'weekly', label: '1週間の献立', icon: CalendarDays },
+  { id: 'menu', label: 'AIに献立を頼む', icon: Sparkles, ai: true },
 ];
 
 /**
@@ -26,9 +28,12 @@ const MODES: { id: Mode; label: string; icon: typeof ChefHat; ai?: boolean }[] =
 export function SuggestSection({
   useUpTargets,
   initialMode = 'makeable',
+  highProtein = false,
 }: {
   useUpTargets: UseUpTarget[];
   initialMode?: Mode;
+  /** 設定で「高タンパク」を選んでいれば、献立の初期値にする。 */
+  highProtein?: boolean;
 }) {
   const [mode, setMode] = useState<Mode>(initialMode);
 
@@ -59,6 +64,7 @@ export function SuggestSection({
       {mode === 'useup' && <UseUpPanel targets={useUpTargets} />}
       {mode === 'seasonal' && <SeasonalPanel />}
       {mode === 'missing' && <MissingIngredientsPanel />}
+      {mode === 'weekly' && <WeeklyPlanPanel defaultHighProtein={highProtein} />}
       {mode === 'menu' && <MenuPlanPanel />}
     </div>
   );

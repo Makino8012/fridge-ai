@@ -1,6 +1,7 @@
 import type { RecipeSuggestion } from '@/lib/ai/types';
 import type { CurrentSeason } from '@/lib/date';
 import type { LocalRecipe } from '@/lib/recipes/types';
+import { estimateProteinPerServing } from '@/lib/nutrition';
 
 export interface InventoryItem {
   name: string;
@@ -79,6 +80,17 @@ function matchesInventory(ingredientName: string, inventory: InventoryItem[]): I
   return inventory.find((item) => namesMatch(item.name, ingredientName)) ?? null;
 }
 
+// タンパク質量は材料から毎回計算せず、一度だけ求めて使い回す。
+const proteinCache = new Map<string, number>();
+
+function proteinOf(recipe: LocalRecipe): number {
+  const cached = proteinCache.get(recipe.title);
+  if (cached !== undefined) return cached;
+  const value = estimateProteinPerServing(recipe.ingredients);
+  proteinCache.set(recipe.title, value);
+  return value;
+}
+
 interface EvaluatedRecipe {
   recipe: LocalRecipe;
   missing: string[]; // 不足している非常備材料の名前
@@ -116,8 +128,18 @@ function evaluate(recipe: LocalRecipe, inventory: InventoryItem[]): EvaluatedRec
       ingredients: suggestionIngredients,
       steps: recipe.steps,
       usesExpiringIngredient: usesExpiring,
+      proteinPerServing: proteinOf(recipe),
     },
   };
+}
+
+/** 1レシピを在庫と照合した結果を返す(献立作成などから使う)。 */
+export function evaluateRecipe(
+  recipe: LocalRecipe,
+  inventory: InventoryItem[],
+): { missing: string[]; suggestion: RecipeSuggestion } {
+  const result = evaluate(recipe, inventory);
+  return { missing: result.missing, suggestion: result.suggestion };
 }
 
 /**

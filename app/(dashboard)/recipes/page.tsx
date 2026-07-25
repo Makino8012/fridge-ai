@@ -6,19 +6,25 @@ import { SavedSection } from '@/features/recipes/components/saved-section';
 import { getFavorites, getHistory } from '@/services/recipes/recipe-service';
 import { RECIPE_COUNT, getBrowseRecipes } from '@/services/recipes/local-recipe-service';
 import { getTonightPicks } from '@/services/dashboard/dashboard-service';
+import { getCurrentProfile } from '@/services/household/household-service';
 
 export default async function RecipesPage({
   searchParams,
 }: {
   searchParams: Promise<{ tab?: string }>;
 }) {
-  const [favorites, history, initialBrowse, picks, params] = await Promise.all([
+  const [favorites, history, initialBrowse, picks, profile, params] = await Promise.all([
     getFavorites(),
     getHistory(),
     getBrowseRecipes({}),
     getTonightPicks(),
+    getCurrentProfile(),
     searchParams,
   ]);
+
+  // 設定の食事方針(高タンパク)を献立の初期値に使う。
+  const prefs = profile?.dietary_preferences as { diet?: string } | null;
+  const highProtein = prefs?.diet === 'high_protein';
 
   // ホームの「早めに使いたい食材」から ?tab=useup で使い切りを直接開けるようにする。
   const initialMode = params.tab === 'useup' ? 'useup' : 'makeable';
@@ -41,7 +47,11 @@ export default async function RecipesPage({
           </TabsList>
 
           <TabsContent value="suggest" className="mt-4">
-            <SuggestSection useUpTargets={picks.expiring} initialMode={initialMode} />
+            <SuggestSection
+              useUpTargets={picks.expiring}
+              initialMode={initialMode}
+              highProtein={highProtein}
+            />
           </TabsContent>
           <TabsContent value="browse" className="mt-4">
             <BrowsePanel totalCount={RECIPE_COUNT} initialResults={initialBrowse} />
