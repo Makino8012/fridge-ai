@@ -15,22 +15,57 @@ function isInSeason(recipe: LocalRecipe, season: CurrentSeason | undefined): boo
 // 肉・魚の部位や切り方の表記を吸収し、「豚こま肉」と「豚肉」を同一視できるようにする。
 const CUT_TOKENS = ['こま', '細切れ', '切れ', 'スライス', '薄切り', 'バラ', 'もも', 'むね', 'ロース', 'ひき', '挽き', '挽'];
 
+// 食材そのものは同じで、状態や大きさだけを表す言葉。取り除いて比べる。
+// 例:「ミニトマト」→「トマト」、「刻みのり」→「のり」、「大根おろし」→「大根」
+const MODIFIER_PREFIXES = [
+  'ミニ', 'プチ', '新', '春', '生', '冷凍', '刻み', 'きざみ', 'おろし', 'すりおろし',
+  '乾燥', 'ゆで', '茹で', '焼き', '蒸し', 'むき', 'ぶな', '有塩', '無塩', '薄口', '濃口', '溶き', '粉',
+];
+const MODIFIER_SUFFIXES = ['おろし', '水煮', '缶詰', '缶', 'パウダー', '肉'];
+
+// 呼び方が違うだけで同じもの。
+const ALIASES: Record<string, string> = {
+  卵黄: '卵', 卵白: '卵', たまご: '卵', 玉子: '卵',
+  ねぎ: '長ねぎ', 青ねぎ: '長ねぎ', 万能ねぎ: '長ねぎ', 小ねぎ: '長ねぎ',
+  しょうゆ: '醤油', みそ: '味噌', にんにく: 'にんにく', しょうが: '生姜',
+  じゃが芋: 'じゃがいも', 薩摩芋: 'さつまいも', 人参: 'にんじん', 玉葱: '玉ねぎ',
+};
+
+function stripAffixes(text: string): string {
+  let n = text;
+  for (const prefix of MODIFIER_PREFIXES) {
+    if (n.startsWith(prefix) && n.length > prefix.length) n = n.slice(prefix.length);
+  }
+  for (const suffix of MODIFIER_SUFFIXES) {
+    if (n.endsWith(suffix) && n.length > suffix.length) n = n.slice(0, -suffix.length);
+  }
+  return n;
+}
+
 export function normalizeIngredientName(name: string): string {
   let n = name.replace(/\s+/g, '').toLowerCase();
   for (const token of CUT_TOKENS) {
     n = n.split(token).join('');
   }
-  return n;
+  n = stripAffixes(n);
+  // 別名は最後にそろえる(「卵黄」→「卵」など)。
+  return ALIASES[n] ?? n;
 }
 
 const normalize = normalizeIngredientName;
 
-/** 2つの食材名が同一とみなせるか(部分一致・双方向・部位表記ゆれ吸収)。 */
+/**
+ * 2つの食材名が同じ食材を指すか。
+ *
+ * 以前は部分一致で判定していたが、「ねぎ」が「玉ねぎ」に、「油」が「油揚げ」に
+ * 一致してしまい、持っていない食材を持っている扱いにしていた。
+ * 表記ゆれ(部位・大きさ・状態・別名)をそろえたうえで完全一致を求める。
+ */
 export function namesMatch(a: string, b: string): boolean {
   const na = normalize(a);
   const nb = normalize(b);
   if (na.length === 0 || nb.length === 0) return false;
-  return na.includes(nb) || nb.includes(na);
+  return na === nb;
 }
 
 // 常備調味料かどうかは辞書の staple フラグだけで判定する。
@@ -39,15 +74,9 @@ function isStaple(_ingredientName: string, stapleFlag: boolean): boolean {
   return stapleFlag;
 }
 
-// 在庫食材名とレシピ材料名を緩く突き合わせる(部分一致・双方向)。
+// 在庫にその材料があるかを探す。表記ゆれをそろえた完全一致で判定する。
 function matchesInventory(ingredientName: string, inventory: InventoryItem[]): InventoryItem | null {
-  const target = normalize(ingredientName);
-  for (const item of inventory) {
-    const inv = normalize(item.name);
-    if (inv.length === 0) continue;
-    if (inv.includes(target) || target.includes(inv)) return item;
-  }
-  return null;
+  return inventory.find((item) => namesMatch(item.name, ingredientName)) ?? null;
 }
 
 interface EvaluatedRecipe {
