@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState, useTransition } from 'react';
-import { Barcode, ChevronDown, Plus, Refrigerator, Search } from 'lucide-react';
+import { Barcode, ChevronDown, ListPlus, Plus, Refrigerator, Search } from 'lucide-react';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,7 @@ import { IngredientForm } from '@/features/ingredients/components/ingredient-for
 import { QuickAddBar } from '@/features/ingredients/components/quick-add-bar';
 import { BarcodeScanner } from '@/features/ingredients/components/barcode-scanner';
 import { ReceiptCapture } from '@/features/ingredients/components/receipt-capture';
+import { BulkAdd } from '@/features/ingredients/components/bulk-add';
 import { lookupBarcodeAction } from '@/features/ingredients/actions';
 import type { CategoryId, Database } from '@/types/database.types';
 
@@ -50,6 +51,7 @@ export function IngredientList({
   const [editingIngredient, setEditingIngredient] = useState<Ingredient | null>(null);
   const [formPrefill, setFormPrefill] = useState<{ name?: string; barcode?: string | null } | undefined>();
   const [scannerOpen, setScannerOpen] = useState(false);
+  const [bulkOpen, setBulkOpen] = useState(false);
   const [, startLookup] = useTransition();
 
   const filtered = useMemo(() => {
@@ -138,6 +140,11 @@ export function IngredientList({
   return (
     <div className="space-y-4">
       <QuickAddBar />
+
+      <Button variant="outline" className="w-full" onClick={() => setBulkOpen(true)}>
+        <ListPlus className="size-4" />
+        まとめて追加（声・書き出し）
+      </Button>
 
       <div className="flex gap-2">
         <div className="relative flex-1">
@@ -267,6 +274,8 @@ export function IngredientList({
           <Plus className="size-6" />
         </Button>
       </div>
+
+      <BulkAdd open={bulkOpen} onOpenChange={setBulkOpen} />
 
       <BarcodeScanner
         open={scannerOpen}

@@ -14,6 +14,43 @@ import {
   type UpdateIngredientFormInput,
 } from './schema';
 
+/**
+ * まとめ入力・音声入力から複数の食材を一度に登録する。
+ * 1件ずつ検証し、登録できた件数を返す。
+ */
+export async function createIngredientsBulk(
+  inputs: IngredientFormInput[],
+): Promise<ActionResult<{ created: number }>> {
+  if (inputs.length === 0) return actionError('登録する食材がありません');
+
+  try {
+    let created = 0;
+    for (const input of inputs) {
+      const parsed = createIngredientSchema.safeParse(input);
+      if (!parsed.success) continue;
+      await ingredientService.createIngredient({
+        name: parsed.data.name,
+        quantity: parsed.data.quantity,
+        unit: parsed.data.unit,
+        categoryId: parsed.data.categoryId,
+        storageLocationId: parsed.data.storageLocationId,
+        expiryDate: parsed.data.expiryDate,
+        memo: parsed.data.memo,
+        source: 'manual',
+        barcode: null,
+      });
+      created++;
+    }
+
+    if (created === 0) return actionError('登録できる食材がありませんでした');
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess({ created });
+  } catch {
+    return actionError('食材の登録に失敗しました');
+  }
+}
+
 export async function createIngredient(
   input: IngredientFormInput,
   extra?: { source?: IngredientSource; barcode?: string | null },
