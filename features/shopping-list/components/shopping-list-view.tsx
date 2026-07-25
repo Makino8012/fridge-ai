@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useTransition } from 'react';
+import { useMemo, useOptimistic, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 import { ShoppingCart, Sparkles, Trash2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -35,18 +35,42 @@ export function ShoppingListView({
   const [isPending, startTransition] = useTransition();
   const [isAiPending, startAiTransition] = useTransition();
 
+  // 追加した瞬間にリストへ表示する(サーバー再取得を待たない)。
+  // サーバー反映後は initialItems が更新され、この楽観的表示は自動で置き換わる。
+  const [optimisticItems, addOptimisticItems] = useOptimistic(
+    initialItems,
+    (state: ShoppingItem[], newItems: ShoppingItem[]) => [...state, ...newItems],
+  );
+
+  function makeOptimisticItem(name: string, quantity: number | null, unit: string | null): ShoppingItem {
+    return {
+      id: `temp-${crypto.randomUUID()}`,
+      household_id: householdId,
+      name,
+      quantity,
+      unit,
+      is_checked: false,
+      source: 'manual',
+      created_by: null,
+      checked_by: null,
+      created_at: new Date().toISOString(),
+      checked_at: null,
+    };
+  }
+
   const { unchecked, checked } = useMemo(() => {
     return {
-      unchecked: initialItems.filter((i) => !i.is_checked),
-      checked: initialItems.filter((i) => i.is_checked),
+      unchecked: optimisticItems.filter((i) => !i.is_checked),
+      checked: optimisticItems.filter((i) => i.is_checked),
     };
-  }, [initialItems]);
+  }, [optimisticItems]);
 
   function handleAdd() {
     if (!newItemName.trim()) return;
     const name = newItemName.trim();
     setNewItemName('');
     startTransition(async () => {
+      addOptimisticItems([makeOptimisticItem(name, null, null)]);
       const result = await addShoppingItem({ name, quantity: null, unit: null });
       if (!result.success) toast.error(result.error);
     });
@@ -65,14 +89,16 @@ export function ShoppingListView({
 
   function handleImportAll() {
     if (!aiSuggestions || aiSuggestions.length === 0) return;
+    const items = aiSuggestions;
+    setAiSuggestions(null);
     startTransition(async () => {
-      const result = await importAiSuggestedItems(aiSuggestions);
+      addOptimisticItems(items.map((i) => makeOptimisticItem(i.name, null, i.unit || null)));
+      const result = await importAiSuggestedItems(items);
       if (!result.success) {
         toast.error(result.error);
         return;
       }
       toast.success('買い物リストに追加しました');
-      setAiSuggestions(null);
     });
   }
 

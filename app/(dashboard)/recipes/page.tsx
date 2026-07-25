@@ -8,10 +8,14 @@ import { MenuPlanPanel } from '@/features/menu-plan/components/menu-plan-panel';
 import { FavoritesList } from '@/features/recipes/components/favorites-list';
 import { HistoryList } from '@/features/recipes/components/history-list';
 import { getFavorites, getHistory } from '@/services/recipes/recipe-service';
-import { RECIPE_COUNT } from '@/services/recipes/local-recipe-service';
+import { RECIPE_COUNT, getBrowseRecipes } from '@/services/recipes/local-recipe-service';
 
 export default async function RecipesPage() {
-  const [favorites, history] = await Promise.all([getFavorites(), getHistory()]);
+  const [favorites, history, initialBrowse] = await Promise.all([
+    getFavorites(),
+    getHistory(),
+    getBrowseRecipes({}),
+  ]);
 
   return (
     <>
@@ -33,7 +37,7 @@ export default async function RecipesPage() {
             <SuggestRecipesPanel />
           </TabsContent>
           <TabsContent value="browse" className="mt-4">
-            <BrowsePanel totalCount={RECIPE_COUNT} />
+            <BrowsePanel totalCount={RECIPE_COUNT} initialResults={initialBrowse} />
           </TabsContent>
           <TabsContent value="seasonal" className="mt-4">
             <SeasonalPanel />
