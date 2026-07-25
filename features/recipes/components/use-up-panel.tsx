@@ -18,6 +18,8 @@ export interface UseUpTarget {
   name: string;
   quantity: string;
   label: string;
+  /** 期限が未入力で、カテゴリから推定した目安であることを示す。 */
+  estimated?: boolean;
 }
 
 export function UseUpPanel({ targets }: { targets: UseUpTarget[] }) {
@@ -75,6 +77,7 @@ export function UseUpPanel({ targets }: { targets: UseUpTarget[] }) {
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">
         期限が近い食材です。使いたいものを選ぶと、それを使うレシピを多く使える順に並べます。
+        期限が未入力の物は、食材の種類からの目安で拾っています。
       </p>
 
       <div className="flex flex-wrap gap-1.5">

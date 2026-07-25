@@ -61,7 +61,7 @@ export function IngredientCard({
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-medium leading-snug">{ingredient.name}</p>
           <div className="mt-0.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
-            <ExpiryBadge expiryDate={ingredient.expiry_date} />
+            <ExpiryBadge item={ingredient} />
             <span className="text-[11px] text-muted-foreground">
               {getStorageLocationLabel(ingredient.storage_location_id)}
               {ingredient.memo ? ` ・ ${ingredient.memo}` : ''}

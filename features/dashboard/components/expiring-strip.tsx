@@ -19,6 +19,8 @@ export function ExpiringStrip({ items }: { items: ExpiringItem[] }) {
               {items.slice(0, 4).map((item) => (
                 <Badge key={item.name} variant="outline" className="bg-background/60 font-normal">
                   {item.name}・{item.label}
+                  {/* 推定を実際の期限と混同させない */}
+                  {item.estimated && <span className="ml-1 opacity-60">(目安)</span>}
                 </Badge>
               ))}
               {items.length > 4 && (

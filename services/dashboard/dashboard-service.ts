@@ -3,6 +3,7 @@ import { listIngredients } from '@/services/ingredients/ingredient-service';
 import { suggestWasteReduction } from '@/services/recipes/recipe-service';
 import { getAlmostMakeableRecipes, getMakeableRecipes } from '@/services/recipes/local-recipe-service';
 import { displayQuantity } from '@/lib/quantity';
+import { effectiveExpiry } from '@/lib/shelf-life';
 import {
   pickStockCheckItems,
   type StockCheckCandidate,
@@ -43,6 +44,8 @@ export interface ExpiringItem {
   name: string;
   quantity: string;
   label: string;
+  /** 賞味期限が未入力で、カテゴリから推定した目安であることを示す。 */
+  estimated: boolean;
 }
 
 export interface TonightPicks {
@@ -65,16 +68,25 @@ export async function getTonightPicks(): Promise<TonightPicks> {
     getAlmostMakeableRecipes(),
   ]);
 
+  // 期限が未入力の食材も、カテゴリからの目安で拾う。
+  // そうしないと期限を入れる習慣がない限り「使い切り」が永久に空になる。
   const expiring = ingredients
-    .filter((i) => {
-      const status = getExpiryStatus(i.expiry_date);
-      return status === 'expired' || status === 'soon';
+    .flatMap((i) => {
+      const expiry = effectiveExpiry(i);
+      if (!expiry) return [];
+      const status = getExpiryStatus(expiry.date);
+      if (status !== 'expired' && status !== 'soon') return [];
+      return [
+        {
+          name: i.name,
+          quantity: displayQuantity(i.quantity, i.unit),
+          label: formatExpiryLabel(expiry.date),
+          estimated: expiry.estimated,
+        },
+      ];
     })
-    .map((i) => ({
-      name: i.name,
-      quantity: displayQuantity(i.quantity, i.unit),
-      label: formatExpiryLabel(i.expiry_date),
-    }));
+    // 実際に期限が入っている物を先に見せる。目安はその後。
+    .sort((a, b) => Number(a.estimated) - Number(b.estimated));
 
   return { recipes, almost: almost.slice(0, 5), expiring };
 }
