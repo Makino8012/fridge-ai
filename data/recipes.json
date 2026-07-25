@@ -49686,5 +49686,5303 @@
     "seasons": [
       "winter"
     ]
+  },
+  {
+    "title": "鶏むね肉のレンジ蒸し（特製ネギ塩だれ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "長ネギ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り除き、フォークで数カ所穴を開ける。",
+      "耐熱容器に鶏むね肉を入れ、酒、塩こしょうをふって軽く揉み込む。",
+      "ふんわりとラップをし、600Wのレンジで約5〜6分加熱する。",
+      "粗熱が取れるまでレンジ内に放置して余熱で中まで火を通す。",
+      "長ネギをみじん切りにする。",
+      "ネギ、ごま油、鶏ガラスープの素、レモン汁を混ぜ合わせてネギ塩だれを作る。",
+      "出来上がった鶏肉にたっぷりとネギ塩だれをかける。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "鶏むね肉のレンジ蒸し（さっぱり梅しそ風味）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2〜3個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ（3倍濃縮）",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り除き、フォークで数カ所穴を開ける。",
+      "耐熱容器に鶏むね肉を入れ、酒、塩こしょうをふって軽く揉み込む。",
+      "ふんわりとラップをし、600Wのレンジで約5〜6分加熱する。",
+      "粗熱が取れるまでレンジ内に放置して余熱で中まで火を通す。",
+      "梅干しは種を取り除き、包丁で叩いてペースト状にする。大葉は千切りにする。",
+      "梅肉、めんつゆを混ぜ合わせる。",
+      "鶏肉に梅ダレを絡め、仕上げに大葉を散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のレンジ蒸し（ヤンニョムチキン風）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラカント（または砂糖）",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "白ごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り除き、フォークで数カ所穴を開ける。",
+      "耐熱容器に鶏むね肉を入れ、酒、塩こしょうをふって軽く揉み込む。",
+      "ふんわりとラップをし、600Wのレンジで約5〜6分加熱する。",
+      "粗熱が取れるまでレンジ内に放置して余熱で中まで火を通す。",
+      "コチュジャン、ケチャップ、ラカント、醤油をボウルで混ぜ合わせる。",
+      "加熱した鶏肉をボウルに入れ、ヤンニョムダレをよく絡める。",
+      "器に盛り付け、白ごまを振る。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のレンジ蒸し（コク旨ガリバタ醤油）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "ニンニク（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り除き、フォークで数カ所穴を開ける。",
+      "耐熱容器に鶏むね肉を入れ、酒、塩こしょうをふって軽く揉み込む。",
+      "ふんわりとラップをし、600Wのレンジで約5〜6分加熱する。",
+      "粗熱が取れるまでレンジ内に放置して余熱で中まで火を通す。",
+      "フライパンにバターとニンニクを入れ、弱火で香りを出す。",
+      "醤油を加え、軽く煮詰めてガリバタソースを作る。",
+      "鶏肉を加えてソースを全体に絡める。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "鶏むね肉のレンジ蒸し（ピリ辛ごまポン酢）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り除き、フォークで数カ所穴を開ける。",
+      "耐熱容器に鶏むね肉を入れ、酒、塩こしょうをふって軽く揉み込む。",
+      "ふんわりとラップをし、600Wのレンジで約5〜6分加熱する。",
+      "粗熱が取れるまでレンジ内に放置して余熱で中まで火を通す。",
+      "すりごま、ポン酢、ラー油（お好みの辛さ）を混ぜ合わせる。",
+      "鶏肉をボウルに入れ、ピリ辛ごまポン酢ダレでよく和える。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 31
+  },
+  {
+    "title": "ささみのホイル焼き（特製ネギ塩だれ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "長ネギ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、一口大のそぎ切りにする。きのこ類は石づきを取ってほぐす。",
+      "アルミホイルを2枚広げ、それぞれにきのこを敷き、その上にささみを乗せる。",
+      "トースター（1000W）で約15分、肉に火が通るまで焼く。",
+      "長ネギをみじん切りにする。",
+      "ネギ、ごま油、鶏ガラスープの素、レモン汁を混ぜ合わせてネギ塩だれを作る。",
+      "出来上がった鶏肉にたっぷりとネギ塩だれをかける。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "ささみのホイル焼き（さっぱり梅しそ風味）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2〜3個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ（3倍濃縮）",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、一口大のそぎ切りにする。きのこ類は石づきを取ってほぐす。",
+      "アルミホイルを2枚広げ、それぞれにきのこを敷き、その上にささみを乗せる。",
+      "トースター（1000W）で約15分、肉に火が通るまで焼く。",
+      "梅干しは種を取り除き、包丁で叩いてペースト状にする。大葉は千切りにする。",
+      "梅肉、めんつゆを混ぜ合わせる。",
+      "鶏肉に梅ダレを絡め、仕上げに大葉を散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "ささみのホイル焼き（ヤンニョムチキン風）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラカント（または砂糖）",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "白ごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、一口大のそぎ切りにする。きのこ類は石づきを取ってほぐす。",
+      "アルミホイルを2枚広げ、それぞれにきのこを敷き、その上にささみを乗せる。",
+      "トースター（1000W）で約15分、肉に火が通るまで焼く。",
+      "コチュジャン、ケチャップ、ラカント、醤油をボウルで混ぜ合わせる。",
+      "加熱した鶏肉をボウルに入れ、ヤンニョムダレをよく絡める。",
+      "器に盛り付け、白ごまを振る。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "ささみのホイル焼き（コク旨ガリバタ醤油）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "ニンニク（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、一口大のそぎ切りにする。きのこ類は石づきを取ってほぐす。",
+      "アルミホイルを2枚広げ、それぞれにきのこを敷き、その上にささみを乗せる。",
+      "トースター（1000W）で約15分、肉に火が通るまで焼く。",
+      "フライパンにバターとニンニクを入れ、弱火で香りを出す。",
+      "醤油を加え、軽く煮詰めてガリバタソースを作る。",
+      "鶏肉を加えてソースを全体に絡める。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "ささみのホイル焼き（ピリ辛ごまポン酢）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、一口大のそぎ切りにする。きのこ類は石づきを取ってほぐす。",
+      "アルミホイルを2枚広げ、それぞれにきのこを敷き、その上にささみを乗せる。",
+      "トースター（1000W）で約15分、肉に火が通るまで焼く。",
+      "すりごま、ポン酢、ラー油（お好みの辛さ）を混ぜ合わせる。",
+      "鶏肉をボウルに入れ、ピリ辛ごまポン酢ダレでよく和える。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のサイコロステーキ（特製ネギ塩だれ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "長ネギ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、一口大のサイコロ状に切る。",
+      "ポリ袋に鶏肉と片栗粉を入れ、シャカシャカ振って薄くまぶす。",
+      "フライパンにオリーブオイルを熱し、鶏肉を中火で転がしながら全面をこんがり焼く。",
+      "長ネギをみじん切りにする。",
+      "ネギ、ごま油、鶏ガラスープの素、レモン汁を混ぜ合わせてネギ塩だれを作る。",
+      "出来上がった鶏肉にたっぷりとネギ塩だれをかける。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "鶏むね肉のサイコロステーキ（さっぱり梅しそ風味）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2〜3個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ（3倍濃縮）",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、一口大のサイコロ状に切る。",
+      "ポリ袋に鶏肉と片栗粉を入れ、シャカシャカ振って薄くまぶす。",
+      "フライパンにオリーブオイルを熱し、鶏肉を中火で転がしながら全面をこんがり焼く。",
+      "梅干しは種を取り除き、包丁で叩いてペースト状にする。大葉は千切りにする。",
+      "梅肉、めんつゆを混ぜ合わせる。",
+      "鶏肉に梅ダレを絡め、仕上げに大葉を散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "鶏むね肉のサイコロステーキ（ヤンニョムチキン風）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラカント（または砂糖）",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "白ごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、一口大のサイコロ状に切る。",
+      "ポリ袋に鶏肉と片栗粉を入れ、シャカシャカ振って薄くまぶす。",
+      "フライパンにオリーブオイルを熱し、鶏肉を中火で転がしながら全面をこんがり焼く。",
+      "コチュジャン、ケチャップ、ラカント、醤油をボウルで混ぜ合わせる。",
+      "加熱した鶏肉をボウルに入れ、ヤンニョムダレをよく絡める。",
+      "器に盛り付け、白ごまを振る。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 33
+  },
+  {
+    "title": "鶏むね肉のサイコロステーキ（コク旨ガリバタ醤油）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ニンニク（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、一口大のサイコロ状に切る。",
+      "ポリ袋に鶏肉と片栗粉を入れ、シャカシャカ振って薄くまぶす。",
+      "フライパンにオリーブオイルを熱し、鶏肉を中火で転がしながら全面をこんがり焼く。",
+      "フライパンにバターとニンニクを入れ、弱火で香りを出す。",
+      "醤油を加え、軽く煮詰めてガリバタソースを作る。",
+      "鶏肉を加えてソースを全体に絡める。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のサイコロステーキ（ピリ辛ごまポン酢）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、一口大のサイコロ状に切る。",
+      "ポリ袋に鶏肉と片栗粉を入れ、シャカシャカ振って薄くまぶす。",
+      "フライパンにオリーブオイルを熱し、鶏肉を中火で転がしながら全面をこんがり焼く。",
+      "すりごま、ポン酢、ラー油（お好みの辛さ）を混ぜ合わせる。",
+      "鶏肉をボウルに入れ、ピリ辛ごまポン酢ダレでよく和える。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 33
+  },
+  {
+    "title": "鶏むね肉のアイラップ茹で（特製ネギ塩だれ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "長ネギ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、アイラップ（耐熱ポリ袋）に入れる。",
+      "塩麹と砂糖を加え、袋の外からよく揉み込み、空気を抜いて口をしっかり結ぶ。",
+      "大きめの鍋にお湯を沸かし、袋ごと入れて蓋をし、火を止めて40分〜1時間放置する。",
+      "長ネギをみじん切りにする。",
+      "ネギ、ごま油、鶏ガラスープの素、レモン汁を混ぜ合わせてネギ塩だれを作る。",
+      "出来上がった鶏肉にたっぷりとネギ塩だれをかける。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 32
+  },
+  {
+    "title": "鶏むね肉のアイラップ茹で（さっぱり梅しそ風味）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2〜3個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ（3倍濃縮）",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、アイラップ（耐熱ポリ袋）に入れる。",
+      "塩麹と砂糖を加え、袋の外からよく揉み込み、空気を抜いて口をしっかり結ぶ。",
+      "大きめの鍋にお湯を沸かし、袋ごと入れて蓋をし、火を止めて40分〜1時間放置する。",
+      "梅干しは種を取り除き、包丁で叩いてペースト状にする。大葉は千切りにする。",
+      "梅肉、めんつゆを混ぜ合わせる。",
+      "鶏肉に梅ダレを絡め、仕上げに大葉を散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のアイラップ茹で（ヤンニョムチキン風）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラカント（または砂糖）",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "白ごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、アイラップ（耐熱ポリ袋）に入れる。",
+      "塩麹と砂糖を加え、袋の外からよく揉み込み、空気を抜いて口をしっかり結ぶ。",
+      "大きめの鍋にお湯を沸かし、袋ごと入れて蓋をし、火を止めて40分〜1時間放置する。",
+      "コチュジャン、ケチャップ、ラカント、醤油をボウルで混ぜ合わせる。",
+      "加熱した鶏肉をボウルに入れ、ヤンニョムダレをよく絡める。",
+      "器に盛り付け、白ごまを振る。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のアイラップ茹で（コク旨ガリバタ醤油）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ニンニク（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、アイラップ（耐熱ポリ袋）に入れる。",
+      "塩麹と砂糖を加え、袋の外からよく揉み込み、空気を抜いて口をしっかり結ぶ。",
+      "大きめの鍋にお湯を沸かし、袋ごと入れて蓋をし、火を止めて40分〜1時間放置する。",
+      "フライパンにバターとニンニクを入れ、弱火で香りを出す。",
+      "醤油を加え、軽く煮詰めてガリバタソースを作る。",
+      "鶏肉を加えてソースを全体に絡める。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "鶏むね肉のアイラップ茹で（ピリ辛ごまポン酢）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "600g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉は皮を取り、アイラップ（耐熱ポリ袋）に入れる。",
+      "塩麹と砂糖を加え、袋の外からよく揉み込み、空気を抜いて口をしっかり結ぶ。",
+      "大きめの鍋にお湯を沸かし、袋ごと入れて蓋をし、火を止めて40分〜1時間放置する。",
+      "すりごま、ポン酢、ラー油（お好みの辛さ）を混ぜ合わせる。",
+      "鶏肉をボウルに入れ、ピリ辛ごまポン酢ダレでよく和える。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "ささみとブロッコリーの和え物（特製ネギ塩だれ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1房",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "長ネギ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは耐熱皿に乗せ、酒を振ってラップをし、レンジ（600W）で約3分加熱後、ほぐす。",
+      "ブロッコリーは小房に分け、レンジ（600W）で約3分加熱して柔らかくする。",
+      "ボウルでささみとブロッコリーを合わせる。",
+      "長ネギをみじん切りにする。",
+      "ネギ、ごま油、鶏ガラスープの素、レモン汁を混ぜ合わせてネギ塩だれを作る。",
+      "出来上がった鶏肉にたっぷりとネギ塩だれをかける。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "ささみとブロッコリーの和え物（さっぱり梅しそ風味）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1房",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2〜3個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "めんつゆ（3倍濃縮）",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは耐熱皿に乗せ、酒を振ってラップをし、レンジ（600W）で約3分加熱後、ほぐす。",
+      "ブロッコリーは小房に分け、レンジ（600W）で約3分加熱して柔らかくする。",
+      "ボウルでささみとブロッコリーを合わせる。",
+      "梅干しは種を取り除き、包丁で叩いてペースト状にする。大葉は千切りにする。",
+      "梅肉、めんつゆを混ぜ合わせる。",
+      "鶏肉に梅ダレを絡め、仕上げに大葉を散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 33
+  },
+  {
+    "title": "ささみとブロッコリーの和え物（ヤンニョムチキン風）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1房",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ラカント（または砂糖）",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "白ごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは耐熱皿に乗せ、酒を振ってラップをし、レンジ（600W）で約3分加熱後、ほぐす。",
+      "ブロッコリーは小房に分け、レンジ（600W）で約3分加熱して柔らかくする。",
+      "ボウルでささみとブロッコリーを合わせる。",
+      "コチュジャン、ケチャップ、ラカント、醤油をボウルで混ぜ合わせる。",
+      "加熱した鶏肉をボウルに入れ、ヤンニョムダレをよく絡める。",
+      "器に盛り付け、白ごまを振る。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 33
+  },
+  {
+    "title": "ささみとブロッコリーの和え物（コク旨ガリバタ醤油）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1房",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ニンニク（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは耐熱皿に乗せ、酒を振ってラップをし、レンジ（600W）で約3分加熱後、ほぐす。",
+      "ブロッコリーは小房に分け、レンジ（600W）で約3分加熱して柔らかくする。",
+      "ボウルでささみとブロッコリーを合わせる。",
+      "フライパンにバターとニンニクを入れ、弱火で香りを出す。",
+      "醤油を加え、軽く煮詰めてガリバタソースを作る。",
+      "鶏肉を加えてソースを全体に絡める。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "ささみとブロッコリーの和え物（ピリ辛ごまポン酢）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1房",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ラー油",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは耐熱皿に乗せ、酒を振ってラップをし、レンジ（600W）で約3分加熱後、ほぐす。",
+      "ブロッコリーは小房に分け、レンジ（600W）で約3分加熱して柔らかくする。",
+      "ボウルでささみとブロッコリーを合わせる。",
+      "すりごま、ポン酢、ラー油（お好みの辛さ）を混ぜ合わせる。",
+      "鶏肉をボウルに入れ、ピリ辛ごまポン酢ダレでよく和える。"
+    ],
+    "tags": [
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 33
+  },
+  {
+    "title": "豆腐グラタン（ツナマヨ風）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁（約300g）",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "木綿豆腐はキッチンペーパーで包み、レンジで2分加熱して水切りをする。",
+      "耐熱皿に豆腐を崩し入れ、塩こしょうで軽く下味をつける。",
+      "ツナの汁気を切り、カロリーハーフマヨネーズと混ぜ合わせる。",
+      "ベースの具材の上にツナマヨをトッピングし、トースターで5分ほど焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "豆腐グラタン（明太チーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁（約300g）",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "明太子",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "低脂質チーズ",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "木綿豆腐はキッチンペーパーで包み、レンジで2分加熱して水切りをする。",
+      "耐熱皿に豆腐を崩し入れ、塩こしょうで軽く下味をつける。",
+      "明太子は薄皮を取り除き、ほぐしておく。",
+      "ベースの具材に明太子を乗せ、さらにチーズを散らしてトースターで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 24
+  },
+  {
+    "title": "豆腐グラタン（キムチそぼろ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁（約300g）",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏むねミンチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "木綿豆腐はキッチンペーパーで包み、レンジで2分加熱して水切りをする。",
+      "耐熱皿に豆腐を崩し入れ、塩こしょうで軽く下味をつける。",
+      "フライパンにごま油を熱し、鶏むねミンチをポロポロになるまで炒める。",
+      "キムチを加えてさらに炒め合わせ、ベースの具材に乗せる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 24
+  },
+  {
+    "title": "豆腐グラタン（和風きのこ餡）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁（約300g）",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "えのき",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "白だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "水溶き片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "木綿豆腐はキッチンペーパーで包み、レンジで2分加熱して水切りをする。",
+      "耐熱皿に豆腐を崩し入れ、塩こしょうで軽く下味をつける。",
+      "小鍋に水、白だし、3等分に切ったえのきを入れて煮立てる。",
+      "水溶き片栗粉でとろみをつけて和風餡を作り、ベースの具材にたっぷりかける。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 24
+  },
+  {
+    "title": "豆腐グラタン（カレー風味）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁（約300g）",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コンソメ顆粒",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "木綿豆腐はキッチンペーパーで包み、レンジで2分加熱して水切りをする。",
+      "耐熱皿に豆腐を崩し入れ、塩こしょうで軽く下味をつける。",
+      "ベースの具材を調理する際、カレー粉、コンソメ、ケチャップを加えて味付けをする。",
+      "全体に味が馴染むまでよく炒め（混ぜ）合わせる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "厚揚げのボリューム炒め（ツナマヨ風）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは熱湯をかけて油抜きをし、一口大に切る。",
+      "フライパンを熱し、厚揚げともやしを入れて強火でサッと炒める。",
+      "ツナの汁気を切り、カロリーハーフマヨネーズと混ぜ合わせる。",
+      "ベースの具材の上にツナマヨをトッピングし、トースターで5分ほど焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "厚揚げのボリューム炒め（明太チーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "明太子",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "低脂質チーズ",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "厚揚げは熱湯をかけて油抜きをし、一口大に切る。",
+      "フライパンを熱し、厚揚げともやしを入れて強火でサッと炒める。",
+      "明太子は薄皮を取り除き、ほぐしておく。",
+      "ベースの具材に明太子を乗せ、さらにチーズを散らしてトースターで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "厚揚げのボリューム炒め（キムチそぼろ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏むねミンチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは熱湯をかけて油抜きをし、一口大に切る。",
+      "フライパンを熱し、厚揚げともやしを入れて強火でサッと炒める。",
+      "フライパンにごま油を熱し、鶏むねミンチをポロポロになるまで炒める。",
+      "キムチを加えてさらに炒め合わせ、ベースの具材に乗せる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "厚揚げのボリューム炒め（和風きのこ餡）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "白だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "水溶き片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは熱湯をかけて油抜きをし、一口大に切る。",
+      "フライパンを熱し、厚揚げともやしを入れて強火でサッと炒める。",
+      "小鍋に水、白だし、3等分に切ったえのきを入れて煮立てる。",
+      "水溶き片栗粉でとろみをつけて和風餡を作り、ベースの具材にたっぷりかける。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "厚揚げのボリューム炒め（カレー風味）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コンソメ顆粒",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは熱湯をかけて油抜きをし、一口大に切る。",
+      "フライパンを熱し、厚揚げともやしを入れて強火でサッと炒める。",
+      "ベースの具材を調理する際、カレー粉、コンソメ、ケチャップを加えて味付けをする。",
+      "全体に味が馴染むまでよく炒め（混ぜ）合わせる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "高タンパクオムレツ（ツナマヨ風）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "全卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "卵白",
+        "quantity": "3個分",
+        "staple": false
+      },
+      {
+        "name": "スキムミルク（または豆乳）",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ボウルに全卵、卵白、スキムミルクを入れてよく混ぜ合わせる。",
+      "フライパンにオリーブオイルを熱し、卵液を流し入れて大きくかき混ぜながら焼く。",
+      "ツナの汁気を切り、カロリーハーフマヨネーズと混ぜ合わせる。",
+      "ベースの具材の上にツナマヨをトッピングし、トースターで5分ほど焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "高タンパクオムレツ（明太チーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "全卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "卵白",
+        "quantity": "3個分",
+        "staple": false
+      },
+      {
+        "name": "スキムミルク（または豆乳）",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "明太子",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "低脂質チーズ",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ボウルに全卵、卵白、スキムミルクを入れてよく混ぜ合わせる。",
+      "フライパンにオリーブオイルを熱し、卵液を流し入れて大きくかき混ぜながら焼く。",
+      "明太子は薄皮を取り除き、ほぐしておく。",
+      "ベースの具材に明太子を乗せ、さらにチーズを散らしてトースターで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "高タンパクオムレツ（キムチそぼろ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "全卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "卵白",
+        "quantity": "3個分",
+        "staple": false
+      },
+      {
+        "name": "スキムミルク（または豆乳）",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏むねミンチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ボウルに全卵、卵白、スキムミルクを入れてよく混ぜ合わせる。",
+      "フライパンにオリーブオイルを熱し、卵液を流し入れて大きくかき混ぜながら焼く。",
+      "フライパンにごま油を熱し、鶏むねミンチをポロポロになるまで炒める。",
+      "キムチを加えてさらに炒め合わせ、ベースの具材に乗せる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 19
+  },
+  {
+    "title": "高タンパクオムレツ（和風きのこ餡）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "全卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "卵白",
+        "quantity": "3個分",
+        "staple": false
+      },
+      {
+        "name": "スキムミルク（または豆乳）",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "えのき",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "白だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "水溶き片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ボウルに全卵、卵白、スキムミルクを入れてよく混ぜ合わせる。",
+      "フライパンにオリーブオイルを熱し、卵液を流し入れて大きくかき混ぜながら焼く。",
+      "小鍋に水、白だし、3等分に切ったえのきを入れて煮立てる。",
+      "水溶き片栗粉でとろみをつけて和風餡を作り、ベースの具材にたっぷりかける。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "高タンパクオムレツ（カレー風味）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "全卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "卵白",
+        "quantity": "3個分",
+        "staple": false
+      },
+      {
+        "name": "スキムミルク（または豆乳）",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コンソメ顆粒",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ボウルに全卵、卵白、スキムミルクを入れてよく混ぜ合わせる。",
+      "フライパンにオリーブオイルを熱し、卵液を流し入れて大きくかき混ぜながら焼く。",
+      "ベースの具材を調理する際、カレー粉、コンソメ、ケチャップを加えて味付けをする。",
+      "全体に味が馴染むまでよく炒め（混ぜ）合わせる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "ライスペーパーの卵包み焼き（ツナマヨ風）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ライスペーパー",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "千切りキャベツ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "フライパンにライスペーパーを1枚敷き、その上にキャベツ、卵を割り入れる。",
+      "中火にかけ、卵を崩しながらキャベツと混ぜ合わせる。",
+      "ツナの汁気を切り、カロリーハーフマヨネーズと混ぜ合わせる。",
+      "ベースの具材の上にツナマヨをトッピングし、トースターで5分ほど焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "ライスペーパーの卵包み焼き（明太チーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ライスペーパー",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "千切りキャベツ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "明太子",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "低脂質チーズ",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "フライパンにライスペーパーを1枚敷き、その上にキャベツ、卵を割り入れる。",
+      "中火にかけ、卵を崩しながらキャベツと混ぜ合わせる。",
+      "明太子は薄皮を取り除き、ほぐしておく。",
+      "ベースの具材に明太子を乗せ、さらにチーズを散らしてトースターで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 24
+  },
+  {
+    "title": "ライスペーパーの卵包み焼き（キムチそぼろ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ライスペーパー",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "千切りキャベツ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏むねミンチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "フライパンにライスペーパーを1枚敷き、その上にキャベツ、卵を割り入れる。",
+      "中火にかけ、卵を崩しながらキャベツと混ぜ合わせる。",
+      "フライパンにごま油を熱し、鶏むねミンチをポロポロになるまで炒める。",
+      "キムチを加えてさらに炒め合わせ、ベースの具材に乗せる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "ライスペーパーの卵包み焼き（和風きのこ餡）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ライスペーパー",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "千切りキャベツ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "白だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "水溶き片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "フライパンにライスペーパーを1枚敷き、その上にキャベツ、卵を割り入れる。",
+      "中火にかけ、卵を崩しながらキャベツと混ぜ合わせる。",
+      "小鍋に水、白だし、3等分に切ったえのきを入れて煮立てる。",
+      "水溶き片栗粉でとろみをつけて和風餡を作り、ベースの具材にたっぷりかける。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "ライスペーパーの卵包み焼き（カレー風味）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ライスペーパー",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "千切りキャベツ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コンソメ顆粒",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "フライパンにライスペーパーを1枚敷き、その上にキャベツ、卵を割り入れる。",
+      "中火にかけ、卵を崩しながらキャベツと混ぜ合わせる。",
+      "ベースの具材を調理する際、カレー粉、コンソメ、ケチャップを加えて味付けをする。",
+      "全体に味が馴染むまでよく炒め（混ぜ）合わせる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "納豆と豆腐の爆弾小鉢（ツナマヨ風）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "半丁（150g）",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "絹ごし豆腐はスプーンで一口大にすくって器に盛る。",
+      "納豆に付属のタレを入れてよく混ぜ合わせる。",
+      "ツナの汁気を切り、カロリーハーフマヨネーズと混ぜ合わせる。",
+      "ベースの具材の上にツナマヨをトッピングし、トースターで5分ほど焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "納豆と豆腐の爆弾小鉢（明太チーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "半丁（150g）",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "明太子",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "低脂質チーズ",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "絹ごし豆腐はスプーンで一口大にすくって器に盛る。",
+      "納豆に付属のタレを入れてよく混ぜ合わせる。",
+      "明太子は薄皮を取り除き、ほぐしておく。",
+      "ベースの具材に明太子を乗せ、さらにチーズを散らしてトースターで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "納豆と豆腐の爆弾小鉢（キムチそぼろ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "半丁（150g）",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "鶏むねミンチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "絹ごし豆腐はスプーンで一口大にすくって器に盛る。",
+      "納豆に付属のタレを入れてよく混ぜ合わせる。",
+      "フライパンにごま油を熱し、鶏むねミンチをポロポロになるまで炒める。",
+      "キムチを加えてさらに炒め合わせ、ベースの具材に乗せる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "納豆と豆腐の爆弾小鉢（和風きのこ餡）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "半丁（150g）",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "白だし",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "水溶き片栗粉",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "絹ごし豆腐はスプーンで一口大にすくって器に盛る。",
+      "納豆に付属のタレを入れてよく混ぜ合わせる。",
+      "小鍋に水、白だし、3等分に切ったえのきを入れて煮立てる。",
+      "水溶き片栗粉でとろみをつけて和風餡を作り、ベースの具材にたっぷりかける。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "納豆と豆腐の爆弾小鉢（カレー風味）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "半丁（150g）",
+        "staple": false
+      },
+      {
+        "name": "卵黄",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "コンソメ顆粒",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "絹ごし豆腐はスプーンで一口大にすくって器に盛る。",
+      "納豆に付属のタレを入れてよく混ぜ合わせる。",
+      "ベースの具材を調理する際、カレー粉、コンソメ、ケチャップを加えて味付けをする。",
+      "全体に味が馴染むまでよく炒め（混ぜ）合わせる。"
+    ],
+    "tags": [
+      "主菜",
+      "豆腐",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 19
+  },
+  {
+    "title": "鮭のレンジ蒸し（トマトガーリック）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "生鮭切り身",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "1/2缶（200g）",
+        "staple": false
+      },
+      {
+        "name": "ニンニク（みじん切り）",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生鮭に塩を振り、10分ほど置いて出てきた水分を拭き取る。",
+      "耐熱皿に鮭を乗せ、酒を振ってふんわりラップをし、レンジ（600W）で約3分半加熱する。",
+      "ベースの具材と一緒に、ニンニク、トマト缶、コンソメを加えて煮込む。",
+      "水分が飛んでソースがとろっとするまで中火で加熱する。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "鮭のレンジ蒸し（塩昆布ごま油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "生鮭切り身",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "いりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生鮭に塩を振り、10分ほど置いて出てきた水分を拭き取る。",
+      "耐熱皿に鮭を乗せ、酒を振ってふんわりラップをし、レンジ（600W）で約3分半加熱する。",
+      "塩昆布とごま油をベースの具材に加えてよく和える。",
+      "仕上げにいりごまを指でひねりながら散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "鮭のレンジ蒸し（味噌マヨ焼き）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "生鮭切り身",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生鮭に塩を振り、10分ほど置いて出てきた水分を拭き取る。",
+      "耐熱皿に鮭を乗せ、酒を振ってふんわりラップをし、レンジ（600W）で約3分半加熱する。",
+      "味噌、マヨネーズ、みりんをよく混ぜ合わせてタレを作る。",
+      "ベースの具材の表面にタレを塗り、トースターで焦げ目がつくまで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "鮭のレンジ蒸し（アボカドわさび醤油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "生鮭切り身",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生鮭に塩を振り、10分ほど置いて出てきた水分を拭き取る。",
+      "耐熱皿に鮭を乗せ、酒を振ってふんわりラップをし、レンジ（600W）で約3分半加熱する。",
+      "アボカドは種と皮を取り、一口大に切る。",
+      "わさび醤油を作り、ベースの具材とアボカドを和える。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "鮭のレンジ蒸し（オイスター生姜）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "生鮭切り身",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "料理酒",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "生姜（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "生鮭に塩を振り、10分ほど置いて出てきた水分を拭き取る。",
+      "耐熱皿に鮭を乗せ、酒を振ってふんわりラップをし、レンジ（600W）で約3分半加熱する。",
+      "オイスターソース、生姜、酒を混ぜ合わせる。",
+      "ベースの具材を炒める（和える）際にタレを回しかけ、全体に味を馴染ませる。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "サバ缶の簡単煮込み（トマトガーリック）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "サバ水煮缶",
+        "quantity": "1缶（約190g）",
+        "staple": true
+      },
+      {
+        "name": "白菜",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "1/2缶（200g）",
+        "staple": false
+      },
+      {
+        "name": "ニンニク（みじん切り）",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はざく切りにする。",
+      "小鍋に白菜とサバ缶（汁ごと）を入れて火にかける。",
+      "ベースの具材と一緒に、ニンニク、トマト缶、コンソメを加えて煮込む。",
+      "水分が飛んでソースがとろっとするまで中火で加熱する。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "サバ缶の簡単煮込み（塩昆布ごま油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "サバ水煮缶",
+        "quantity": "1缶（約190g）",
+        "staple": true
+      },
+      {
+        "name": "白菜",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "いりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はざく切りにする。",
+      "小鍋に白菜とサバ缶（汁ごと）を入れて火にかける。",
+      "塩昆布とごま油をベースの具材に加えてよく和える。",
+      "仕上げにいりごまを指でひねりながら散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "サバ缶の簡単煮込み（味噌マヨ焼き）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "サバ水煮缶",
+        "quantity": "1缶（約190g）",
+        "staple": true
+      },
+      {
+        "name": "白菜",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はざく切りにする。",
+      "小鍋に白菜とサバ缶（汁ごと）を入れて火にかける。",
+      "味噌、マヨネーズ、みりんをよく混ぜ合わせてタレを作る。",
+      "ベースの具材の表面にタレを塗り、トースターで焦げ目がつくまで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "サバ缶の簡単煮込み（アボカドわさび醤油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "サバ水煮缶",
+        "quantity": "1缶（約190g）",
+        "staple": true
+      },
+      {
+        "name": "白菜",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はざく切りにする。",
+      "小鍋に白菜とサバ缶（汁ごと）を入れて火にかける。",
+      "アボカドは種と皮を取り、一口大に切る。",
+      "わさび醤油を作り、ベースの具材とアボカドを和える。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "サバ缶の簡単煮込み（オイスター生姜）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "サバ水煮缶",
+        "quantity": "1缶（約190g）",
+        "staple": true
+      },
+      {
+        "name": "白菜",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "生姜（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はざく切りにする。",
+      "小鍋に白菜とサバ缶（汁ごと）を入れて火にかける。",
+      "オイスターソース、生姜、酒を混ぜ合わせる。",
+      "ベースの具材を炒める（和える）際にタレを回しかけ、全体に味を馴染ませる。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "マグロのポキ風（トマトガーリック）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "マグロ赤身（刺身用）",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "1/2缶（200g）",
+        "staple": false
+      },
+      {
+        "name": "ニンニク（みじん切り）",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグロは1.5cm角に切る。玉ねぎは薄切りにして水にさらし、辛味を抜いてから水気を絞る。",
+      "ボウルでマグロと玉ねぎを合わせる。",
+      "ベースの具材と一緒に、ニンニク、トマト缶、コンソメを加えて煮込む。",
+      "水分が飛んでソースがとろっとするまで中火で加熱する。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 28
+  },
+  {
+    "title": "マグロのポキ風（塩昆布ごま油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "マグロ赤身（刺身用）",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "いりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグロは1.5cm角に切る。玉ねぎは薄切りにして水にさらし、辛味を抜いてから水気を絞る。",
+      "ボウルでマグロと玉ねぎを合わせる。",
+      "塩昆布とごま油をベースの具材に加えてよく和える。",
+      "仕上げにいりごまを指でひねりながら散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "マグロのポキ風（味噌マヨ焼き）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "マグロ赤身（刺身用）",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグロは1.5cm角に切る。玉ねぎは薄切りにして水にさらし、辛味を抜いてから水気を絞る。",
+      "ボウルでマグロと玉ねぎを合わせる。",
+      "味噌、マヨネーズ、みりんをよく混ぜ合わせてタレを作る。",
+      "ベースの具材の表面にタレを塗り、トースターで焦げ目がつくまで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "マグロのポキ風（アボカドわさび醤油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "マグロ赤身（刺身用）",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグロは1.5cm角に切る。玉ねぎは薄切りにして水にさらし、辛味を抜いてから水気を絞る。",
+      "ボウルでマグロと玉ねぎを合わせる。",
+      "アボカドは種と皮を取り、一口大に切る。",
+      "わさび醤油を作り、ベースの具材とアボカドを和える。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "マグロのポキ風（オイスター生姜）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "マグロ赤身（刺身用）",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "生姜（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグロは1.5cm角に切る。玉ねぎは薄切りにして水にさらし、辛味を抜いてから水気を絞る。",
+      "ボウルでマグロと玉ねぎを合わせる。",
+      "オイスターソース、生姜、酒を混ぜ合わせる。",
+      "ベースの具材を炒める（和える）際にタレを回しかけ、全体に味を馴染ませる。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "シーフードミックスの炒め物（トマトガーリック）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "冷凍シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "1/2缶（200g）",
+        "staple": false
+      },
+      {
+        "name": "ニンニク（みじん切り）",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスは塩水（分量外）に浸して解凍し、水気をしっかり拭き取る。キャベツはざく切り。",
+      "フライパンを熱し、強火でシーフードとキャベツを一気に炒める。",
+      "ベースの具材と一緒に、ニンニク、トマト缶、コンソメを加えて煮込む。",
+      "水分が飛んでソースがとろっとするまで中火で加熱する。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "シーフードミックスの炒め物（塩昆布ごま油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "冷凍シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "いりごま",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスは塩水（分量外）に浸して解凍し、水気をしっかり拭き取る。キャベツはざく切り。",
+      "フライパンを熱し、強火でシーフードとキャベツを一気に炒める。",
+      "塩昆布とごま油をベースの具材に加えてよく和える。",
+      "仕上げにいりごまを指でひねりながら散らす。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "シーフードミックスの炒め物（味噌マヨ焼き）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "冷凍シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "カロリーハーフマヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスは塩水（分量外）に浸して解凍し、水気をしっかり拭き取る。キャベツはざく切り。",
+      "フライパンを熱し、強火でシーフードとキャベツを一気に炒める。",
+      "味噌、マヨネーズ、みりんをよく混ぜ合わせてタレを作る。",
+      "ベースの具材の表面にタレを塗り、トースターで焦げ目がつくまで焼く。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "シーフードミックスの炒め物（アボカドわさび醤油）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "冷凍シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスは塩水（分量外）に浸して解凍し、水気をしっかり拭き取る。キャベツはざく切り。",
+      "フライパンを熱し、強火でシーフードとキャベツを一気に炒める。",
+      "アボカドは種と皮を取り、一口大に切る。",
+      "わさび醤油を作り、ベースの具材とアボカドを和える。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 29
+  },
+  {
+    "title": "シーフードミックスの炒め物（オイスター生姜）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "冷凍シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "生姜（すりおろし）",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスは塩水（分量外）に浸して解凍し、水気をしっかり拭き取る。キャベツはざく切り。",
+      "フライパンを熱し、強火でシーフードとキャベツを一気に炒める。",
+      "オイスターソース、生姜、酒を混ぜ合わせる。",
+      "ベースの具材を炒める（和える）際にタレを回しかけ、全体に味を馴染ませる。"
+    ],
+    "tags": [
+      "主菜",
+      "魚",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 28
+  },
+  {
+    "title": "オートミール米化チャーハン（キムチ豚ヒレ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "オートミール（ロールドオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "豚ヒレ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大きめの耐熱ボウルにオートミールと水を入れ、レンジ（600W）で約1分半加熱して米化する。",
+      "フライパンを熱し、溶き卵を流し入れて半熟状になったら米化したオートミールを加える。",
+      "豚ヒレ肉は細切りにする。ごま油で豚肉とキムチを炒め合わせる。",
+      "ベースの炭水化物と混ぜ合わせ、パラパラ（またはドロドロ）になるまで仕上げる。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "オートミール米化チャーハン（ツナ塩昆布）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "オートミール（ロールドオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ネギ（小口切り）",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "大きめの耐熱ボウルにオートミールと水を入れ、レンジ（600W）で約1分半加熱して米化する。",
+      "フライパンを熱し、溶き卵を流し入れて半熟状になったら米化したオートミールを加える。",
+      "ベースの具材にツナ（汁ごと）と塩昆布を加えて調理する。",
+      "器に盛り付け、ネギを散らす。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "オートミール米化チャーハン（カレーチキン）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "オートミール（ロールドオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大きめの耐熱ボウルにオートミールと水を入れ、レンジ（600W）で約1分半加熱して米化する。",
+      "フライパンを熱し、溶き卵を流し入れて半熟状になったら米化したオートミールを加える。",
+      "ベースの具材と一緒にカレー粉、鶏ガラスープの素を加えて調理する。",
+      "（沼の場合は炊飯器の目盛り4合分まで水を入れて炊飯し、数時間保温する）。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "オートミール米化チャーハン（シーフードトマト）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（ロールドオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "冷凍シーフード",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大きめの耐熱ボウルにオートミールと水を入れ、レンジ（600W）で約1分半加熱して米化する。",
+      "フライパンを熱し、溶き卵を流し入れて半熟状になったら米化したオートミールを加える。",
+      "ベースの具材にシーフードミックスとトマト缶、コンソメを加えて煮込む（または炊き込む）。",
+      "酸味が飛ぶまでしっかり火を通す。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "オートミール米化チャーハン（きのこチーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "オートミール（ロールドオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "低脂質スライスチーズ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大きめの耐熱ボウルにオートミールと水を入れ、レンジ（600W）で約1分半加熱して米化する。",
+      "フライパンを熱し、溶き卵を流し入れて半熟状になったら米化したオートミールを加える。",
+      "しめじをほぐしてベースの具材と一緒に調理する。",
+      "仕上げにチーズを乗せて溶かし、黒こしょうを振る。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "究極の減量沼風（キムチ豚ヒレ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白米（または玄米）",
+        "quantity": "0.5合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "1ネット",
+        "staple": false
+      },
+      {
+        "name": "干し椎茸",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "豚ヒレ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉はフードプロセッサーでミンチ状にするか、細かく刻む。干し椎茸は砕く。",
+      "炊飯器に洗った米、鶏肉、スライスしたオクラ、干し椎茸を入れる。",
+      "豚ヒレ肉は細切りにする。ごま油で豚肉とキムチを炒め合わせる。",
+      "ベースの炭水化物と混ぜ合わせ、パラパラ（またはドロドロ）になるまで仕上げる。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "究極の減量沼風（ツナ塩昆布）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白米（または玄米）",
+        "quantity": "0.5合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "1ネット",
+        "staple": false
+      },
+      {
+        "name": "干し椎茸",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ネギ（小口切り）",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "鶏むね肉はフードプロセッサーでミンチ状にするか、細かく刻む。干し椎茸は砕く。",
+      "炊飯器に洗った米、鶏肉、スライスしたオクラ、干し椎茸を入れる。",
+      "ベースの具材にツナ（汁ごと）と塩昆布を加えて調理する。",
+      "器に盛り付け、ネギを散らす。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "究極の減量沼風（カレーチキン）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白米（または玄米）",
+        "quantity": "0.5合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "1ネット",
+        "staple": false
+      },
+      {
+        "name": "干し椎茸",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉はフードプロセッサーでミンチ状にするか、細かく刻む。干し椎茸は砕く。",
+      "炊飯器に洗った米、鶏肉、スライスしたオクラ、干し椎茸を入れる。",
+      "ベースの具材と一緒にカレー粉、鶏ガラスープの素を加えて調理する。",
+      "（沼の場合は炊飯器の目盛り4合分まで水を入れて炊飯し、数時間保温する）。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "究極の減量沼風（シーフードトマト）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "白米（または玄米）",
+        "quantity": "0.5合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "1ネット",
+        "staple": false
+      },
+      {
+        "name": "干し椎茸",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "冷凍シーフード",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉はフードプロセッサーでミンチ状にするか、細かく刻む。干し椎茸は砕く。",
+      "炊飯器に洗った米、鶏肉、スライスしたオクラ、干し椎茸を入れる。",
+      "ベースの具材にシーフードミックスとトマト缶、コンソメを加えて煮込む（または炊き込む）。",
+      "酸味が飛ぶまでしっかり火を通す。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "究極の減量沼風（きのこチーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白米（または玄米）",
+        "quantity": "0.5合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "1ネット",
+        "staple": false
+      },
+      {
+        "name": "干し椎茸",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "低脂質スライスチーズ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉はフードプロセッサーでミンチ状にするか、細かく刻む。干し椎茸は砕く。",
+      "炊飯器に洗った米、鶏肉、スライスしたオクラ、干し椎茸を入れる。",
+      "しめじをほぐしてベースの具材と一緒に調理する。",
+      "仕上げにチーズを乗せて溶かし、黒こしょうを振る。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "オートミールリゾット（キムチ豚ヒレ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（クイックオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "無調整豆乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "キムチ",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "豚ヒレ肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小鍋にオートミール、豆乳、水を入れて弱火にかける。",
+      "焦げ付かないように混ぜながら、とろみがつくまで煮込む。",
+      "豚ヒレ肉は細切りにする。ごま油で豚肉とキムチを炒め合わせる。",
+      "ベースの炭水化物と混ぜ合わせ、パラパラ（またはドロドロ）になるまで仕上げる。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "オートミールリゾット（ツナ塩昆布）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（クイックオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "無調整豆乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "ツナ水煮缶",
+        "quantity": "1缶",
+        "staple": true
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ネギ（小口切り）",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "小鍋にオートミール、豆乳、水を入れて弱火にかける。",
+      "焦げ付かないように混ぜながら、とろみがつくまで煮込む。",
+      "ベースの具材にツナ（汁ごと）と塩昆布を加えて調理する。",
+      "器に盛り付け、ネギを散らす。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 23
+  },
+  {
+    "title": "オートミールリゾット（カレーチキン）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（クイックオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "無調整豆乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏ガラスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小鍋にオートミール、豆乳、水を入れて弱火にかける。",
+      "焦げ付かないように混ぜながら、とろみがつくまで煮込む。",
+      "ベースの具材と一緒にカレー粉、鶏ガラスープの素を加えて調理する。",
+      "（沼の場合は炊飯器の目盛り4合分まで水を入れて炊飯し、数時間保温する）。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "オートミールリゾット（シーフードトマト）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（クイックオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "無調整豆乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "冷凍シーフード",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小鍋にオートミール、豆乳、水を入れて弱火にかける。",
+      "焦げ付かないように混ぜながら、とろみがつくまで煮込む。",
+      "ベースの具材にシーフードミックスとトマト缶、コンソメを加えて煮込む（または炊き込む）。",
+      "酸味が飛ぶまでしっかり火を通す。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "オートミールリゾット（きのこチーズ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "オートミール（クイックオーツ）",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "無調整豆乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "100ml",
+        "staple": true
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "低脂質スライスチーズ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "小鍋にオートミール、豆乳、水を入れて弱火にかける。",
+      "焦げ付かないように混ぜながら、とろみがつくまで煮込む。",
+      "しめじをほぐしてベースの具材と一緒に調理する。",
+      "仕上げにチーズを乗せて溶かし、黒こしょうを振る。"
+    ],
+    "tags": [
+      "ご飯",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 22
+  },
+  {
+    "title": "プロテインマグケーキ（リッチチョコ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "お好みのプロテインパウダー",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ピュアココアパウダー",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "ハイカカオチョコ（72%以上）",
+        "quantity": "2欠片",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "マグカップ（2個用意）にそれぞれ材料を半量ずつ入れる。",
+      "ダマがなくなるまでスプーンでしっかり混ぜ合わせる。",
+      "1個ずつレンジ（600W）で約1分〜1分半、生地が膨らんで表面が乾くまで加熱する。",
+      "ベースの生地にピュアココアパウダーを混ぜ込む。",
+      "加熱前（または寝かせる前）に砕いたハイカカオチョコをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "プロテインマグケーキ（抹茶きなこ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "お好みのプロテインパウダー",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "抹茶パウダー",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "きなこ",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "マグカップ（2個用意）にそれぞれ材料を半量ずつ入れる。",
+      "ダマがなくなるまでスプーンでしっかり混ぜ合わせる。",
+      "1個ずつレンジ（600W）で約1分〜1分半、生地が膨らんで表面が乾くまで加熱する。",
+      "ベースの生地に抹茶パウダーを混ぜ込んで風味をつける。",
+      "食べる直前に上からきなこを茶こしなどで振りかける。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 15
+  },
+  {
+    "title": "プロテインマグケーキ（バナナピーナッツ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "お好みのプロテインパウダー",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "バナナ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "無糖ピーナッツバター",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "マグカップ（2個用意）にそれぞれ材料を半量ずつ入れる。",
+      "ダマがなくなるまでスプーンでしっかり混ぜ合わせる。",
+      "1個ずつレンジ（600W）で約1分〜1分半、生地が膨らんで表面が乾くまで加熱する。",
+      "バナナは半分を潰してベースの生地に混ぜ込み、残りはスライスする。",
+      "食べる際にスライスしたバナナとピーナッツバターをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 18
+  },
+  {
+    "title": "プロテインマグケーキ（ベリーヨーグルト）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "お好みのプロテインパウダー",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "冷凍ミックスベリー",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "ハチミツ",
+        "quantity": "小さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "マグカップ（2個用意）にそれぞれ材料を半量ずつ入れる。",
+      "ダマがなくなるまでスプーンでしっかり混ぜ合わせる。",
+      "1個ずつレンジ（600W）で約1分〜1分半、生地が膨らんで表面が乾くまで加熱する。",
+      "食べる直前に冷凍ミックスベリーをトッピングする。",
+      "お好みでハチミツを少しだけ垂らす。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 17
+  },
+  {
+    "title": "プロテインマグケーキ（アールグレイ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "お好みのプロテインパウダー",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "水",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "紅茶のティーバッグ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "バニラエッセンス",
+        "quantity": "数滴",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "マグカップ（2個用意）にそれぞれ材料を半量ずつ入れる。",
+      "ダマがなくなるまでスプーンでしっかり混ぜ合わせる。",
+      "1個ずつレンジ（600W）で約1分〜1分半、生地が膨らんで表面が乾くまで加熱する。",
+      "ティーバッグの茶葉を取り出し、ベースの生地に直接混ぜ込む。",
+      "バニラエッセンスを加えて風味をアップさせる。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 18
+  },
+  {
+    "title": "オーバーナイトオーツ（リッチチョコ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "アーモンドミルク（砂糖不使用）",
+        "quantity": "150ml",
+        "staple": true
+      },
+      {
+        "name": "ギリシャヨーグルト（無糖）",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "ピュアココアパウダー",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "ハイカカオチョコ（72%以上）",
+        "quantity": "2欠片",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "保存容器（2個用意）にオートミールとアーモンドミルクを半量ずつ入れる。",
+      "その上にギリシャヨーグルトを重ねるように乗せる。",
+      "蓋をして冷蔵庫で一晩（最低4時間）寝かせる。",
+      "ベースの生地にピュアココアパウダーを混ぜ込む。",
+      "加熱前（または寝かせる前）に砕いたハイカカオチョコをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "オーバーナイトオーツ（抹茶きなこ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "アーモンドミルク（砂糖不使用）",
+        "quantity": "150ml",
+        "staple": true
+      },
+      {
+        "name": "ギリシャヨーグルト（無糖）",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "抹茶パウダー",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "きなこ",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "保存容器（2個用意）にオートミールとアーモンドミルクを半量ずつ入れる。",
+      "その上にギリシャヨーグルトを重ねるように乗せる。",
+      "蓋をして冷蔵庫で一晩（最低4時間）寝かせる。",
+      "ベースの生地に抹茶パウダーを混ぜ込んで風味をつける。",
+      "食べる直前に上からきなこを茶こしなどで振りかける。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 21
+  },
+  {
+    "title": "オーバーナイトオーツ（バナナピーナッツ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "アーモンドミルク（砂糖不使用）",
+        "quantity": "150ml",
+        "staple": true
+      },
+      {
+        "name": "ギリシャヨーグルト（無糖）",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "バナナ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "無糖ピーナッツバター",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "保存容器（2個用意）にオートミールとアーモンドミルクを半量ずつ入れる。",
+      "その上にギリシャヨーグルトを重ねるように乗せる。",
+      "蓋をして冷蔵庫で一晩（最低4時間）寝かせる。",
+      "バナナは半分を潰してベースの生地に混ぜ込み、残りはスライスする。",
+      "食べる際にスライスしたバナナとピーナッツバターをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 17
+  },
+  {
+    "title": "オーバーナイトオーツ（ベリーヨーグルト）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "アーモンドミルク（砂糖不使用）",
+        "quantity": "150ml",
+        "staple": true
+      },
+      {
+        "name": "ギリシャヨーグルト（無糖）",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "冷凍ミックスベリー",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "ハチミツ",
+        "quantity": "小さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "保存容器（2個用意）にオートミールとアーモンドミルクを半量ずつ入れる。",
+      "その上にギリシャヨーグルトを重ねるように乗せる。",
+      "蓋をして冷蔵庫で一晩（最低4時間）寝かせる。",
+      "食べる直前に冷凍ミックスベリーをトッピングする。",
+      "お好みでハチミツを少しだけ垂らす。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 16
+  },
+  {
+    "title": "オーバーナイトオーツ（アールグレイ）",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "アーモンドミルク（砂糖不使用）",
+        "quantity": "150ml",
+        "staple": true
+      },
+      {
+        "name": "ギリシャヨーグルト（無糖）",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "紅茶のティーバッグ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "バニラエッセンス",
+        "quantity": "数滴",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "保存容器（2個用意）にオートミールとアーモンドミルクを半量ずつ入れる。",
+      "その上にギリシャヨーグルトを重ねるように乗せる。",
+      "蓋をして冷蔵庫で一晩（最低4時間）寝かせる。",
+      "ティーバッグの茶葉を取り出し、ベースの生地に直接混ぜ込む。",
+      "バニラエッセンスを加えて風味をアップさせる。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 17
+  },
+  {
+    "title": "おから＆豆腐のヘルシースイーツ（リッチチョコ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "おからパウダー",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ラカント",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "ピュアココアパウダー",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "ハイカカオチョコ（72%以上）",
+        "quantity": "2欠片",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ボウルに絹ごし豆腐を入れ、ホイッパーで滑らかなペースト状になるまで混ぜる。",
+      "おからパウダーとラカントを加えてさらによく混ぜ合わせ、まとまりを出す。",
+      "ベースの生地にピュアココアパウダーを混ぜ込む。",
+      "加熱前（または寝かせる前）に砕いたハイカカオチョコをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 17
+  },
+  {
+    "title": "おから＆豆腐のヘルシースイーツ（抹茶きなこ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "おからパウダー",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ラカント",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "抹茶パウダー",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "きなこ",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ボウルに絹ごし豆腐を入れ、ホイッパーで滑らかなペースト状になるまで混ぜる。",
+      "おからパウダーとラカントを加えてさらによく混ぜ合わせ、まとまりを出す。",
+      "ベースの生地に抹茶パウダーを混ぜ込んで風味をつける。",
+      "食べる直前に上からきなこを茶こしなどで振りかける。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 16
+  },
+  {
+    "title": "おから＆豆腐のヘルシースイーツ（バナナピーナッツ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "おからパウダー",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ラカント",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "バナナ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "無糖ピーナッツバター",
+        "quantity": "大さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ボウルに絹ごし豆腐を入れ、ホイッパーで滑らかなペースト状になるまで混ぜる。",
+      "おからパウダーとラカントを加えてさらによく混ぜ合わせ、まとまりを出す。",
+      "バナナは半分を潰してベースの生地に混ぜ込み、残りはスライスする。",
+      "食べる際にスライスしたバナナとピーナッツバターをトッピングする。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "おから＆豆腐のヘルシースイーツ（ベリーヨーグルト）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "おからパウダー",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ラカント",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "冷凍ミックスベリー",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "ハチミツ",
+        "quantity": "小さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ボウルに絹ごし豆腐を入れ、ホイッパーで滑らかなペースト状になるまで混ぜる。",
+      "おからパウダーとラカントを加えてさらによく混ぜ合わせ、まとまりを出す。",
+      "食べる直前に冷凍ミックスベリーをトッピングする。",
+      "お好みでハチミツを少しだけ垂らす。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 17
+  },
+  {
+    "title": "おから＆豆腐のヘルシースイーツ（アールグレイ）",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "絹ごし豆腐",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "おからパウダー",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ラカント",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "紅茶のティーバッグ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "バニラエッセンス",
+        "quantity": "数滴",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ボウルに絹ごし豆腐を入れ、ホイッパーで滑らかなペースト状になるまで混ぜる。",
+      "おからパウダーとラカントを加えてさらによく混ぜ合わせ、まとまりを出す。",
+      "ティーバッグの茶葉を取り出し、ベースの生地に直接混ぜ込む。",
+      "バニラエッセンスを加えて風味をアップさせる。"
+    ],
+    "tags": [
+      "デザート",
+      "ヘルシー",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 20
   }
 ]

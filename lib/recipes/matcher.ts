@@ -84,6 +84,8 @@ function matchesInventory(ingredientName: string, inventory: InventoryItem[]): I
 const proteinCache = new Map<string, number>();
 
 function proteinOf(recipe: LocalRecipe): number {
+  // 提供元の数値があればそれを使う(自動推定より正確)。
+  if (recipe.proteinPerServing !== undefined) return recipe.proteinPerServing;
   const cached = proteinCache.get(recipe.title);
   if (cached !== undefined) return cached;
   const value = estimateProteinPerServing(recipe.ingredients);
