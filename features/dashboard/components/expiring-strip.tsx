@@ -9,7 +9,7 @@ export function ExpiringStrip({ items }: { items: ExpiringItem[] }) {
   if (items.length === 0) return null;
 
   return (
-    <Link href="/recipes" className="block">
+    <Link href="/recipes?tab=useup" className="block">
       <Card className="rounded-2xl border-warning/40 bg-warning/10">
         <CardContent className="flex items-center gap-3 p-4">
           <AlertTriangle className="size-5 shrink-0 text-warning-foreground dark:text-warning" />

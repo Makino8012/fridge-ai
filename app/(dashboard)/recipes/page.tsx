@@ -3,28 +3,40 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SuggestRecipesPanel } from '@/features/recipes/components/suggest-recipes-panel';
 import { SeasonalPanel } from '@/features/recipes/components/seasonal-panel';
 import { BrowsePanel } from '@/features/recipes/components/browse-panel';
+import { UseUpPanel } from '@/features/recipes/components/use-up-panel';
 import { MissingIngredientsPanel } from '@/features/recipes/components/missing-ingredients-panel';
 import { MenuPlanPanel } from '@/features/menu-plan/components/menu-plan-panel';
 import { FavoritesList } from '@/features/recipes/components/favorites-list';
 import { HistoryList } from '@/features/recipes/components/history-list';
 import { getFavorites, getHistory } from '@/services/recipes/recipe-service';
 import { RECIPE_COUNT, getBrowseRecipes } from '@/services/recipes/local-recipe-service';
+import { getTonightPicks } from '@/services/dashboard/dashboard-service';
 
-export default async function RecipesPage() {
-  const [favorites, history, initialBrowse] = await Promise.all([
+export default async function RecipesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tab?: string }>;
+}) {
+  const [favorites, history, initialBrowse, picks, params] = await Promise.all([
     getFavorites(),
     getHistory(),
     getBrowseRecipes({}),
+    getTonightPicks(),
+    searchParams,
   ]);
+
+  // ホームの「早めに使いたい食材」から ?tab=useup で直接開けるようにする。
+  const defaultTab = params.tab === 'useup' ? 'useup' : 'suggest';
 
   return (
     <>
       <Header title="レシピ提案" />
       <div className="px-4 md:px-0">
-        <Tabs defaultValue="suggest">
+        <Tabs defaultValue={defaultTab}>
           <div className="-mx-4 overflow-x-auto px-4 md:mx-0 md:px-0">
             <TabsList className="w-max">
               <TabsTrigger value="suggest">作れる</TabsTrigger>
+              <TabsTrigger value="useup">使い切り</TabsTrigger>
               <TabsTrigger value="browse">一覧</TabsTrigger>
               <TabsTrigger value="seasonal">旬</TabsTrigger>
               <TabsTrigger value="missing">買い足せば作れる</TabsTrigger>
@@ -35,6 +47,9 @@ export default async function RecipesPage() {
           </div>
           <TabsContent value="suggest" className="mt-4">
             <SuggestRecipesPanel />
+          </TabsContent>
+          <TabsContent value="useup" className="mt-4">
+            <UseUpPanel targets={picks.expiring} />
           </TabsContent>
           <TabsContent value="browse" className="mt-4">
             <BrowsePanel totalCount={RECIPE_COUNT} initialResults={initialBrowse} />

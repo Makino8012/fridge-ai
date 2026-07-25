@@ -165,6 +165,56 @@ export function browseRecipes(
     .map((e) => ({ missingCount: e.missing.length, recipe: e.suggestion }));
 }
 
+export interface UseUpResult {
+  /** 指定した食材のうち、このレシピで使えるもの。 */
+  usedIngredients: string[];
+  /** 作るために買い足しが必要な食材。 */
+  missingIngredients: string[];
+  recipe: RecipeSuggestion;
+}
+
+/**
+ * 指定した食材(期限が近いものなど)を使い切るためのレシピを探す。
+ * 使える食材が多い順 → 買い足しが少ない順 → 調理時間が短い順で並べる。
+ */
+export function findRecipesUsing(
+  recipes: LocalRecipe[],
+  inventory: InventoryItem[],
+  targetNames: string[],
+  limit = 20,
+): UseUpResult[] {
+  if (targetNames.length === 0) return [];
+
+  const results: UseUpResult[] = [];
+
+  for (const recipe of recipes) {
+    // このレシピが、指定食材のうちどれを使うか。
+    const used = targetNames.filter((target) =>
+      recipe.ingredients.some((ing) => !isStaple(ing.name, ing.staple) && namesMatch(ing.name, target)),
+    );
+    if (used.length === 0) continue;
+
+    const evaluated = evaluate(recipe, inventory);
+    results.push({
+      usedIngredients: used,
+      missingIngredients: evaluated.missing,
+      recipe: evaluated.suggestion,
+    });
+  }
+
+  results.sort((a, b) => {
+    if (a.usedIngredients.length !== b.usedIngredients.length) {
+      return b.usedIngredients.length - a.usedIngredients.length;
+    }
+    if (a.missingIngredients.length !== b.missingIngredients.length) {
+      return a.missingIngredients.length - b.missingIngredients.length;
+    }
+    return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
+  });
+
+  return results.slice(0, limit);
+}
+
 /** 辞書に含まれるタグの一覧(カテゴリ絞り込み用)。 */
 export function collectTags(recipes: LocalRecipe[]): string[] {
   const counts = new Map<string, number>();

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   findAlmostMakeableRecipes,
   findMakeableRecipes,
+  findRecipesUsing,
   findSeasonalRecipes,
   namesMatch,
   type InventoryItem,
@@ -181,5 +182,33 @@ describe('findAlmostMakeableRecipes', () => {
     const shogayaki = result.find((r) => r.recipe.title === '生姜焼き');
     const onion = shogayaki?.recipe.ingredients.find((i) => i.name === '玉ねぎ');
     expect(onion?.owned).toBe(false);
+  });
+});
+
+describe('findRecipesUsing', () => {
+  it('returns recipes that use the given ingredients', () => {
+    const result = findRecipesUsing(recipes, inv(['豚こま肉', '玉ねぎ']), ['玉ねぎ']);
+    expect(result.map((r) => r.recipe.title)).toContain('生姜焼き');
+  });
+
+  it('ranks recipes that use more of the target ingredients first', () => {
+    const result = findRecipesUsing(
+      recipes,
+      inv(['豚こま肉', '玉ねぎ', 'じゃがいも', 'にんじん']),
+      ['じゃがいも', 'にんじん', '玉ねぎ'],
+    );
+    // 肉じゃがは3品すべてを使うので、玉ねぎだけの生姜焼きより先に来る
+    expect(result[0]!.recipe.title).toBe('肉じゃが');
+    expect(result[0]!.usedIngredients.length).toBeGreaterThan(1);
+  });
+
+  it('reports what still needs buying', () => {
+    const result = findRecipesUsing(recipes, inv(['豚こま肉']), ['豚こま肉']);
+    const shogayaki = result.find((r) => r.recipe.title === '生姜焼き');
+    expect(shogayaki?.missingIngredients).toEqual(['玉ねぎ']);
+  });
+
+  it('returns nothing when no ingredient is given', () => {
+    expect(findRecipesUsing(recipes, inv(['豚こま肉']), [])).toEqual([]);
   });
 });

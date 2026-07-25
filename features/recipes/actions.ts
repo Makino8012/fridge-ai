@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
 import * as recipeService from '@/services/recipes/recipe-service';
 import * as localRecipeService from '@/services/recipes/local-recipe-service';
+import type { UseUpResult } from '@/lib/recipes/matcher';
 import { aiErrorMessage, type MenuPlanTimeframe, type RecipeSuggestion } from '@/lib/ai/types';
 
 // ===== 無料モード(ローカルレシピ辞書・API課金なし) =====
@@ -108,5 +109,16 @@ export async function cookRecipeAction(recipe: RecipeSuggestion): Promise<Action
     return actionSuccess(result);
   } catch {
     return actionError('在庫の更新に失敗しました');
+  }
+}
+
+export async function findUseUpRecipesAction(
+  targetNames: string[],
+): Promise<ActionResult<UseUpResult[]>> {
+  try {
+    const recipes = await localRecipeService.getUseUpRecipes(targetNames);
+    return actionSuccess(recipes);
+  } catch {
+    return actionError('レシピの取得に失敗しました');
   }
 }

@@ -5,6 +5,7 @@ import {
   collectTags,
   findAlmostMakeableRecipes,
   findMakeableRecipes,
+  findRecipesUsing,
   findSeasonalRecipes,
   type BrowseFilters,
   type InventoryItem,
@@ -46,4 +47,10 @@ export async function getSeasonalRecipes() {
 export async function getBrowseRecipes(filters: BrowseFilters) {
   const inventory = await getInventory();
   return browseRecipes(RECIPES, inventory, filters);
+}
+
+/** 期限が近い食材などを使い切るためのレシピを探す。 */
+export async function getUseUpRecipes(targetNames: string[]) {
+  const inventory = await getInventory();
+  return findRecipesUsing(RECIPES, inventory, targetNames);
 }
