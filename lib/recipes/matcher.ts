@@ -1,5 +1,6 @@
 import type { RecipeSuggestion } from '@/lib/ai/types';
 import type { CurrentSeason } from '@/lib/date';
+import { isMainDish } from '@/lib/recipes/dish-role';
 import type { LocalRecipe } from '@/lib/recipes/types';
 import { estimateProteinPerServing } from '@/lib/nutrition';
 
@@ -159,13 +160,17 @@ export function findMakeableRecipes(
     .filter((e) => e.missing.length === 0);
 
   makeable.sort((a, b) => {
-    // 1. 賞味期限が近い食材を使うレシピを最優先
+    // 1. 単体で一食になる料理を先に。「今夜これどう?」に煮卵が出ると使い物にならない
+    const aMain = isMainDish(a.recipe);
+    const bMain = isMainDish(b.recipe);
+    if (aMain !== bMain) return aMain ? -1 : 1;
+    // 2. 賞味期限が近い食材を使うレシピを優先
     if (a.usesExpiring !== b.usesExpiring) return a.usesExpiring ? -1 : 1;
-    // 2. 旬のレシピを優先
+    // 3. 旬のレシピを優先
     const aSeason = isInSeason(a.recipe, currentSeason);
     const bSeason = isInSeason(b.recipe, currentSeason);
     if (aSeason !== bSeason) return aSeason ? -1 : 1;
-    // 3. 調理時間が短い順
+    // 4. 調理時間が短い順
     return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
   });
 

@@ -2,6 +2,7 @@ import type { RecipeSuggestion } from '@/lib/ai/types';
 import type { LocalRecipe } from '@/lib/recipes/types';
 import { HIGH_PROTEIN_THRESHOLD } from '@/lib/nutrition';
 import { namesMatch, type InventoryItem } from '@/lib/recipes/matcher';
+import { isMainDish } from '@/lib/recipes/dish-role';
 
 export interface WeeklyPlanOptions {
   /** 何日分作るか。 */
@@ -56,6 +57,7 @@ function pseudoRandom(seed: number): () => number {
 /**
  * 1週間分の献立を組み立てる。
  *
+ * ・単体で一食になる料理(主菜・主食)だけを選ぶ
  * ・同じ料理は出さない
  * ・主材料(鶏/豚/魚など)が続かないようにする
  * ・在庫で作れるもの、筋トレ向け(高タンパク)を設定に応じて優先する
@@ -78,8 +80,9 @@ export function buildWeeklyPlan(
   const random = pseudoRandom(seed);
 
   // 各レシピを一度だけ評価して点数をつける。
+  // 副菜(煮卵、キャロットラペなど)は単体で一食にならないので候補から外す。
   const scored = recipes
-    .filter((r) => !excluded.has(r.title))
+    .filter((r) => !excluded.has(r.title) && isMainDish(r))
     .map((recipe) => {
       const { missing, suggestion } = evaluate(recipe);
       const protein = suggestion.proteinPerServing ?? 0;

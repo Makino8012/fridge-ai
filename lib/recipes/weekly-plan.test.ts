@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import recipesData from '@/data/recipes.json';
 import { buildWeeklyPlan, collectMissingIngredients } from './weekly-plan';
 import { evaluateRecipe, type InventoryItem } from './matcher';
+import { isMainDish } from './dish-role';
 import type { LocalRecipe } from './types';
 
 const RECIPES = recipesData as LocalRecipe[];
@@ -14,6 +15,21 @@ function plan(stock: string[], options = {}) {
 }
 
 describe('buildWeeklyPlan', () => {
+  // 「3日目: 煮卵」が一食として出てきた不具合の再発防止。
+  it('副菜だけの日を作らない', () => {
+    const meals = plan(['卵', '醤油', 'みりん', '砂糖'], { days: 7 });
+    const sideDishes = meals.filter((m) => {
+      const source = RECIPES.find((r) => r.title === m.recipe.title)!;
+      return !isMainDish(source);
+    });
+    expect(sideDishes.map((m) => m.recipe.title)).toEqual([]);
+  });
+
+  it('在庫が卵だけでも煮卵は献立に出さない', () => {
+    const titles = plan(['卵'], { days: 5 }).map((m) => m.recipe.title);
+    expect(titles).not.toContain('煮卵');
+  });
+
   it('7日分の献立を作る', () => {
     expect(plan(['豚こま肉', '玉ねぎ', 'キャベツ'])).toHaveLength(7);
   });

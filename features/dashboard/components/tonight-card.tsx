@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { Clock, Flame, RefreshCw, ShoppingCart, UtensilsCrossed } from 'lucide-react';
+import { useState, useTransition } from 'react';
+import { Clock, CookingPot, Flame, RefreshCw, ShoppingCart, UtensilsCrossed } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
+import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { RecipeDetailDialog } from '@/features/recipes/components/recipe-detail-dialog';
+import { cookRecipeAction } from '@/features/recipes/actions';
 import type { TonightPicks } from '@/services/dashboard/dashboard-service';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
@@ -25,6 +28,7 @@ export function TonightCard({ picks }: { picks: TonightPicks }) {
 
   const [index, setIndex] = useState(0);
   const [open, setOpen] = useState(false);
+  const [isCooking, startCooking] = useTransition();
 
   if (candidates.length === 0) {
     return (
@@ -42,6 +46,22 @@ export function TonightCard({ picks }: { picks: TonightPicks }) {
 
   const current = candidates[index % candidates.length]!;
   const { recipe, missing } = current;
+
+  // 作った記録を忘れると在庫がズレて提案が外れていくので、ここからも減らせるようにする。
+  function handleCooked() {
+    startCooking(async () => {
+      const result = await cookRecipeAction(recipe);
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      if (result.data.reduced.length === 0) {
+        toast.info('在庫から減らせる材料はありませんでした');
+      } else {
+        toast.success(`${result.data.reduced.join('、')}を在庫から減らしました`);
+      }
+    });
+  }
 
   return (
     <>
@@ -105,6 +125,25 @@ export function TonightCard({ picks }: { picks: TonightPicks }) {
               別の案
             </Button>
           </div>
+
+          {/* 作った記録が在庫の正確さを保つので、レシピを開かなくても押せるようにする */}
+          {missing.length === 0 && (
+            <Button
+              variant="ghost"
+              className="w-full rounded-full text-muted-foreground"
+              onClick={handleCooked}
+              disabled={isCooking}
+            >
+              {isCooking ? (
+                <LoadingSpinner />
+              ) : (
+                <>
+                  <CookingPot className="size-4" />
+                  もう作った(在庫を減らす)
+                </>
+              )}
+            </Button>
+          )}
         </CardContent>
       </Card>
 
