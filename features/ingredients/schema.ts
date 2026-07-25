@@ -1,8 +1,17 @@
 import { z } from 'zod';
 import { normalizeUnit } from '@/lib/quantity';
+import { CATEGORY_OPTIONS, STORAGE_LOCATION_OPTIONS } from '@/lib/constants';
+import type { CategoryId, StorageLocationId } from '@/types/database.types';
 
-const categoryIdSchema = z.enum(['vegetable', 'meat', 'fish', 'drink', 'frozen', 'seasoning', 'other']);
-const storageLocationIdSchema = z.enum(['fridge', 'freezer', 'room_temp']);
+// カテゴリーはマスター(CATEGORY_OPTIONS)から生成し、追加時にここを直し忘れないようにする。
+const categoryIds = CATEGORY_OPTIONS.map((c) => c.id) as [CategoryId, ...CategoryId[]];
+const storageLocationIds = STORAGE_LOCATION_OPTIONS.map((s) => s.id) as [
+  StorageLocationId,
+  ...StorageLocationId[],
+];
+
+const categoryIdSchema = z.enum(categoryIds);
+const storageLocationIdSchema = z.enum(storageLocationIds);
 
 export const ingredientFormSchema = z.object({
   name: z.string().min(1, '食材名を入力してください').max(50),

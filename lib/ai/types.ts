@@ -116,8 +116,14 @@ export type ShoppingListOutput = z.infer<typeof shoppingListOutputSchema>;
 // レシートOCR: 写真から食材品目を抽出
 export const receiptCategorySchema = z.enum([
   'vegetable',
+  'fruit',
   'meat',
   'fish',
+  'egg',
+  'dairy',
+  'noodle',
+  'bread',
+  'grain',
   'drink',
   'frozen',
   'seasoning',

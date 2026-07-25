@@ -5,5 +5,5 @@ export const RECEIPT_EXTRACT_PROMPT = `これは日本のスーパー等のレ�
 - 食品以外(日用品・雑貨・袋代・ポイント等)は除外する。
 - 商品名はレシート表記の略称ではなく、一般的で分かりやすい食材名に直す(例:「ブタコマ」→「豚こま肉」)。
 - 各品目に quantity(推定数量、不明なら1)、unit(個/g/ml/本/パック/袋 など適切な単位)、
-  categoryId(vegetable=野菜 / meat=肉 / fish=魚 / drink=飲み物 / frozen=冷凍食品 / seasoning=調味料 / other=その他)を付ける。
+  categoryId(vegetable=野菜 / fruit=フルーツ / meat=肉 / fish=魚 / egg=卵 / dairy=乳製品 / noodle=麺類 / bread=パン / grain=米・穀物 / drink=飲み物 / frozen=冷凍食品 / seasoning=調味料 / other=その他)を付ける。
 - 読み取れない品目は無理に推測せず除外する。`;

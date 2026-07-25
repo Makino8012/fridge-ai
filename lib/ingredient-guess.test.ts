@@ -26,11 +26,19 @@ describe('guessCategory', () => {
     expect(guessCategory('醤油')).toBe('seasoning');
   });
 
-  it('puts dairy, eggs and tofu in other', () => {
-    expect(guessCategory('チーズ')).toBe('other');
-    expect(guessCategory('とろけるチーズ')).toBe('other');
-    expect(guessCategory('卵')).toBe('other');
+  it('detects the newer categories', () => {
+    expect(guessCategory('チーズ')).toBe('dairy');
+    expect(guessCategory('とろけるチーズ')).toBe('dairy');
+    expect(guessCategory('卵')).toBe('egg');
+    expect(guessCategory('いちご')).toBe('fruit');
+    expect(guessCategory('うどん')).toBe('noodle');
+    expect(guessCategory('食パン')).toBe('bread');
+    expect(guessCategory('米')).toBe('grain');
+  });
+
+  it('keeps soy products and seaweed in other', () => {
     expect(guessCategory('豆腐')).toBe('other');
+    expect(guessCategory('わかめ')).toBe('other');
   });
 
   it('returns null for unknown or empty names', () => {
@@ -73,8 +81,16 @@ describe('guessStorage', () => {
     expect(guessStorage('frozen', 'アイス')).toBe('freezer');
   });
 
-  it('puts seasonings at room temperature', () => {
+  it('puts seasonings and dry goods at room temperature', () => {
     expect(guessStorage('seasoning', '醤油')).toBe('room_temp');
+    expect(guessStorage('grain', '米')).toBe('room_temp');
+    expect(guessStorage('noodle', 'パスタ')).toBe('room_temp');
+  });
+
+  it('puts dairy, eggs and fruit in the fridge', () => {
+    expect(guessStorage('dairy', 'チーズ')).toBe('fridge');
+    expect(guessStorage('egg', '卵')).toBe('fridge');
+    expect(guessStorage('fruit', 'いちご')).toBe('fridge');
   });
 
   it('returns null when it cannot tell', () => {

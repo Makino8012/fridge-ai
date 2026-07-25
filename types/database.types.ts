@@ -6,8 +6,14 @@ export type Json = string | number | boolean | null | { [key: string]: Json | un
 
 export type CategoryId =
   | 'vegetable'
+  | 'fruit'
   | 'meat'
   | 'fish'
+  | 'egg'
+  | 'dairy'
+  | 'noodle'
+  | 'bread'
+  | 'grain'
   | 'drink'
   | 'frozen'
   | 'seasoning'

@@ -43,6 +43,41 @@ const CATEGORY_KEYWORDS: { category: CategoryId; words: string[] }[] = [
     ],
   },
   {
+    category: 'fruit',
+    words: [
+      'いちご', 'イチゴ', '苺', 'りんご', 'リンゴ', 'バナナ', 'みかん', 'ミカン', 'オレンジ',
+      'レモン', 'ぶどう', 'ブドウ', '桃', '梨', '柿', 'キウイ', 'メロン',
+      'すいか', 'スイカ', 'パイナップル', 'グレープフルーツ', 'ブルーベリー', 'さくらんぼ',
+      'マンゴー', 'ライム', 'アボカド', '果物', 'フルーツ',
+    ],
+  },
+  {
+    category: 'egg',
+    words: ['卵', 'たまご', 'タマゴ', '玉子', 'うずら卵'],
+  },
+  {
+    category: 'dairy',
+    words: [
+      'チーズ', 'バター', 'ヨーグルト', '生クリーム', 'マスカルポーネ', 'モッツァレラ',
+      'クリームチーズ', '粉チーズ', '練乳', 'サワークリーム', '乳製品',
+    ],
+  },
+  {
+    category: 'noodle',
+    words: [
+      'うどん', 'そば', 'そうめん', 'パスタ', 'スパゲッティ', '中華麺', 'ラーメン', '焼きそば',
+      'ビーフン', 'フォー', '春雨', 'マカロニ', 'ラザニア', 'そうめん', '冷麺', 'トック', '麺',
+    ],
+  },
+  {
+    category: 'bread',
+    words: ['食パン', 'パン', 'バゲット', 'マフィン', 'トルティーヤ', 'ピザ生地', 'コッペパン'],
+  },
+  {
+    category: 'grain',
+    words: ['米', 'ご飯', 'ごはん', 'もち米', '餅', 'もち', 'オートミール', 'シリアル', 'グラノーラ', 'クスクス'],
+  },
+  {
     category: 'vegetable',
     words: [
       'キャベツ', '白菜', 'レタス', 'ほうれん草', '小松菜', '大根', 'にんじん', '人参',
@@ -51,17 +86,17 @@ const CATEGORY_KEYWORDS: { category: CategoryId; words: string[] }[] = [
       'きのこ', 'しめじ', 'えのき', 'しいたけ', 'まいたけ', 'エリンギ', 'にら', 'ニラ',
       'ごぼう', 'れんこん', 'かぶ', 'オクラ', 'ズッキーニ', 'とうもろこし', 'コーン',
       '豆苗', '水菜', '春菊', 'セロリ', '大葉', 'みょうが', '枝豆', 'ゴーヤ', '菜の花',
-      'たけのこ', 'アボカド', 'いちご', 'りんご', 'バナナ', 'みかん', 'レモン', 'ぶどう',
+      'たけのこ',
       '野菜', '果物',
     ],
   },
 ];
 
-// 卵・豆腐・乳製品などは「その他」に寄せる(専用カテゴリーがないため)。
+// 専用カテゴリーがない食品は「その他」に寄せる(大豆製品・海藻・缶詰など)。
 const OTHER_WORDS = [
-  '卵', 'たまご', '豆腐', '納豆', '厚揚げ', '油揚げ', 'チーズ', 'バター', 'ヨーグルト',
-  '生クリーム', 'パン', 'ご飯', '米', '麺', 'うどん', 'そば', 'パスタ', '中華麺', '春雨',
-  'こんにゃく', 'わかめ', 'のり', 'ひじき', '缶',
+  '豆腐', '納豆', '厚揚げ', '油揚げ', 'がんもどき', 'おから', '豆乳',
+  'こんにゃく', 'しらたき', 'わかめ', 'のり', 'ひじき', '昆布', 'もずく', 'あおさ',
+  '缶', 'ちくわ', 'かまぼこ', 'はんぺん',
 ];
 
 export function guessCategory(name: string): CategoryId | null {
@@ -106,12 +141,15 @@ export function guessUnit(name: string): string | null {
   return null;
 }
 
+const FRIDGE_CATEGORIES: CategoryId[] = ['vegetable', 'fruit', 'meat', 'fish', 'egg', 'dairy', 'drink'];
+const ROOM_TEMP_CATEGORIES: CategoryId[] = ['seasoning', 'grain', 'noodle', 'bread'];
+
 export function guessStorage(category: CategoryId | null, name: string): StorageLocationId | null {
   if (name.includes('冷凍') || name.includes('アイス')) return 'freezer';
   if (category === 'frozen') return 'freezer';
-  if (category === 'seasoning') return 'room_temp';
-  if (category === 'vegetable' || category === 'meat' || category === 'fish' || category === 'drink')
-    return 'fridge';
+  if (category === null) return null;
+  if (ROOM_TEMP_CATEGORIES.includes(category)) return 'room_temp';
+  if (FRIDGE_CATEGORIES.includes(category)) return 'fridge';
   return null;
 }
 

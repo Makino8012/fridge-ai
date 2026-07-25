@@ -2,8 +2,14 @@ import type { CategoryId, StorageLocationId } from '@/types/database.types';
 
 export const CATEGORY_OPTIONS: { id: CategoryId; label: string }[] = [
   { id: 'vegetable', label: '野菜' },
+  { id: 'fruit', label: 'フルーツ' },
   { id: 'meat', label: '肉' },
   { id: 'fish', label: '魚' },
+  { id: 'egg', label: '卵' },
+  { id: 'dairy', label: '乳製品' },
+  { id: 'noodle', label: '麺類' },
+  { id: 'bread', label: 'パン' },
+  { id: 'grain', label: '米・穀物' },
   { id: 'drink', label: '飲み物' },
   { id: 'frozen', label: '冷凍食品' },
   { id: 'seasoning', label: '調味料' },
