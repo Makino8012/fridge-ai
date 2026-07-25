@@ -152,17 +152,28 @@ describe('namesMatch', () => {
 });
 
 describe('findAlmostMakeableRecipes', () => {
-  it('returns recipes missing exactly one non-staple ingredient', () => {
+  it('returns recipes missing a small number of non-staple ingredients', () => {
     const result = findAlmostMakeableRecipes(recipes, inv(['豚こま肉']));
     const titles = result.map((r) => r.recipe.title);
     expect(titles).toContain('生姜焼き');
     const shogayaki = result.find((r) => r.recipe.title === '生姜焼き');
-    expect(shogayaki?.missingIngredient).toBe('玉ねぎ');
+    expect(shogayaki?.missingIngredients).toEqual(['玉ねぎ']);
+  });
+
+  it('includes recipes missing two ingredients, fewest missing first', () => {
+    const result = findAlmostMakeableRecipes(recipes, inv(['豚こま肉']));
+    // 生姜焼きは1品不足、肉じゃがは2品不足(じゃがいも・にんじん)なので先に来る
+    expect(result[0]!.missingIngredients.length).toBeLessThanOrEqual(
+      result[result.length - 1]!.missingIngredients.length,
+    );
+    expect(result.every((r) => r.missingIngredients.length <= 2)).toBe(true);
   });
 
   it('filters by the specified missing ingredient name', () => {
     const result = findAlmostMakeableRecipes(recipes, inv(['豚こま肉']), 'にんじん');
-    expect(result.every((r) => r.missingIngredient.includes('にんじん'))).toBe(true);
+    expect(
+      result.every((r) => r.missingIngredients.some((n) => n.includes('にんじん'))),
+    ).toBe(true);
   });
 
   it('marks the missing ingredient as not owned', () => {

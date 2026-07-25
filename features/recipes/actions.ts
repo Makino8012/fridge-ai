@@ -19,7 +19,7 @@ export async function findMakeableRecipesAction(): Promise<ActionResult<RecipeSu
 
 export async function findAlmostMakeableAction(
   missingIngredientName?: string,
-): Promise<ActionResult<{ missingIngredient: string; recipe: RecipeSuggestion }[]>> {
+): Promise<ActionResult<{ missingIngredients: string[]; recipe: RecipeSuggestion }[]>> {
   try {
     const recipes = await localRecipeService.getAlmostMakeableRecipes(missingIngredientName);
     return actionSuccess(recipes);

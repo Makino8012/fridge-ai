@@ -200,30 +200,37 @@ export function findSeasonalRecipes(
 }
 
 /**
- * 非常備材料の不足があと1つだけのレシピを返す。
- * missingIngredientName を指定した場合は、その食材を買えば作れるものに絞る。
+ * 買い足せば作れるレシピを返す(不足が maxMissing 個以下のもの)。
+ * missingIngredientName を指定した場合は、その食材が不足リストに含まれるものに絞る。
+ * 不足が少ない順 → 調理時間が短い順に並べる。
  */
 export function findAlmostMakeableRecipes(
   recipes: LocalRecipe[],
   inventory: InventoryItem[],
   missingIngredientName?: string,
-  limit = 10,
-): { missingIngredient: string; recipe: RecipeSuggestion }[] {
+  limit = 20,
+  maxMissing = 2,
+): { missingIngredients: string[]; recipe: RecipeSuggestion }[] {
   const target = missingIngredientName ? normalize(missingIngredientName) : null;
 
   const almost = recipes
     .map((r) => evaluate(r, inventory))
-    .filter((e) => e.missing.length === 1)
+    .filter((e) => e.missing.length >= 1 && e.missing.length <= maxMissing)
     .filter((e) => {
       if (!target) return true;
-      const m = normalize(e.missing[0]!);
-      return m.includes(target) || target.includes(m);
+      return e.missing.some((name) => {
+        const m = normalize(name);
+        return m.includes(target) || target.includes(m);
+      });
     });
 
-  almost.sort((a, b) => a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes);
+  almost.sort((a, b) => {
+    if (a.missing.length !== b.missing.length) return a.missing.length - b.missing.length;
+    return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
+  });
 
   return almost.slice(0, limit).map((e) => ({
-    missingIngredient: e.missing[0]!,
+    missingIngredients: e.missing,
     recipe: e.suggestion,
   }));
 }

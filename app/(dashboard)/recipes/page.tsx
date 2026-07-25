@@ -27,7 +27,7 @@ export default async function RecipesPage() {
               <TabsTrigger value="suggest">作れる</TabsTrigger>
               <TabsTrigger value="browse">一覧</TabsTrigger>
               <TabsTrigger value="seasonal">旬</TabsTrigger>
-              <TabsTrigger value="missing">あと1品</TabsTrigger>
+              <TabsTrigger value="missing">買い足せば作れる</TabsTrigger>
               <TabsTrigger value="menu">献立</TabsTrigger>
               <TabsTrigger value="favorites">お気に入り</TabsTrigger>
               <TabsTrigger value="history">履歴</TabsTrigger>
