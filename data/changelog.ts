@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '2.5.1',
+    date: '2026-07-26',
+    changes: [
+      'レシピを44品追加（合計1175種類に）。ホイコーロー・エビチリ丼・天津麺・ワンタン麺・ロコモコ・シャクシュカ・各種カレー・グラタン・ご当地丼など',
+      'レシピ手順の詳細化を継続（合計609品が詳しい手順に対応）',
+    ],
+  },
+  {
     version: '2.5.0',
     date: '2026-07-26',
     changes: [
