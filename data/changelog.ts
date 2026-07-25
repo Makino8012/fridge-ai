@@ -7,6 +7,13 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.4.4',
+    date: '2026-07-25',
+    changes: [
+      'レシピをさらに追加（ローストビーフ・パエリア・ピザなどのごちそう系、パスタ各種、お茶漬け/雑炊、和菓子・スイーツ・ドリンクなど、合計809種類に）',
+    ],
+  },
+  {
     version: '1.4.3',
     date: '2026-07-25',
     changes: [
