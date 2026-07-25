@@ -35,7 +35,7 @@ for (const [title, steps] of Object.entries(patch)) {
     continue;
   }
   // 英単語の混入チェック(単位や NG などの略語だけ許可)
-  const ALLOWED = new Set(['ml', 'cm', 'mm', 'kg', 'NG', 'OK', 'g', 'L']);
+  const ALLOWED = new Set(['ml', 'cm', 'mm', 'kg', 'NG', 'OK', 'g', 'L', 'W']);
   for (const s of steps) {
     for (const word of s.match(/[A-Za-z]+/g) ?? []) {
       if (!ALLOWED.has(word)) problems.push(`ENGLISH WORD "${word}" in ${title}`);
