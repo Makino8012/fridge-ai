@@ -25,13 +25,15 @@ import { cn } from '@/lib/utils';
 const EXAMPLE = '牛乳と卵、キャベツ2個、豚こま肉300g';
 
 // ブラウザの音声認識(Web Speech API)。対応していない環境では音声ボタンを出さない。
+type SpeechResultList = ArrayLike<ArrayLike<{ transcript: string }> & { isFinal: boolean }>;
+
 type SpeechRecognitionLike = {
   lang: string;
   continuous: boolean;
   interimResults: boolean;
   start: () => void;
   stop: () => void;
-  onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+  onresult: ((event: { results: SpeechResultList }) => void) | null;
   onerror: (() => void) | null;
   onend: (() => void) | null;
 };
@@ -49,6 +51,7 @@ export function BulkAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (
   const [text, setText] = useState('');
   const [items, setItems] = useState<ParsedIngredient[] | null>(null);
   const [listening, setListening] = useState(false);
+  const [interim, setInterim] = useState('');
   const [speechAvailable, setSpeechAvailable] = useState(false);
   const [isPending, startTransition] = useTransition();
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
@@ -61,6 +64,7 @@ export function BulkAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (
     if (open) {
       setText('');
       setItems(null);
+      setInterim('');
     }
     return () => recognitionRef.current?.stop();
   }, [open]);
@@ -69,6 +73,7 @@ export function BulkAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (
     if (listening) {
       recognitionRef.current?.stop();
       setListening(false);
+      setInterim('');
       return;
     }
 
@@ -78,19 +83,29 @@ export function BulkAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (
     const recognition = new Recognition();
     recognition.lang = 'ja-JP';
     recognition.continuous = true;
-    recognition.interimResults = false;
+    // 話し終わるのを待たず、認識中の言葉もその場で表示する(反映が速く感じる)。
+    recognition.interimResults = true;
     recognition.onresult = (event) => {
-      let heard = '';
+      let confirmed = '';
+      let inProgress = '';
       for (let i = 0; i < event.results.length; i++) {
-        heard += event.results[i]?.[0]?.transcript ?? '';
+        const result = event.results[i];
+        const transcript = result?.[0]?.transcript ?? '';
+        if (result?.isFinal) confirmed += transcript;
+        else inProgress += transcript;
       }
-      setText(heard);
+      setText(confirmed + inProgress);
+      setInterim(inProgress);
     };
     recognition.onerror = () => {
       toast.error('音声を聞き取れませんでした');
       setListening(false);
+      setInterim('');
     };
-    recognition.onend = () => setListening(false);
+    recognition.onend = () => {
+      setListening(false);
+      setInterim('');
+    };
 
     recognitionRef.current = recognition;
     recognition.start();
@@ -158,6 +173,15 @@ export function BulkAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
+              {listening && (
+                <p className="flex items-center gap-1.5 text-xs text-primary">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
+                    <span className="relative inline-flex size-2 rounded-full bg-primary" />
+                  </span>
+                  {interim !== '' ? `聞き取り中: ${interim}` : '聞き取り中…話してください'}
+                </p>
+              )}
               <div className="flex gap-2">
                 {speechAvailable && (
                   <Button

@@ -254,7 +254,7 @@ export function IngredientList({
         </div>
       )}
 
-      <div className="fixed bottom-24 left-4 flex flex-col items-center gap-3 md:bottom-8 md:left-auto md:right-8">
+      <div className="hide-on-keyboard fixed bottom-24 left-4 flex flex-col items-center gap-3 md:bottom-8 md:left-auto md:right-8">
         <ReceiptCapture />
         <Button
           size="icon"

@@ -65,3 +65,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*
+  キーボードが開いている間だけ隠す要素につけるクラス。
+  画面下に固定したナビや丸ボタンが入力欄に重なるのを防ぐ。
+  keyboard-open クラスは components/keyboard-inset.tsx が付け外しする。
+*/
+html.keyboard-open .hide-on-keyboard {
+  display: none;
+}

@@ -44,10 +44,16 @@ const DrawerContent = React.forwardRef<
       ref={ref}
       className={cn(
         // 画面より高くならないよう上限を設ける(はみ出して上部が見切れるのを防ぐ)
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto max-h-[92dvh] flex-col rounded-t-[10px] border bg-background",
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
         className
       )}
       {...props}
+      // キーボードが出たらその分だけ持ち上げ、高さも縮める(入力欄が隠れない)
+      style={{
+        bottom: "var(--kb-inset, 0px)",
+        maxHeight: "calc(92dvh - var(--kb-inset, 0px))",
+        ...props.style,
+      }}
     >
       <div className="mx-auto mt-4 h-2 w-[100px] shrink-0 rounded-full bg-muted" />
       {children}
