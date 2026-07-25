@@ -15,28 +15,31 @@ export function RecipeSuggestionCard({ recipe }: { recipe: RecipeSuggestion }) {
 
   return (
     <>
-      <Card className="cursor-pointer rounded-2xl transition-colors hover:bg-muted/40" onClick={() => setOpen(true)}>
+      <Card
+        className="group cursor-pointer rounded-2xl transition-all hover:border-primary/30 hover:shadow-md active:scale-[0.99]"
+        onClick={() => setOpen(true)}
+      >
         <CardContent className="space-y-2 p-4">
           <div className="flex items-start justify-between gap-2">
-            <p className="font-medium">{recipe.title}</p>
+            <p className="text-[15px] font-semibold leading-snug">{recipe.title}</p>
             <FavoriteButton recipe={recipe} />
           </div>
-          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <Badge variant="outline" className="font-normal">
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-muted-foreground">
+            <Badge variant="secondary" className="font-normal">
               {DIFFICULTY_LABEL[recipe.difficulty]}
             </Badge>
-            <span className="flex items-center gap-1">
+            <span className="flex items-center gap-1 tabular-nums">
               <Clock className="size-3.5" />
               {recipe.cookingTimeMinutes}分
             </span>
             {recipe.usesExpiringIngredient && (
-              <span className="flex items-center gap-1 text-warning-foreground dark:text-warning">
+              <span className="flex items-center gap-1 font-medium text-warning-foreground dark:text-warning">
                 <Flame className="size-3.5" />
-                期限が近い食材を使用
+                期限が近い食材
               </span>
             )}
           </div>
-          <p className="line-clamp-1 text-xs text-muted-foreground">
+          <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
             {recipe.ingredients.map((i) => i.name).join('、')}
           </p>
         </CardContent>
