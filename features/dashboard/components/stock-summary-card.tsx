@@ -15,19 +15,19 @@ function StatCard({
 }) {
   return (
     <Card className="rounded-2xl">
-      <CardContent className="flex flex-col gap-2 p-4">
+      <CardContent className="flex flex-col gap-1.5 p-3.5">
         <div
           className={cn(
-            'flex size-9 items-center justify-center rounded-xl',
+            'flex size-8 items-center justify-center rounded-lg',
             tone === 'destructive' && 'bg-destructive/15 text-destructive',
             tone === 'warning' && 'bg-warning/15 text-warning-foreground dark:text-warning',
             tone === 'default' && 'bg-accent text-accent-foreground',
           )}
         >
-          <Icon className="size-4.5" strokeWidth={1.75} />
+          <Icon className="size-4" strokeWidth={2} />
         </div>
-        <p className="text-2xl font-semibold tabular-nums">{value}</p>
-        <p className="text-xs text-muted-foreground">{label}</p>
+        <p className="text-2xl font-bold tabular-nums leading-none">{value}</p>
+        <p className="text-[11px] leading-tight text-muted-foreground">{label}</p>
       </CardContent>
     </Card>
   );

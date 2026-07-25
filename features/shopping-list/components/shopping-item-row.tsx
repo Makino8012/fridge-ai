@@ -35,7 +35,7 @@ export function ShoppingItemRow({ item }: { item: ShoppingItem }) {
   }
 
   return (
-    <div className="flex items-center gap-3 rounded-xl border px-3 py-2.5">
+    <div className="flex items-center gap-3 rounded-xl border bg-card px-3 py-3 transition-colors hover:border-primary/30">
       <Checkbox checked={optimisticChecked} onCheckedChange={handleToggle} disabled={isPending} className="size-5" />
       <div className={cn('flex-1 text-sm', optimisticChecked && 'text-muted-foreground line-through')}>
         {item.name}

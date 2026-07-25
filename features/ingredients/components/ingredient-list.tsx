@@ -221,7 +221,7 @@ export function IngredientList({
                 {group !== 'none' && (
                   <button
                     type="button"
-                    className="flex w-full items-center gap-1.5 border-b pb-1.5 text-left"
+                    className="flex w-full items-center gap-1.5 border-b border-border/60 pb-2 text-left"
                     onClick={() =>
                       setCollapsed((prev) => {
                         const next = new Set(prev);
@@ -237,8 +237,10 @@ export function IngredientList({
                         isCollapsed && '-rotate-90',
                       )}
                     />
-                    <span className="text-sm font-semibold">{g.label}</span>
-                    <span className="text-xs text-muted-foreground">{g.items.length}</span>
+                    <span className="text-sm font-bold tracking-tight">{g.label}</span>
+                    <span className="rounded-full bg-muted px-1.5 py-0.5 text-[11px] font-medium text-muted-foreground">
+                      {g.items.length}
+                    </span>
                   </button>
                 )}
                 {!isCollapsed && (
