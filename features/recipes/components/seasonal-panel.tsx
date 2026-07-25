@@ -33,7 +33,7 @@ export function SeasonalPanel() {
       {isPending && <RecipeSuggestionSkeletonList />}
 
       {!isPending && results && results.length > 0 && (
-        <div className="space-y-2.5">
+        <div className="grid gap-2.5 md:grid-cols-2">
           {results.map((r, i) => (
             <div key={i} className="space-y-1.5">
               {r.missingCount === 0 ? (

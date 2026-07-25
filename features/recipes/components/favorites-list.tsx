@@ -14,7 +14,7 @@ export function FavoritesList({ favorites }: { favorites: RecipeFavoriteRow[] })
   }
 
   return (
-    <div className="space-y-2.5">
+    <div className="grid gap-2.5 md:grid-cols-2">
       {favorites.map((fav) => (
         <RecipeSuggestionCard key={fav.id} recipe={fav.recipe_data as unknown as RecipeSuggestion} />
       ))}

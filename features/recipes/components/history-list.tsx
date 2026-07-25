@@ -20,7 +20,7 @@ export function HistoryList({ history }: { history: RecipeHistoryRow[] }) {
   }
 
   return (
-    <div className="space-y-2.5">
+    <div className="grid gap-2.5 md:grid-cols-2">
       {history.map((item) => (
         <Card key={item.id} className="rounded-2xl">
           <CardContent className="flex items-center justify-between p-4">

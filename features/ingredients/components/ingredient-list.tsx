@@ -152,7 +152,7 @@ export function IngredientList({
           description={initialIngredients.length === 0 ? '右下の+ボタンから追加しましょう' : undefined}
         />
       ) : (
-        <div className="space-y-2.5">
+        <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((ingredient) => (
             <IngredientCard key={ingredient.id} ingredient={ingredient} onEdit={openEditForm} />
           ))}

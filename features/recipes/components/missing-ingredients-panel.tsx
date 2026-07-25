@@ -80,7 +80,7 @@ export function MissingIngredientsPanel() {
       )}
 
       {!isPending && localResults && localResults.length > 0 && (
-        <div className="space-y-2.5">
+        <div className="grid gap-2.5 md:grid-cols-2">
           {localResults.map((r, i) => (
             <div key={i} className="space-y-1.5">
               <Badge variant="outline" className="font-normal">
@@ -93,7 +93,7 @@ export function MissingIngredientsPanel() {
       )}
 
       {!isPending && aiRecipes && aiRecipes.length > 0 && (
-        <div className="space-y-2.5">
+        <div className="grid gap-2.5 md:grid-cols-2">
           {aiRecipes.map((recipe, i) => (
             <RecipeSuggestionCard key={i} recipe={recipe} />
           ))}

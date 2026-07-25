@@ -74,7 +74,7 @@ export function SuggestRecipesPanel() {
       )}
 
       {!isPending && recipes && recipes.length > 0 && (
-        <div className="space-y-2.5">
+        <div className="grid gap-2.5 md:grid-cols-2">
           {recipes.map((recipe, i) => (
             <RecipeSuggestionCard key={i} recipe={recipe} />
           ))}

@@ -19,7 +19,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
         <div className="flex items-center px-4 pt-3 md:hidden">
           <Brand />
         </div>
-        <main className="container max-w-4xl flex-1 space-y-6 pb-24 pt-3 md:pb-10 md:pt-6">
+        <main className="container max-w-5xl flex-1 space-y-6 pb-24 pt-3 md:pb-10 md:pt-6">
           {children}
         </main>
       </div>

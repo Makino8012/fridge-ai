@@ -157,7 +157,7 @@ export function ShoppingListView({
         <EmptyState icon={ShoppingCart} title="買い物リストは空です" />
       ) : (
         <div className="space-y-4">
-          <div className="space-y-2">
+          <div className="grid gap-2 md:grid-cols-2">
             {unchecked.map((item) => (
               <ShoppingItemRow key={item.id} item={item} />
             ))}
@@ -171,9 +171,11 @@ export function ShoppingListView({
                   <Trash2 className="size-3.5" /> 削除
                 </Button>
               </div>
-              {checked.map((item) => (
-                <ShoppingItemRow key={item.id} item={item} />
-              ))}
+              <div className="grid gap-2 md:grid-cols-2">
+                {checked.map((item) => (
+                  <ShoppingItemRow key={item.id} item={item} />
+                ))}
+              </div>
             </div>
           )}
         </div>

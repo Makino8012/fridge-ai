@@ -100,7 +100,7 @@ export function BrowsePanel({
 
         <div className={isPending ? 'pointer-events-none opacity-40 transition-opacity' : 'transition-opacity'}>
           {results.length > 0 ? (
-            <div className="space-y-2.5">
+            <div className="grid gap-2.5 md:grid-cols-2">
               {results.map((r, i) => (
                 <div key={i} className="space-y-1.5">
                   {r.missingCount === 0 && (
