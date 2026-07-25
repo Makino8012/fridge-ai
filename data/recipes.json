@@ -47789,5 +47789,1508 @@
     "seasons": [
       "all"
     ]
+  },
+  {
+    "title": "鶏むねのハーブグリル",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "2片",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉の皮を取り、厚い部分を開いて厚みを均一にする。",
+      "塩・砂糖ひとつまみ・すりおろしにんにくをすり込み、30分置く(しっとり仕上がる)。",
+      "フライパンを中火で熱し、オリーブオイルをひいて鶏肉を4分焼く。",
+      "裏返して蓋をし、弱火で6分蒸し焼きにする。",
+      "火を止めて5分休ませてから切る(肉汁が落ち着く)。",
+      "黒こしょうとレモンを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ささみのチーズ焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "6枚",
+        "staple": false
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみの筋を取り、包丁で開いて平らにする。",
+      "塩こしょうをして10分置く。",
+      "大葉とチーズをのせて半分に折る。",
+      "フライパンで両面を3分ずつ焼く。",
+      "蓋をして2分蒸し焼きにし、チーズを溶かして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ささみの梅しそ蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "6枚",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみの筋を取り、開いて塩をふる。",
+      "叩いた梅と大葉をのせて巻く。",
+      "耐熱皿に並べ、酒をふる。",
+      "ラップをしてレンジ600Wで4分加熱する。",
+      "そのまま3分蒸らし、余熱で火を通して完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "鶏むねとブロッコリーの塩炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "350g",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1株",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を一口大のそぎ切りにし、酒と塩をもみ込んで片栗粉をまぶす。",
+      "ブロッコリーを小房に分け、2分下茹でする。",
+      "フライパンにごま油とにんにくを熱し、鶏肉を炒める。",
+      "火が通ったらブロッコリーを加える。",
+      "鶏がらスープの素と塩こしょうで味を整えて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "サラダチキンの温野菜プレート",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1/2株",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ゆで卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉に塩と砂糖少々をすり込み、耐熱袋に入れる。",
+      "沸騰させて火を止めた湯に袋ごと入れ、30分放置する(しっとり仕上がる)。",
+      "ブロッコリーとにんじんを蒸すか茹でる。",
+      "鶏肉を薄切りにする。",
+      "皿に野菜・鶏肉・半分に切ったゆで卵を盛る。",
+      "オリーブオイルと黒こしょうをかけて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏むねのタンドリー風",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "ヨーグルト",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を一口大に切り、フォークで数か所刺す。",
+      "ヨーグルト・カレー粉・すりおろしにんにく・塩に30分漬ける(肉が柔らかくなる)。",
+      "フライパンかトースターで焼く。",
+      "焼き色がついたら裏返し、中まで火を通す。",
+      "レモンとパセリを添えて完成。"
+    ],
+    "tags": [
+      "エスニック",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鮭とブロッコリーのバター蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "3切れ",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1株",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鮭に塩をふって10分置き、出た水分を拭く。",
+      "フライパンにブロッコリーとしめじを敷き、鮭をのせる。",
+      "酒を回しかけ、蓋をして中火で8分蒸す。",
+      "バターと醤油を加えて絡める。",
+      "黒こしょうをふって完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "まぐろの漬けサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "まぐろ",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "アボカド",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "まぐろを2cm角に切る。",
+      "醤油・ごま油・わさびを混ぜ、まぐろを15分漬ける。",
+      "アボカドを同じ大きさに切る。",
+      "レタスを敷いた器に盛る。",
+      "白ごまを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "サラダ",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "サバ缶と豆腐のチゲ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "サバ缶",
+        "quantity": "2缶",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "コチュジャン",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鍋でキムチを軽く炒めて香りを出す。",
+      "水400ml・鶏がら・コチュジャンを加えて煮立てる。",
+      "サバ缶を汁ごと加える(汁に旨みと栄養がある)。",
+      "豆腐を大きく崩して入れ、5分煮る。",
+      "ニラを加えてさっと煮て完成。"
+    ],
+    "tags": [
+      "韓国",
+      "汁物",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "サバ缶の卵とじ丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "サバ缶",
+        "quantity": "2缶",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "玉ねぎを薄切りにする。",
+      "フライパンにサバ缶の汁・醤油・みりん・水50mlを入れて煮立てる。",
+      "玉ねぎを煮て、しんなりしたらサバの身を加える。",
+      "溶き卵を回し入れ、蓋をして30秒。",
+      "半熟でご飯にのせ、青ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "エビとブロッコリーのガーリック炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "エビ",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1株",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "2片",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "エビの背わたを取り、塩と片栗粉でもんで洗う。",
+      "ブロッコリーを小房に分けて2分下茹でする。",
+      "フライパンにオイルとにんにくを弱火で熱し、香りを出す。",
+      "エビを強火で炒め、色が変わったらブロッコリーを加える。",
+      "塩こしょうで味を整えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豆腐と鶏ひき肉のヘルシーハンバーグ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐を重しをして20分しっかり水切りする。",
+      "玉ねぎをみじん切りにして炒め、冷ます。",
+      "ひき肉・豆腐・玉ねぎ・卵・片栗粉を粘りが出るまで練る。",
+      "小判形にして中央をくぼませる。",
+      "両面を焼き、蓋をして弱火で7分蒸し焼きにする。",
+      "大根おろしとポン酢でいただいて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "納豆と卵のオートミール雑炊",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "納豆",
+        "quantity": "3パック",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鍋に水400mlと鶏がらスープの素を入れて煮立てる。",
+      "オートミールを加えて2分煮る。",
+      "納豆を混ぜて加える。",
+      "溶き卵を回し入れ、半熟で火を止める。",
+      "ねぎを散らし、醤油で味を整えて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "ご飯",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "高タンパク豆腐そぼろ丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐を水切りして手で細かく崩す。",
+      "フライパンでひき肉を炒め、色が変わったら豆腐を加える。",
+      "水分を飛ばすように5分炒める(そぼろ状になる)。",
+      "醤油・みりん・砂糖少々で味付けする。",
+      "別に炒り卵を作る。",
+      "ご飯にそぼろと炒り卵をのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏むねとほうれん草のスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "ほうれん草",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を薄いそぎ切りにし、酒と片栗粉をもみ込む。",
+      "鍋に水600mlと鶏がら、生姜を入れて煮立てる。",
+      "鶏肉を1枚ずつ入れ、アクを取りながら5分煮る。",
+      "ほうれん草を加えてさっと煮る。",
+      "溶き卵を回し入れ、ごま油を垂らして完成。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ギリシャヨーグルトボウル",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "ヨーグルト",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "バナナ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "グラノーラ",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "きなこ",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "はちみつ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "プロテインパウダー",
+        "quantity": "50g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ヨーグルトをペーパーで15分水切りする(濃厚になりタンパク質も凝縮する)。",
+      "器に盛る。",
+      "スライスしたバナナとグラノーラをのせる。",
+      "きなこ(あればプロテインパウダーも)を混ぜ、はちみつをかけて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "朝食",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "プロテインパンケーキ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "ヨーグルト",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "バナナ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ベーキングパウダー",
+        "quantity": "小さじ1",
+        "staple": false
+      },
+      {
+        "name": "プロテインパウダー",
+        "quantity": "30g",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "オートミールをミキサーで粉状にする(なければそのままでも可)。",
+      "バナナを潰し、卵・ヨーグルトと混ぜる。",
+      "オートミール・プロテインパウダー・ベーキングパウダーを加えて混ぜる。",
+      "弱火のフライパンで片面3分ずつ焼く。",
+      "はちみつやヨーグルトを添えて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "朝食",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏むねのしっとりチャーシュー",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を巻いてタコ糸か爪楊枝で形を整える。",
+      "フライパンで表面全体に焼き色をつける。",
+      "醤油・みりん・水100ml・生姜・にんにく・ねぎを加える。",
+      "落とし蓋をして弱火で15分煮る。",
+      "火を止めて煮汁の中で冷ます(しっとり仕上がる最大のコツ)。",
+      "薄切りにして煮汁をかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "筋トレ",
+      "高タンパク",
+      "作り置き"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "牛赤身のステーキサラダ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "牛もも肉",
+        "quantity": "350g",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "ミニトマト",
+        "quantity": "8個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "牛肉を30分ほど室温に戻し、焼く直前に塩こしょうする。",
+      "強火で片面1分半ずつ焼く。",
+      "アルミホイルで包み5分休ませる(肉汁が落ち着く)。",
+      "醤油・オリーブオイル・すりおろしにんにくでドレッシングを作る。",
+      "薄切りにして野菜の上に並べ、ドレッシングをかけて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "サラダ",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "厚揚げと鶏ひき肉のあんかけ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げに熱湯をかけて油抜きし、一口大に切って焼く。",
+      "別のフライパンでひき肉とねぎを炒める。",
+      "水200ml・鶏がら・醤油を加えて煮る。",
+      "水溶き片栗粉でとろみをつける。",
+      "厚揚げにあんをかけ、生姜を添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "卵たっぷりニラ玉",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": "6個",
+        "staple": false
+      },
+      {
+        "name": "ニラ",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵を溶き、鶏がらスープの素を混ぜる。",
+      "ニラを4cmに切る。",
+      "フライパンでひき肉を炒める。",
+      "ニラを加えてさっと炒める。",
+      "卵液を流し入れ、大きく混ぜて半熟で火を止めて完成。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏ささみとひじきの和え物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "ひじき",
+        "quantity": "20g",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ひじきを水で20分戻して洗う。",
+      "ささみを酒をふってレンジで3分加熱し、粗熱を取って裂く。",
+      "にんじんを細切りにしてさっと茹でる。",
+      "醤油・すりごま・ごま油で和え衣を作る。",
+      "全て和えて完成。作り置きにも向く。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "筋トレ",
+      "高タンパク",
+      "作り置き"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鮭とオートミールのリゾット",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "オートミール",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "ほうれん草",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "粉チーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鮭を焼いてほぐし、骨と皮を取る。",
+      "ほうれん草を茹でて刻む。",
+      "鍋に水150ml・コンソメを煮立て、オートミールを加えて2分煮る。",
+      "牛乳を加えて温める。",
+      "鮭とほうれん草を加え、粉チーズを混ぜて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "ご飯",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚ヒレの生姜焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚ヒレ肉",
+        "quantity": "350g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚ヒレ肉を1cm厚に切り、軽く叩いて平らにする(脂が少なく高タンパク)。",
+      "薄く小麦粉をまぶす。",
+      "フライパンで両面を2分ずつ焼いて取り出す。",
+      "玉ねぎを炒め、しんなりしたら醤油・みりん・すりおろし生姜を加える。",
+      "豚肉を戻して煮絡め、照りが出たら完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "たんぱく質たっぷり具だくさん味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/6本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根をいちょう切りにする。",
+      "鍋で豚肉を炒め、大根を加えてだしを注ぐ。",
+      "アクを取りながら10分煮る。",
+      "豆腐を角切りにして加える。",
+      "味噌を溶き入れ、溶き卵を回し入れて完成。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "鶏むねの照り焼き丼(高タンパク)",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉をそぎ切りにして片栗粉をまぶす。",
+      "フライパンで両面を2分ずつ焼く。",
+      "醤油・みりん・砂糖少々で照りよく煮絡める。",
+      "温泉卵を作るかゆで卵を半分に切る。",
+      "ご飯に鶏肉をのせ、卵を添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ツナと卵のオートミールお好み焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "オートミール",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "2缶",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "お好みソース",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "オートミールを水50mlでふやかす。",
+      "キャベツを細かく刻む。",
+      "卵・ツナ・オートミール・キャベツを混ぜる。",
+      "フライパンで片面4分ずつ、蓋をして焼く。",
+      "ソースとかつお節をかけて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "軽食",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鶏むねとキャベツの塩麹蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉をそぎ切りにし、塩と酒をもみ込んで15分置く。",
+      "フライパンにキャベツとしめじを敷く。",
+      "鶏肉を広げてのせ、酒を回しかける。",
+      "蓋をして中火で10分蒸す。",
+      "ごま油と黒こしょうをかけて完成。"
+    ],
+    "tags": [
+      "ヘルシー",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "高タンパク豆腐グラタン",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "鶏ひき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "100ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐を水切りして粗く崩す。",
+      "ひき肉と玉ねぎを炒め、コンソメで味付けする。",
+      "豆腐と牛乳を加えて混ぜる(小麦粉を使わないのでヘルシー)。",
+      "耐熱皿に入れ、チーズをのせる。",
+      "トースターで10分、焼き色がつくまで焼いて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "グラタン",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "winter"
+    ]
   }
 ]
