@@ -57426,5 +57426,1940 @@
     "seasons": [
       "all"
     ]
+  },
+  {
+    "title": "塩豚",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "豚バラブロック",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚バラブロックの全面に塩をすり込む(重さの3%が目安)。",
+      "ペーパーで包んでラップし、冷蔵庫で2日寝かせる(水分が抜けて旨みが濃くなる)。",
+      "ペーパーを替えながら寝かせるとより良い。",
+      "鍋にたっぷりの水とねぎの青い部分を入れ、豚肉を40分茹でる。",
+      "茹で汁の中で冷ますとしっとりする。",
+      "薄切りにし、黒こしょうと粒マスタードを添えて完成。茹で汁はスープに使える。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "作り置き"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ローストチキン",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "3片",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉に塩こしょうをすり込み、1時間置く(下味が入る)。",
+      "じゃがいもとにんじんを大きめに切る。",
+      "天板に野菜を広げ、オリーブオイルとにんにくをかける。",
+      "鶏肉を皮目を上にしてのせる。",
+      "200度のオーブンで35分焼く。途中で出た脂を野菜にかけると美味しい。",
+      "皮がパリッとしたら取り出し、5分休ませて切り分けて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "ごちそう"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "チキンナゲット",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "350g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "大さじ4",
+        "staple": true
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉の皮を取り、包丁で粗く叩く(フードプロセッサーでも可)。",
+      "卵・小麦粉・マヨネーズ・塩こしょうを加えてよく練る(マヨネーズでふんわりする)。",
+      "冷蔵庫で20分休ませると成形しやすい。",
+      "スプーン2本で小判形にすくい、170度の油にそっと落とす。",
+      "2分揚げて裏返し、さらに1分半揚げる。",
+      "油を切り、ケチャップやマスタードを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "揚げ物",
+      "鶏肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "フィッシュアンドチップス",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "白身魚",
+        "quantity": "3切れ",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "100g",
+        "staple": true
+      },
+      {
+        "name": "炭酸水",
+        "quantity": "120ml",
+        "staple": false
+      },
+      {
+        "name": "レモン",
+        "quantity": "1/2個",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "じゃがいもを太めのくし切りにし、10分水にさらして水気を拭く。",
+      "160度で5分揚げ、一度取り出す(後で二度揚げする)。",
+      "白身魚に塩こしょうをふり、水気を拭いて小麦粉を薄くまぶす。",
+      "小麦粉と炭酸水を混ぜて衣を作る(炭酸でサクサクになる)。",
+      "魚に衣をつけ、180度で3分揚げる。",
+      "じゃがいもを190度で1分二度揚げし、塩とレモン、モルトビネガーを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "揚げ物",
+      "イギリス"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "クラブハウスサンド",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉を茹でるか焼いて、薄切りにする。",
+      "ベーコンをカリカリに焼く。",
+      "パン3枚をトーストし、片面ずつマヨネーズを塗る。",
+      "1枚目にレタスと鶏肉、2枚目を重ねる。",
+      "その上にベーコンとトマトをのせ、3枚目で挟む。",
+      "ピックで留めて対角線に4等分し、完成。"
+    ],
+    "tags": [
+      "洋食",
+      "軽食",
+      "サンドイッチ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼きそばパン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "コッペパン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "中華麺",
+        "quantity": "1玉",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "豚こま肉",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "お好みソース",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツをざく切りにする。",
+      "フライパンで豚肉とキャベツを炒める。",
+      "麺を加え、水大さじ2をふってほぐしながら炒める。",
+      "ソースを回し入れ、水分を飛ばすように炒めて冷ます。",
+      "パンに切り込みを入れ、マヨネーズを塗る。",
+      "焼きそばを挟み、青のりと紅生姜をのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "軽食",
+      "パン"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "コロッケパン",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "コッペパン",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "コロッケ",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "ウスターソース",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツを細めの千切りにする。",
+      "コロッケを温め直し、ソースをかける。",
+      "パンに切り込みを入れ、内側にマヨネーズを塗る。",
+      "キャベツを敷き詰める。",
+      "コロッケを挟み、ソースを追加でかけて完成。"
+    ],
+    "tags": [
+      "和食",
+      "軽食",
+      "パン"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "天むす",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "エビ",
+        "quantity": "6尾",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "焼きのり",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "60g",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "エビの背わたを取り、腹に切り込みを入れてまっすぐにする。",
+      "冷水と小麦粉でさっくり衣を作り、180度で1分半揚げる。",
+      "醤油とみりんを煮立てた天つゆに、揚げたてをさっとくぐらせる。",
+      "手を水でぬらして塩をつけ、ご飯を広げる。",
+      "エビの尾を出すように包み、俵型に握る。",
+      "細く切ったのりを巻いて完成。"
+    ],
+    "tags": [
+      "和食",
+      "軽食",
+      "名古屋"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鯖の竜田揚げ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "さば",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "さばを一口大に切り、骨があれば取る。",
+      "醤油・酒・すりおろし生姜に15分漬ける(臭みが消える)。",
+      "汁気を軽く拭き、片栗粉をしっかりまぶす。",
+      "170度の油で3分揚げる。",
+      "一度取り出し、190度で30秒二度揚げしてカリッとさせる。",
+      "レモンと大根おろしを添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "揚げ物",
+      "魚"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鶏むねの塩麹漬け焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "適量",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉をフォークで数か所刺す。",
+      "塩麹をまんべんなくすり込み、袋に入れて一晩漬ける(麹の力で驚くほど柔らかくなる)。",
+      "焼く前に塩麹を軽く拭き取る(焦げやすいため)。",
+      "フライパンを弱めの中火にし、油をひいて4分焼く。",
+      "裏返して蓋をし、弱火で6分蒸し焼きにする。",
+      "5分休ませてから切り、黒こしょうをふって完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "豚の味噌漬け焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚ロース肉",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豚肉の赤身と脂身の境目に数か所切り込みを入れる(反り返り防止)。",
+      "味噌・みりん・砂糖・酒を混ぜて漬け床を作る。",
+      "豚肉に塗り、袋に入れて冷蔵庫で半日〜1日漬ける。",
+      "焼く前に味噌をヘラで拭き取る(残っていると焦げる)。",
+      "フライパンを弱めの中火にし、片面3分ずつ焼く。",
+      "焼き色がついたら器に盛り、キャベツを添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "作り置き"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ぶり大根丼",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "ぶり",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ぶりに熱湯をかけて霜降りにし、冷水で血合いを洗う。",
+      "大根を2cm厚のいちょう切りにし、10分下茹でする。",
+      "鍋に水300ml・醤油・みりん・砂糖・生姜を煮立てる。",
+      "大根を入れて落とし蓋をし、15分煮る。",
+      "ぶりを加えてさらに12分、煮汁が半分になるまで煮る。",
+      "ご飯にのせ、煮汁をかけて青ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "冬"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "あさりバター",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "あさり",
+        "quantity": "400g",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "20g",
+        "staple": true
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "50ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "あさりを3%の塩水に1時間浸けて砂抜きし、殻をこすり洗いする。",
+      "フライパンにバターとにんにくの薄切りを入れ、弱火で香りを出す。",
+      "あさりと酒を加えてすぐ蓋をする。",
+      "強めの中火で3分、殻が開くまで蒸す。",
+      "醤油を回しかけ、バターを追加して溶かす。",
+      "黒こしょうと青ねぎをふって完成。"
+    ],
+    "tags": [
+      "洋食",
+      "おつまみ",
+      "あさり"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "きのこリゾット",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "米",
+        "quantity": "1合",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "まいたけ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "粉チーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "20g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "コンソメスープ600mlを作り、常に温めておく(冷たいスープを足すと芯が残る)。",
+      "きのこをほぐし、玉ねぎをみじん切りにする。",
+      "鍋にバターを溶かし、玉ねぎを炒めてからきのこを加えて水分を飛ばす。",
+      "洗わない米を加え、透き通るまで2分炒める。",
+      "温かいスープをお玉1杯ずつ加え、混ぜながら吸わせる。これを18分繰り返す。",
+      "米に少し芯が残る状態で火を止め、粉チーズとバターを混ぜて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "米料理",
+      "きのこ"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "海鮮リゾット",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "米",
+        "quantity": "1合",
+        "staple": false
+      },
+      {
+        "name": "シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "トマト缶",
+        "quantity": "1/2缶",
+        "staple": false
+      },
+      {
+        "name": "白ワイン",
+        "quantity": "50ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "シーフードミックスを解凍し、水気を拭く。",
+      "コンソメスープ500mlを作って温めておく。",
+      "鍋でシーフードを炒め、白ワインをふって一度取り出す(硬くならない)。",
+      "玉ねぎを炒め、洗わない米を加えて2分炒める。",
+      "トマト缶と温かいスープを少しずつ加え、混ぜながら18分煮る。",
+      "シーフードを戻し、塩こしょうで整えてパセリを散らして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "米料理",
+      "海鮮"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "パンプキンスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "かぼちゃ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "250ml",
+        "staple": false
+      },
+      {
+        "name": "生クリーム",
+        "quantity": "50ml",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぼちゃの皮を厚めにむき、薄切りにする。玉ねぎも薄切りにする。",
+      "鍋にバターを溶かし、玉ねぎを透き通るまで炒める。",
+      "かぼちゃと水200ml、コンソメを加えて12分煮る。",
+      "粗熱を取ってミキサーにかけ、なめらかにする。",
+      "鍋に戻して牛乳でのばし、弱火で温める(沸騰させない)。",
+      "塩で整え、生クリームをたらして完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "かぼちゃ"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "ほうれん草のポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "ほうれん草",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "250ml",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ほうれん草をさっと茹でて冷水にとり、水気を絞る(色鮮やかに仕上がる)。",
+      "玉ねぎとじゃがいもを薄切りにする。",
+      "鍋にバターを溶かし、玉ねぎとじゃがいもを炒める。",
+      "水200mlとコンソメで柔らかくなるまで煮る。",
+      "ほうれん草を加え、粗熱を取ってミキサーにかける。",
+      "牛乳でのばして温め、塩で整えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "ほうれん草"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "中華粥",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "米",
+        "quantity": "1/2合",
+        "staple": false
+      },
+      {
+        "name": "鶏むね肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "米を洗い、ごま油小さじ1をまぶして30分置く(粒が立ってとろみが出る)。",
+      "鍋に米・水1L・鶏がらスープの素・薄切り生姜を入れる。",
+      "鶏むね肉を丸ごと加え、強火で煮立てる。",
+      "アクを取り、蓋をずらして弱火で35分炊く(時々混ぜて焦げ付きを防ぐ)。",
+      "鶏肉を取り出して裂き、粥に戻す。",
+      "塩で味を整え、ねぎとごま油をかけて完成。"
+    ],
+    "tags": [
+      "中華",
+      "ご飯",
+      "体調不良時"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "卵粥",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "1.5膳",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ご飯をざるに入れて水で洗い、ぬめりを取る(さらっと仕上がる)。",
+      "鍋にだしを入れて煮立て、塩と醤油で薄味をつける。",
+      "ご飯を加え、弱火で10分煮る。",
+      "とろみが出てきたら火を弱める。",
+      "溶き卵を細く回し入れ、10秒待ってからそっと混ぜる。",
+      "ねぎを散らし、梅干しを添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "ご飯",
+      "体調不良時"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "梅粥",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "米",
+        "quantity": "1/2合",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "塩",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "大葉",
+        "quantity": "2枚",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "米を研ぎ、鍋に米と水5倍量を入れる。",
+      "強火で煮立て、混ぜてから弱火にする。",
+      "蓋を少しずらして30分、混ぜずにゆっくり炊く(混ぜると粘りが出る)。",
+      "とろりとしたら塩で味を整える。",
+      "器に盛り、梅干しをのせる。",
+      "大葉の千切りを添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "ご飯",
+      "体調不良時"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "出汁茶漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "刻みのり",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "三つ葉",
+        "quantity": "適量",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしを温め、醤油と塩ひとつまみで薄めに味をつける(茶漬けは薄味が基本)。",
+      "ご飯を器によそう(温かいものを使う)。",
+      "刻みのりと三つ葉をのせる。",
+      "熱いだしを静かに注ぐ。",
+      "わさびを添えて完成。あられを散らすと食感が良い。"
+    ],
+    "tags": [
+      "和食",
+      "ご飯",
+      "お茶漬け"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "鯛茶漬け",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鯛",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      },
+      {
+        "name": "わさび",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鯛を薄いそぎ切りにする。",
+      "醤油・みりん少々・すりごまを混ぜてごまだれを作る。",
+      "鯛を10分漬ける(漬けすぎると硬くなる)。",
+      "ご飯に漬け鯛をのせる。",
+      "だしを温め、塩で薄く味をつける。",
+      "熱いだしを注ぎ、わさびと三つ葉を添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "ご飯",
+      "お茶漬け"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "たまごトースト",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "40g",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パンのふちにマヨネーズで土手を作る(卵が流れない)。",
+      "中央に卵を割り入れる。",
+      "黄身に竹串で数か所穴をあける(破裂を防ぐ)。",
+      "チーズを周りに散らす。",
+      "トースターで7分、白身が固まるまで焼く。",
+      "黒こしょうをふって完成。"
+    ],
+    "tags": [
+      "洋食",
+      "朝食",
+      "トースト"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "しらすトースト",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "しらす",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "刻みのり",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "パンにマヨネーズを薄く塗る。",
+      "しらすをたっぷり広げる。",
+      "チーズをのせる。",
+      "トースターで5分、チーズが溶けるまで焼く。",
+      "刻みのりと青ねぎをのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "朝食",
+      "しらす"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "納豆トースト",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "納豆",
+        "quantity": "2パック",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "刻みのり",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "納豆を付属のタレでよく混ぜ、粘りを出す。",
+      "マヨネーズを混ぜる(パンになじみやすくなる)。",
+      "パンに広げる。",
+      "チーズをのせる。",
+      "トースターで6分、チーズが溶けるまで焼く。",
+      "刻みのりと青ねぎをのせて完成。"
+    ],
+    "tags": [
+      "和食",
+      "朝食",
+      "納豆"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "カレー南蛮うどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "カレールー",
+        "quantity": "2片",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉を一口大に、ねぎを斜め切りにする。",
+      "だしを煮立て、鶏肉とねぎを5分煮る。",
+      "火を止めてカレールーを溶かす(煮立てながらだとダマになる)。",
+      "醤油とみりんを加えて和風に整える。",
+      "水溶き片栗粉でとろみを足す(麺に絡んで冷めにくい)。",
+      "茹でたうどんにかけ、青ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "うどん"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "おでんうどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "おでん",
+        "quantity": "2人分",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "残りもののおでんを鍋で温める。",
+      "おでんのつゆにだしを足して味を調整する(そのままだと濃い)。",
+      "うどんを茹でて湯切りする。",
+      "器にうどんを入れ、つゆを注ぐ。",
+      "おでんの具をのせ、ねぎと七味を添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "リメイク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "味噌汁うどん",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "うどん",
+        "quantity": "2玉",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "わかめ",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ3",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "だしを温め、豆腐とわかめを入れる。",
+      "うどんを別鍋で茹でて湯切りする(そのまま入れると汁が濁る)。",
+      "だしを弱火にし、味噌を溶き入れる。",
+      "うどんを器に入れる。",
+      "味噌汁を注ぎ、ねぎを散らして完成。"
+    ],
+    "tags": [
+      "和食",
+      "麺",
+      "時短"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ドリア風雑炊",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "1.5膳",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "300ml",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉と玉ねぎを小さく切る。",
+      "鍋で炒め、水100mlとコンソメを加えて5分煮る。",
+      "洗ったご飯を加えて5分煮る。",
+      "牛乳を加えて温める(沸騰させない)。",
+      "チーズを加えて溶かす。",
+      "黒こしょうとパセリをふって完成。"
+    ],
+    "tags": [
+      "洋食",
+      "ご飯",
+      "リメイク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "牛丼(つゆだく)",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "牛薄切り肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "玉ねぎをくし切りにする(繊維に沿うと煮崩れない)。",
+      "鍋にだし・醤油・みりん・砂糖大さじ1・薄切り生姜を煮立てる。",
+      "玉ねぎを入れて5分、透き通るまで煮る。",
+      "牛肉を1枚ずつ広げて加え、アクを丁寧に取る。",
+      "弱火で5分煮て、火を止めて10分置く(味が染みる)。",
+      "ご飯につゆごとたっぷりのせ、紅生姜を添えて完成。"
+    ],
+    "tags": [
+      "和食",
+      "丼",
+      "牛肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ムール貝の白ワイン蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "ムール貝",
+        "quantity": "500g",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "2片",
+        "staple": true
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "白ワイン",
+        "quantity": "100ml",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "パセリ",
+        "quantity": "適量",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "ムール貝の足糸を引き抜き、殻をこすり洗いする。",
+      "にんにくと玉ねぎをみじん切りにする。",
+      "鍋にオリーブオイルとにんにくを入れ、弱火で香りを出す。",
+      "玉ねぎを加えて透き通るまで炒める。",
+      "ムール貝と白ワインを加え、蓋をして強火で5分蒸す。",
+      "口が開いたら塩で整え、パセリを散らしてバゲットを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "魚介"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "パエリア風炊き込みご飯",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 55,
+    "ingredients": [
+      {
+        "name": "米",
+        "quantity": "2合",
+        "staple": false
+      },
+      {
+        "name": "シーフードミックス",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "パプリカ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "カレー粉",
+        "quantity": "小さじ1/2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "米を研いでざるに上げる。シーフードは解凍して水気を拭く。",
+      "鶏肉と野菜を1cm角に切る。",
+      "炊飯器に米・コンソメ・カレー粉(色付け)を入れ、水を2合の目盛りまで注ぐ。",
+      "鶏肉と野菜をのせ、混ぜずに炊く。",
+      "炊き上がり5分前にシーフードを加えるか、炊き上がりに混ぜる(硬くならない)。",
+      "10分蒸らし、レモンとパセリを添えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "米料理",
+      "スペイン"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "あんかけ豆腐丼",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "絹豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "鶏ひき肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ご飯",
+        "quantity": "2膳",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐を2cm角に切り、ざるに上げて軽く水気を切る。",
+      "フライパンでひき肉とみじん切りねぎを炒める。",
+      "水200ml・鶏がら・醤油を加えて煮立てる。",
+      "豆腐を加え、崩さないよう3分煮る。",
+      "水溶き片栗粉を回し入れ、優しく混ぜてとろみをつける。",
+      "ご飯にかけ、ごま油とおろし生姜を添えて完成。"
+    ],
+    "tags": [
+      "中華",
+      "丼",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ベーグルサンド",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ベーグル",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "クリームチーズ",
+        "quantity": "60g",
+        "staple": false
+      },
+      {
+        "name": "スモークサーモン",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "紫玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "適量",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ベーグルを横半分に切り、軽くトーストする。",
+      "紫玉ねぎを薄切りにして水にさらし、水気を絞る。",
+      "断面にクリームチーズをたっぷり塗る。",
+      "レタス・スモークサーモン・玉ねぎを重ねる。",
+      "黒こしょうとレモンをふる。",
+      "上のベーグルで挟み、半分に切って完成。"
+    ],
+    "tags": [
+      "洋食",
+      "軽食",
+      "サンドイッチ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "フレンチトーストサンド",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "食パン",
+        "quantity": "4枚",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "150ml",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "とろけるチーズ",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "パン2枚でハムとチーズを挟む。",
+      "卵・牛乳・塩少々を混ぜて卵液を作り、茶こしで漉す。",
+      "サンドを卵液に両面浸す(押さえるとよく染みる)。",
+      "フライパンにバターを溶かし、弱火で片面4分焼く。",
+      "裏返して蓋をし、さらに4分焼く(中のチーズが溶ける)。",
+      "半分に切って完成。甘くしたい場合は砂糖を加える。"
+    ],
+    "tags": [
+      "洋食",
+      "朝食",
+      "サンドイッチ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "焼きさば寿司",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "さば",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "米",
+        "quantity": "1.5合",
+        "staple": false
+      },
+      {
+        "name": "大葉",
+        "quantity": "6枚",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "さばに塩をふって15分置き、水分を拭いてグリルでこんがり焼く。",
+      "ご飯に酢・砂糖・塩の合わせ酢を混ぜ、うちわで冷ましてすし飯にする。",
+      "ラップを広げ、焼いたさばを皮目を下にして並べる。",
+      "大葉を敷き、すし飯を棒状にのせる。",
+      "ラップごと巻いて、しっかり形を整える。",
+      "10分なじませてから、濡らした包丁で切り分けて完成。"
+    ],
+    "tags": [
+      "和食",
+      "米料理",
+      "魚"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "リゾット風雑炊",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ご飯",
+        "quantity": "1.5膳",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "200ml",
+        "staple": false
+      },
+      {
+        "name": "粉チーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ご飯をざるで洗い、ぬめりを取る(さらっと仕上がる)。",
+      "鍋でベーコンとしめじを炒める。",
+      "水100mlとコンソメを加えて煮立てる。",
+      "ご飯を加えて5分煮る。",
+      "牛乳を加えて温め、粉チーズを混ぜる。",
+      "黒こしょうをふって完成。"
+    ],
+    "tags": [
+      "洋食",
+      "ご飯",
+      "時短"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "じゃがいものポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "じゃがいも",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "250ml",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "じゃがいもと玉ねぎを薄切りにする。",
+      "鍋にバターを溶かし、玉ねぎを焦がさないよう透き通るまで炒める。",
+      "じゃがいもを加えてさっと炒める。",
+      "水200mlとコンソメを加え、柔らかくなるまで12分煮る。",
+      "粗熱を取ってミキサーにかける(熱いまま回すと危険)。",
+      "牛乳でのばして温め、塩で整えて完成。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "じゃがいも"
+    ],
+    "seasons": [
+      "winter"
+    ]
   }
 ]
