@@ -6,7 +6,7 @@ import { ChefHat, Home, Refrigerator, Settings, ShoppingCart } from 'lucide-reac
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
-  { href: '/', label: 'ダッシュボード', icon: Home },
+  { href: '/', label: 'ホーム', icon: Home },
   { href: '/ingredients', label: '在庫一覧', icon: Refrigerator },
   { href: '/recipes', label: 'レシピ提案', icon: ChefHat },
   { href: '/shopping-list', label: '買い物リスト', icon: ShoppingCart },
