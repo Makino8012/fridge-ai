@@ -22,12 +22,23 @@ export function KeyboardInset() {
       document.documentElement.classList.toggle('keyboard-open', inset > 120);
     };
 
+    // 入力欄にフォーカスしたら、キーボードが出きった頃に見える位置へスクロールする。
+    const scrollFocusedIntoView = (event: FocusEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target?.matches?.('input, textarea, [contenteditable="true"]')) return;
+      window.setTimeout(() => {
+        target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }, 300);
+    };
+
     update();
     viewport.addEventListener('resize', update);
     viewport.addEventListener('scroll', update);
+    document.addEventListener('focusin', scrollFocusedIntoView);
     return () => {
       viewport.removeEventListener('resize', update);
       viewport.removeEventListener('scroll', update);
+      document.removeEventListener('focusin', scrollFocusedIntoView);
       document.documentElement.style.removeProperty('--kb-inset');
       document.documentElement.classList.remove('keyboard-open');
     };

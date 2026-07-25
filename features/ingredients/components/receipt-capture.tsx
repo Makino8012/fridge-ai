@@ -130,7 +130,7 @@ export function ReceiptCapture({ className }: { className?: string }) {
 
       <Drawer open={reviewOpen} onOpenChange={setReviewOpen}>
         <DrawerContent>
-          <div className="mx-auto flex max-h-[85vh] w-full max-w-md flex-col">
+          <div className="mx-auto flex min-h-0 w-full max-w-md flex-col">
             <DrawerHeader>
               <DrawerTitle>読み取った食材</DrawerTitle>
               <DrawerDescription>内容を確認・修正して登録してください。</DrawerDescription>

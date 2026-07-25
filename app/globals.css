@@ -74,3 +74,21 @@
 html.keyboard-open .hide-on-keyboard {
   display: none;
 }
+
+/*
+  ドロワーをキーボードに隠されないようにする。
+  --kb-inset(キーボードの高さ)は components/keyboard-inset.tsx がセットする。
+  ・padding-bottom で中身をキーボードの上へ逃がす
+  ・max-height を縮めて上部が画面外に出ないようにする
+  インラインstyleではなくクラスで指定するのは、vaul が開閉アニメーションで
+  transform を直接書き換えるため、そちらと衝突させないため。
+*/
+.drawer-keyboard-safe {
+  max-height: calc(92dvh - var(--kb-inset, 0px));
+  padding-bottom: var(--kb-inset, 0px);
+}
+
+/* ダイアログ(レシピ詳細など)も同様に、キーボード分だけ高さを詰める。 */
+.dialog-keyboard-safe {
+  max-height: calc(85dvh - var(--kb-inset, 0px));
+}

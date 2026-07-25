@@ -6,11 +6,15 @@ import { Drawer as DrawerPrimitive } from "vaul"
 import { cn } from "@/lib/utils"
 
 const Drawer = ({
-  shouldScaleBackground = true,
+  shouldScaleBackground = false,
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
   <DrawerPrimitive.Root
+    // 背景の拡大縮小はiOSで position:fixed の基準がずれる原因になるため使わない。
     shouldScaleBackground={shouldScaleBackground}
+    // キーボード対応は drawer-keyboard-safe(CSS)で行うため、
+    // vaul側の自動リポジションと二重にならないよう切る。
+    repositionInputs={false}
     {...props}
   />
 )
@@ -43,17 +47,12 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        // 画面より高くならないよう上限を設ける(はみ出して上部が見切れるのを防ぐ)
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
+        // drawer-keyboard-safe: 画面からはみ出さない高さ上限と、
+        // キーボードが出たときに中身をその上へ逃がす余白(globals.css)
+        "drawer-keyboard-safe fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
         className
       )}
       {...props}
-      // キーボードが出たらその分だけ持ち上げ、高さも縮める(入力欄が隠れない)
-      style={{
-        bottom: "var(--kb-inset, 0px)",
-        maxHeight: "calc(92dvh - var(--kb-inset, 0px))",
-        ...props.style,
-      }}
     >
       <div className="mx-auto mt-4 h-2 w-[100px] shrink-0 rounded-full bg-muted" />
       {children}

@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.9.2',
+    date: '2026-07-25',
+    changes: [
+      'キーボードで入力欄が隠れる問題を修正。キーボードの高さ分だけ画面を詰め、入力中の欄が自動で見える位置までスクロールします',
+      'ドロワー(下から出る入力画面)の制御を見直し、キーボード対応が二重にかかってずれる不具合を解消',
+    ],
+  },
+  {
     version: '1.9.1',
     date: '2026-07-25',
     changes: [

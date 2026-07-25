@@ -66,7 +66,7 @@ export function RecipeDetailDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
+      <DialogContent className="dialog-keyboard-safe overflow-y-auto sm:max-w-lg">
         <DialogHeader>
           <div className="flex items-start justify-between gap-2 pr-6">
             <DialogTitle>{recipe.title}</DialogTitle>
