@@ -30,6 +30,43 @@ describe('buildWeeklyPlan', () => {
     expect(titles).not.toContain('煮卵');
   });
 
+  // 在庫にある数品だけが延々と出て献立にならなかったため、
+  // 在庫優先はあくまで加点にとどめる。
+  it('在庫が少なくても買い足しが必要な料理を出す', () => {
+    const meals = plan(['卵'], { days: 7 });
+    const needsShopping = meals.filter((m) => m.missingIngredients.length > 0);
+    expect(needsShopping.length).toBeGreaterThan(0);
+  });
+
+  it('買い足しが多すぎる料理は出さない', () => {
+    const meals = plan(['卵'], { days: 7, maxMissing: 3 });
+    for (const meal of meals) {
+      expect(meal.missingIngredients.length).toBeLessThanOrEqual(3);
+    }
+  });
+
+  it('ジャンルを指定するとその系統の料理が中心になる', () => {
+    const meals = plan(['豚こま肉', '玉ねぎ'], { days: 5, genres: ['中華'] });
+    const chinese = meals.filter((m) => {
+      const source = RECIPES.find((r) => r.title === m.recipe.title)!;
+      return source.tags.includes('中華');
+    });
+    expect(chinese).toHaveLength(meals.length);
+  });
+
+  it('ジャンルを複数選べる', () => {
+    const meals = plan(['豚こま肉'], { days: 5, genres: ['韓国', 'エスニック'] });
+    for (const meal of meals) {
+      const source = RECIPES.find((r) => r.title === meal.recipe.title)!;
+      expect(source.tags.some((t) => t === '韓国' || t === 'エスニック')).toBe(true);
+    }
+  });
+
+  it('ジャンルを絞りすぎて日数分そろわないときは全体から選ぶ', () => {
+    const meals = plan(['卵'], { days: 7, genres: ['そんなジャンルはない'] });
+    expect(meals).toHaveLength(7);
+  });
+
   it('7日分の献立を作る', () => {
     expect(plan(['豚こま肉', '玉ねぎ', 'キャベツ'])).toHaveLength(7);
   });

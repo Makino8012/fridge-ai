@@ -11,11 +11,28 @@ export interface WeeklyPlanOptions {
   highProtein?: boolean;
   /** 在庫で作れる料理をどれだけ優先するか。 */
   preferStock?: boolean;
+  /** ジャンルの絞り込み(タグ名)。複数指定するとどれかに当てはまる料理が対象。 */
+  genres?: string[];
+  /** 1食あたり買い足してよい材料の上限。多すぎる料理は現実的でないので除く。 */
+  maxMissing?: number;
   /** 同じ料理を出さないための除外リスト(作り直し時に使う)。 */
   exclude?: string[];
   /** 並びを変えるための種。日ごとに違う献立にするために使う。 */
   seed?: number;
 }
+
+/** 献立で選べるジャンル。レシピ辞書のタグと対応している。 */
+export const PLAN_GENRES: { id: string; label: string }[] = [
+  { id: '和食', label: '和食' },
+  { id: '洋食', label: '洋食' },
+  { id: '中華', label: '中華' },
+  { id: '韓国', label: '韓国' },
+  { id: 'エスニック', label: 'エスニック' },
+  { id: '麺', label: '麺' },
+  { id: '丼', label: '丼' },
+  { id: 'ヘルシー', label: 'ヘルシー' },
+  { id: '背徳飯', label: '背徳飯' },
+];
 
 export interface PlannedMeal {
   /** 何日目か(0始まり)。 */
@@ -72,6 +89,8 @@ export function buildWeeklyPlan(
     days = 7,
     highProtein = false,
     preferStock = true,
+    genres = [],
+    maxMissing = 5,
     exclude = [],
     seed = 1,
   } = options;
@@ -79,17 +98,23 @@ export function buildWeeklyPlan(
   const excluded = new Set(exclude);
   const random = pseudoRandom(seed);
 
+  // ジャンル指定があれば絞る。ただし絞りすぎて献立が組めないなら全体に戻す。
+  const genreFiltered =
+    genres.length > 0 ? recipes.filter((r) => r.tags.some((t) => genres.includes(t))) : recipes;
+  const pool = genreFiltered.filter(isMainDish).length >= days ? genreFiltered : recipes;
+
   // 各レシピを一度だけ評価して点数をつける。
   // 副菜(煮卵、キャロットラペなど)は単体で一食にならないので候補から外す。
-  const scored = recipes
+  const scored = pool
     .filter((r) => !excluded.has(r.title) && isMainDish(r))
     .map((recipe) => {
       const { missing, suggestion } = evaluate(recipe);
       const protein = suggestion.proteinPerServing ?? 0;
 
       let score = 0;
-      // 買い足しが少ないほど高得点
-      if (preferStock) score += Math.max(0, 6 - missing.length) * 10;
+      // 在庫で作れると嬉しいが、あくまで加点。
+      // ここを強くしすぎると在庫にある数品だけが延々と出て献立にならない。
+      if (preferStock) score += Math.max(0, 3 - missing.length) * 4;
       // 筋トレ設定なら、タンパク質が多いほど高得点
       if (highProtein) {
         score += Math.min(protein, 60);
@@ -97,11 +122,14 @@ export function buildWeeklyPlan(
       }
       // 作るのが現実的な時間を少し優遇
       if (recipe.cookingTimeMinutes <= 30) score += 5;
-      // 同点のものが毎回同じ順にならないよう、わずかに散らす
-      score += random() * 8;
+      // 毎回同じ献立にならないよう大きめに散らす。
+      // 献立は「今週何食べる?」の提案なので、目新しさの方が最適解より大事。
+      score += random() * 30;
 
       return { recipe, suggestion, missing, protein, group: mainGroupOf(recipe), score };
     })
+    // 買い足しが多すぎる料理は現実的でないので候補から外す
+    .filter((c) => c.missing.length <= maxMissing)
     .sort((a, b) => b.score - a.score);
 
   const plan: PlannedMeal[] = [];

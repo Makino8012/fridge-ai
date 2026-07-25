@@ -10,7 +10,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { RecipeDetailDialog } from '@/features/recipes/components/recipe-detail-dialog';
 import { addMissingToShoppingListAction, buildWeeklyPlanAction } from '@/features/recipes/actions';
-import type { PlannedMeal } from '@/lib/recipes/weekly-plan';
+import { PLAN_GENRES, type PlannedMeal } from '@/lib/recipes/weekly-plan';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 import { cn } from '@/lib/utils';
 
@@ -22,6 +22,7 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
   const [missing, setMissing] = useState<string[]>([]);
   const [days, setDays] = useState(7);
   const [highProtein, setHighProtein] = useState(defaultHighProtein);
+  const [genres, setGenres] = useState<string[]>([]);
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const [detail, setDetail] = useState<RecipeSuggestion | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -29,7 +30,7 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
 
   function generate(seed = Date.now() % 100000) {
     startTransition(async () => {
-      const result = await buildWeeklyPlanAction({ days, highProtein, seed });
+      const result = await buildWeeklyPlanAction({ days, highProtein, genres, seed });
       if (!result.success) {
         toast.error(result.error);
         return;
@@ -44,7 +45,11 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
   useEffect(() => {
     generate(1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days, highProtein]);
+  }, [days, highProtein, genres]);
+
+  function toggleGenre(id: string) {
+    setGenres((prev) => (prev.includes(id) ? prev.filter((g) => g !== id) : [...prev, id]));
+  }
 
   function toggleChecked(index: number) {
     setChecked((prev) => {
@@ -118,6 +123,30 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
             <RefreshCw className={cn('size-3.5', isPending && 'animate-spin')} />
             作り直す
           </Button>
+        </div>
+
+        <div className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:px-0">
+          <Button
+            type="button"
+            variant={genres.length === 0 ? 'default' : 'outline'}
+            size="sm"
+            className="h-8 shrink-0 rounded-full px-3 text-xs font-normal"
+            onClick={() => setGenres([])}
+          >
+            すべて
+          </Button>
+          {PLAN_GENRES.map((g) => (
+            <Button
+              key={g.id}
+              type="button"
+              variant={genres.includes(g.id) ? 'default' : 'outline'}
+              size="sm"
+              className="h-8 shrink-0 rounded-full px-3 text-xs font-normal"
+              onClick={() => toggleGenre(g.id)}
+            >
+              {g.label}
+            </Button>
+          ))}
         </div>
 
         {highProtein && meals && meals.length > 0 && (
