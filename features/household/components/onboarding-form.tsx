@@ -13,6 +13,7 @@ import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { useEnsureAnonymousSession } from '@/features/household/hooks/use-ensure-anonymous-session';
 import { createHousehold } from '@/features/household/actions';
 import { createHouseholdSchema, type CreateHouseholdInput } from '@/features/household/schema';
+import { SignInWithEmail } from '@/features/household/components/sign-in-with-email';
 
 export function OnboardingForm() {
   const router = useRouter();
@@ -93,6 +94,11 @@ export function OnboardingForm() {
           </Button>
         </form>
       </Form>
+
+      {/* ここで新しく作ると前の在庫と切り離されるので、戻る導線を必ず見せる */}
+      <div className="flex flex-col items-center gap-2 border-t pt-6">
+        <SignInWithEmail />
+      </div>
     </div>
   );
 }

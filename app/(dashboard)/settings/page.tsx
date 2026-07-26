@@ -2,6 +2,8 @@ import { Users } from 'lucide-react';
 import { Header } from '@/components/layout/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { InviteLinkCard } from '@/features/household/components/invite-link-card';
+import { AccountLinkCard } from '@/features/household/components/account-link-card';
+import { createClient } from '@/lib/supabase/server';
 import { DietaryPreferencesForm } from '@/features/household/components/dietary-preferences-form';
 import { ChangelogCard } from '@/features/household/components/changelog-card';
 import { PantrySetupCard } from '@/features/ingredients/components/pantry-setup-card';
@@ -16,6 +18,11 @@ import {
 
 export default async function SettingsPage() {
   const householdId = await getCurrentHouseholdId();
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
   const [household, profile, members, ingredients] = await Promise.all([
     getHousehold(householdId),
     getCurrentProfile(),
@@ -44,6 +51,9 @@ export default async function SettingsPage() {
             </ul>
           </CardContent>
         </Card>
+
+        {/* 引き継ぎ設定は在庫を失わないための要なので、招待より先に見せる */}
+        <AccountLinkCard currentEmail={user?.email ?? null} />
 
         <InviteLinkCard inviteToken={household.invite_token} />
 
