@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { actionError, actionSuccess, type ActionResult } from '@/lib/action-result';
+import { describeIngredientError } from '@/lib/db-error';
 import * as ingredientService from '@/services/ingredients/ingredient-service';
 import { lookupBarcode, type BarcodeLookupResult } from '@/services/ingredients/barcode-service';
 import { addReceiptItems, extractReceiptItems } from '@/services/ingredients/receipt-service';
@@ -46,8 +47,8 @@ export async function createIngredientsBulk(
     revalidatePath('/ingredients');
     revalidatePath('/');
     return actionSuccess({ created });
-  } catch {
-    return actionError('食材の登録に失敗しました');
+  } catch (error) {
+    return actionError(describeIngredientError(error, '食材の登録に失敗しました'));
   }
 }
 
@@ -127,8 +128,8 @@ export async function quickAddIngredient(
     revalidatePath('/ingredients');
     revalidatePath('/');
     return actionSuccess(result);
-  } catch {
-    return actionError('追加に失敗しました');
+  } catch (error) {
+    return actionError(describeIngredientError(error, '追加に失敗しました'));
   }
 }
 
@@ -202,7 +203,7 @@ export async function setStapleQuantityAction(
     revalidatePath('/ingredients');
     revalidatePath('/');
     return actionSuccess(result);
-  } catch {
-    return actionError('数量の更新に失敗しました');
+  } catch (error) {
+    return actionError(describeIngredientError(error, '数量の更新に失敗しました'));
   }
 }
