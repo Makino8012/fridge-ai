@@ -19,8 +19,11 @@ import { cn } from '@/lib/utils';
  * そのぶん最初の登録が面倒になるため、ここでまとめて登録できるようにしている。
  */
 
-/** レシピ辞書での使用頻度が高い順。かっこ内の数字は登場するレシピ数の目安。 */
-const PANTRY_ITEMS = [
+/**
+ * レシピ辞書での使用頻度が高い順。
+ * 先頭ほど多くのレシピで使われるので、「よく使う分だけ」の一括選択に使う。
+ */
+export const PANTRY_ITEMS = [
   '鶏がらスープの素',
   'にんにく',
   'コンソメ',
@@ -50,6 +53,9 @@ const PANTRY_ITEMS = [
   '白だし',
   '焼肉のタレ',
 ];
+
+/** 「よく使う分だけ」で選ばれる数。これだけで大半のレシピを満たせる。 */
+const COMMON_COUNT = 10;
 
 export function PantrySetupCard({ existingNames }: { existingNames: string[] }) {
   const owned = new Set(existingNames);
@@ -107,6 +113,39 @@ export function PantrySetupCard({ existingNames }: { existingNames: string[] }) 
           家にある物を選んで登録すると、それを使うレシピが「作れる」に出るようになります。
           塩・砂糖・醤油などの基礎調味料は登録しなくても持っている前提で扱います。
         </p>
+
+        {/* 1つずつ押させると面倒なので、まとめて選べるようにする */}
+        <div className="flex flex-wrap gap-1.5">
+          <Button
+            type="button"
+            variant="secondary"
+            size="sm"
+            className="h-8 rounded-full px-3 text-xs font-normal"
+            onClick={() => setSelected(new Set(candidates.slice(0, COMMON_COUNT)))}
+          >
+            よく使う{Math.min(COMMON_COUNT, candidates.length)}品を選ぶ
+          </Button>
+          <Button
+            type="button"
+            variant="secondary"
+            size="sm"
+            className="h-8 rounded-full px-3 text-xs font-normal"
+            onClick={() => setSelected(new Set(candidates))}
+          >
+            すべて選ぶ
+          </Button>
+          {selected.size > 0 && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="h-8 rounded-full px-3 text-xs font-normal text-muted-foreground"
+              onClick={() => setSelected(new Set())}
+            >
+              選択を解除
+            </Button>
+          )}
+        </div>
 
         <div className="flex flex-wrap gap-1.5">
           {candidates.map((name) => (
