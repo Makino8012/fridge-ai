@@ -1,6 +1,7 @@
 import type { RecipeSuggestion } from '@/lib/ai/types';
 import type { CurrentSeason } from '@/lib/date';
 import { isMainDish } from '@/lib/recipes/dish-role';
+import { isBasicStaple } from '@/lib/recipes/staples';
 import type { LocalRecipe } from '@/lib/recipes/types';
 import { estimateProteinPerServing } from '@/lib/nutrition';
 
@@ -70,10 +71,12 @@ export function namesMatch(a: string, b: string): boolean {
   return na === nb;
 }
 
-// 常備調味料かどうかは辞書の staple フラグだけで判定する。
-// 名前のキーワード一致に頼ると「油揚げ」を油と誤認するなど、誤ヒットの原因になるため使わない。
-function isStaple(_ingredientName: string, stapleFlag: boolean): boolean {
-  return stapleFlag;
+// 「持っている前提」にしてよいのは、辞書で常備扱いかつ基礎調味料のものだけ。
+// 辞書の staple にはオイスターソースやナンプラー、生のにんにく・生姜まで
+// 含まれていて、家に無いのに在庫ありとみなされてしまうため。
+// 名前のキーワード一致に頼ると「油揚げ」を油と誤認するので、名前の一致は完全一致で見る。
+function isStaple(ingredientName: string, stapleFlag: boolean): boolean {
+  return stapleFlag && isBasicStaple(ingredientName);
 }
 
 // 在庫にその材料があるかを探す。表記ゆれをそろえた完全一致で判定する。

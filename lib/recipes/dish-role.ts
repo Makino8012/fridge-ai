@@ -103,3 +103,24 @@ export function dishRole(recipe: RoleInput): DishRole {
 export function isMainDish(recipe: RoleInput): boolean {
   return dishRole(recipe) === 'main';
 }
+
+/** 汁物として扱うタグ。 */
+const SOUP_TAGS = ['汁物', 'スープ'];
+
+/** 献立の中での立ち位置。主菜・汁物・副菜の3つに分ける。 */
+export type DishCourse = 'main' | 'soup' | 'side';
+
+export const COURSE_LABEL: Record<DishCourse, string> = {
+  main: '主菜',
+  soup: '汁物',
+  side: '副菜',
+};
+
+/**
+ * 一食を組み立てるための分類。
+ * 鍋やラーメンのように汁物タグが付いていても単体で一食になる料理は主菜を優先する。
+ */
+export function dishCourse(recipe: RoleInput): DishCourse {
+  if (isMainDish(recipe)) return 'main';
+  return (recipe.tags ?? []).some((t) => SOUP_TAGS.includes(t)) ? 'soup' : 'side';
+}

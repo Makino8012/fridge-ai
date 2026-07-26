@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useTransition } from 'react';
-import { CalendarDays, Check, Dumbbell, RefreshCw, ShoppingCart } from 'lucide-react';
+import { CalendarDays, Check, Dumbbell, Lock, LockOpen, RefreshCw, ShoppingCart } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -10,7 +10,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
 import { RecipeDetailDialog } from '@/features/recipes/components/recipe-detail-dialog';
 import { addMissingToShoppingListAction, buildWeeklyPlanAction } from '@/features/recipes/actions';
-import { PLAN_GENRES, type PlannedMeal } from '@/lib/recipes/weekly-plan';
+import {
+  DISHES_PER_MEAL_OPTIONS,
+  PLAN_GENRES,
+  type PlannedMeal,
+} from '@/lib/recipes/weekly-plan';
+import { COURSE_LABEL } from '@/lib/recipes/dish-role';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 import { cn } from '@/lib/utils';
 
@@ -23,21 +28,55 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
   const [days, setDays] = useState(7);
   const [highProtein, setHighProtein] = useState(defaultHighProtein);
   const [genres, setGenres] = useState<string[]>([]);
+  const [dishesPerMeal, setDishesPerMeal] = useState(3);
+  // 気に入った日を固定するための、日付インデックスの集合。
+  const [locked, setLocked] = useState<Set<number>>(new Set());
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const [detail, setDetail] = useState<RecipeSuggestion | null>(null);
   const [isPending, startTransition] = useTransition();
   const [isAdding, startAdding] = useTransition();
 
   function generate(seed = Date.now() % 100000) {
+    // 固定した日はそのまま残し、その料理が別の日に重複しないよう除外して作り直す。
+    const keep = new Map<number, PlannedMeal>();
+    for (const index of locked) {
+      const meal = meals?.[index];
+      if (meal) keep.set(index, meal);
+    }
+    const keptTitles = [...keep.values()].flatMap((m) => m.dishes.map((d) => d.recipe.title));
+
     startTransition(async () => {
-      const result = await buildWeeklyPlanAction({ days, highProtein, genres, seed });
+      const result = await buildWeeklyPlanAction({
+        days,
+        highProtein,
+        genres,
+        dishesPerMeal,
+        exclude: keptTitles,
+        seed,
+      });
       if (!result.success) {
         toast.error(result.error);
         return;
       }
-      setMeals(result.data.meals);
-      setMissing(result.data.missingIngredients);
+
+      const next = result.data.meals.map((meal, index) => keep.get(index) ?? meal);
+      setMeals(next);
+      setMissing(collectMissing(next));
       setChecked(new Set());
+    });
+  }
+
+  /** 固定分を混ぜ直したあとの、献立全体で足りない材料。 */
+  function collectMissing(all: PlannedMeal[]): string[] {
+    return [...new Set(all.flatMap((m) => m.missingIngredients))];
+  }
+
+  function toggleLocked(index: number) {
+    setLocked((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
     });
   }
 
@@ -45,7 +84,7 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
   useEffect(() => {
     generate(1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days, highProtein, genres]);
+  }, [days, highProtein, genres, dishesPerMeal]);
 
   function toggleGenre(id: string) {
     setGenres((prev) => (prev.includes(id) ? prev.filter((g) => g !== id) : [...prev, id]));
@@ -79,7 +118,10 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
   const checkedMissing = [...new Set(checkedMeals.flatMap((m) => m.missingIngredients))];
   const totalProtein = meals?.length
     ? Math.round(
-        meals.reduce((s, m) => s + (m.recipe.proteinPerServing ?? 0), 0) / meals.length,
+        meals.reduce((sum, meal) => {
+          const main = meal.dishes.find((d) => d.course === 'main');
+          return sum + (main?.recipe.proteinPerServing ?? 0);
+        }, 0) / meals.length,
       )
     : 0;
 
@@ -98,6 +140,20 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
               onClick={() => setDays(d)}
             >
               {d}日
+            </Button>
+          ))}
+
+          <span className="ml-2 text-xs text-muted-foreground">品数</span>
+          {DISHES_PER_MEAL_OPTIONS.map((n) => (
+            <Button
+              key={n}
+              type="button"
+              variant={dishesPerMeal === n ? 'default' : 'outline'}
+              size="sm"
+              className="h-8 rounded-full px-3 text-xs font-normal"
+              onClick={() => setDishesPerMeal(n)}
+            >
+              {n}品
             </Button>
           ))}
 
@@ -173,65 +229,96 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
         <>
           <div className="space-y-2.5">
             {meals.map((meal, index) => (
-              <Card key={index} className="rounded-2xl">
-                <CardContent className="flex items-start gap-3 p-3.5">
-                  <Checkbox
-                    checked={checked.has(index)}
-                    onCheckedChange={() => toggleChecked(index)}
-                    className="mt-1 shrink-0"
-                    aria-label={`${DAY_LABELS[index]}を選択`}
-                  />
+              <Card
+                key={index}
+                className={cn('rounded-2xl', locked.has(index) && 'border-primary/50 bg-accent/30')}
+              >
+                <CardContent className="space-y-2 p-3.5">
+                  <div className="flex items-center gap-2">
+                    <Checkbox
+                      checked={checked.has(index)}
+                      onCheckedChange={() => toggleChecked(index)}
+                      className="shrink-0"
+                      aria-label={`${DAY_LABELS[index]}を選択`}
+                    />
+                    <Badge variant="secondary" className="shrink-0 font-normal">
+                      {DAY_LABELS[index] ?? `${index + 1}日目`}
+                    </Badge>
 
-                  <button
-                    type="button"
-                    className="min-w-0 flex-1 space-y-1.5 text-left"
-                    onClick={() => setDetail(meal.recipe)}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Badge variant="secondary" className="shrink-0 font-normal">
-                        {DAY_LABELS[index] ?? `${index + 1}日目`}
-                      </Badge>
-                      <span className="truncate text-[15px] font-semibold">{meal.recipe.title}</span>
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-muted-foreground">
-                      <span>{meal.recipe.cookingTimeMinutes}分</span>
-                      {meal.recipe.proteinPerServing !== undefined && (
-                        <span className="tabular-nums">
-                          タンパク質{meal.recipe.proteinPerServing}g
-                        </span>
-                      )}
-                      {meal.missingIngredients.length === 0 ? (
-                        <span className="flex items-center gap-1 text-success">
-                          <Check className="size-3.5" />
-                          在庫だけで作れる
-                        </span>
-                      ) : (
-                        <span>買い足し{meal.missingIngredients.length}品</span>
-                      )}
-                    </div>
-
-                    {meal.missingIngredients.length > 0 && (
-                      <p className="line-clamp-1 text-xs text-muted-foreground">
-                        {meal.missingIngredients.join('、')}
-                      </p>
+                    {meal.missingIngredients.length === 0 ? (
+                      <span className="flex items-center gap-1 text-xs text-success">
+                        <Check className="size-3.5" />
+                        在庫だけで作れる
+                      </span>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">
+                        買い足し{meal.missingIngredients.length}品
+                      </span>
                     )}
-                  </button>
 
-                  {meal.missingIngredients.length > 0 && (
+                    {/* 気に入った日は固定して、作り直しても変わらないようにする */}
                     <Button
                       type="button"
                       variant="ghost"
                       size="icon"
-                      className="size-9 shrink-0"
-                      disabled={isAdding}
-                      onClick={() =>
-                        addToShoppingList(meal.missingIngredients, DAY_LABELS[index] ?? '')
-                      }
-                      aria-label="この日の材料を買い物リストへ"
+                      className={cn('ml-auto size-9 shrink-0', locked.has(index) && 'text-primary')}
+                      onClick={() => toggleLocked(index)}
+                      aria-label={locked.has(index) ? 'この日の固定を解除' : 'この日を固定する'}
+                      aria-pressed={locked.has(index)}
                     >
-                      <ShoppingCart className="size-4" />
+                      {locked.has(index) ? <Lock className="size-4" /> : <LockOpen className="size-4" />}
                     </Button>
+
+                    {meal.missingIngredients.length > 0 && (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        className="size-9 shrink-0"
+                        disabled={isAdding}
+                        onClick={() =>
+                          addToShoppingList(meal.missingIngredients, DAY_LABELS[index] ?? '')
+                        }
+                        aria-label="この日の材料を買い物リストへ"
+                      >
+                        <ShoppingCart className="size-4" />
+                      </Button>
+                    )}
+                  </div>
+
+                  <ul className="space-y-1">
+                    {meal.dishes.map((dish) => (
+                      <li key={dish.recipe.title}>
+                        <button
+                          type="button"
+                          className="flex w-full items-baseline gap-2 text-left"
+                          onClick={() => setDetail(dish.recipe)}
+                        >
+                          <span className="w-8 shrink-0 text-xs text-muted-foreground">
+                            {COURSE_LABEL[dish.course]}
+                          </span>
+                          <span
+                            className={cn(
+                              'min-w-0 flex-1 truncate',
+                              dish.course === 'main'
+                                ? 'text-[15px] font-semibold'
+                                : 'text-sm text-muted-foreground',
+                            )}
+                          >
+                            {dish.recipe.title}
+                          </span>
+                          <span className="shrink-0 text-xs tabular-nums text-muted-foreground">
+                            {dish.recipe.cookingTimeMinutes}分
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {meal.missingIngredients.length > 0 && (
+                    <p className="line-clamp-1 text-xs text-muted-foreground">
+                      買う物: {meal.missingIngredients.join('、')}
+                    </p>
                   )}
                 </CardContent>
               </Card>

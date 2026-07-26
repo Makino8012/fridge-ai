@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { InviteLinkCard } from '@/features/household/components/invite-link-card';
 import { DietaryPreferencesForm } from '@/features/household/components/dietary-preferences-form';
 import { ChangelogCard } from '@/features/household/components/changelog-card';
+import { PantrySetupCard } from '@/features/ingredients/components/pantry-setup-card';
+import { listIngredients } from '@/services/ingredients/ingredient-service';
 import { APP_VERSION } from '@/data/changelog';
 import {
   getCurrentHouseholdId,
@@ -14,10 +16,11 @@ import {
 
 export default async function SettingsPage() {
   const householdId = await getCurrentHouseholdId();
-  const [household, profile, members] = await Promise.all([
+  const [household, profile, members, ingredients] = await Promise.all([
     getHousehold(householdId),
     getCurrentProfile(),
     getHouseholdMembers(householdId),
+    listIngredients(),
   ]);
 
   return (
@@ -45,6 +48,8 @@ export default async function SettingsPage() {
         <InviteLinkCard inviteToken={household.invite_token} />
 
         {profile && <DietaryPreferencesForm initialPreferences={profile.dietary_preferences} />}
+
+        <PantrySetupCard existingNames={ingredients.map((i) => i.name)} />
 
         <ChangelogCard />
 
