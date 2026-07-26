@@ -16,7 +16,12 @@ function isInSeason(recipe: LocalRecipe, season: CurrentSeason | undefined): boo
 }
 
 // 肉・魚の部位や切り方の表記を吸収し、「豚こま肉」と「豚肉」を同一視できるようにする。
-const CUT_TOKENS = ['こま', '細切れ', '切れ', 'スライス', '薄切り', 'バラ', 'もも', 'むね', 'ロース', 'ひき', '挽き', '挽'];
+// 部位や切り方の違い。在庫に「鶏むね肉」があればレシピの「鶏もも肉」は作れる、
+// という判断にしたいので、同じ肉の中の違いは取り除いてから比べる。
+const CUT_TOKENS = [
+  'こま', '細切れ', '切り落とし', '切れ', 'スライス', '薄切り', 'バラ', 'もも', 'むね', 'ロース',
+  'ヒレ', 'カルビ', 'すね', 'サーロイン', 'ブロック', 'しゃぶ', 'ミンチ', 'ひき', '挽き', '挽',
+];
 
 // 食材そのものは同じで、状態や大きさだけを表す言葉。取り除いて比べる。
 // 例:「ミニトマト」→「トマト」、「刻みのり」→「のり」、「大根おろし」→「大根」
@@ -32,6 +37,8 @@ const ALIASES: Record<string, string> = {
   ねぎ: '長ねぎ', 青ねぎ: '長ねぎ', 万能ねぎ: '長ねぎ', 小ねぎ: '長ねぎ',
   しょうゆ: '醤油', みそ: '味噌', にんにく: 'にんにく', しょうが: '生姜',
   じゃが芋: 'じゃがいも', 薩摩芋: 'さつまいも', 人参: 'にんじん', 玉葱: '玉ねぎ',
+  // 肉の呼び分け。定番食材のカタログ側の表記にそろえる。
+  鶏ささみ: 'ささみ', 鶏手羽元: '手羽元', 鶏手羽先: '手羽先', 合いびき: 'ひき肉',
 };
 
 function stripAffixes(text: string): string {
@@ -46,7 +53,11 @@ function stripAffixes(text: string): string {
 }
 
 export function normalizeIngredientName(name: string): string {
-  let n = name.replace(/\s+/g, '').toLowerCase();
+  // 「牛肉(すき焼き用)」のような補足は食材名ではないので落とす。
+  let n = name
+    .replace(/[（(][^）)]*[）)]/g, '')
+    .replace(/\s+/g, '')
+    .toLowerCase();
   for (const token of CUT_TOKENS) {
     n = n.split(token).join('');
   }

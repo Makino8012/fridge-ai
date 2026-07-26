@@ -179,3 +179,46 @@ export async function touchIngredient(id: string) {
     .eq('id', id);
   if (error) throw error;
 }
+
+/**
+ * 名前を指定して在庫の数量を「その値にする」。
+ *
+ * 定番食材は買うたびに登録するのではなく、手元の数だけを直す使い方をするので、
+ * 加算(quickAddIngredient)ではなく上書きが要る。0を指定したら在庫から消す。
+ */
+export async function setIngredientQuantityByName(
+  input: QuickAddInput,
+): Promise<{ mode: 'created' | 'updated' | 'removed' }> {
+  const supabase = await createClient();
+  const householdId = await getCurrentHouseholdId();
+
+  const { data: existing } = await supabase
+    .from('ingredients')
+    .select('id')
+    .eq('household_id', householdId)
+    .eq('name', input.name)
+    .limit(1)
+    .maybeSingle();
+
+  if (input.quantity <= 0) {
+    if (existing) {
+      await deleteIngredient(existing.id);
+      return { mode: 'removed' };
+    }
+    return { mode: 'removed' };
+  }
+
+  if (existing) {
+    await updateIngredient(existing.id, { quantity: input.quantity, unit: input.unit });
+    return { mode: 'updated' };
+  }
+
+  await createIngredient({
+    name: input.name,
+    quantity: input.quantity,
+    unit: input.unit,
+    categoryId: input.categoryId,
+    storageLocationId: input.storageLocationId,
+  });
+  return { mode: 'created' };
+}

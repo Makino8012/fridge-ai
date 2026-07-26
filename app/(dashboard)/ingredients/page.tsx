@@ -1,6 +1,8 @@
 import { Header } from '@/components/layout/header';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { IngredientList } from '@/features/ingredients/components/ingredient-list';
 import { PANTRY_ITEMS, PantrySetupCard } from '@/features/ingredients/components/pantry-setup-card';
+import { StapleFoodsPanel } from '@/features/ingredients/components/staple-foods-panel';
 import { listIngredients } from '@/services/ingredients/ingredient-service';
 import { getCurrentHouseholdId } from '@/services/household/household-service';
 
@@ -20,10 +22,29 @@ export default async function IngredientsPage() {
 
   return (
     <>
-      <Header title="在庫一覧" />
+      <Header title="在庫" />
       <div className="space-y-4 px-4 md:px-0">
-        {registeredPantryCount < PANTRY_PROMPT_THRESHOLD && <PantrySetupCard existingNames={names} />}
-        <IngredientList initialIngredients={ingredients} householdId={householdId} />
+        <Tabs defaultValue="list">
+          <TabsList className="w-full">
+            <TabsTrigger value="list" className="flex-1">
+              一覧
+            </TabsTrigger>
+            <TabsTrigger value="staples" className="flex-1">
+              定番
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="list" className="mt-4 space-y-4">
+            {registeredPantryCount < PANTRY_PROMPT_THRESHOLD && (
+              <PantrySetupCard existingNames={names} />
+            )}
+            <IngredientList initialIngredients={ingredients} householdId={householdId} />
+          </TabsContent>
+
+          <TabsContent value="staples" className="mt-4">
+            <StapleFoodsPanel ingredients={ingredients} />
+          </TabsContent>
+        </Tabs>
       </div>
     </>
   );

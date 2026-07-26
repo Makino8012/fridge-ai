@@ -190,3 +190,19 @@ export async function markUsedUpAction(id: string): Promise<ActionResult<null>> 
     return actionError('在庫の削除に失敗しました');
   }
 }
+
+/**
+ * 定番食材の数量を指定の値にする(0なら在庫から消す)。
+ */
+export async function setStapleQuantityAction(
+  input: ingredientService.QuickAddInput,
+): Promise<ActionResult<{ mode: 'created' | 'updated' | 'removed' }>> {
+  try {
+    const result = await ingredientService.setIngredientQuantityByName(input);
+    revalidatePath('/ingredients');
+    revalidatePath('/');
+    return actionSuccess(result);
+  } catch {
+    return actionError('数量の更新に失敗しました');
+  }
+}
