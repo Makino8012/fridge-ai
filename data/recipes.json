@@ -36266,8 +36266,8 @@
     ]
   },
   {
-    "title": "さわらの西京焼き",
-    "difficulty": "normal",
+    "title": "さわらの西京焼き風",
+    "difficulty": "easy",
     "cookingTimeMinutes": 20,
     "ingredients": [
       {
@@ -36276,12 +36276,17 @@
         "staple": false
       },
       {
-        "name": "西京味噌",
+        "name": "味噌",
         "quantity": "大さじ3",
-        "staple": false
+        "staple": true
       },
       {
         "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
         "quantity": "大さじ1",
         "staple": true
       },
@@ -36292,19 +36297,23 @@
       }
     ],
     "steps": [
-      "味噌・みりん・酒を混ぜて漬け床を作る。",
-      "さわらを一晩漬ける。",
-      "味噌を拭き取る。",
-      "焦がさないよう弱火のグリルで焼いて完成。"
+      "さわらに塩をふって15分おき、水分を拭く。",
+      "味噌・みりん・砂糖・酒を混ぜて漬けだれを作る。",
+      "さわらに塗り、ラップで包んで冷蔵庫で2時間以上おく。",
+      "味噌を丁寧に拭き取る(焦げやすいため)。",
+      "魚焼きグリルまたはフライパンで弱火で片面4分ずつ焼く。",
+      "焦げそうならアルミホイルをかぶせる。"
     ],
     "tags": [
       "和食",
       "主菜",
+      "魚",
       "春"
     ],
     "seasons": [
       "spring"
-    ]
+    ],
+    "proteinPerServing": 26
   },
   {
     "title": "銀だらの煮付け",
@@ -65919,5 +65928,2778 @@
       "winter"
     ],
     "proteinPerServing": 26
+  },
+  {
+    "title": "あさりと春キャベツの酒蒸しスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "あさり",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/6個",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "10g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "あさりは砂抜きし、殻をこすり合わせて洗う。",
+      "キャベツはざく切り、にんにくは薄切りにする。",
+      "鍋にバターとにんにくを入れ、弱火で香り立たせる。",
+      "あさりと酒を加え、ふたをして中火で3分蒸す。",
+      "殻が開いたら水400mlとキャベツを加える。",
+      "4分煮て、塩で味を調える。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "海鮮"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "豆腐とみょうがのすまし汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 8,
+    "ingredients": [
+      {
+        "name": "豆腐",
+        "quantity": "1/3丁",
+        "staple": false
+      },
+      {
+        "name": "みょうが",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐は1.5cm角に切る。",
+      "みょうがは薄い小口切りにし、水にさらす。",
+      "鍋にだしを煮立て、醤油と塩少々で味を調える。",
+      "豆腐を入れて2分温める。",
+      "器に注ぎ、水気を切ったみょうがをのせる。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "豆腐"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "鶏ときのこの和風スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "600ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "鶏むね肉を薄いそぎ切りにする。",
+      "しめじはほぐし、長ねぎは斜め切り、生姜は千切りにする。",
+      "鍋にだしと生姜を入れて煮立てる。",
+      "鶏肉を一枚ずつ入れ、あくを取りながら4分煮る。",
+      "しめじと長ねぎを加えて3分煮る。",
+      "醤油で味を調える。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "鶏肉",
+      "きのこ"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "かぶとベーコンのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "かぶ",
+        "quantity": "3個",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぶは皮をむいて6等分のくし切り、葉は3cm長さに切る。",
+      "ベーコンは1cm幅に切る。",
+      "鍋にオリーブオイルを熱し、ベーコンを炒める。",
+      "水500mlとコンソメ、かぶを加える。",
+      "弱火で8分、かぶが透き通るまで煮る。",
+      "葉を加えて2分煮て、黒こしょうをふる。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "冬瓜と鶏ひき肉のスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "冬瓜",
+        "quantity": "300g",
+        "staple": false
+      },
+      {
+        "name": "鶏ひき肉",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "冬瓜は皮とわたを取り、2cm角に切る。",
+      "生姜はみじん切りにする。",
+      "鍋でひき肉と生姜を炒める。",
+      "水600mlと鶏がらスープの素、冬瓜を加える。",
+      "弱火で12分、冬瓜が透き通るまで煮る。",
+      "水溶き片栗粉で軽くとろみをつける。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "鶏肉"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ほうれん草と卵のかきたまスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "ほうれん草",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ほうれん草は茹でて水気を絞り、4cm長さに切る。",
+      "鍋に水500mlと鶏がらスープの素を入れて煮立てる。",
+      "水溶き片栗粉を加えてとろみをつける。",
+      "溶き卵を細く回し入れ、10秒待ってから優しく混ぜる。",
+      "ほうれん草を加え、ごま油をたらす。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "卵"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "里芋と長ねぎの味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "里芋",
+        "quantity": "4個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "里芋は皮をむき、塩でもんでぬめりを洗い流す。",
+      "1.5cm厚さの輪切りにする。",
+      "鍋にだしと里芋を入れ、中火で12分煮る。",
+      "竹串がすっと通ったら長ねぎの小口切りを加える。",
+      "火を止めて味噌を溶き入れる。"
+    ],
+    "tags": [
+      "和食",
+      "汁物"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "セロリとトマトのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "セロリ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "セロリは筋を取って1cm幅、玉ねぎは薄切りにする。",
+      "トマトはざく切りにする。",
+      "鍋にオリーブオイルを熱し、玉ねぎとセロリを4分炒める。",
+      "トマトを加えて木べらで潰しながら3分煮る。",
+      "水400mlとコンソメを加え、弱火で6分煮る。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "豚肉と白菜の生姜スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "白菜",
+        "quantity": "1/8個",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "2片",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はそぎ切り、生姜は千切りにする。",
+      "鍋に水600mlと鶏がらスープの素、生姜を入れて煮立てる。",
+      "白菜を加えて6分煮る。",
+      "豚肉を一枚ずつほぐしながら加える。",
+      "あくを取り、醤油で味を調える。",
+      "ごま油をたらして仕上げる。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "豚肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "そら豆のポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "そら豆",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "250ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1.5",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "そら豆をさやから出し、2分茹でて薄皮をむく。",
+      "玉ねぎは薄切りにする。",
+      "バターで玉ねぎを弱火で5分、透き通るまで炒める。",
+      "水150mlとコンソメ、そら豆を加えて5分煮る。",
+      "ミキサーにかけてなめらかにし、鍋に戻す。",
+      "牛乳を加えて温め、塩で味を調える。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "きくらげと卵の中華スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "きくらげ",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "きくらげを水で20分戻し、細切りにする。",
+      "鍋に水500mlと鶏がらスープの素を入れて煮立てる。",
+      "きくらげを加えて3分煮る。",
+      "溶き卵を細く回し入れ、10秒待ってから混ぜる。",
+      "酢とごま油を加え、小口切りの長ねぎを散らす。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "きのこ"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "ズッキーニとトマトのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ズッキーニ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ズッキーニは1cm厚さの半月切り、トマトはざく切りにする。",
+      "ベーコンは1cm幅、にんにくはみじん切りにする。",
+      "オリーブオイルでにんにくとベーコンを炒める。",
+      "ズッキーニを加えて3分炒める。",
+      "トマトと水450ml、コンソメを加えて8分煮る。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "油揚げとキャベツの味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "キャベツ",
+        "quantity": "1/8個",
+        "staple": false
+      },
+      {
+        "name": "油揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツはざく切りにする。",
+      "油揚げは熱湯をかけて油抜きし、短冊切りにする。",
+      "鍋にだしを煮立て、キャベツを4分煮る。",
+      "油揚げを加えて2分煮る。",
+      "火を止めて味噌を溶き入れる。"
+    ],
+    "tags": [
+      "和食",
+      "汁物"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "牛肉とわかめのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "乾燥わかめ",
+        "quantity": "8g",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "1片",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "わかめを水で戻し、水気を切る。",
+      "鍋にごま油とすりおろしにんにくを入れて弱火で香り立たせる。",
+      "牛肉を加えて炒め、色が変わったら醤油を加える。",
+      "水600mlと鶏がらスープの素を加えて煮立てる。",
+      "あくを取り、弱火で8分煮る。",
+      "わかめを加えて2分煮る。"
+    ],
+    "tags": [
+      "韓国",
+      "汁物",
+      "牛肉"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "とうもろこしの冷製ポタージュ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "とうもろこし",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "250ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ1.5",
+        "staple": false
+      },
+      {
+        "name": "バター",
+        "quantity": "15g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "とうもろこしの実を包丁で削ぎ落とす。",
+      "玉ねぎは薄切りにする。",
+      "バターで玉ねぎを弱火で5分炒める。",
+      "とうもろこしと水150ml、コンソメを加えて8分煮る。",
+      "ミキサーにかけ、ざるでこしてなめらかにする。",
+      "牛乳を加えて混ぜ、冷蔵庫で1時間冷やす。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "冷たい"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "厚揚げとキムチのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "キムチ",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは油抜きして一口大に切る。",
+      "鍋にごま油を熱し、キムチを2分炒める。",
+      "水500mlと鶏がらスープの素を加えて煮立てる。",
+      "厚揚げを加えて5分煮る。",
+      "斜め切りの長ねぎを加えて1分煮る。"
+    ],
+    "tags": [
+      "韓国",
+      "汁物",
+      "豆腐"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "たけのこと若布の吸い物",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "たけのこ水煮",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "乾燥わかめ",
+        "quantity": "5g",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "たけのこは薄切りにする。",
+      "わかめは水で戻し、水気を切る。",
+      "鍋にだしとたけのこを入れ、5分煮る。",
+      "醤油とみりん、塩少々で味を調える。",
+      "わかめを加えて火を止める。"
+    ],
+    "tags": [
+      "和食",
+      "汁物"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "白いんげん豆とベーコンのスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "白いんげん豆",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "玉ねぎとにんじんは1cm角、ベーコンは1cm幅に切る。",
+      "鍋にオリーブオイルを熱し、ベーコンを炒める。",
+      "玉ねぎとにんじんを加えて4分炒める。",
+      "水500mlとコンソメ、白いんげん豆を加える。",
+      "弱火で10分煮て、塩こしょうで味を調える。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "なめこと豆腐の赤だし",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "なめこ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1/3丁",
+        "staple": false
+      },
+      {
+        "name": "青ねぎ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なめこをさっと洗う。",
+      "豆腐は1.5cm角に切る。",
+      "鍋にだしを煮立て、なめこを2分煮る。",
+      "豆腐を加えて2分温める。",
+      "火を止めて味噌を溶き入れ、小口切りの青ねぎを散らす。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "きのこ"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "鶏手羽と大根のスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 35,
+    "ingredients": [
+      {
+        "name": "鶏手羽元",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "大根",
+        "quantity": "8cm",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "2片",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "手羽元は骨に沿って切り込みを入れる。",
+      "大根は2cm厚さのいちょう切りにする。",
+      "鍋に手羽元・水800ml・酒・生姜の薄切りを入れて煮立てる。",
+      "あくを丁寧に取り、弱火で15分煮る。",
+      "大根を加えてさらに12分煮る。",
+      "醤油と塩で味を調え、長ねぎを加える。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "鶏肉",
+      "高タンパク"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "モロヘイヤと卵のスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "モロヘイヤ",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "モロヘイヤの葉を摘み、さっと茹でて刻む。",
+      "鍋に水500mlと鶏がらスープの素を入れて煮立てる。",
+      "モロヘイヤを加えて2分煮る。",
+      "溶き卵を細く回し入れ、10秒待ってから混ぜる。",
+      "ごま油をたらして仕上げる。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ソーセージとレンズ豆のスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "ソーセージ",
+        "quantity": "4本",
+        "staple": false
+      },
+      {
+        "name": "レンズ豆",
+        "quantity": "80g",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ソーセージは1cm幅の斜め切りにする。",
+      "玉ねぎとにんじんは1cm角に切る。",
+      "オリーブオイルで野菜を4分炒める。",
+      "水600mlとコンソメ、洗ったレンズ豆を加える。",
+      "弱火で15分、豆が柔らかくなるまで煮る。",
+      "ソーセージを加えて3分煮る。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "とろろ昆布と梅のスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "とろろ昆布",
+        "quantity": "10g",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "かつお節",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "器にとろろ昆布とかつお節を入れる。",
+      "梅干しは種を取り、軽くほぐして加える。",
+      "醤油を加える。",
+      "熱湯400mlを注ぐ。",
+      "よく混ぜて溶かす。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "時短"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "サーモンのチャウダー",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "鮭",
+        "quantity": "2切れ",
+        "staple": false
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "牛乳",
+        "quantity": "400ml",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "小麦粉",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "バター",
+        "quantity": "20g",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鮭は一口大に切り、塩こしょうをふる。",
+      "じゃがいもと玉ねぎは1.5cm角に切る。",
+      "バターで玉ねぎを4分炒め、小麦粉をふり入れる。",
+      "牛乳を少しずつ加えてのばす。",
+      "じゃがいもとコンソメを加え、弱火で12分煮る。",
+      "鮭を加えて6分煮て、塩こしょうで味を調える。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "魚"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "オクラともずくの冷たいスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "オクラ",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "もずく",
+        "quantity": "100g",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "400ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      },
+      {
+        "name": "生姜",
+        "quantity": "1/2片",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "だしに醤油を加え、冷蔵庫で冷やしておく。",
+      "オクラは塩でこすってうぶ毛を取り、1分茹でる。",
+      "冷水にとって小口切りにする。",
+      "もずくはさっと洗って水気を切る。",
+      "器に具を入れ、冷たいだしを注いで生姜のすりおろしをのせる。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "冷たい",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "白菜と豆腐の生姜スープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/8個",
+        "staple": false
+      },
+      {
+        "name": "豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "2片",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "白菜はそぎ切り、生姜は千切りにする。",
+      "豆腐は2cm角に切る。",
+      "鍋に水600mlと鶏がらスープの素、生姜を入れて煮立てる。",
+      "白菜を加えて6分煮る。",
+      "豆腐を加えて3分温め、ごま油をたらす。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "豆腐",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "ミートボールのトマトスープ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "合いびき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "トマト缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "玉ねぎの半量をみじん切りにし、残りは薄切りにする。",
+      "ひき肉にみじん切り玉ねぎ・パン粉・塩こしょうを混ぜ、一口大に丸める。",
+      "オリーブオイルで薄切り玉ねぎを4分炒める。",
+      "トマト缶と水300ml、コンソメを加えて煮立てる。",
+      "ミートボールを落とし入れ、弱火で12分煮る。",
+      "塩こしょうで味を調える。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物",
+      "ひき肉"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "小松菜と厚揚げの味噌汁",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "小松菜",
+        "quantity": "1/2束",
+        "staple": false
+      },
+      {
+        "name": "厚揚げ",
+        "quantity": "1/2枚",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "500ml",
+        "staple": true
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは油抜きして一口大に切る。",
+      "小松菜は4cm長さに切り、茎と葉に分ける。",
+      "鍋にだしと厚揚げを入れ、4分煮る。",
+      "小松菜の茎を加えて1分、葉を加えてさらに1分煮る。",
+      "火を止めて味噌を溶き入れる。"
+    ],
+    "tags": [
+      "和食",
+      "汁物",
+      "豆腐"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "きのこと鶏ひき肉のとろみスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鶏ひき肉",
+        "quantity": "120g",
+        "staple": false
+      },
+      {
+        "name": "えのき",
+        "quantity": "1袋",
+        "staple": false
+      },
+      {
+        "name": "しめじ",
+        "quantity": "1/2パック",
+        "staple": false
+      },
+      {
+        "name": "生姜",
+        "quantity": "1片",
+        "staple": false
+      },
+      {
+        "name": "鶏がらスープの素",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "えのきとしめじは石づきを取り、食べやすく切る。",
+      "生姜はみじん切りにする。",
+      "鍋でひき肉と生姜を炒める。",
+      "水600mlと鶏がらスープの素を加えて煮立てる。",
+      "きのこを加えて6分煮る。",
+      "水溶き片栗粉でとろみをつける。"
+    ],
+    "tags": [
+      "中華",
+      "汁物",
+      "きのこ",
+      "鶏肉"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "アスパラとベーコンのコンソメスープ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "アスパラガス",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "ベーコン",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/3個",
+        "staple": false
+      },
+      {
+        "name": "コンソメ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "アスパラは根元の皮をむき、3cm長さに切る。",
+      "ベーコンは1cm幅、玉ねぎは薄切りにする。",
+      "鍋でベーコンを炒め、玉ねぎを加えて3分炒める。",
+      "水500mlとコンソメを加えて煮立てる。",
+      "アスパラを加えて3分煮て、黒こしょうをふる。"
+    ],
+    "tags": [
+      "洋食",
+      "汁物"
+    ],
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "title": "鶏むねの塩麹焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "塩麹",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉をフォークで数か所刺し、厚さを均一に開く。",
+      "塩麹をもみ込み、冷蔵庫で30分以上おく。",
+      "余分な塩麹を軽く拭き取る(焦げやすいため)。",
+      "オリーブオイルを熱し、弱めの中火で5分焼く。",
+      "裏返してふたをし、4分蒸し焼きにする。",
+      "そぎ切りにし、レモン汁と黒こしょうをかける。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉",
+      "筋トレ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 34
+  },
+  {
+    "title": "豚肉と豆腐のチャンプルー",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": "1丁",
+        "staple": false
+      },
+      {
+        "name": "もやし",
+        "quantity": "1/2袋",
+        "staple": false
+      },
+      {
+        "name": "にら",
+        "quantity": "1/3束",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐はキッチンペーパーで包み、10分おいて水切りする。",
+      "手で大きめに崩す。",
+      "ごま油で豆腐を強火で焼き付け、一度取り出す。",
+      "豚肉を炒め、色が変わったらもやしを加える。",
+      "豆腐を戻し、溶き卵を回し入れる。",
+      "にらを加え、醤油で味を調えて手早く炒める。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉",
+      "豆腐"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "proteinPerServing": 28
+  },
+  {
+    "title": "豚バラと厚揚げの照り煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚バラ肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "厚揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは油抜きして一口大、長ねぎは3cm長さに切る。",
+      "豚バラ肉は5cm幅に切る。",
+      "フライパンで豚肉を炒め、余分な脂を拭き取る。",
+      "厚揚げと長ねぎを加えて焼き色をつける。",
+      "醤油・みりん・砂糖と水100mlを加える。",
+      "汁気が半分になるまで中火で8分煮からめる。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉",
+      "豆腐"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "proteinPerServing": 27
+  },
+  {
+    "title": "鶏むねとキャベツの塩昆布蒸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "塩昆布",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏むね肉をそぎ切りにし、酒をもみ込む。",
+      "キャベツをざく切りにする。",
+      "フライパンにキャベツを敷き、鶏肉を広げてのせる。",
+      "塩昆布を散らし、ごま油を回しかける。",
+      "ふたをして中火で10分蒸し焼きにする。",
+      "全体を混ぜ合わせて器に盛る。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "鶏肉",
+      "ヘルシー",
+      "高タンパク"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "proteinPerServing": 32
+  },
+  {
+    "title": "ひき肉と豆腐のハンバーグ",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 25,
+    "ingredients": [
+      {
+        "name": "合いびき肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": "1/2丁",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "パン粉",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ3",
+        "staple": false
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "豆腐をキッチンペーパーで包み、レンジで2分加熱して水切りする。",
+      "玉ねぎをみじん切りにして炒め、冷ます。",
+      "ひき肉・豆腐・玉ねぎ・パン粉・片栗粉・塩こしょうをよく練る。",
+      "小判形に成形し、中央をくぼませる。",
+      "中火で4分焼き、裏返してふたをし弱火で6分焼く。",
+      "大根おろしとポン酢をかけて食べる。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "ひき肉",
+      "豆腐"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 28
+  },
+  {
+    "title": "エビとブロッコリーのマヨ炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "エビ",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": "1/2株",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "片栗粉",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "はちみつ",
+        "quantity": "小さじ1",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "エビは背わたを取り、片栗粉と塩でもんで洗う。",
+      "水気を拭き、片栗粉をまぶす。",
+      "ブロッコリーは小房に分け、2分茹でる。",
+      "多めの油でエビを2分揚げ焼きにする。",
+      "マヨネーズ・ケチャップ・はちみつを混ぜる。",
+      "エビとブロッコリーをソースで和える。"
+    ],
+    "tags": [
+      "中華",
+      "主菜",
+      "エビ",
+      "高タンパク"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "proteinPerServing": 28
+  },
+  {
+    "title": "牛こまとキャベツのすき煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "牛こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "キャベツはざく切り、玉ねぎは薄切りにする。",
+      "鍋に醤油・砂糖・酒・水150mlを入れて煮立てる。",
+      "玉ねぎを加えて4分煮る。",
+      "牛肉を広げて入れ、あくを取る。",
+      "キャベツを加えてふたをし、6分煮る。",
+      "全体を混ぜて味をなじませる。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "牛肉"
+    ],
+    "seasons": [
+      "spring",
+      "winter"
+    ],
+    "proteinPerServing": 26
+  },
+  {
+    "title": "たっぷり野菜の豚しゃぶ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚ロース肉",
+        "quantity": "250g",
+        "staple": false
+      },
+      {
+        "name": "レタス",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "きゅうり",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "トマト",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "ポン酢",
+        "quantity": "大さじ4",
+        "staple": false
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "鍋に湯を沸かし、沸騰直前の温度を保つ。",
+      "豚肉を一枚ずつ広げ、色が変わるまで30秒茹でる。",
+      "ざるにあげて冷ます(冷水に取ると固くなる)。",
+      "レタスは手でちぎり、きゅうりは細切り、トマトはくし切りにする。",
+      "器に野菜を盛り、豚肉をのせる。",
+      "ポン酢・ごま油・すりごまを混ぜたたれをかける。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉",
+      "ヘルシー",
+      "冷たい"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "proteinPerServing": 30
+  },
+  {
+    "title": "鶏もも肉のバジル焼き",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": "2枚",
+        "staple": false
+      },
+      {
+        "name": "バジル",
+        "quantity": "10枚",
+        "staple": false
+      },
+      {
+        "name": "にんにく",
+        "quantity": "2片",
+        "staple": false
+      },
+      {
+        "name": "粉チーズ",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "鶏肉に塩こしょうをふり、15分おく。",
+      "バジルとにんにくをみじん切りにする。",
+      "オリーブオイル半量と混ぜ、バジルソースを作る。",
+      "残りの油で鶏肉を皮目から6分焼く。",
+      "裏返して4分焼き、火を通す。",
+      "食べやすく切り、バジルソースと粉チーズをかける。"
+    ],
+    "tags": [
+      "洋食",
+      "主菜",
+      "鶏肉",
+      "高タンパク"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "proteinPerServing": 35
+  },
+  {
+    "title": "豚こまと根菜の味噌炒め",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "豚こま肉",
+        "quantity": "200g",
+        "staple": false
+      },
+      {
+        "name": "れんこん",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "味噌",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "ごま油",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "れんこんは薄い半月切りにし、水に3分さらす。",
+      "にんじんは短冊切りにする。",
+      "味噌とみりんを混ぜ合わせておく。",
+      "ごま油で豚肉を炒め、色が変わったら根菜を加える。",
+      "ふたをして弱火で5分蒸し焼きにする。",
+      "合わせ味噌を加えてからめる。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "豚肉"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "proteinPerServing": 25
+  },
+  {
+    "title": "ツナと大根のさっと煮",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "大根",
+        "quantity": "1/3本",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "2缶",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根は1.5cm厚さのいちょう切りにする。",
+      "鍋にだしと大根を入れ、中火で10分煮る。",
+      "大根が透き通ったらツナを汁ごと加える。",
+      "醤油とみりんを加える。",
+      "落としぶたをして弱火で6分煮る。",
+      "火を止めて味を含ませる。"
+    ],
+    "tags": [
+      "和食",
+      "主菜",
+      "魚",
+      "常備菜"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "proteinPerServing": 20
+  },
+  {
+    "title": "鶏ささみとオクラの梅和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ささみ",
+        "quantity": "3本",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "6本",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "かつお節",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "酒",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ささみは筋を取り、酒をふってレンジで3分加熱する。",
+      "粗熱が取れたら手で細かく裂く。",
+      "オクラは塩でこすり、1分茹でて小口切りにする。",
+      "梅干しは種を取ってたたく。",
+      "ささみ・オクラ・梅を和える。",
+      "かつお節をふって仕上げる。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "鶏肉",
+      "ヘルシー"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ブロッコリーとゆで卵のサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ブロッコリー",
+        "quantity": "1/2株",
+        "staple": false
+      },
+      {
+        "name": "卵",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "卵を10分茹でて固ゆでにし、殻をむく。",
+      "ブロッコリーは小房に分け、2分半茹でる。",
+      "ざるにあげて粗熱を取り、水気をよく切る。",
+      "ゆで卵をフォークで粗く潰す。",
+      "マヨネーズと醤油を混ぜ、すべてを和える。",
+      "黒こしょうをふって仕上げる。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "卵"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "長芋とオクラの梅かつお和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "長芋",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "オクラ",
+        "quantity": "5本",
+        "staple": false
+      },
+      {
+        "name": "梅干し",
+        "quantity": "1個",
+        "staple": false
+      },
+      {
+        "name": "かつお節",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "長芋は皮をむき、ポリ袋に入れて麺棒で粗くたたく。",
+      "オクラは塩でこすり、1分茹でて小口切りにする。",
+      "梅干しは種を取ってたたく。",
+      "長芋・オクラ・梅・醤油を和える。",
+      "かつお節をのせて仕上げる。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "焼きねぎのおひたし",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "長ねぎ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "200ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "かつお節",
+        "quantity": "1パック",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "長ねぎを4cm長さに切る。",
+      "フライパンで転がしながら焼き色がつくまで6分焼く。",
+      "だし・醤油・みりんを合わせて一度煮立て、冷ます。",
+      "焼いたねぎを熱いうちに浸す。",
+      "冷蔵庫で30分以上冷やし、かつお節をのせる。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "きのこの南蛮漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "しめじ",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "エリンギ",
+        "quantity": "2本",
+        "staple": false
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "酢",
+        "quantity": "大さじ3",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "しめじはほぐし、エリンギは食べやすく裂く。",
+      "玉ねぎは薄切りにする。",
+      "フライパンできのこを強火で4分、水分を飛ばしながら焼く。",
+      "酢・醤油・砂糖を混ぜる。",
+      "熱いうちにきのこと玉ねぎを漬ける。",
+      "冷蔵庫で30分以上なじませる。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "きのこ",
+      "常備菜"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "かぼちゃとくるみのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 18,
+    "ingredients": [
+      {
+        "name": "かぼちゃ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "くるみ",
+        "quantity": "30g",
+        "staple": false
+      },
+      {
+        "name": "クリームチーズ",
+        "quantity": "50g",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "かぼちゃを2cm角に切り、耐熱皿に入れる。",
+      "ラップをして電子レンジ600Wで6分加熱する。",
+      "熱いうちにフォークで粗く潰す。",
+      "くるみは乾煎りして粗く刻む。",
+      "クリームチーズとマヨネーズを混ぜ込む。",
+      "くるみを加え、黒こしょうをふる。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "autumn"
+    ]
+  },
+  {
+    "title": "セロリとハムのマリネ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "セロリ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ハム",
+        "quantity": "3枚",
+        "staple": false
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "塩こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "セロリは筋を取り、斜め薄切りにする。",
+      "葉も刻んで使う。",
+      "ハムは細切りにする。",
+      "レモン汁・オリーブオイル・塩こしょうを混ぜる。",
+      "すべてを和え、冷蔵庫で20分冷やす。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "all"
+    ]
+  },
+  {
+    "title": "厚揚げと小松菜の煮浸し",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": "1枚",
+        "staple": false
+      },
+      {
+        "name": "小松菜",
+        "quantity": "1束",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "300ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ1.5",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "厚揚げは油抜きして一口大に切る。",
+      "小松菜は4cm長さに切り、茎と葉に分ける。",
+      "鍋にだし・醤油・みりんを煮立て、厚揚げを5分煮る。",
+      "小松菜の茎を加えて2分煮る。",
+      "葉を加えて1分煮る。",
+      "火を止めて味を含ませる。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "豆腐"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "紫キャベツとりんごのサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "紫キャベツ",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "りんご",
+        "quantity": "1/2個",
+        "staple": false
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "はちみつ",
+        "quantity": "小さじ2",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "紫キャベツを細切りにする。",
+      "塩小さじ1/2をふって10分おき、水気を絞る。",
+      "りんごは皮つきのまま細切りにする。",
+      "レモン汁・はちみつ・オリーブオイルを混ぜる。",
+      "すべてを和え、冷蔵庫で20分なじませる。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "ズッキーニとツナのマリネ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "ズッキーニ",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "ツナ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "レモン汁",
+        "quantity": "大さじ1",
+        "staple": false
+      },
+      {
+        "name": "オリーブオイル",
+        "quantity": "大さじ1",
+        "staple": true
+      },
+      {
+        "name": "黒こしょう",
+        "quantity": "少々",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ズッキーニを5mm厚さの輪切りにする。",
+      "フライパンで両面に焼き色がつくまで焼く。",
+      "ツナは油を切る。",
+      "レモン汁・オリーブオイル・黒こしょうを混ぜる。",
+      "熱いうちにズッキーニを漬け、ツナを加える。",
+      "冷蔵庫で20分冷やす。"
+    ],
+    "tags": [
+      "洋食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "ごぼうとにんじんのごまマヨサラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "ごぼう",
+        "quantity": "1本",
+        "staple": false
+      },
+      {
+        "name": "にんじん",
+        "quantity": "1/2本",
+        "staple": false
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "ごぼうは細切りにし、水に5分さらす。",
+      "にんじんも細切りにする。",
+      "熱湯で3分茹で、ざるにあげて冷ます。",
+      "水気をしっかり切る。",
+      "すりごま・マヨネーズ・醤油で和える。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "title": "白菜とりんごの浅漬け",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "白菜",
+        "quantity": "1/8個",
+        "staple": false
+      },
+      {
+        "name": "りんご",
+        "quantity": "1/4個",
+        "staple": false
+      },
+      {
+        "name": "昆布",
+        "quantity": "5cm",
+        "staple": false
+      },
+      {
+        "name": "唐辛子",
+        "quantity": "1/2本",
+        "staple": false
+      }
+    ],
+    "steps": [
+      "白菜を1cm幅のざく切りにする。",
+      "りんごは皮つきのまま薄いいちょう切りにする。",
+      "昆布は細切り、唐辛子は種を取って輪切りにする。",
+      "ポリ袋にすべてと塩小さじ1を入れる。",
+      "袋の上から軽くもみ、空気を抜いて閉じる。",
+      "冷蔵庫で2時間以上おく。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "漬物"
+    ],
+    "seasons": [
+      "winter"
+    ]
+  },
+  {
+    "title": "なすとみょうがの揚げ浸し",
+    "difficulty": "normal",
+    "cookingTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "なす",
+        "quantity": "3本",
+        "staple": false
+      },
+      {
+        "name": "みょうが",
+        "quantity": "2個",
+        "staple": false
+      },
+      {
+        "name": "だし",
+        "quantity": "250ml",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "みりん",
+        "quantity": "大さじ2",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "なすは縦半分に切り、皮に細かく切り込みを入れる。",
+      "だし・醤油・みりんを煮立て、冷ましておく。",
+      "170度の油でなすを3分揚げる。",
+      "油を軽く切り、熱いうちに浸す。",
+      "みょうがの薄切りを加える。",
+      "冷蔵庫で1時間以上冷やす。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "なす"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "いんげんのごまマヨ和え",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "いんげん",
+        "quantity": "150g",
+        "staple": false
+      },
+      {
+        "name": "すりごま",
+        "quantity": "大さじ2",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ1.5",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      },
+      {
+        "name": "砂糖",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "いんげんのヘタを取る。",
+      "塩を入れた湯で3分茹でる。",
+      "冷水にとって色止めし、水気を切る。",
+      "3等分に切る。",
+      "すりごま・マヨネーズ・醤油・砂糖で和える。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "野菜"
+    ],
+    "seasons": [
+      "summer"
+    ]
+  },
+  {
+    "title": "大根とほたての和風サラダ",
+    "difficulty": "easy",
+    "cookingTimeMinutes": 12,
+    "ingredients": [
+      {
+        "name": "大根",
+        "quantity": "1/4本",
+        "staple": false
+      },
+      {
+        "name": "ホタテ缶",
+        "quantity": "1缶",
+        "staple": false
+      },
+      {
+        "name": "貝割れ大根",
+        "quantity": "1パック",
+        "staple": false
+      },
+      {
+        "name": "マヨネーズ",
+        "quantity": "大さじ2",
+        "staple": true
+      },
+      {
+        "name": "醤油",
+        "quantity": "小さじ1",
+        "staple": true
+      }
+    ],
+    "steps": [
+      "大根を細切りにし、冷水に5分さらす。",
+      "水気をしっかり切る。",
+      "貝割れ大根は根を落として半分に切る。",
+      "ホタテ缶は汁を軽く切ってほぐす。",
+      "マヨネーズと醤油で和え、器に盛る。"
+    ],
+    "tags": [
+      "和食",
+      "副菜",
+      "海鮮"
+    ],
+    "seasons": [
+      "winter"
+    ]
   }
 ]
