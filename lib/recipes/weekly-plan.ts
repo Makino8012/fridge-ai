@@ -68,8 +68,11 @@ export interface PlannedMeal {
 /** 一食の品数。 */
 export const DISHES_PER_MEAL_OPTIONS = [1, 2, 3] as const;
 
-/** 副菜・汁物で買い足したい材料の上限。脇役のために買い物を増やしたくない。 */
-const SUPPORTING_DISH_MAX_MISSING = 1;
+/**
+ * 副菜・汁物で買い足してよい材料の上限。
+ * 脇役のために買い物を増やしたくないが、1品に絞ると同じ料理ばかりになるので2品まで許す。
+ */
+const SUPPORTING_DISH_MAX_MISSING = 2;
 
 // 主材料が続かないようにするための分類。
 const MAIN_GROUPS: [string, string[]][] = [
@@ -159,9 +162,11 @@ export function buildWeeklyPlan(
         if (preferStock) {
           // 主菜は在庫優先を弱めにする。強くしすぎると在庫にある数品だけが
           // 延々と出て献立にならない。逆に副菜・汁物のために買い物が増えるのは避けたい。
+          // 副菜・汁物は take() が先に「買い足し1品以内」で絞るので、
+          // ここで在庫を強く効かせると同じ副菜ばかりになる。散らしを効かせる。
           score += isMain
             ? Math.max(0, 3 - missing.length) * 4
-            : Math.max(0, 4 - missing.length) * 12;
+            : Math.max(0, 4 - missing.length) * 6;
         }
         // 筋トレ設定なら、タンパク質が多い主菜を優先する
         if (highProtein && isMain) {
@@ -201,23 +206,27 @@ export function buildWeeklyPlan(
   /**
    * まだ使っていない候補を1つ取る。
    *
-   * 買い足しが少なく、その日の他の品と主材料がかぶらないものを優先し、
-   * 見つからなければ順に条件を緩める。
-   * 副菜が付かない日ができるより、買い物が1品増える方がましなため。
+   * 買い足しの上限だけを守り、その中は点数順(在庫の加点+散らし)で選ぶ。
+   * 上限を厳しくして「一番安い1品」を選び続けると、
+   * 作り直しても同じ味噌汁ばかりが出てしまうため、幅を持たせる。
+   * その日の他の品と主材料がかぶるものは避ける。
    */
   function take(
     candidates: typeof mains,
-    preferredMaxMissing: number,
+    limit: number,
     avoidGroups: string[],
   ): (typeof mains)[number] | undefined {
-    const unused = candidates.filter((c) => !usedTitles.has(c.recipe.title));
+    const unused = candidates.filter(
+      (c) => !usedTitles.has(c.recipe.title) && c.missing.length <= limit,
+    );
     // 材料が1つでもかぶれば避ける(肉じゃがに里芋の煮物、など)。
     const noClash = (c: (typeof unused)[number]) =>
       !c.groups.some((g) => avoidGroups.includes(g));
     const pick =
-      unused.find((c) => c.missing.length <= preferredMaxMissing && noClash(c)) ??
       unused.find(noClash) ??
-      unused[0];
+      unused[0] ??
+      // 上限内に候補が無ければ、条件を外して1品確保する。
+      candidates.find((c) => !usedTitles.has(c.recipe.title));
     if (pick) usedTitles.add(pick.recipe.title);
     return pick;
   }
