@@ -287,6 +287,13 @@ export function WeeklyPlanPanel({ defaultHighProtein = false }: { defaultHighPro
                   </div>
 
                   <ul className="space-y-1">
+                    {/* おかずだけでは食事にならないので、主食が無い日はごはんを添える */}
+                    {meal.needsRice && (
+                      <li className="flex items-baseline gap-2">
+                        <span className="w-8 shrink-0 text-xs text-muted-foreground">主食</span>
+                        <span className="text-sm text-muted-foreground">ごはん</span>
+                      </li>
+                    )}
                     {meal.dishes.map((dish) => (
                       <li key={dish.recipe.title}>
                         <button

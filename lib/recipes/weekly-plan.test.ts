@@ -59,6 +59,60 @@ describe('buildWeeklyPlan', () => {
     expect(cheap.length).toBeGreaterThan(supporting.length / 2);
   });
 
+  // みたらし団子が副菜として出てしまったため、おかずにならない料理を献立から外す。
+  it('デザートや飲み物を献立に出さない', () => {
+    const meals = plan(['卵', '牛乳', '砂糖'], { days: 7 });
+    const titles = meals.flatMap((m) => m.dishes.map((d) => d.recipe.title));
+    for (const title of titles) {
+      const source = RECIPES.find((r) => r.title === title)!;
+      expect(source.tags.some((t) => ['デザート', 'おやつ', 'ドリンク', '飲み物'].includes(t))).toBe(
+        false,
+      );
+    }
+  });
+
+  it('主菜が丼や麺でない日はごはんを添える', () => {
+    const meals = plan(['鮭', '玉ねぎ'], { days: 7 });
+    for (const meal of meals) {
+      const main = meal.dishes.find((d) => d.course === 'main')!;
+      const source = RECIPES.find((r) => r.title === main.recipe.title)!;
+      const hasCarb = source.ingredients.some((i) =>
+        ['ご飯', 'ごはん', '米', 'パスタ', 'うどん', 'そば', '中華麺', 'パン', '食パン'].some((c) =>
+          i.name.includes(c),
+        ),
+      );
+      expect(meal.needsRice).toBe(!hasCarb);
+    }
+  });
+
+  it('同じ食事の中で主材料がかぶらない', () => {
+    // 肉じゃがの横に里芋の煮物が並ぶような献立を避ける。
+    const meals = plan(['豚こま肉', '卵', '玉ねぎ', 'にんじん', '豆腐'], { days: 7, seed: 7 });
+    const GROUPS: [string, string[]][] = [
+      ['いも', ['じゃがいも', 'さつまいも', '里芋', 'さといも', '長芋']],
+      ['鶏', ['鶏', 'ささみ', '手羽']],
+      ['豚', ['豚']],
+      ['牛', ['牛']],
+    ];
+    const groupsOf = (title: string) => {
+      const source = RECIPES.find((r) => r.title === title)!;
+      const names = source.ingredients.filter((i) => !i.staple).map((i) => i.name);
+      return GROUPS.filter(([, words]) =>
+        names.some((n) => words.some((w) => n.includes(w))),
+      ).map(([g]) => g);
+    };
+
+    for (const meal of meals) {
+      const seen = new Set<string>();
+      for (const dish of meal.dishes) {
+        for (const group of groupsOf(dish.recipe.title)) {
+          expect(seen.has(group)).toBe(false);
+          seen.add(group);
+        }
+      }
+    }
+  });
+
   it('1食が主菜・副菜・汁物で構成される', () => {
     const meals = plan(['豚こま肉', '玉ねぎ'], { days: 5 });
     for (const meal of meals) {
@@ -150,8 +204,8 @@ describe('buildWeeklyPlan', () => {
 describe('collectMissingIngredients', () => {
   it('重複する材料をまとめる', () => {
     const meals = [
-      { dayIndex: 0, dishes: [], missingIngredients: ['玉ねぎ', 'にんじん'] },
-      { dayIndex: 1, dishes: [], missingIngredients: ['玉ねぎ', '豚こま肉'] },
+      { dayIndex: 0, dishes: [], missingIngredients: ['玉ねぎ', 'にんじん'], needsRice: true },
+      { dayIndex: 1, dishes: [], missingIngredients: ['玉ねぎ', '豚こま肉'], needsRice: true },
     ];
     expect(collectMissingIngredients(meals)).toEqual(['玉ねぎ', 'にんじん', '豚こま肉']);
   });

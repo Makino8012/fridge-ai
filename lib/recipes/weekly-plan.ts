@@ -2,7 +2,12 @@ import type { RecipeSuggestion } from '@/lib/ai/types';
 import type { LocalRecipe } from '@/lib/recipes/types';
 import { HIGH_PROTEIN_THRESHOLD } from '@/lib/nutrition';
 import { namesMatch, type InventoryItem } from '@/lib/recipes/matcher';
-import { dishCourse, isMainDish, type DishCourse } from '@/lib/recipes/dish-role';
+import {
+  dishCourse,
+  hasStapleCarb,
+  isMainDish,
+  type DishCourse,
+} from '@/lib/recipes/dish-role';
 
 export interface WeeklyPlanOptions {
   /** 何日分作るか。 */
@@ -53,6 +58,11 @@ export interface PlannedMeal {
   dishes: PlannedDish[];
   /** この一食全体で買い足しが必要な材料(重複を除いたもの)。 */
   missingIngredients: string[];
+  /**
+   * ごはんを添える必要があるか。
+   * 主菜が丼や麺なら不要だが、焼き魚のようなおかずだけでは食事にならない。
+   */
+  needsRice: boolean;
 }
 
 /** 一食の品数。 */
@@ -70,15 +80,25 @@ const MAIN_GROUPS: [string, string[]][] = [
   ['魚', ['鮭', 'さば', 'ぶり', 'あじ', 'いわし', 'たら', 'まぐろ', 'さんま', '白身魚', 'カレイ']],
   ['魚介', ['エビ', 'イカ', 'たこ', 'あさり', 'ホタテ', '牡蠣']],
   ['卵', ['卵']],
-  ['豆腐', ['豆腐', '厚揚げ', '納豆']],
+  ['豆腐', ['豆腐', '厚揚げ', '納豆', 'がんもどき']],
+  ['いも', ['じゃがいも', 'さつまいも', '里芋', 'さといも', '長芋']],
+  ['根菜', ['大根', 'ごぼう', 'れんこん', 'にんじん']],
+  ['葉物', ['キャベツ', '白菜', 'ほうれん草', '小松菜', 'レタス', '春菊']],
+  ['きのこ', ['しめじ', 'えのき', 'しいたけ', 'まいたけ', 'エリンギ', 'なめこ']],
 ];
 
-function mainGroupOf(recipe: LocalRecipe): string {
+/** その料理に含まれる主材料のグループをすべて返す。 */
+function groupsOf(recipe: LocalRecipe): string[] {
   const names = recipe.ingredients.filter((i) => !i.staple).map((i) => i.name);
-  for (const [group, words] of MAIN_GROUPS) {
-    if (names.some((name) => words.some((w) => name.includes(w)))) return group;
-  }
-  return 'その他';
+  const found = MAIN_GROUPS.filter(([, words]) =>
+    names.some((name) => words.some((w) => name.includes(w))),
+  ).map(([group]) => group);
+  return found.length > 0 ? found : ['その他'];
+}
+
+/** 日ごとの献立が偏らないようにするための代表グループ。 */
+function mainGroupOf(recipe: LocalRecipe): string {
+  return groupsOf(recipe)[0]!;
 }
 
 /** 数値の並びを毎回変えるための簡易乱数(同じseedなら同じ結果)。 */
@@ -154,7 +174,15 @@ export function buildWeeklyPlan(
         // 献立は「今週何食べる?」の提案なので、目新しさの方が最適解より大事。
         score += random() * 30;
 
-        return { recipe, suggestion, missing, protein, group: mainGroupOf(recipe), score };
+        return {
+          recipe,
+          suggestion,
+          missing,
+          protein,
+          group: mainGroupOf(recipe),
+          groups: groupsOf(recipe),
+          score,
+        };
       })
       .sort((a, b) => b.score - a.score);
   }
@@ -172,17 +200,24 @@ export function buildWeeklyPlan(
 
   /**
    * まだ使っていない候補を1つ取る。
-   * まず買い足しの少ないものを探し、無ければ条件を緩める。
+   *
+   * 買い足しが少なく、その日の他の品と主材料がかぶらないものを優先し、
+   * 見つからなければ順に条件を緩める。
    * 副菜が付かない日ができるより、買い物が1品増える方がましなため。
    */
   function take(
     candidates: typeof mains,
     preferredMaxMissing: number,
+    avoidGroups: string[],
   ): (typeof mains)[number] | undefined {
+    const unused = candidates.filter((c) => !usedTitles.has(c.recipe.title));
+    // 材料が1つでもかぶれば避ける(肉じゃがに里芋の煮物、など)。
+    const noClash = (c: (typeof unused)[number]) =>
+      !c.groups.some((g) => avoidGroups.includes(g));
     const pick =
-      candidates.find(
-        (c) => !usedTitles.has(c.recipe.title) && c.missing.length <= preferredMaxMissing,
-      ) ?? candidates.find((c) => !usedTitles.has(c.recipe.title));
+      unused.find((c) => c.missing.length <= preferredMaxMissing && noClash(c)) ??
+      unused.find(noClash) ??
+      unused[0];
     if (pick) usedTitles.add(pick.recipe.title);
     return pick;
   }
@@ -201,16 +236,19 @@ export function buildWeeklyPlan(
     const dishes: PlannedDish[] = [
       { recipe: main.suggestion, course: 'main', missingIngredients: main.missing },
     ];
+    // 同じ食事の中で主材料がかぶらないようにする(肉じゃがに里芋の煮物、など)。
+    const usedGroups = [...main.groups];
 
     if (dishesPerMeal >= 2) {
-      const side = take(sides, SUPPORTING_DISH_MAX_MISSING);
+      const side = take(sides, SUPPORTING_DISH_MAX_MISSING, usedGroups);
       if (side) {
+        usedGroups.push(...side.groups);
         dishes.push({ recipe: side.suggestion, course: 'side', missingIngredients: side.missing });
       }
     }
 
     if (dishesPerMeal >= 3) {
-      const soup = take(soups, SUPPORTING_DISH_MAX_MISSING);
+      const soup = take(soups, SUPPORTING_DISH_MAX_MISSING, usedGroups);
       if (soup) {
         dishes.push({ recipe: soup.suggestion, course: 'soup', missingIngredients: soup.missing });
       }
@@ -220,6 +258,7 @@ export function buildWeeklyPlan(
       dayIndex: day,
       dishes,
       missingIngredients: mergeIngredientNames(dishes.flatMap((d) => d.missingIngredients)),
+      needsRice: !hasStapleCarb(main.recipe),
     });
   }
 

@@ -78,7 +78,8 @@ export interface RoleInput {
   tags?: string[];
 }
 
-function hasStapleCarb(recipe: RoleInput): boolean {
+/** ご飯やパン、麺などの主食を含むか。含まなければ献立にごはんを添える必要がある。 */
+export function hasStapleCarb(recipe: RoleInput): boolean {
   return recipe.ingredients.some((ing) =>
     STAPLE_CARBS.some((carb) => ing.name.includes(carb)),
   );
@@ -107,20 +108,31 @@ export function isMainDish(recipe: RoleInput): boolean {
 /** 汁物として扱うタグ。 */
 const SOUP_TAGS = ['汁物', 'スープ'];
 
-/** 献立の中での立ち位置。主菜・汁物・副菜の3つに分ける。 */
-export type DishCourse = 'main' | 'soup' | 'side';
+/**
+ * ごはんのおかずにならないタグ。
+ * みたらし団子が副菜として献立に出てしまったため、献立の対象から完全に外す。
+ */
+const NOT_A_MEAL_TAGS = ['デザート', 'おやつ', 'ドリンク', '飲み物'];
+
+/** 献立の中での立ち位置。献立に出さないものは 'other'。 */
+export type DishCourse = 'main' | 'soup' | 'side' | 'other';
 
 export const COURSE_LABEL: Record<DishCourse, string> = {
   main: '主菜',
   soup: '汁物',
   side: '副菜',
+  other: 'その他',
 };
 
 /**
  * 一食を組み立てるための分類。
- * 鍋やラーメンのように汁物タグが付いていても単体で一食になる料理は主菜を優先する。
+ *
+ * ・デザートや飲み物は、ごはんのおかずにならないので 'other' として除く
+ * ・鍋やラーメンのように汁物タグが付いていても単体で一食になる料理は主菜を優先する
  */
 export function dishCourse(recipe: RoleInput): DishCourse {
+  const tags = recipe.tags ?? [];
+  if (tags.some((t) => NOT_A_MEAL_TAGS.includes(t))) return 'other';
   if (isMainDish(recipe)) return 'main';
-  return (recipe.tags ?? []).some((t) => SOUP_TAGS.includes(t)) ? 'soup' : 'side';
+  return tags.some((t) => SOUP_TAGS.includes(t)) ? 'soup' : 'side';
 }
