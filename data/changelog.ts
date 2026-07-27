@@ -7,6 +7,15 @@ export interface ChangelogEntry {
 // 大きな変更があったときにこの配列の先頭に追記する。
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '2.7.2',
+    date: '2026-07-27',
+    changes: [
+      'レシピの「さがす」タブを「一覧」に変更しました',
+      '一覧が200品で打ち切られていたのを直し、「もっと見る」で全1399品までたどれるようにしました',
+      '「◯品中◯品を表示」と件数が分かるようにしました',
+    ],
+  },
+  {
     version: '2.7.1',
     date: '2026-07-26',
     changes: [

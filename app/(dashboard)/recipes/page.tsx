@@ -39,7 +39,7 @@ export default async function RecipesPage({
               提案
             </TabsTrigger>
             <TabsTrigger value="browse" className="flex-1">
-              さがす
+              一覧
             </TabsTrigger>
             <TabsTrigger value="saved" className="flex-1">
               保存
@@ -54,7 +54,7 @@ export default async function RecipesPage({
             />
           </TabsContent>
           <TabsContent value="browse" className="mt-4">
-            <BrowsePanel totalCount={RECIPE_COUNT} initialResults={initialBrowse} />
+            <BrowsePanel totalCount={RECIPE_COUNT} initialListing={initialBrowse} />
           </TabsContent>
           <TabsContent value="saved" className="mt-4">
             <SavedSection favorites={favorites} history={history} />

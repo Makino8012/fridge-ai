@@ -6,6 +6,7 @@ import * as recipeService from '@/services/recipes/recipe-service';
 import * as localRecipeService from '@/services/recipes/local-recipe-service';
 import type { UseUpResult } from '@/lib/recipes/matcher';
 import type { PlannedMeal, WeeklyPlanOptions } from '@/lib/recipes/weekly-plan';
+import type { BrowseListing } from '@/lib/recipes/matcher';
 import * as shoppingListService from '@/services/shopping-list/shopping-list-service';
 import { aiErrorMessage, type MenuPlanTimeframe, type RecipeSuggestion } from '@/lib/ai/types';
 
@@ -45,10 +46,11 @@ export async function getSeasonalRecipesAction(): Promise<
 export async function browseRecipesAction(filters: {
   query?: string;
   tag?: string;
-}): Promise<ActionResult<{ missingCount: number; recipe: RecipeSuggestion }[]>> {
+  offset?: number;
+}): Promise<ActionResult<BrowseListing>> {
   try {
-    const recipes = await localRecipeService.getBrowseRecipes(filters);
-    return actionSuccess(recipes);
+    const listing = await localRecipeService.getBrowseRecipes(filters);
+    return actionSuccess(listing);
   } catch {
     return actionError('レシピ一覧の取得に失敗しました');
   }

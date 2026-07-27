@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useTransition } from 'react';
 import { BookOpen, Search } from 'lucide-react';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { EmptyState } from '@/components/shared/empty-state';
 import { LoadingSpinner } from '@/components/shared/loading-spinner';
@@ -12,21 +13,24 @@ import { browseRecipesAction } from '@/features/recipes/actions';
 import type { RecipeSuggestion } from '@/lib/ai/types';
 
 type BrowseResult = { missingCount: number; recipe: RecipeSuggestion };
+type BrowseListing = { total: number; items: BrowseResult[] };
 
 // よく使う代表的なタグだけを絞り込みチップに出す。
 const TAG_CHIPS = ['筋トレ', '背徳飯', '和食', '洋食', '中華', '韓国', '主菜', '副菜', '鍋', '麺', '丼', 'デザート'];
 
 export function BrowsePanel({
   totalCount,
-  initialResults,
+  initialListing,
 }: {
   totalCount: number;
-  initialResults: BrowseResult[];
+  initialListing: BrowseListing;
 }) {
   const [query, setQuery] = useState('');
   const [tag, setTag] = useState<string | null>(null);
-  const [results, setResults] = useState<BrowseResult[]>(initialResults);
+  const [results, setResults] = useState<BrowseResult[]>(initialListing.items);
+  const [matchCount, setMatchCount] = useState(initialListing.total);
   const [isPending, startTransition] = useTransition();
+  const [isLoadingMore, startLoadingMore] = useTransition();
 
   // 初回(絞り込みなし)はサーバーから渡された初期結果をそのまま使い、余分な通信をしない。
   const isFirstRun = useRef(true);
@@ -50,11 +54,31 @@ export function BrowsePanel({
           toast.error(result.error);
           return;
         }
-        setResults(result.data);
+        setResults(result.data.items);
+        setMatchCount(result.data.total);
       });
     }, delay);
     return () => clearTimeout(handle);
   }, [query, tag]);
+
+  /** 続きを読み込んで下に足す。 */
+  function loadMore() {
+    startLoadingMore(async () => {
+      const result = await browseRecipesAction({
+        query,
+        tag: tag ?? undefined,
+        offset: results.length,
+      });
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+      setResults((prev) => [...prev, ...result.data.items]);
+      setMatchCount(result.data.total);
+    });
+  }
+
+  const hasMore = results.length < matchCount;
 
   return (
     <div className="space-y-4">
@@ -99,6 +123,11 @@ export function BrowsePanel({
         )}
 
         <div className={isPending ? 'pointer-events-none opacity-40 transition-opacity' : 'transition-opacity'}>
+          {results.length > 0 && (
+            <p className="mb-2 text-xs text-muted-foreground">
+              {matchCount}品中 {results.length}品を表示
+            </p>
+          )}
           {results.length > 0 ? (
             <div className="grid gap-2.5 md:grid-cols-2">
               {results.map((r, i) => (
@@ -114,6 +143,17 @@ export function BrowsePanel({
             </div>
           ) : (
             !isPending && <EmptyState icon={BookOpen} title="該当するレシピが見つかりませんでした" />
+          )}
+
+          {hasMore && (
+            <Button
+              variant="outline"
+              className="mt-3 w-full"
+              onClick={loadMore}
+              disabled={isLoadingMore}
+            >
+              {isLoadingMore ? <LoadingSpinner /> : `もっと見る(残り${matchCount - results.length}品)`}
+            </Button>
           )}
         </div>
       </div>

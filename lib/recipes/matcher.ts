@@ -195,6 +195,8 @@ export interface BrowseFilters {
   query?: string;
   tag?: string; // タグ(和食/中華/主菜 など)で絞り込み
   limit?: number;
+  /** 何件目から返すか。「もっと見る」で続きを読むために使う。 */
+  offset?: number;
 }
 
 export interface BrowseResult {
@@ -202,15 +204,24 @@ export interface BrowseResult {
   recipe: RecipeSuggestion;
 }
 
+export interface BrowseListing {
+  /** 絞り込み後の全件数。表示しているのはこのうち items.length 件。 */
+  total: number;
+  items: BrowseResult[];
+}
+
 /**
  * 登録されている全レシピを一覧・検索する。在庫との照合で「作れる/あと何品」も分かる。
  * 在庫で作れるもの→不足が少ない順、次に調理時間が短い順で並べる。
+ *
+ * 一度に全部返すと重いので limit/offset で区切り、
+ * 全件数(total)も返して「もっと見る」を出せるようにする。
  */
 export function browseRecipes(
   recipes: LocalRecipe[],
   inventory: InventoryItem[],
   filters: BrowseFilters = {},
-): BrowseResult[] {
+): BrowseListing {
   const q = filters.query?.trim().toLowerCase();
 
   let filtered = recipes;
@@ -232,9 +243,15 @@ export function browseRecipes(
     return a.recipe.cookingTimeMinutes - b.recipe.cookingTimeMinutes;
   });
 
-  return evaluated
-    .slice(0, filters.limit ?? 200)
-    .map((e) => ({ missingCount: e.missing.length, recipe: e.suggestion }));
+  const offset = filters.offset ?? 0;
+  const limit = filters.limit ?? 60;
+
+  return {
+    total: evaluated.length,
+    items: evaluated
+      .slice(offset, offset + limit)
+      .map((e) => ({ missingCount: e.missing.length, recipe: e.suggestion })),
+  };
 }
 
 export interface UseUpResult {
